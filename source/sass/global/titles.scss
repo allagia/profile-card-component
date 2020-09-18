@@ -1,0 +1,15 @@
+.main-title {
+  font-size: 64px;
+  line-height: 74px;
+
+  //не для всех страниц
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
