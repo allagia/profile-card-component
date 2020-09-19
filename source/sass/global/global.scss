@@ -1,15 +1,15 @@
 * {
   box-sizing: border-box;
 
-  ::-moz-selection {
-    color: $white;
-    background: $red;
-  }
+  // ::-moz-selection {
+  //   color: $white;
+  //   background: $red;
+  // }
 
-  ::selection {
-    color: $white;
-    background: $red;
-  }
+  // ::selection {
+  //   color: $white;
+  //   background: $red;
+  // }
 }
 
 html {
@@ -27,6 +27,7 @@ body {
   width: 100%;
   min-width: 320px;
   min-height: 100%;
+  color: $dark;
 }
 
 .header,

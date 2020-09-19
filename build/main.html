@@ -13,6 +13,7 @@
   <title>Aero-House</title>
 </head>
 <body>
+
 <header class="page-header">
  <nav class="main-nav">
    <div class="main-nav__logo logo">
@@ -24,7 +25,86 @@
   <main></main>
   <section>
   <h2>Подвал</h2>
+  <main>
+    <section class="map">
+  <img src="img/map@1x.jpg" srcset="img/map@2x.jpg" width="1920" height="778" alt="местоположение компании на карте">
+
 </section>
+
+  </main>
+  <footer class="page-footer">
+  <div class="page-footer__wrap container">
+
+    <div class="page-footer__nav">
+      <div>
+        <a class="page-footer__logo" href="#main.html">
+          <img src="img/icon-logo.svg" width="107" height="83" alt="логотип компании">
+        </a>
+        <div class="page-footer__links social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--whatsapp" href="#" aria-label="Вотсап"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--insta" href="#" aria-label="Инстаграм"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="#" aria-label="Фейсбук"></a>
+            </li>
+          </ul>
+          <p>© 2020 ООО "АэроХауз"</p>
+        </div>
+      </div>
+      <div class="page-footer__contacts">
+        <dl>
+          <dt>Телефон</dt>
+          <dd><a href="tel:+74954142050">+7-495-414-20-50</a></dd>
+          <dt>Адрес</dt>
+          <dd>127106, г. Москва, Алтуфьевское шоссе, д. 27, офис 452.</dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:info@aero-house.com">info@aero-house.com</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="page-footer__modal modal">
+      <h2 class="modal__title">Напишите нам</h2>
+      <p class="modal__text">Напишите о своем проекте<br>и мы ответим на Ваши вопросы</p>
+      <form>
+        <div class="modal__first-line">
+          <p>
+            <label class="visually-hidden" for="name-id">Имя*</label>
+            <input type="text" id="name-id" placeholder="Имя*">
+          </p>
+
+          <p>
+            <label class="visually-hidden" for="phone-id">Телефон</label>
+            <input type="text" id="phone-id" placeholder="Телефон">
+          </p>
+        </div>
+
+        <p>
+          <label class="visually-hidden" for="mail-id">E-mail*</label>
+          <input type="text" id="mail-id" placeholder="E-mail*">
+        </p>
+
+        <textarea placeholder="Cообщение"></textarea>
+
+        <p class="modal__attachment">
+          <input class="visually-hidden" type="file" id="attachment-id">
+          <label for="attachment-id">Прикрепить вложение</label>
+        </p>
+
+        <button class="btn" type="submit">Отправить сообщение</button>
+
+        <p class="modal__agreement">
+          <input class="visually-hidden" type="radio" id="agree-id">
+          <label for="agree-id">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</label>
+        </p>
+      </form>
+    </div>
+  </div>
+</footer>
+
 
 </body>
 </html>
