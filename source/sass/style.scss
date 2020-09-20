@@ -7,9 +7,11 @@
 @import "./global/container.scss";
 @import "./global/buttons.scss";
 @import "./global/titles.scss";
-
 // BLOCKS
+@import "./blocks/header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main-menu.scss";
+@import "./blocks/contact-header.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/map.scss";
-@import "./blocks/modal.scss"
-
+@import "./blocks/modal.scss";

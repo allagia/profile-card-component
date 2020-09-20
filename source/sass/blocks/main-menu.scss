@@ -1,0 +1,29 @@
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 5;
+}
+
+.main-menu__link {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: $dark;
+}
+
+.main-menu__item {
+  margin-right: 40px;
+}
+
+.main-menu__item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .main-menu {
+    flex-grow: 1.5;
+  }
+}
