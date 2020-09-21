@@ -1,3 +1,3 @@
 /** Порядок подключения JS-модулей */
 
-/* // =require modules/header.js */
+// =require components/phone-mask.js

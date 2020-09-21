@@ -1,5 +1,3 @@
-/** Порядок подключения JS-модулей */
-
 'use strict';
 
 var maskOptions = {
@@ -9,4 +7,3 @@ var maskOptions = {
 [].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
   new IMask(input, maskOptions);
 });
-

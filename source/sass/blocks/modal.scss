@@ -1,13 +1,37 @@
+.page-footer__modal-wrap {
+  margin: 3px 0 0 17px;
+
+  order: 2;
+  z-index: 1;
+
+  @media (max-width: 1400px) {
+    order: 1;
+    width: 100%;
+    margin: -86px 0 60px;
+  }
+
+  @include mobile {
+    margin: 0 0 20px;
+  }
+}
+
 .page-footer__modal {
-  position: absolute;
-  left: 50%;
-  bottom: 22.5%;
   width: 700px;
   min-height: 700px;
-  padding: 42px 95px;
+  padding: 41px 95px;
 
   background-color: $white;
-  transform: translate(-50%, 0);
+
+  @media (max-width: 1400px) {
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 29px 15px 79px;
+  }
 
   label {
     position: absolute;
@@ -17,6 +41,11 @@
 
     letter-spacing: 0.02em;
     opacity: 0.8;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -31,22 +60,55 @@
 
 
     text-align: center;
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 42px;
+
+      margin: 0 0 11px;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 28px;
 
-    margin: 0;
-    margin-bottom: 43px;
+    width: 67%;
+    margin: 0 auto 43px;
 
     text-align: center;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+
+      width: 73%;
+      margin-bottom: 24px;
+    }
   }
 
   &__first-line {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 22px;
+
+      p {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  &__textarea-mobile {
+    display: none;
+
+    @include mobile {
+      display: block;
+      margin: 23px 0 28px 0;
+    }
   }
 
   &__attachment {
@@ -76,31 +138,94 @@
 
       max-width: 490px;
       padding-left: 50px;
+
+      @include mobile {
+        font-size: 10px;
+        line-height: 16px;
+
+        padding-left: 26px;
+        max-width: 92%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 23px;
+        top: 3px;
+        width: 13px;
+        height: 13px;
+        border: 2px solid $blue;
+        border-radius: 1px;
+
+        @include mobile {
+          left: 0;
+          top: 2px;
+        }
+      }
+
+      &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 27px;
+        top: 7px;
+        width: 9px;
+        height: 9px;
+        background-color: $blue;
+        border-radius: 1px;
+
+        @include mobile {
+          left: 4px;
+          top: 6px;
+        }
+      }
     }
 
     input {
       display: none;
+
+      &:checked + label::after {
+        display: block;
+      }
     }
   }
 
   button {
     font-size: 15px;
     line-height: 57px;
+    font-weight: 500;
     display: block;
     margin: 40px auto 23px;
     width: 319px;
     height: 57px;
 
     text-transform: uppercase;
+    outline: none;
+
+    @include mobile {
+      width: 100%;
+      margin: 45px auto 21px;
+    }
   }
 }
 
 form {
+  // @include mobile {
+  //   width: calc(100% - 30px);
+  //   margin: 0 auto;
+  // }
+
   p {
     margin: 0;
   }
 
   input {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(50, 59, 71, 0.8);
+
     width: 100%;
     min-width: 230px;
     height: 38px;
@@ -108,6 +233,8 @@ form {
 
     border: none;
     border-bottom: 1px solid rgba(50, 59, 71, 0.6);
+    outline: none;
+    cursor: pointer;
 
     &::placeholder {
       display: block;
@@ -116,11 +243,23 @@ form {
   }
 
   textarea {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(50, 59, 71, 0.8);
+
     width: 100%;
     min-height: 110px;
     margin-top: 37px;
     margin-bottom: 10px;
     padding: 10px 15px;
     border: 1px solid rgba(50, 59, 71, 0.6);
+    outline: none;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
