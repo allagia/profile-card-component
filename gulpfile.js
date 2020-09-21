@@ -128,5 +128,10 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'webp', 'vendor', 'vendor-styles', 'css', 'sprite', 'html', 'js'));
+gulp.task('pixelGlass', function () {
+  return gulp.src('source/pixelPerfect/**/*.*')
+    .pipe(gulp.dest('build/pixelPerfect'));
+});
+
+gulp.task('build', gulp.series('clean', 'copy', 'webp', 'vendor', 'vendor-styles', 'css', 'sprite', 'html', 'js', 'pixelGlass'));
 gulp.task('start', gulp.series('build', 'server'));
