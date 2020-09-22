@@ -101,7 +101,6 @@
   margin-bottom: 18px;
 
   li {
-    display: flex;
     margin-bottom: 11px;
 
     font-family: $font; // вынести
@@ -112,6 +111,10 @@
     text-align: left;
     color: $dark;
     letter-spacing: 0.02em;
+  }
+
+  a {
+    display: flex;
 
     &::before {
       content: "";
@@ -130,7 +133,9 @@
     li {
       font-size: 14px;
       line-height: 16px;
+    }
 
+    a {
       &::before {
         margin-right: 4px;
       }
