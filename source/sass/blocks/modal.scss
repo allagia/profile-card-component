@@ -18,7 +18,7 @@
 .page-footer__modal {
   width: 700px;
   min-height: 700px;
-  padding: 41px 95px;
+  padding: 41px 95px 0;
 
   background-color: $white;
 
@@ -34,13 +34,15 @@
   }
 
   label {
-    position: absolute;
-    font-weight: 500;
+    // position: absolute;
+    // font-weight: 500;
     font-size: 15px;
     line-height: 14px;
 
     letter-spacing: 0.02em;
     opacity: 0.8;
+
+    margin-bottom: 40px;
 
     @include mobile {
       font-size: 14px;
@@ -54,6 +56,7 @@
     font-size: 52px;
     line-height: 61px;
     font-weight: 400;
+    letter-spacing: -0.01em;
 
     margin: 0;
     margin-bottom: 13px;
@@ -87,10 +90,9 @@
     }
   }
 
-  &__first-line {
+  &__form-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
 
     @include mobile {
       display: block;
@@ -99,6 +101,10 @@
       p {
         margin-bottom: 23px;
       }
+    }
+
+    label {
+      width: 45%;
     }
   }
 
@@ -137,71 +143,6 @@
     }
   }
 
-  &__agreement {
-    label {
-      font-size: 12px;
-      line-height: 18px;
-
-      max-width: 490px;
-      padding-left: 50px;
-
-      cursor: pointer;
-      transition: opacity $transition-props;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      @include mobile {
-        font-size: 10px;
-        line-height: 16px;
-
-        padding-left: 26px;
-        max-width: 92%;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 23px;
-        top: 3px;
-        width: 13px;
-        height: 13px;
-        border: 2px solid $blue;
-        border-radius: 1px;
-
-        @include mobile {
-          left: 0;
-          top: 2px;
-        }
-      }
-
-      &::after {
-        display: none;
-        content: "";
-        position: absolute;
-        left: 27px;
-        top: 7px;
-        width: 9px;
-        height: 9px;
-        background-color: $blue;
-        border-radius: 1px;
-
-        @include mobile {
-          left: 4px;
-          top: 6px;
-        }
-      }
-    }
-
-    input {
-      display: none;
-
-      &:checked + label::after {
-        display: block;
-      }
-    }
-  }
 
   button {
     font-size: 15px;
@@ -227,6 +168,68 @@
   }
 }
 
+.checkbox {
+  position: relative;
+  display: flex;
+
+  &__indicator {
+    position: absolute;
+    top: 4px;
+    left: 24px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 2px solid $blue;
+    border-radius: 1px;
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 9px;
+      height: 9px;
+      background-color: $blue;
+      border-radius: 1px;
+      opacity: 1;
+
+      @include mobile {
+        left: 4px;
+        top: 6px;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked + .checkbox__indicator::before {
+    display: block;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+
+    max-width: 490px;
+    padding-left: 50px;
+
+    cursor: pointer;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 16px;
+
+      padding-left: 26px;
+      max-width: 92%;
+    }
+  }
+}
+
 form {
   p {
     margin: 0;
@@ -240,7 +243,7 @@ form {
     color: rgba(50, 59, 71, 0.8);
 
     width: 100%;
-    min-width: 230px;
+    // min-width: 230px;
     height: 38px;
     padding: 0;
 

@@ -118,7 +118,7 @@ gulp.task('vendor-styles', function () {
 });
 
 gulp.task('vendor', function () {
-  return gulp.src('source/libs/**/*.js')
+  return gulp.src('source/js/vendor/**/*.js')
       .pipe(concat('vendor.js'))
       .pipe(gulp.dest('build/js'));
 });
@@ -130,7 +130,7 @@ gulp.task('clean', function () {
 
 gulp.task('pixelGlass', function () {
   return gulp.src('source/pixelPerfect/**/*.*')
-    .pipe(gulp.dest('build/pixelPerfect'));
+      .pipe(gulp.dest('build/pixelPerfect'));
 });
 
 gulp.task('build', gulp.series('clean', 'copy', 'webp', 'vendor', 'vendor-styles', 'css', 'sprite', 'html', 'js', 'pixelGlass'));
