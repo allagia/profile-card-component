@@ -20,7 +20,9 @@
 }
 
 .main-nav__menu {
-  @include list-reset();
+  ul {
+    @include list-reset();
+  }
 
   display: flex;
   flex-wrap: wrap;
