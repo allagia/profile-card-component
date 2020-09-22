@@ -116,6 +116,12 @@
       display: block;
       position: relative;
       padding-left: 36px;
+      transition: opacity $transition-props;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
 
       &::before {
         content: "";
@@ -138,6 +144,13 @@
 
       max-width: 490px;
       padding-left: 50px;
+
+      cursor: pointer;
+      transition: opacity $transition-props;
+
+      &:hover {
+        opacity: 0.7;
+      }
 
       @include mobile {
         font-size: 10px;
@@ -201,6 +214,11 @@
 
     text-transform: uppercase;
     outline: none;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @include mobile {
       width: 100%;
@@ -210,11 +228,6 @@
 }
 
 form {
-  // @include mobile {
-  //   width: calc(100% - 30px);
-  //   margin: 0 auto;
-  // }
-
   p {
     margin: 0;
   }
@@ -235,10 +248,15 @@ form {
     border-bottom: 1px solid rgba(50, 59, 71, 0.6);
     outline: none;
     cursor: pointer;
+    transition: opacity $transition-props;
 
     &::placeholder {
       display: block;
       margin-bottom: 5px;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 
@@ -257,6 +275,11 @@ form {
     border: 1px solid rgba(50, 59, 71, 0.6);
     outline: none;
     cursor: pointer;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @include mobile {
       display: none;
