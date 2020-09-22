@@ -1,14 +1,3 @@
-/** Порядок подключения JS-модулей */
-
-'use strict';
-
-(function () {
-  window.utils = {
-    BREAKPOINT_MOBILE: '(max-width: 767px)',
-    BREAKPOINT_TABLET: '(max-width: 1280px)',
-  };
-})();
-
 'use strict';
 
 (function () {
@@ -33,15 +22,4 @@
 
   window.matchMedia(BREAKPOINT_MOBILE).addListener(closeMenu);
 })();
-
-
-'use strict';
-
-var maskOptions = {
-  mask: '+{7} (000) 000-00-00'
-};
-
-[].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
-  new IMask(input, maskOptions);
-});
 

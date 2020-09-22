@@ -83,34 +83,34 @@
 </symbol></svg>
 </div>
 <header class="page-header">
-  <div class="main-nav container">
-    <div class="main-nav__logo">
+  <div class="page-header__container container">
+    <div class="page-header__logo">
       <a href="#">
         <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
       </a>
     </div>
 
-    <div class="main-nav__controls">
-      <a class="main-nav__mobile-tel" href="tel:+79857276573">
+    <div class="page-header__controls">
+      <a class="page-header__mobile-tel" href="tel:+79857276573">
         <svg width="15" height="15">
           <use xlink:href="#icon-phone"></use>
         </svg>
       </a>
-      <button class="main-nav__btn-open">
+      <button class="page-header__btn-open" aria-controls="mobile-menu" aria-label="Открыть меню">
         <svg width="19" height="19">
           <use xlink:href="#icon-btn-burger"></use>
         </svg>
       </button>
     </div>
 
-    <div class="main-nav__menu-wrapper">
+    <div class="page-header__menu-wrapper" id="mobile-menu">
 
-      <div class="main-nav__mobile">
-        <div class="main-nav__mobile-logo">
+      <div class="page-header__mobile">
+        <div class="page-header__mobile-logo">
           <img src="img/icon-logo-mobile.svg" width="60" height="47" alt="Логотип">
         </div>
 
-        <button class="main-nav__btn-close">
+        <button class="page-header__btn-close" aria-controls="mobile-menu" aria-label="Закрыть меню">
           <svg width="19" height="19">
             <use xlink:href="#icon-btn-cross"></use>
           </svg>
@@ -118,8 +118,8 @@
       </div>
 
 
-      <div class="main-nav__center-wrapper">
-        <nav class="main-nav__menu">
+      <div class="page-header__center-wrapper">
+        <nav class="page-header__menu">
           <ul>
             <li>
               <a href="#">Технология</a>
@@ -139,9 +139,9 @@
           </ul>
         </nav>
 
-        <div class="main-nav__search">
+        <div class="page-header__search">
           <form action="" method="get">
-            <input id="header-search" type="search" name="search">
+            <input id="header-search" type="search" name="search" required="">
             <svg width="17.5" height="17.5">
               <use xlink:href="#icon-search"></use>
             </svg>
@@ -151,8 +151,8 @@
         </div>
       </div>
 
-      <div class="main-nav__right-wrapper">
-        <ul class="main-nav__contact">
+      <div class="page-header__right-wrapper">
+        <ul class="page-header__contact">
           <li>
             <a href="tel:+74957730831">
               <svg width="18" height="18">
@@ -170,7 +170,7 @@
             </a>
           </li>
         </ul>
-        <div class="main-nav__slogan">
+        <div class="page-header__slogan">
           <p>Официальный дистрибьютор</p>
           <p>
             <picture>
@@ -182,7 +182,7 @@
         </div>
       </div>
 
-      <div class="main-nav__social">
+      <div class="page-header__social">
         <ul>
           <li>
             <a href="#" aria-label="Связать в вотсап">

@@ -1,8 +1,20 @@
 .page-header {
   position: relative;
+
+  font-family: $font;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: $dark;
+
+  @include mobile {
+    // overflow-x: hidden;
+  }
 }
 
-.main-nav {
+.page-header__container {
   display: flex;
   padding-top: 31px;
 
@@ -13,7 +25,7 @@
   }
 }
 
-.main-nav__logo {
+.page-header__logo {
   flex-shrink: 0;
   width: 107px;
   height: 83px;
@@ -36,7 +48,7 @@
   }
 }
 
-.main-nav__controls {
+.page-header__controls {
   display: none;
 
   @include mobile {
@@ -45,7 +57,9 @@
   }
 }
 
-.main-nav__mobile-tel {
+.page-header__mobile-tel {
+  outline: none;
+
   &:hover svg,
   &:focus svg {
     fill: $dark;
@@ -58,13 +72,14 @@
   }
 }
 
-.main-nav__btn-open {
+.page-header__btn-open {
   margin-left: 23px;
   padding: 0;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &:hover svg,
   &:focus svg {
@@ -72,28 +87,37 @@
   }
 
   svg {
+    display: block;
     fill: $dark;
 
     transition: all $transition-props;
   }
 }
 
-.main-nav__menu-wrapper {
+.page-header__menu-wrapper {
   @include mobile {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 0;
     z-index: 10;
 
-    width: 100%;
+    width: 0;
     height: 100vh;
-    padding: 40px 15px;
+    padding: 40px 0;
 
-    background-color: $blue; // удалить
+    background-color: $blue;
+    overflow: hidden;
+
+    transition: all $transition-props;
+
+    &--open {
+      width: 100%;
+      padding: 40px 15px;
+    }
   }
 }
 
-.main-nav__mobile {
+.page-header__mobile {
   display: none;
 
   @include mobile {
@@ -104,11 +128,11 @@
   }
 }
 
-.main-nav__mobile-logo {
+.page-header__mobile-logo {
 
 }
 
-.main-nav__btn-close {
+.page-header__btn-close {
   padding: 0;
 
   background-color: transparent;
@@ -132,7 +156,7 @@
   }
 }
 
-.main-nav__center-wrapper {
+.page-header__center-wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 1000px;
@@ -154,7 +178,7 @@
   }
 }
 
-.main-nav__menu {
+.page-header__menu {
   ul {
     @include list-reset();
 
@@ -171,12 +195,6 @@
   }
 
   a {
-    font-family: $font; // вынести
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
     color: $dark;
     letter-spacing: 0.02em;
 
@@ -222,7 +240,7 @@
   }
 }
 
-.main-nav__search {
+.page-header__search {
   form {
     display: flex;
     flex-direction: row-reverse;
@@ -243,18 +261,25 @@
 
   input {
     height: auto;
+    padding: 0;
 
     font-size: 18px;
     line-height: 20px;
+    font-weight: 400;
     color: $dark;
     text-transform: uppercase;
 
     background-color: transparent;
     border: none;
+    cursor: auto;
 
-    &:active + svg,
+    &:invalid + svg {
+      fill: $white;
+    }
+
     &:hover + svg,
-    &:focus + svg {
+    &:focus + svg,
+    &:valid + svg {
       fill: $dark;
     }
   }
@@ -276,7 +301,7 @@
   }
 }
 
-.main-nav__right-wrapper {
+.page-header__right-wrapper {
   flex-shrink: 0;
   width: 210px;
   margin-left: auto;
@@ -291,7 +316,7 @@
   }
 }
 
-.main-nav__contact {
+.page-header__contact {
   @include list-reset();
 
   margin-bottom: 18px;
@@ -303,12 +328,6 @@
   a {
     display: flex;
 
-    font-family: $font; // вынести
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
     color: $dark;
     letter-spacing: 0.02em;
 
@@ -359,13 +378,8 @@
   }
 }
 
-.main-nav__slogan {
-  font-family: $font; // вынести
+.page-header__slogan {
   font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
   color: $lighter-grey;
 
   p {
@@ -394,7 +408,7 @@
   }
 }
 
-.main-nav__social {
+.page-header__social {
   display: none;
 
   @include mobile {
@@ -431,5 +445,4 @@
       transition: all $transition-props;
     }
   }
-
 }
