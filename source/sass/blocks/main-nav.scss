@@ -1,12 +1,23 @@
+.page-header {
+  position: relative;
+}
+
 .main-nav {
   display: flex;
   padding-top: 31px;
+
+  @include mobile {
+    align-items: flex-start;
+    padding-top: 41px;
+    padding-bottom: 30px;
+  }
 }
 
 .main-nav__logo {
-  // flex-grow: 2; // сетка
+  flex-shrink: 0;
   width: 107px;
   height: 83px;
+  margin-right: auto;
 
   img {
     width: 100%;
@@ -16,21 +27,150 @@
   @include tablet {
     width: 90px;
     height: 70px;
+    // margin-right: 157px;
+  }
+
+  @include mobile {
+    width: 60px;
+    height: 47px;
+  }
+}
+
+.main-nav__controls {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-nav__mobile-tel {
+  &:hover svg,
+  &:focus svg {
+    fill: $dark;
+  }
+
+  svg {
+    fill: $blue;
+
+    transition: all $transition-props;
+  }
+}
+
+.main-nav__btn-open {
+  margin-left: 23px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $blue;
+  }
+
+  svg {
+    fill: $dark;
+
+    transition: all $transition-props;
+  }
+}
+
+.main-nav__menu-wrapper {
+  @include mobile {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+
+    width: 100%;
+    height: 100vh;
+    padding: 40px 15px;
+
+    background-color: $blue; // удалить
+  }
+}
+
+.main-nav__mobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 38px;
+  }
+}
+
+.main-nav__mobile-logo {
+
+}
+
+.main-nav__btn-close {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    display: block;
+
+    fill: $white;
+
+    transition: all $transition-props;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $dark;
+    }
+  }
+}
+
+.main-nav__center-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  margin-right: 30px;
+  margin-left: 64px;
+
+  @include tablet {
+    max-width: 673px;
+    margin-left: 20px;
+    // margin-left: 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 36px;
+    margin-left: 0;
   }
 }
 
 .main-nav__menu {
   ul {
     @include list-reset();
-  }
 
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 5; // сетка
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   li {
     margin-right: 50px;
 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
     font-family: $font; // вынести
     font-size: 16px;
     line-height: 19px;
@@ -40,13 +180,8 @@
     color: $dark;
     letter-spacing: 0.02em;
 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  a {
     transition: all $transition-props;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -55,45 +190,104 @@
   }
 
   @include tablet {
-    flex-grow: 1.5; // сетка
-
     li {
       margin-right: 40px;
+    }
+  }
+
+  @include mobile {
+    ul {
+      flex-direction: column;
+    }
+
+    li {
+      margin-right: 0;
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      font-size: 24px;
+      line-height: 28px;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $dark;
+      }
     }
   }
 }
 
 .main-nav__search {
-  flex-grow: 1.4;
+  form {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid $white;
+  }
 
   svg {
+    display: block;
+    margin-right: 10px;
+
+    fill: $dark;
+
     transition: all $transition-props;
   }
 
-  button {
-    padding: 0;
+  input {
+    height: auto;
+
+    font-size: 18px;
+    line-height: 20px;
+    color: $dark;
+    text-transform: uppercase;
 
     background-color: transparent;
     border: none;
-    cursor: pointer;
 
-    &:hover svg,
-    &:focus svg {
-      fill: $blue;
+    &:active + svg,
+    &:hover + svg,
+    &:focus + svg {
+      fill: $dark;
     }
   }
 
   @include tablet {
-    flex-grow: 0.4;
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  @include mobile {
+    order: -1;
+    margin-bottom: 27px;
+
+    svg {
+      fill: $white;
+    }
   }
 }
 
 .main-nav__right-wrapper {
+  flex-shrink: 0;
   width: 210px;
   margin-left: auto;
 
   @include tablet {
     width: 155px;
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 36px;
   }
 }
 
@@ -104,6 +298,10 @@
 
   li {
     margin-bottom: 11px;
+  }
+
+  a {
+    display: flex;
 
     font-family: $font; // вынести
     font-size: 16px;
@@ -113,34 +311,50 @@
     text-align: left;
     color: $dark;
     letter-spacing: 0.02em;
+
+    transition: all $transition-props;
+    outline: none;
   }
 
-  a {
-    display: flex;
+  svg {
+    display: block;
+    margin-right: 6px;
 
-    &::before {
-      content: "";
+    fill: $blue;
 
-      width: 18px;
-      height: 18px;
-      margin-right: 6px;
-
-      background-image: url("../img/icon-whatsapp-header.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+    transition: all $transition-props;
   }
 
   @include tablet {
-    li {
+    a {
       font-size: 14px;
       line-height: 16px;
     }
 
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 0;
+
     a {
-      &::before {
-        margin-right: 4px;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $dark;
       }
+
+      &:hover svg,
+      &:focus svg {
+        fill: $dark;
+      }
+    }
+
+    svg {
+      fill: $white;
     }
   }
 }
@@ -174,4 +388,48 @@
       margin-right: 6px;
     }
   }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.main-nav__social {
+  display: none;
+
+  @include mobile {
+    display: block;
+
+    ul {
+      @include list-reset();
+
+      display: flex;
+    }
+
+    li {
+      margin-right: 27px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      outline: none;
+
+      &:hover svg,
+      &:focus svg {
+        fill: $dark;
+      }
+    }
+
+    svg {
+      display: block;
+
+      fill: $white;
+
+      transition: all $transition-props;
+    }
+  }
+
 }

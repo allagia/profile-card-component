@@ -12,58 +12,124 @@
       </a>
     </div>
 
-    <nav class="main-nav__menu">
-      <ul>
-        <li>
-          <a href="#">Технология</a>
-        </li>
-        <li>
-          <a href="#">О компании</a>
-        </li>
-        <li>
-          <a href="#">Продукция</a>
-        </li>
-        <li>
-          <a href="#">Объекты</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="main-nav__search">
-      <form action="" method="get">
-        <!-- <label class="visually-hidden" for="header-search">Поиск по сайту</label> -->
-        <!-- <input id="header-search" type="search" name="search" placeholder="Искать здесь..."> -->
-        <button type="submit">
-          <span class="visually-hidden">Кнопка поиска</span>
-          <svg width="17.5" height="17.5">
-            <use xlink:href="#icon-search"></use>
-          </svg>
-        </button>
-      </form>
+    <div class="main-nav__controls">
+      <a class="main-nav__mobile-tel" href="tel:+79857276573">
+        <svg width="15" height="15">
+          <use xlink:href="#icon-phone"></use>
+        </svg>
+      </a>
+      <button class="main-nav__btn-open">
+        <svg width="19" height="19">
+          <use xlink:href="#icon-btn-burger"></use>
+        </svg>
+      </button>
     </div>
 
-    <div class="main-nav__right-wrapper">
-      <ul class="main-nav__contact">
-        <li>
-          <a href="tel:+74954142050">+7-495-414-20-50</a>
-        </li>
-        <li>
-          <a href="tel:+79857276573">+7-985-727-65-73</a>
-        </li>
-      </ul>
-      <div class="main-nav__slogan">
-        <p>Официальный дистрибьютор</p>
-        <p>
-          <picture>
-            <source type="image/webp" srcset="img/icon-distribution.webp">
-            <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
-          </picture>
-          <span>AERECO в России</span>
-        </p>
+    <div class="main-nav__menu-wrapper">
+
+      <div class="main-nav__mobile">
+        <div class="main-nav__mobile-logo">
+          <img src="img/icon-logo-mobile.svg" width="60" height="47" alt="Логотип">
+        </div>
+
+        <button class="main-nav__btn-close">
+          <svg width="19" height="19">
+            <use xlink:href="#icon-btn-cross"></use>
+          </svg>
+        </button>
       </div>
+
+
+      <div class="main-nav__center-wrapper">
+        <nav class="main-nav__menu">
+          <ul>
+            <li>
+              <a href="#">Технология</a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Продукция</a>
+            </li>
+            <li>
+              <a href="#">Объекты</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="main-nav__search">
+          <form action="" method="get">
+            <input id="header-search" type="search" name="search">
+            <svg width="17.5" height="17.5">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+            <label class="visually-hidden" for="header-search">Поиск по сайту</label>
+            <button class="visually-hidden" type="submit"></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="main-nav__right-wrapper">
+        <ul class="main-nav__contact">
+          <li>
+            <a href="tel:+74957730831">
+              <svg width="18" height="18">
+                <use xlink:href="#icon-tel-header"></use>
+              </svg>
+              +7-495-773-08-31
+            </a>
+          </li>
+          <li>
+            <a href="tel:+79857276573">
+              <svg width="18" height="18">
+                <use xlink:href="#icon-tel-header"></use>
+              </svg>
+              +7-985-727-65-73
+            </a>
+          </li>
+        </ul>
+        <div class="main-nav__slogan">
+          <p>Официальный дистрибьютор</p>
+          <p>
+            <picture>
+              <source type="image/webp" srcset="img/icon-distribution.webp">
+              <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
+            </picture>
+            <span>AERECO в России</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="main-nav__social">
+        <ul>
+          <li>
+            <a href="#" aria-label="Связать в вотсап">
+              <svg width="26" height="26">
+                <use xlink:href="#icon-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Профиль в инстаграм">
+              <svg width="28" height="28">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Группа в фейсбуке">
+              <svg width="27" height="27">
+                <use xlink:href="#icon-facebook-header"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </header>
