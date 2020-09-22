@@ -3,14 +3,28 @@
   padding-top: 31px;
 }
 
-// начало
+.main-nav__logo {
+  // flex-grow: 2; // сетка
+  width: 107px;
+  height: 83px;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @include tablet {
+    width: 90px;
+    height: 70px;
+  }
+}
 
 .main-nav__menu {
   @include list-reset();
 
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 5; // оставить или изменить сетку
+  flex-grow: 5; // сетка
 
   li {
     margin-right: 50px;
@@ -30,6 +44,8 @@
   }
 
   a {
+    transition: all $transition-props;
+
     &:hover,
     &:focus {
       color: $blue;
@@ -37,7 +53,7 @@
   }
 
   @include tablet {
-    flex-grow: 1.5; // убрать или оставить
+    flex-grow: 1.5; // сетка
 
     li {
       margin-right: 40px;
@@ -45,9 +61,30 @@
   }
 }
 
+.main-nav__search {
+  flex-grow: 1.4;
 
+  svg {
+    transition: all $transition-props;
+  }
 
-// вставить поиск
+  button {
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover svg,
+    &:focus svg {
+      fill: $blue;
+    }
+  }
+
+  @include tablet {
+    flex-grow: 0.4;
+  }
+}
 
 .main-nav__right-wrapper {
   width: 210px;
@@ -122,7 +159,6 @@
   }
 
   img {
-    display: block;
     margin-right: 5px;
   }
 
@@ -130,45 +166,5 @@
     img {
       margin-right: 6px;
     }
-  }
-}
-
-// конец
-
-
-.main-nav__search button {
-  background-color: transparent;
-  border: none;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:active {
-    cursor: pointer;
-  }
-}
-
-.main-nav__logo a {
-  display: block;
-  min-width: 107px;
-}
-
-.main-nav__logo {
-  flex-grow: 2;
-}
-
-.main-nav__search {
-  flex-grow: 1.4;
-}
-
-@media (max-width: $tablet-width) {
-  .main-nav__logo img {
-    width: 90px;
-    height: 70px;
-  }
-
-  .main-nav__search {
-    flex-grow: 0.4;
   }
 }
