@@ -1,3 +1,5 @@
+// LIBS
+@import "./libs/swiper.scss";
 // GLOBAL
 @import "./global/normalize.scss";
 @import "./global/fonts.scss";
@@ -7,11 +9,12 @@
 @import "./global/container.scss";
 @import "./global/buttons.scss";
 @import "./global/titles.scss";
+@import "./global/link-blue-underlined.scss";
 // BLOCKS
 @import "./blocks/page-header.scss";
 @import "./blocks/footer.scss";
-
 @import "./blocks/footer_without_map.scss";
-@import "./blocks/modal.scss"
-
-
+@import "./blocks/modal.scss";
+@import "./blocks/main-intro.scss";
+@import "./blocks/main-slider.scss";
+@import "./blocks/thechnology.scss";

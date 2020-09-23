@@ -1,0 +1,163 @@
+.main-slider {
+  position: relative;
+  max-width: 1630px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 1110px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -80%;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__container {
+    @include mobile {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    width: 77.4%;
+    height: 570px;
+
+    @include tablet {
+      width: 74.3%;
+    }
+
+    @include mobile {
+      // width: 95.8%;
+      width: 100%;
+    }
+  }
+
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
+
+  .swiper-slide-next {
+    width: 14%;
+    height: auto;
+
+    @include tablet {
+      width: 14.4%;
+    }
+
+    @include mobile {
+      // width: 95.8%;
+      width: 100%;
+    }
+  }
+
+  .swiper-button-prev {
+    top: 50.2%;
+    left: -69px;
+
+    background-image: url("../img/main-slider-prev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    transition: opacity $transition-props;
+    outline: none;
+    z-index: 0;
+
+    &::after {
+      content: "";
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include tablet {
+      left: -39px;
+    }
+
+    @include mobile {
+      left: 12px;
+      top: 37.2%;
+      z-index: 1;
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      content: "";
+    }
+
+    right: 149px;
+    top: 7%;
+
+    width: 74px;
+    height: 60px;
+
+    background-image: url("../img/main-slider-next.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity $transition-props;
+    outline: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include tablet {
+      width: 55px;
+      height: 46px;
+
+      right: 106px;
+      top: 6%;
+    }
+
+    @include mobile {
+      width: 36px;
+      height: 30px;
+
+      right: 15px;
+      top: initial;
+      bottom: 54px;
+    }
+  }
+
+  &__pagination {
+    font-size: 24px;
+    line-height: 35px;
+
+    width: 100px;
+
+    bottom: 40.7%;
+    left: initial;
+    right: 141px;
+
+    @include tablet {
+      bottom: 54.8%;
+      right: 73px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 27px;
+
+      bottom: 55px;
+      right: 51px;
+    }
+  }
+}

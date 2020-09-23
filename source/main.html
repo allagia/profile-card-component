@@ -7,9 +7,112 @@
 <body>
   <include src="source/components/header.html"></include>
   <main>
-    <!-- <include src="source/components/map.html"></include> -->
+    <section class="main-intro">
+      <div class="main-intro__container">
+        <div class="main-intro__wrap container">
+          <h1 class="main-intro__title main-title">Новая роль вентиляции</h1>
+          <p class="main-intro__text">Оптимальный баланс между качеством воздуха в&nbsp;помещении и&nbsp;экономией электроэнергии</p>
+          <a class="main-intro__link link-blue-underlined" href="#">О Качестве воздуха</a>
+        </div>
+
+        <div class="main-intro__slider-wrapper main-slider">
+          <div class="main-slider__container swiper-container">
+            <ul class="main-slider__list swiper-wrapper">
+              <li class="main-slider__item swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/main-slider-1@1x.webp 1x, img/main-slider-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/main-slider-1-tablet@1x.webp 1x, img/main-slider-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-slider-1-mobile@1x.webp 1x, img/main-slider-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/main-slider-1@1x.jpg 1x, img/main-slider-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/main-slider-1-tablet@1x.jpg 1x, img/main-slider-1-tablet@2x.jpg 2x">
+                  <img src="img/main-slider-1-mobile@1x.jpg" srcset="img/main-slider-1-mobile@2x.jpg" width="1299" height="738" alt="слайд 1">
+                </picture>
+              </li>
+              <li class="main-slider__item swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/main-slider-2-tablet@1x.webp 1x, img/main-slider-2-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/main-slider-2@1x.jpg 1x, img/main-slider-2@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/main-slider-2-tablet@1x.jpg 1x, img/main-slider-2-tablet@2x.jpg 2x">
+                  <img src="img/main-slider-2@1x.jpg" srcset="img/main-slider-2@2x.jpg" width="1299" height="738" alt="слайд 2">
+                </picture>
+              </li>
+              <li class="main-slider__item swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/main-slider-1@1x.webp 1x, img/main-slider-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/main-slider-1-tablet@1x.webp 1x, img/main-slider-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-slider-1-mobile@1x.webp 1x, img/main-slider-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/main-slider-1@1x.jpg 1x, img/main-slider-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/main-slider-1-tablet@1x.jpg 1x, img/main-slider-1-tablet@2x.jpg 2x">
+                  <img src="img/main-slider-1-mobile@1x.jpg" srcset="img/main-slider-1-mobile@2x.jpg" width="1299" height="738" alt="слайд 1">
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <div class="main-slider__pagination swiper-pagination">
+          </div>
+          <div class="main-slider__button-prev swiper-button-prev"></div>
+          <div class="main-slider__button-next swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <section class="technology">
+      <div class="technology__wrap container">
+        <h2 class="technology__title">Технологии Aereco</h2>
+        <ol class="technology__list">
+          <li class="technology__item">
+            <span class="technology__num">01</span>
+            <h3>Система вентиляции с&nbsp;рекуперацией тепла</h3>
+            <div class="technology__image">
+
+              <img src="img/technology/1@1x.jpg" srcset="img/technology/1@2x.jpg" width="386" height="391">
+            </div>
+            <p>Механический приток и&nbsp;удалении воздуха с&nbsp;использованием специального теплообменника, который аккумулирует тепло удаляемого воздуха, передавая его холодному приточному воздуху.</p>
+            <span class="technology__name">Инновационная система DXR</span>
+          </li>
+          <li class="technology__item">
+            <span class="technology__num">02</span>
+            <h3>Гибридная система вентиляции</h3>
+            <div class="technology__image">
+
+              <img src="img/technology/2@1x.jpg" srcset="img/technology/2@2x.jpg" width="438" height="444">
+            </div>
+            <p>Сочетание энергоэффективности и&nbsp;постоянного поддержания высокого качества воздуха внутри помещений как новых, так и&nbsp;реконструируемых зданиях и&nbsp;пространств.</p>
+            <span class="technology__name">Вентиляторы низкого давления</span>
+          </li>
+          <li class="technology__item">
+            <span class="technology__num">03</span>
+            <h3>Естественная система вентиляции</h3>
+            <div class="technology__image">
+
+              <img src="img/technology/3@1x.jpg" srcset="img/technology/3@2x.jpg" width="534" height="252">
+            </div>
+            <p>Система естественной вентиляции компании Aereco&nbsp;&mdash; это идеальное решение для модернизации зданий, в&nbsp;которых раньше была предусмотрена стандартная система пассивной вентиляции.</p>
+            <span class="technology__name">Технология MEV</span>
+          </li>
+        </ol>
+        <a class="technology__link link-blue-underlined">Все СИСТЕМЫ</a>
+      </div>
+    </section>
+
   </main>
 
-  <include src="source/components/footer.html"></include>
+  <include src="source/components/footer_with_map.html"></include>
   <include src="source/components/script.html"></include>
 </body>

@@ -1,7 +1,7 @@
 {
-  "name": "protokol",
+  "name": "aero-house",
   "version": "1.0.0",
-  "description": "сборка для проекта protokol",
+  "description": "сборка для проекта aero-house",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",

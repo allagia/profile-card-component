@@ -90,6 +90,11 @@
   &__logo {
     display: block;
     margin-bottom: 146px;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     @media (max-width: 1400px) {
       width: 90px;
@@ -110,7 +115,7 @@
 
   &__icons {
     order: 1;
-    margin: 0 0 21px 0;
+    margin: 0 0 26px 0;
 
     @media (max-width: 1400px) {
       order: 2;
@@ -140,7 +145,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    margin: 0 16px 21px 0;
+    margin: 0 7px 21px 0;
     order: 3;
 
     @media (max-width: 1400px) {
@@ -166,26 +171,23 @@
       order: 2;
     }
 
+    svg {
+      position: absolute;
+      top: 4px;
+      left: -30px;
+    }
+
 
     div {
       position: relative;
-      margin-bottom: 48px;
+      margin-bottom: 38px;
 
       &:last-of-type {
         margin-bottom: 0;
       }
 
-      &::before {
-        content: "";
-        position: absolute;
-
-        left: -28px;
-        top: 4px;
-
-        @include mobile {
-          left: -29px;
-          top: 0;
-        }
+      &:first-of-type {
+        margin-bottom: 47px;
       }
 
       @media (max-width: 1400px) {
@@ -197,71 +199,13 @@
       }
     }
 
-    .contacts__phone {
-      &::before {
-        width: 16px;
-        height: 16px;
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-      }
-    }
-
-    .contacts__address {
-      margin-bottom: 40px;
-
-      &::before {
-        top: 0;
-        width: 14px;
-        height: 20px;
-        background-image: url("../img/icon-pin.svg");
-        background-repeat: no-repeat;
-
-        @include mobile {
-          top: -2px;
-          left: -26px;
-        }
-      }
-
-      @include mobile {
-        margin-bottom: 32px;
-
-        span {
-          br {
-            display: none;
-          }
-        }
-
-        p {
-          margin-bottom: 10px;
-        }
-      }
-    }
-
-    .contacts__email {
-      &::before {
-        width: 19px;
-        height: 15px;
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-      }
-    }
-
-
-    p {
-      font-weight: 700;
-      margin: 0 0 12px;
-      text-transform: uppercase;
-
-      @include mobile {
-        font-size: 12px;
-        line-height: 14px;
-
-        margin: 0 0 6px;
-      }
-    }
-
     a {
       color: #5f6f85;
+      transition: opacity $transition-props;
+
+      &:hover {
+        opacity: 0.7;
+      }
 
       &:first-of-type {
         line-height: 19px;
@@ -292,6 +236,8 @@
       font-size: 18px;
       line-height: 24px;
 
+      color: #5f6f85;
+
       @include mobile {
         font-size: 14px;
       }
@@ -299,11 +245,40 @@
   }
 }
 
+.contacts {
+  &__title {
+    font-weight: 700;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 14px;
+
+      margin: 0 0 6px;
+    }
+  }
+
+  &__address {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    color: #5f6f85;
+  }
+}
+
 .social {
   p {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+
     margin: 0;
 
-   @media (max-width: 1400px) {
+    color: rgba($color: #323B47, $alpha: 0.8);
+
+    @media (max-width: 1400px) {
       font-size: 12px;
       line-height: 14px;
     }
@@ -312,9 +287,9 @@
   &__list {
     @include list-reset;
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 
-   @media (max-width: 1400px) {
+    @media (max-width: 1400px) {
       margin-bottom: 21px;
     }
   }
@@ -331,38 +306,10 @@
     display: block;
     background-repeat: no-repeat;
     background-size: contain;
+    transition: opacity $transition-props;
 
-    &--whatsapp {
-      width: 26px;
-      height: 26px;
-      background-image: url("../img/icon-whatsapp.svg");
-
-      @include mobile {
-        width: 21px;
-        height: 21px;
-      }
-    }
-
-    &--insta {
-      width: 28px;
-      height: 28px;
-      background-image: url("../img/icon-instagram.svg");
-
-      @include mobile {
-        width: 22px;
-        height: 22px;
-      }
-    }
-
-    &--fb {
-      width: 14px;
-      height: 27px;
-      background-image: url("../img/icon-facebook.svg");
-
-      @include mobile {
-        width: 11px;
-        height: 22px;
-      }
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
