@@ -31,7 +31,7 @@
     @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 41px;
+    margin-bottom: 38px;
     // counter-reset: item;
 
     @include tablet {
@@ -48,15 +48,12 @@
     line-height: 74px;
     font-weight: 400;
 
-    margin: 0 0 49px;
+    margin: 0 0 52px;
 
     color: $white;
 
     @include tablet {
-      font-size: 56px;
-      line-height: 65px;
-
-      margin: 0 0 53px;
+      margin: 0 0 46px;
     }
 
     @include mobile {
@@ -74,7 +71,16 @@
     line-height: 23px;
     color: $white;
 
-    margin-bottom: 31px;
+    margin-bottom: 29px;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 34px;
+      letter-spacing: 0.005em;
+      font-weight: 500;
+
+      margin-bottom: 19px;
+    }
 
     @include mobile {
       font-size: 18px;
@@ -110,6 +116,12 @@
   }
 
   &__link {
+    padding: 9px 18px 9px 0;
+
+    @include tablet {
+      padding: 9px 45px 9px 0;
+    }
+
     &::after {
       right: -25px;
 
@@ -135,8 +147,9 @@
     margin-right: 8.4%;
 
     @include tablet {
+      width: 36%;
       min-width: 377px;
-      margin-right: 8.9%;
+      margin-right: 6.9%;
     }
 
     @include mobile {
@@ -162,22 +175,28 @@
     &::before {
       position: absolute;
       content: "";
-      top: 36px;
-      width: 88%;
+      top: 33px;
+      width: 88.5%;
       border-bottom: 3px solid rgba($color:#ffffff, $alpha: 0.9);
 
       @include tablet {
         width: 100%;
       }
+
+      @include tablet {
+        top: 38px;
+        width: 93.5%;
+      }
     }
 
     h3 {
       font-weight: 500;
-      font-size: 30px;
-      line-height: 35px;
+      font-size: 24px;
+      line-height: 34px;
       letter-spacing: 0.01em;
       color: $white;
 
+      max-width: 92%;
       margin: 0;
       margin-bottom: 26px;
 
@@ -194,13 +213,13 @@
       line-height: 26px;
 
       margin: 0;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
 
       color: $dark-grey;
 
-      @include tablet {
-        margin-bottom: 30px;
-      }
+      // @include tablet {
+      //   margin-bottom: 30px;
+      // }
 
       @include mobile {
         font-size: 14px;

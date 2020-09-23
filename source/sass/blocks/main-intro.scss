@@ -1,36 +1,33 @@
 .main-intro {
   &__wrap {
-    // padding: 32px 145px 57px 425px;
-    padding-top: 32px;
+    padding-top: 30px;
     padding-left: 425px;
     padding-bottom: 57px;
 
     @include tablet {
       padding-top: 0;
       padding-left: 85px;
-      padding-bottom: 42px;
+      padding-bottom: 52px;
     }
 
     @include mobile {
       padding-left: 15px;
+      padding-bottom: 43px;
     }
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 
     @include tablet {
-      font-size: 56px;
-      line-height: 65px;
-
-      margin-bottom: 31px;
+      margin-bottom: 21px;
     }
 
     @include mobile {
       font-size: 36px;
       line-height: 42px;
 
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
   }
 
@@ -38,7 +35,7 @@
     font-size: 24px;
     line-height: 36px;
 
-    margin: 0 0 34px 0;
+    margin: 0 0 33px 0;
     max-width: 50%;
 
     @include tablet {
@@ -47,18 +44,10 @@
 
     @include mobile {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 26px;
 
       max-width: 100%;
-      margin: 0 0 24px;
-    }
-  }
-
-  &__link {
-    @include mobile {
-      font-size: 14px;
-
-      padding: 9px 55px 9px 0;
+      margin: 0 0 20px;
     }
   }
 }
