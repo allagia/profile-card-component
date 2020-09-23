@@ -2,12 +2,29 @@
   max-width: 1920px;
   width: 100%;
   padding: 0 145px;
-  // padding: 0 7.6%;
   margin: 0 auto;
 
   @include tablet {
     padding: 0 85px;
-    // padding: 0 6.6%;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
+}
+
+.container-liga {
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 60px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-inner)  and (max-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $tablet-inner) {
+    padding: 0 30px;
   }
 
   @include mobile {

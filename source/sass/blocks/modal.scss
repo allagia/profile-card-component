@@ -1,17 +1,17 @@
 .page-footer__modal-wrap {
-  margin: 3px 0 0 17px;
-
+  padding: 3px 0 0 13px;
   order: 2;
   z-index: 1;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1490px) {
     order: 1;
     width: 100%;
-    margin: -86px 0 60px;
+    margin-bottom: 47px;
+    padding: 0;
   }
 
   @include mobile {
-    margin: 0 0 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -22,7 +22,7 @@
 
   background-color: $white;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1490px) {
     margin: 0 auto;
   }
 
@@ -30,16 +30,15 @@
     position: relative;
     width: 100%;
     min-height: auto;
-    padding: 29px 15px 79px;
+    padding: 29px 15px 5px;
   }
 
   label {
-    // position: absolute;
-    // font-weight: 500;
-    font-size: 15px;
-    line-height: 14px;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
 
-    letter-spacing: 0.02em;
+    letter-spacing: 0.005em;
     opacity: 0.8;
 
     margin-bottom: 40px;
@@ -47,19 +46,28 @@
     @include mobile {
       font-size: 14px;
       line-height: 14px;
+
+      margin-bottom: 25px;
+    }
+  }
+
+  label[for="textarea-mobile"] {
+    display: none;
+
+    @include mobile {
+      display: block;
     }
   }
 }
 
 .modal {
   &__title {
-    font-size: 52px;
-    line-height: 61px;
+    font-size: 48px;
+    line-height: 56px;
     font-weight: 400;
-    letter-spacing: -0.01em;
 
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
 
 
     text-align: center;
@@ -75,18 +83,23 @@
   &__text {
     font-size: 18px;
     line-height: 28px;
+    letter-spacing: 0.005em;
 
     width: 67%;
-    margin: 0 auto 43px;
+    margin: 0 auto 42px;
 
     text-align: center;
+
+    @media (max-width: 1490px) {
+      margin: 0 auto 44px;
+    }
 
     @include mobile {
       font-size: 14px;
       line-height: 22px;
 
-      width: 73%;
-      margin-bottom: 24px;
+      width: 80%;
+      margin-bottom: 26px;
     }
   }
 
@@ -105,17 +118,13 @@
 
     label {
       width: 45%;
+
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 
-  &__textarea-mobile {
-    display: none;
-
-    @include mobile {
-      display: block;
-      margin: 23px 0 28px 0;
-    }
-  }
 
   &__attachment {
     label {
@@ -124,6 +133,10 @@
       padding-left: 36px;
       transition: opacity $transition-props;
       cursor: pointer;
+
+      @include mobile {
+        margin-top: 29px;
+      }
 
       &:hover {
         opacity: 0.7;
@@ -173,6 +186,10 @@
       &:hover {
         opacity: 0.7;
       }
+
+      @include mobile {
+        height: 36px;
+      }
     }
 
     textarea {
@@ -184,9 +201,9 @@
 
       width: 100%;
       min-height: 110px;
-      margin-top: 37px;
+      margin-top: -3px;
       margin-bottom: 10px;
-      padding: 10px 15px;
+      padding: 11px 17px;
       border: 1px solid rgba(50, 59, 71, 0.6);
       outline: none;
       cursor: pointer;
@@ -240,6 +257,11 @@
     border: 2px solid $blue;
     border-radius: 1px;
 
+    @include mobile {
+      top: 1px;
+      left: 0;
+    }
+
     &::before {
       display: none;
       content: "";
@@ -253,8 +275,8 @@
       opacity: 1;
 
       @include mobile {
-        left: 4px;
-        top: 6px;
+        left: 2px;
+        top: 2px;
       }
     }
   }
@@ -264,6 +286,7 @@
   }
 
   &__text {
+    display: block;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0.02em;
@@ -283,7 +306,7 @@
       line-height: 16px;
 
       padding-left: 26px;
-      max-width: 92%;
+      max-width: 100%;
     }
   }
 }
