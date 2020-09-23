@@ -1,16 +1,6 @@
 /** Порядок подключения JS-модулей */
 
 'use strict';
-(function () {
-  var maskOptions = {
-    mask: '+{7} (000) 000-00-00'
-  };
-
-
-  [].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
-    new IMask(input, maskOptions);
-  });
-})();
 
 (function () {
   window.utils = {
@@ -49,11 +39,15 @@
 
 
 'use strict';
+(function () {
+  var maskOptions = {
+    mask: '+{7} (000) 000-00-00'
+  };
 
-var maskOptions = {
-  mask: '+{7} (000) 000-00-00'
-};
-
+  [].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
+    new IMask(input, maskOptions);
+  });
+})();
 
 'use strict';
 
