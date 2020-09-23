@@ -1,14 +1,15 @@
 /** Порядок подключения JS-модулей */
 
 'use strict';
+(function () {
+  var maskOptions = {
+    mask: '+{7} (000) 000-00-00'
+  };
 
-var maskOptions = {
-  mask: '+{7} (000) 000-00-00'
-};
-
-[].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
-  new IMask(input, maskOptions);
-});
+  [].slice.call(document.querySelectorAll('input[type="tel"]')).forEach(function (input) {
+    new IMask(input, maskOptions);
+  });
+})();
 
 'use strict';
 
@@ -16,11 +17,10 @@ var maskOptions = {
 
   var swiper = new Swiper('.main-slider__container', {
     slidesPerView: 'auto',
-    spaceBetween: 145,
-    slidesOffsetBefore: 145,
+    // spaceBetween: 140,
     centerInsufficientSlides: true,
     loop: 'true',
-
+    autoHeight: 'true',
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -40,6 +40,19 @@ var maskOptions = {
     navigation: {
       nextEl: '.main-slider__button-prev',
       prevEl: '.main-slider__button-next',
+    },
+    breakpoints: {
+      1281: {
+        spaceBetween: 140
+      },
+
+      768: {
+        spaceBetween: 125
+      },
+
+      320: {
+        spaceBetween: 40
+      }
     }
   });
 })();
