@@ -29,8 +29,8 @@
       },
     },
     navigation: {
-      nextEl: '.main-slider1__button-prev',
-      prevEl: '.main-slider1__button-next',
+      nextEl: '.main-sliders__button-prev1',
+      prevEl: '.main-sliders__button-next1',
     },
     thumbs: {
       swiper: swiper2,
@@ -74,8 +74,8 @@
       },
     },
     navigation: {
-      nextEl: '.main-slider2__button-prev',
-      prevEl: '.main-slider2__button-next',
+      nextEl: '.main-sliders__button-prev2',
+      prevEl: '.main-sliders__button-next2',
     },
     thumbs: {
       swiper: swiper1,
