@@ -110,6 +110,7 @@
 
       top: 31.2%;
       left: 14px;
+      z-index: 1;
     }
   }
 
@@ -118,14 +119,11 @@
       content: "";
     }
 
-    right: 149px;
-
+    // top: -256%;
     // right: 9.2%;
 
     top: 7%;
-
-    // top: -256%;
-
+    right: 149px;
 
     width: 74px;
     height: 60px;
@@ -219,7 +217,7 @@
   }
 
   @include mobile {
-    width: 100%;
+    width: 0;
   }
 }
 
