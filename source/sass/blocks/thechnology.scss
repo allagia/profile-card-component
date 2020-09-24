@@ -14,6 +14,10 @@
     }
   }
 
+  &__container {
+    margin-bottom: 22px;
+  }
+
   &__wrap {
     position: relative;
     padding-top: 160px;
@@ -111,8 +115,10 @@
 
     @include mobile {
       width: 100%;
+      max-width: 290px;
+      max-height: 195px;
       height: auto;
-      margin-bottom: 24px;
+      margin: 0 auto 24px;
 
       img {
         margin: 0 auto;
@@ -130,7 +136,7 @@
     @include mobile {
       display: block;
       width: 160px;
-      margin: -34px 15px 0 15px;
+      margin: -34px 0 0 0;
       padding: 9px 40px 5px 0;
       z-index: 1;
     }
@@ -227,6 +233,7 @@
 
         margin-bottom: 11px;
         max-width: 100%;
+        min-height: 68px;
       }
     }
 
@@ -253,6 +260,22 @@
   }
 
   .swiper-pagination-fraction {
-    bottom: 39%;
+    display: none;
+
+    @include mobile {
+      display: block;
+      bottom: initial;
+      top: 287px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba($color: #ffffff, $alpha: 0.6);
+
+    &-active {
+      background-color: $white;
+    }
   }
 }

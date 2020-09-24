@@ -57,8 +57,8 @@
     slidesPerView: 'auto',
     // spaceBetween: 140,
     centerInsufficientSlides: true,
-    loop: 'true',
-    autoHeight: 'true',
+    loop: true,
+    autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -134,11 +134,13 @@
       slidesPerView: 'auto',
       spaceBetween: 15,
       initialSlide: 1,
-      // autoHeight: 'true',
+      autoHeight: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
-      }
+        clickable: true
+      },
+
     });
   };
 
