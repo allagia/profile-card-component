@@ -18,7 +18,7 @@
 .page-footer__modal {
   width: 700px;
   min-height: 700px;
-  padding: 41px 95px 0;
+  padding: 41px 95px 20px;
 
   background-color: $white;
 
@@ -105,6 +105,7 @@
 
   &__form-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     @include mobile {
@@ -127,33 +128,59 @@
 
 
   &__attachment {
-    label {
-      display: block;
-      position: relative;
-      padding-left: 36px;
-      transition: opacity $transition-props;
-      cursor: pointer;
+    display: block;
+    position: relative;
+    padding-left: 36px;
+    transition: opacity $transition-props;
+    cursor: pointer;
 
-      @include mobile {
-        margin-top: 29px;
-      }
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 26px;
-        height: 21px;
-        left: 0;
-        top: -3px;
-
-        background-image: url("../img/icon-cloud.svg");
-        background-repeat: no-repeat;
-      }
+    @include mobile {
+      margin-top: 29px;
     }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 21px;
+      left: 0;
+      top: -3px;
+
+      background-image: url("../img/icon-cloud.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  label[id="file-name"] {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid $dark;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: -30px;
+    //   display: block;
+    //   width: 17px;
+    //   height: 17px;
+    //   background-color: red;
+    //   // border-bottom: 1px solid $dark;
+    // }
+
+    // span {
+    //   display: none;
+    //   position: absolute;
+    //   top: 0;
+    //   left: -30px;
+    //   width: 17px;
+    //   height: 17px;
+    //   background-color: red;
+    // }
   }
 
   form {
@@ -226,7 +253,7 @@
     display: block;
     margin: 40px auto 23px;
     width: 319px;
-    height: 57px;
+    min-height: 57px;
 
     text-transform: uppercase;
     outline: none;

@@ -6,8 +6,8 @@
     slidesPerView: 'auto',
     // spaceBetween: 140,
     centerInsufficientSlides: true,
-    loop: 'true',
-    autoHeight: 'true',
+    loop: true,
+    autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
