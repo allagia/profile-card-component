@@ -1,0 +1,66 @@
+
+  <div class="modal popup modal--inst">
+    <button class="modal__close-btn" type="button">
+      <svg width="20" height="20" viewBox="0 0 20 20">
+        <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
+      </svg>
+    </button>
+    <h2 class="modal__title">Оставить заявку на монтаж оборудования</h2>
+
+    <form method="post" name="calculation" autocomplete="on">
+      <label>
+        <input type="text" placeholder="ФИО*" required>
+      </label>
+
+      <div class="modal__form-row">
+
+        <label>
+          <input type="email" placeholder="E-mail*" required>
+        </label>
+
+        <label>
+          <input type="tel" placeholder="Телефон">
+        </label>
+
+      </div>
+
+      <label>
+        <input type="text" placeholder="Адрес объекта">
+      </label>
+
+      <div class="modal__objects">
+        <p>Выберите тип обьекта:</p>
+        <div class="modal__types">
+          <label>Квартира
+            <input type="radio" name="object" value="flat">
+          </label>
+          <label>Коттедж
+            <input type="radio" name="object" value="cottage">
+          </label>
+          <label>Офис
+            <input type="radio" name="object" value="office">
+          </label>
+          <label>Ещё...
+            <input type="radio" name="object" value="another">
+          </label>
+        </div>
+      </div>
+
+      <textarea placeholder="Cообщение"></textarea>
+
+      <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
+        <input class="visually-hidden" type="file">
+      </label>
+      <label id="file-name-inst"></label>
+
+      <button class="btn" type="submit">Отправить сообщение</button>
+
+      <label class="modal__agreement checkbox">
+        <input class="visually-hidden" type="checkbox" checked required>
+        <span class="checkbox__indicator"></span>
+        <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
+      </label>
+
+    </form>
+  </div>
+

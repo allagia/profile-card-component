@@ -4,7 +4,7 @@
   <include src="source/components/head.html"></include>
   <title>Aero-House</title>
 </head>
-<body>
+<body class="body">
   <include src="source/components/header.html"></include>
   <main>
     <section class="main-intro">
@@ -349,36 +349,48 @@
         </div>
     </section>
 
-    <section>
+    <section class="tab">
       <div class="container">
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'London')">Компания</button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">Продукция</button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Технический расчет</button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">Монтаж</button>
-        </div>
+        <div class="tab__wrap indent">
 
-        <div id="London" class="tabcontent">
-          <h3>Системы вентиляции</h3>
-          <p>AeroHouse имеет многолетний опыт в&nbsp;сфере подбора и&nbsp;монтажа вентиляционного оборудования для обьектов любого размера и&nbsp;сложности.</p>
-          <a class="link-blue-underlidned">О КОМПАНИИ</a>
-        </div>
-
-        <div id="Paris" class="tabcontent">
-          <h3>Комплексные решения</h3>
-          <p>Широкий ассортимент продукции для систем вентиляции позволит полностью укомплектовать любой проект, независимо от&nbsp;его сложности и&nbsp;размера.</p>
-          <a class="link-blue-underlidned">О КОМПАНИИ</a>
-        </div>
-
-        <div id="Tokyo" class="tabcontent">
-          <!-- <include src="source/components/modal.html"></include> -->
-        </div>
-
-        <div id="Tokyo" class="tabcontent">
-            <!-- <include src="source/components/modal.html"></include> -->
+          <div class="tab__list">
+            <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'company')">Компания</button>
+            <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'solution')">Продукция</button>
+            <a class="tab__link tab__link--modal tab__link--popup1" onclick="window.Tab.openTab(event, 'calculation')">Технический расчет</a>
+            <a class="tab__link tab__link--modal tab__link--popup2" onclick="window.Tab.openTab(event, 'installation')">Монтаж</a>
           </div>
+
+          <div class="tab__content content">
+
+            <div id="company" class="tabcontent content__item">
+              <h3>Системы вентиляции</h3>
+              <p>AeroHouse имеет многолетний опыт в&nbsp;сфере подбора и&nbsp;монтажа вентиляционного оборудования для обьектов любого размера и&nbsp;сложности.</p>
+              <a class="link-blue-underlined">О КОМПАНИИ</a>
+            </div>
+
+            <div id="solution" class="tabcontent content__item">
+              <h3>Комплексные решения</h3>
+              <p>Широкий ассортимент продукции для систем вентиляции позволит полностью укомплектовать любой проект, независимо от&nbsp;его сложности и&nbsp;размера.</p>
+              <a class="link-blue-underlined">О КОМПАНИИ</a>
+            </div>
+
+            <div id="calculation" class="tabcontent content__item">
+            </div>
+
+            <div id="installation" class="tabcontent  content__item">
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
+
+    <div class="overlay"></div>
+    <include src="source/components/modal-calc.html"></include>
+    <include src="source/components/modal-inst.html"></include>
+    <!-- </div> -->
 
   </main>
 

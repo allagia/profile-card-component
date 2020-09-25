@@ -1,0 +1,147 @@
+.tab {
+  position: relative;
+  margin-bottom: 280px;
+
+  @include tablet {
+    margin-bottom: 153px;
+  }
+
+  @include mobile {
+    margin-bottom: 107px;
+  }
+
+  &__wrap {
+    display: flex;
+
+    @include tablet {
+      margin-left: 55px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 400px;
+    margin-right: 60px;
+
+    @include tablet {
+      min-width: 300px;
+      margin-right: 120px;
+    }
+
+    @include mobile {
+      margin: 0 0 26px 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    font-size: 36px;
+    line-height: 42px;
+    padding: 0 0 0 29px;
+    margin-bottom: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: opacity $transition-props;
+    text-align: left;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 36px;
+
+      margin-bottom: 23px;
+    }
+
+    @include mobile {
+      margin-bottom: 6px;
+    }
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      background-color: $blue;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      &::before {
+        display: block;
+      }
+    }
+  }
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    margin: 1px 0 13px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 14px;
+
+      margin: 0 0 16px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+
+      letter-spacing: 0.005em;
+
+      margin: 0 0 26px;
+    }
+  }
+
+  a {
+    padding: 9px 49px 8px 0;
+
+    &::after {
+      top: 12px;
+      width: 23px;
+    }
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+

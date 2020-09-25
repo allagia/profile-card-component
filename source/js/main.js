@@ -6,3 +6,5 @@
 // =require components/file-upload.js
 // =require components/technology-slider.js
 // =require components/main-intro-slider.js
+// =require components/main-tabs.js
+// =require components/popup.js

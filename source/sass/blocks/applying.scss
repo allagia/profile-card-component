@@ -1,4 +1,14 @@
 .applying {
+  margin-bottom: 146px;
+
+  @include tablet {
+    margin-bottom: 140px;
+  }
+
+  @include mobile {
+    margin-bottom: 62px;
+  }
+
   h2 {
     @include tablet {
       font-size: 56px;
@@ -25,7 +35,7 @@
       margin-top: 20px;
     }
 
-    @media (min-width: 1280px) and (max-width: 1350px) {
+    @media (min-width: 1281px) and (max-width: 1350px) {
       margin-top: 20px;
     }
 
