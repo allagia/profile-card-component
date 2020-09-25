@@ -1,6 +1,7 @@
 .main-intro {
   @include mobile {
     margin: 0 -15px;
+    overflow: hidden;
   }
 
   &__wrap {

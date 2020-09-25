@@ -109,14 +109,9 @@
 
   var swiper1 = new Swiper('.main-slider1', {
     slidesPerView: 1,
-    // spaceBetween: 40,
     centerInsufficientSlides: true,
     loop: true,
     autoHeight: true,
-    // freeMode: true,
-    // loopedSlides: 2,
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',
@@ -134,33 +129,18 @@
       },
     },
     navigation: {
-      nextEl: '.main-slider1__button-prev',
-      prevEl: '.main-slider1__button-next',
+      nextEl: '.main-sliders__button-prev1',
+      prevEl: '.main-sliders__button-next1',
     },
     thumbs: {
       swiper: swiper2,
-    },
-    // breakpoints: {
-    //   1281: {
-    //     spaceBetween: 140
-    //   },
-
-    //   768: {
-    //     spaceBetween: 125
-    //   },
-
-    //   320: {
-    //     spaceBetween: 40
-    //   }
-    // }
+    }
   });
 
   var swiper2 = new Swiper('.main-slider2', {
     slidesPerView: 1,
-    // spaceBetween: 40,
     centerInsufficientSlides: true,
     loop: true,
-    // loopedSlides: 1,
     autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
@@ -179,27 +159,117 @@
       },
     },
     navigation: {
-      nextEl: '.main-slider2__button-prev',
-      prevEl: '.main-slider2__button-next',
+      nextEl: '.main-sliders__button-prev2',
+      prevEl: '.main-sliders__button-next2',
     },
     thumbs: {
       swiper: swiper1,
-    },
-    // breakpoints: {
-    //   1281: {
-    //     spaceBetween: 140
-    //   },
-
-    //   768: {
-    //     spaceBetween: 125
-    //   },
-
-    //   320: {
-    //     spaceBetween: 40
-    //   }
-    // }
+    }
   });
 
+
+})();
+
+'use strict';
+
+(function () {
+
+  function openTab(evt, tabName) {
+    var i;
+    var tabcontent;
+    var tablinks;
+
+    tabcontent = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none';
+    }
+    tablinks = document.getElementsByClassName('tab__link');
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(' active', '');
+    }
+    document.getElementById(tabName).style.display = 'block';
+    evt.currentTarget.className += ' active';
+
+    // document.getElementById('defaultOpen').click();
+  }
+
+  window.Tab = {
+    openTab: openTab
+  };
+})();
+
+
+
+'use strict';
+
+
+(function () {
+
+  var ESC_KEYCODE = 27;
+  var ENTER_KEYCODE = 13;
+  var popups = document.querySelectorAll('.tab__link--modal');
+  var button1 = document.querySelector('.tab__link--popup1');
+  var button2 = document.querySelector('.tab__link--popup2');
+  var popup1 = document.querySelector('.modal--calc');
+  var popup2 = document.querySelector('.modal--inst');
+  var body = document.querySelector('body');
+  var closePopups = document.querySelectorAll('.modal__close-btn');
+  var overlay = document.querySelector('.overlay');
+
+  button1.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup1.classList.add('popup--opened');
+    body.classList.add('body--under-popup');
+  });
+
+
+  button2.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup2.classList.add('popup--opened');
+    body.classList.add('body--under-popup');
+  });
+
+  // var closeModal = function () {
+  //   popups.forEach(function (el) {
+  //     el.classList.remove('popup--opened');
+  //   });
+  //   return;
+  // };
+
+  var closePopup = function () {
+    popup1.classList.remove('popup--opened');
+    popup2.classList.remove('popup--opened');
+    body.classList.remove('body--under-popup');
+  };
+
+
+  closePopups.forEach(function (element) {
+    element.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closePopup();
+    });
+  });
+
+  closePopups.forEach(function (element) {
+    element.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === ENTER_KEYCODE) {
+        evt.preventDefault();
+        closePopup();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      evt.preventDefault();
+      closePopup();
+    }
+  });
+
+  overlay.addEventListener('click', function (evt) {
+    evt.stopPropagation(); //отмена закрывать окно при клике по модалке
+    closePopup();
+  });
 
 })();
 

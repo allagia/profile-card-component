@@ -1,0 +1,258 @@
+.applying {
+  margin-bottom: 146px;
+
+  @include tablet {
+    margin-bottom: 140px;
+  }
+
+  @include mobile {
+    margin-bottom: 62px;
+  }
+
+  h2 {
+    @include tablet {
+      font-size: 56px;
+      line-height: 65px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  &__lists {
+    width: 100%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -51px;
+
+    @media (min-width: 768px) and (max-width: 1060px) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: 1281px) and (max-width: 1350px) {
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+  }
+
+  &__link {
+    margin: 0 70px 101px 0;
+    padding: 9px 48px 5px 0;
+
+    @include tablet {
+      margin: 0 0 101px 0;
+    }
+
+    @include mobile {
+      margin: 3px 0 0 0;
+    }
+
+    &::after {
+      top: 13px;
+      width: 25px;
+    }
+  }
+}
+
+.examples {
+  @include list-reset;
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    transition: opacity $transition-props;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 14px;
+
+
+    font-size: 16px;
+    line-height: 26px;
+
+    letter-spacing: 0.005em;
+
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+
+    @include tablet {
+      padding-top: 0;
+      padding-bottom: 10px;
+      border: 1px solid rgba($color: #8ea0b9, $alpha: 0.5);
+    }
+
+    span {
+      display: block;
+      margin-bottom: 6px;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+      }
+    }
+
+    h3 {
+      font-size: 36px;
+      line-height: 42px;
+      font-weight: 400;
+
+      margin: 0 0 13px;
+
+      @include mobile {
+        font-size: 24px;
+        line-height: 36px;
+
+        margin: 0 0 8px;
+      }
+    }
+
+    p {
+      position: relative;
+      max-width: 44%;
+      margin: 0 auto;
+
+      @include tablet {
+        max-width: 64%;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &:first-of-type {
+        margin-bottom: 22px;
+        padding-left: 30px;
+
+        &::before {
+          content: "";
+          position: absolute;
+
+          top: 2px;
+          left: 7px;
+
+          width: 12px;
+          height: 17px;
+
+          background-image: url("../img/icon-pin.svg");
+
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          @include mobile {
+            top: 3px;
+            left: -7px;
+          }
+        }
+
+        @include mobile {
+          margin-bottom: 25px;
+          padding-left: 12px;
+          text-align: initial;
+        }
+      }
+
+      &:last-of-type {
+        margin: 0 auto 39px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    b {
+      font-weight: 600;
+      letter-spacing: 0.01em;
+
+      margin-bottom: 3px;
+      display: block;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    a {
+      padding: 9px 62px 8px 0;
+    }
+  }
+
+
+  &__item {
+    position: relative;
+    max-width: 788px;
+    // max-height: 606px;
+    width: 49%;
+    margin: 0 3.2% 0 0;
+
+    overflow: hidden;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .examples__description {
+        opacity: 1;
+      }
+
+      .examples__image {
+        opacity: 0;
+      }
+    }
+
+    @include tablet {
+      max-height: 409px;
+      margin: 0 2.5% 0 0;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px;
+
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+}

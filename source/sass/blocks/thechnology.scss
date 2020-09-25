@@ -1,5 +1,14 @@
 .technology {
   position: relative;
+  margin-bottom: 178px;
+
+  @include tablet {
+    margin-bottom: 158px;
+  }
+
+  @include mobile {
+    margin-bottom: 85px;
+  }
 
   &::before {
     content: "";
@@ -15,7 +24,9 @@
   }
 
   &__container {
-    margin-bottom: 22px;
+    @include mobile {
+      margin-bottom: 22px;
+    }
   }
 
   &__wrap {
