@@ -36,17 +36,18 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding-top: 372px;
+    padding-top: 369px;
     padding-bottom: 122px;
 
     @media (max-width: 1490px) {
       flex-wrap: wrap;
-      padding-bottom: 32px;
-      padding-top: 286px;
+      padding-bottom: 44px;
+      padding-top: 283px;
     }
 
     @include mobile {
       padding-top: 0;
+      padding-bottom: 36px;
     }
   }
 

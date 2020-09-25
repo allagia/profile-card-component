@@ -46,7 +46,7 @@
     display: block;
     font-size: 36px;
     line-height: 42px;
-    padding: 0 0 0 29px;
+    padding: 0 0 0 40px;
     margin-bottom: 16px;
     border: none;
     background-color: transparent;
@@ -64,18 +64,24 @@
 
     @include mobile {
       margin-bottom: 6px;
+      padding: 0 0 0 29px;
     }
 
     &::before {
       display: none;
       content: "";
       position: absolute;
-      top: 11px;
-      left: 0;
+      top: 12px;
+      left: 15px;
       width: 13px;
       height: 13px;
       background-color: $blue;
       border-radius: 50%;
+
+      @include mobile {
+        left: 0;
+        width: 13px;
+      }
     }
 
     &:hover {
