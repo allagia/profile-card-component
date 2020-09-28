@@ -13,4 +13,12 @@
   vertical-align: middle;
   background-color: $blue;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #66d0fd;
+  }
+
+  &:active {
+    background-color: #08b5fe;
+  }
 }

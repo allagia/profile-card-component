@@ -1,0 +1,17 @@
+.large-indent {
+  margin-left: 280px;
+  margin-right: 280px;
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+  &--additional {
+    margin-left: 240px;
+    margin-right: 240px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+}
