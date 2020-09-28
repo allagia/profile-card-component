@@ -292,15 +292,18 @@
   &__list {
     @include list-reset;
     display: flex;
-    margin-bottom: 33px;
+    max-width: 190px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 
     @media (max-width: 1490px) {
-      margin-bottom: 21px;
+      margin-bottom: 13px;
     }
   }
 
   &__item {
     margin-right: 30px;
+    margin-bottom: 10px;
 
     @include mobile {
       margin-right: 30px;

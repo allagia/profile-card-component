@@ -6,7 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="системы вентиляции Aereco">
 
-<!-- <link rel="preload" href="fonts/PT_Root_UI_Regular.woff2" as="font" crossorigin="anonymous"> -->
+<link rel="preload" href="fonts/SuisseIntl-Regular.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="fonts/SuisseIntl-Medium.woff2" as="font" crossorigin="anonymous">
+<link rel="preload" href="fonts/SuisseIntl-Bold.woff2" as="font" crossorigin="anonymous">
 
 <link rel="stylesheet" href="css/style.min.css">
 
@@ -145,13 +147,13 @@
         </nav>
 
         <div class="page-header__search">
-          <form action="" method="get">
+          <form method="get">
             <input id="header-search" type="search" name="search" required="">
             <svg width="17.5" height="17.5">
               <use xlink:href="#icon-search"></use>
             </svg>
             <label class="visually-hidden" for="header-search">Поиск по сайту</label>
-            <button class="visually-hidden" type="submit"></button>
+            <button class="visually-hidden" type="submit" aria-label="отправить запрос"></button>
           </form>
         </div>
       </div>
@@ -220,13 +222,18 @@
   <main>
     <section class="main-intro">
       <div class="main-intro__container container">
-        <div class="main-intro__wrap ">
+        <div class="main-intro__wrape large-indent">
           <h1 class="main-intro__title main-title">Новая роль вентиляции</h1>
           <p class="main-intro__text">Оптимальный баланс между качеством воздуха в&nbsp;помещении и&nbsp;экономией электроэнергии</p>
           <a class="main-intro__link link-blue-underlined" href="#">О Качестве воздуха</a>
         </div>
+      </div>
+    </section>
 
-        <div class="main-sliders ">
+    <section>
+      <h2 class="visually-hidden">Слайдер</h2>
+      <div class="container">
+        <div class="main-sliders">
           <a href="#" class="main-sliders-more">
             <svg width="72" height="60" viewBox="0 0 72 60">
               <use xlink:href="img/sprite_auto.svg#icon-main-slider-next"></use>
@@ -448,7 +455,7 @@
 
     <section class="tab">
       <div class="container">
-        <div class="tab__wrap indent">
+        <div class="tab__wrap large-indent large-indent--additional">
 
           <div class="tab__list">
             <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'company')">Компания</button>
@@ -602,7 +609,7 @@
 
   <footer class="page-footer">
   <div class="page-footer__map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.4155713468513!2d37.580422600569285!3d55.85545593943973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a9efd5eeaf%3A0xad906f52e0396da9!2z0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjcsINCc0L7RgdC60LLQsCwgMTI3MTA2!5e0!3m2!1sru!2sru!4v1600712107766!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.4155713468513!2d37.580422600569285!3d55.85545593943973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a9efd5eeaf%3A0xad906f52e0396da9!2z0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjcsINCc0L7RgdC60LLQsCwgMTI3MTA2!5e0!3m2!1sru!2sru!4v1600712107766!5m2!1sru!2sru" title="адрес на карте" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
   
 <div class="page-footer__wrapper container">

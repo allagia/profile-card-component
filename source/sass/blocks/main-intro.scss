@@ -7,14 +7,12 @@
     overflow: hidden;
   }
 
-  &__wrap {
+  &__container {
     padding-bottom: 57px;
     padding-top: 40px;
-    padding-left: 280px;
 
     @include tablet {
       padding-top: 2px;
-      padding-left: 0;
       padding-bottom: 52px;
     }
 
@@ -22,6 +20,7 @@
       padding-bottom: 43px;
     }
   }
+
 
   &__title {
     margin-bottom: 23px;
@@ -44,11 +43,7 @@
     line-height: 36px;
 
     margin: 0 0 33px 0;
-    max-width: 50%;
-
-    @include tablet {
-      max-width: 60%;
-    }
+    max-width: 60%;
 
     @include mobile {
       font-size: 16px;

@@ -29,7 +29,7 @@
       initialSlide: 1,
       autoHeight: true,
       pagination: {
-        el: '.technology__pagination',
+        el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
       },

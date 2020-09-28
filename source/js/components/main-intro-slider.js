@@ -34,7 +34,12 @@
         nextSlideItems.forEach(function (el) {
           el.classList.remove('active');
         });
-        nextSlideItems[this.realIndex].classList.add('active');
+        var index = this.realIndex + 1;
+        if (nextSlideItems[index]) {
+          nextSlideItems[index].classList.add('active');
+        } else {
+          nextSlideItems[0].classList.add('active');
+        }
       },
     },
   });
