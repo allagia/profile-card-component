@@ -28,7 +28,6 @@
 
   @include mobile {
     padding-top: 20px;
-    margin: 0 -15px;
   }
 
 
@@ -48,6 +47,10 @@
     @include mobile {
       padding-top: 0;
       padding-bottom: 36px;
+
+      //отрицательный маргин должен быть у дочерних элементов!
+      margin: 0 -15px;
+      width: calc(100% + 30px);
     }
   }
 
