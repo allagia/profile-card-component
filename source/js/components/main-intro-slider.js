@@ -31,7 +31,7 @@
     },
     on: {
       slideChange: function () {
-        nextSlideItems.forEach(function(el) {
+        nextSlideItems.forEach(function (el) {
           el.classList.remove('active');
         });
         nextSlideItems[this.realIndex].classList.add('active');
