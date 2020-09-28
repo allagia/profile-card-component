@@ -45,7 +45,7 @@
   &__list {
     @include list-reset;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     margin-bottom: 38px;
     counter-reset: item;
 
@@ -138,7 +138,7 @@
   }
 
   &__link {
-    padding: 9px 18px 9px 0;
+    // padding: 9px 18px 9px 0;
 
     @include tablet {
       padding: 9px 45px 9px 0;
@@ -153,7 +153,7 @@
     }
 
     &::after {
-      right: -25px;
+      // right: -25px;
 
       @include tablet {
         right: 2px;
@@ -178,12 +178,13 @@
   &__item {
     position: relative;
     width: 26%;
-    min-width: 370px;
+    // min-width: 370px;
     margin-right: 8.4%;
+    overflow: hidden;
 
     @include tablet {
       width: 36%;
-      min-width: 377px;
+      // min-width: 377px;
       margin-right: 6.9%;
     }
 
@@ -237,6 +238,10 @@
       max-width: 92%;
       margin: 0;
       margin-bottom: 26px;
+
+      @include tablet {
+        max-width: 97%;
+      }
 
       @include mobile {
         // font-size: 24px;
