@@ -15,7 +15,7 @@
     left: -85px;
   }
 
-  @include mobile{
+  @include mobile {
     width: calc(100% + 30px);
     left: -15px;
   }
@@ -23,15 +23,37 @@
 
 .main-sliders-more {
   position: absolute;
-  bottom: 70%;
-  transition: opacity .3s ease;
+  bottom: 86.2%;
+  cursor: pointer;
+  transition: opacity $transition-props;
 
   &:hover {
-    opacity: .4;
+    opacity: 0.4;
+  }
+
+  @include tablet-inner-rev {
+    right: 9.3%;
+  }
+
+
+  @include tablet {
+    right: 9.5%;
+    bottom: 87.2%;
+
+    svg {
+      width: 55px;
+      height: 46px;
+    }
   }
 
   @include tablet-inner {
-    right: 0;
+    right: 15px;
+    bottom: -21.4%;
+
+    svg {
+      width: 36px;
+      height: 30px;
+    }
   }
 }
 
@@ -39,27 +61,24 @@
   font-size: 24px;
   line-height: 35px;
   width: 100px;
-  bottom: 40.7%;
+  bottom: 40.6%;
   left: initial;
 
-  @include tablet-inner {
-    right: 51px;
-  }
-
-  @include mobile {
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-
-.main-sliders-more,
-.main-sliders__pagination1 {
   @include tablet-inner-rev {
     right: 8.7%;
   }
 
+  @include tablet {
+    right: 6.5%;
+    bottom: 54.6%;
+  }
+
   @include tablet-inner {
-    bottom: -100px;
+    right: 51px;
+    font-size: 18px;
+    line-height: 27px;
+
+    bottom: -21.4%;
   }
 }
 
@@ -67,6 +86,10 @@
 .main-slider1 {
   width: 77.4%;
   margin: 0;
+
+  @include tablet {
+    width: 74.3%;
+  }
 
   picture,
   img {
@@ -76,6 +99,10 @@
 
     @include tablet {
       height: 360px;
+    }
+
+    @include tablet-inner {
+      height: 217px;
     }
   }
 
@@ -88,6 +115,10 @@
 .main-slider2 {
   width: 14%;
   margin: 0;
+
+  @include tablet {
+    width: 14.4%;
+  }
 }
 
 .main-sliders__button-next1,
@@ -137,18 +168,21 @@
   bottom: 0;
   top: auto;
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
   outline: none;
 
   &:hover {
-    opacity: .4;
+    opacity: 0.4;
   }
 
-  &:after {
+  &::after {
     display: none;
 
     @include tablet-inner {
       display: block;
+      color: $white;
+      font-size: 20px;
+      padding: 0 0 0 36px;
     }
   }
 
@@ -164,7 +198,7 @@
 }
 
 .main-sliders__button-prev1 {
-  background: #bebebe;
+  background-color: $bg-color;
   left: -145px;
   width: 146px;
   top: 0;
@@ -172,7 +206,7 @@
   height: 100%;
   outline: none;
   margin-top: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 
   @include tablet {
     left: -85px;
@@ -184,12 +218,19 @@
     left: 0;
   }
 
-  &:after {
-    color: black;
+  &::after {
+    color: #b7b7b7;
+    font-size: 20px;
+    padding: 3px 0 0 36px;
+
+    @include tablet-inner {
+      color: $white;
+      padding: 0 36px 0 0;
+    }
   }
 
 
   &:hover {
-    opacity: .6;
+    opacity: 0.7;
   }
 }
