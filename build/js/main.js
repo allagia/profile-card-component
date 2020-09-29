@@ -19,6 +19,8 @@
   var navWrap = header.querySelector('.page-header__nav-wrap');
 
   navWrap.classList.remove('page-header__nav-wrap--nojs');
+  navWrap.classList.remove('page-header__nav-wrap--opened');
+  navWrap.classList.add('page-header__nav-wrap--closed');
 
   var closeMenu = navToggle.addEventListener('click', function () {
     if (navWrap.classList.contains('page-header__nav-wrap--closed')) {

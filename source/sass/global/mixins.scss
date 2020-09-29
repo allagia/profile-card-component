@@ -12,7 +12,10 @@
 
 @mixin tablet-1200px {
   @media (max-width: $tablet-1200px) {
-    
+    @content;
+  }
+}
+
 @mixin tablet-inner {
   @media (max-width: $tablet-inner) {
     @content;
