@@ -1,29 +1,26 @@
 .main-intro {
+  // временно
+  position: relative;
+  z-index: 4;
+
   @include mobile {
-    margin: 0 -15px;
     overflow: hidden;
   }
 
-  &__wrap {
-    // padding-top: 30px;
-    // padding-left: 425px;
+  &__container {
     padding-bottom: 57px;
     padding-top: 40px;
-    padding-left: 280px;
 
     @include tablet {
-      // padding-top: 0;
-      // padding-left: 85px;
       padding-top: 2px;
-      padding-left: 0;
       padding-bottom: 52px;
     }
 
     @include mobile {
-      padding-left: 15px;
       padding-bottom: 43px;
     }
   }
+
 
   &__title {
     margin-bottom: 23px;
@@ -46,11 +43,7 @@
     line-height: 36px;
 
     margin: 0 0 33px 0;
-    max-width: 50%;
-
-    @include tablet {
-      max-width: 60%;
-    }
+    max-width: 60%;
 
     @include mobile {
       font-size: 16px;

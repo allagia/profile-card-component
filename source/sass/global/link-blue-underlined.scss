@@ -14,14 +14,14 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 13px;
     right: 0;
-
-    width: 28px;
-    height: 14px;
+    width: 24px;
+    height: 12px;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    transition: background-image 0.2s ease;
 
     @include tablet {
       width: 23px;
@@ -32,7 +32,10 @@
   }
 
   &:hover {
-    opacity: 0.7;
+    &::after {
+      background-image: url("../img/arrow-blue.svg");
+      background-size: contain;
+    }
   }
 
   @include tablet {

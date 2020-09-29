@@ -45,7 +45,7 @@
   &__list {
     @include list-reset;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     margin-bottom: 38px;
     counter-reset: item;
 
@@ -101,8 +101,6 @@
     @include mobile {
       font-size: 20px;
       line-height: 30px;
-
-      // margin-bottom: 23px;
     }
 
     &::after {
@@ -113,13 +111,18 @@
   }
 
   &__image {
-    width: 370px;
+    max-width: 370px;
     height: 250px;
     margin-bottom: 26px;
     overflow: hidden;
 
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
     @include tablet {
-      width: 377px;
+      max-width: 377px;
       height: 248px;
       margin-bottom: 28px;
     }
@@ -133,13 +136,12 @@
 
       img {
         margin: 0 auto;
+        height: auto;
       }
     }
   }
 
   &__link {
-    padding: 9px 18px 9px 0;
-
     @include tablet {
       padding: 9px 45px 9px 0;
     }
@@ -153,8 +155,6 @@
     }
 
     &::after {
-      right: -25px;
-
       @include tablet {
         right: 2px;
       }
@@ -178,13 +178,18 @@
   &__item {
     position: relative;
     width: 26%;
-    min-width: 370px;
+    // min-width: 370px;
     margin-right: 8.4%;
+    overflow: hidden;
 
     @include tablet {
       width: 36%;
-      min-width: 377px;
+      // min-width: 377px;
       margin-right: 6.9%;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
     }
 
     @include mobile {
@@ -238,10 +243,11 @@
       margin: 0;
       margin-bottom: 26px;
 
-      @include mobile {
-        // font-size: 24px;
-        // line-height: 28px;
+      @include tablet {
+        max-width: 97%;
+      }
 
+      @include mobile {
         margin-bottom: 11px;
         max-width: 100%;
         min-height: 68px;
@@ -257,10 +263,6 @@
 
       color: $dark-grey;
 
-      // @include tablet {
-      //   margin-bottom: 30px;
-      // }
-
       @include mobile {
         font-size: 14px;
         line-height: 22px;
@@ -270,7 +272,7 @@
     }
   }
 
-  .swiper-pagination-fraction {
+  .swiper-container-horizontal > .swiper-pagination-bullets {
     display: none;
 
     @include mobile {

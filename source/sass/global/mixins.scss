@@ -12,6 +12,15 @@
 
 @mixin tablet-1200px {
   @media (max-width: $tablet-1200px) {
+    
+@mixin tablet-inner {
+  @media (max-width: $tablet-inner) {
+    @content;
+  }
+}
+
+@mixin tablet-inner-rev {
+  @media (min-width: $tablet-inner+1) {
     @content;
   }
 }

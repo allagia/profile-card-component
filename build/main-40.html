@@ -14,12 +14,12 @@
 
   <title>Aero-House</title>
 </head>
-<body class="body">
+<body>
   <!--<link href="pixelPerfect/pixel-glass/styles.css" rel="stylesheet">-->
 <!--<link href="pixelPerfect/index.css" rel="stylesheet">-->
 <!--<script src="pixelPerfect/pixel-glass/script.js"></script>-->
 <div style="display: none;">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
 <clipPath id="clip0">
 <rect width="28" height="28" fill="transparent"></rect>
 </clipPath>
@@ -88,630 +88,248 @@
 </symbol><symbol id="icon-whatsapp" viewBox="0 0 26 26">
 <path d="M13 0C5.85968 0 0 5.85968 0 13C0 15.3566 0.635361 17.6507 1.84023 19.6577L0 26L6.3423 24.1598C8.34935 25.3646 10.6434 26 13 26C20.1403 26 26 20.1403 26 13C26 5.85968 20.1403 0 13 0ZM21.1278 18.4929L20.523 19.0977C19.6672 19.9535 17.6992 19.8856 16.4347 19.6414C12.2299 18.8293 7.32777 14.0777 6.38237 9.96284C5.91423 7.92445 6.1727 6.15227 6.84872 5.47604L7.45354 4.87123C7.78738 4.53758 8.32971 4.53798 8.66316 4.87123L11.0828 7.29108C11.2443 7.45255 11.3327 7.66658 11.3327 7.89569C11.3327 8.1248 11.2443 8.33904 11.0828 8.49991L10.4782 9.10532C9.81169 9.77341 9.81169 10.8587 10.4782 11.5252L14.4738 15.4682C15.1423 16.1367 16.2242 16.1375 16.8937 15.4682L17.4985 14.8636C17.8107 14.5496 18.3939 14.5486 18.7087 14.8636L21.1278 17.2827C21.4563 17.6098 21.4688 18.1517 21.1278 18.4929Z"></path>
 </symbol></svg>
-</div>
-<header class="page-header">
-  <div class="page-header__overlay"></div>
-  <div class="page-header__wrap container">
-    <a class="page-header__logo" href="#">
-      <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
-    </a>
+  </div>
+  <header class="page-header">
+    <div class="page-header__container container-40">
+      <div class="page-header__logo">
+        <a href="#">
+          <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
+        </a>
+      </div>
 
-    <div class="page-header__nav-wrap page-header__nav-wrap--closed page-header__nav-wrap--nojs">
-      <a class="page-header__nav-contact-link" href="tel:+79857276573">
-        <svg width="15" height="15">
-          <use xlink:href="#icon-phone"></use>
-        </svg>
-      </a>
-      <button class="page-header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="page-header__nav page-header__nav--active">
-        <div class="page-header__links social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Вотсап">
-                <svg width="26" height="26" viewBox="0 0 26 26">
-                  <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+      <div class="page-header__controls">
+        <a class="page-header__mobile-tel" href="tel:+79857276573">
+          <svg width="15" height="15">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+        </a>
+        <button class="page-header__btn-open" aria-controls="mobile-menu" aria-label="Открыть меню">
+          <svg width="19" height="19">
+            <use xlink:href="#icon-btn-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="page-header__menu-wrapper" id="mobile-menu">
+
+        <div class="page-header__mobile">
+          <div>
+            <img src="img/icon-logo-mobile.svg" width="60" height="47" alt="Логотип">
+          </div>
+
+          <button class="page-header__btn-close" aria-controls="mobile-menu" aria-label="Закрыть меню">
+            <svg width="19" height="19">
+              <use xlink:href="#icon-btn-cross"></use>
+            </svg>
+          </button>
+        </div>
+
+
+        <div class="page-header__center-wrapper">
+          <nav class="page-header__menu">
+            <ul>
+              <li>
+                <a href="#">Технология</a>
+              </li>
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Продукция</a>
+              </li>
+              <li>
+                <a href="#">Объекты</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="page-header__search">
+            <form method="get">
+              <input id="header-search" type="search" name="search" required="">
+              <svg width="17.5" height="17.5">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              <label class="visually-hidden" for="header-search">Поиск по сайту</label>
+              <button class="visually-hidden" type="submit"></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="page-header__right-wrapper">
+          <ul class="page-header__contact">
+            <li>
+              <a href="tel:+74957730831">
+                <svg width="18" height="18">
+                  <use xlink:href="#icon-tel-header"></use>
+                </svg>
+                +7-495-773-08-31
+              </a>
+            </li>
+            <li>
+              <a href="tel:+79857276573">
+                <svg width="18" height="18">
+                  <use xlink:href="#icon-tel-header"></use>
+                </svg>
+                +7-985-727-65-73
+              </a>
+            </li>
+          </ul>
+          <div class="page-header__slogan">
+            <p>Официальный дистрибьютор</p>
+            <p>
+              <picture>
+                <source type="image/webp" srcset="img/icon-distribution.webp">
+                <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
+              </picture>
+              <span>AERECO в России</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="page-header__social">
+          <ul>
+            <li>
+              <a href="#" aria-label="Связать в вотсап">
+                <svg width="26" height="26">
+                  <use xlink:href="#icon-whatsapp"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Инстаграм">
-                <svg width="28" height="28" viewBox="0 0 28 28">
-                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            <li>
+              <a href="#" aria-label="Профиль в инстаграм">
+                <svg width="28" height="28">
+                  <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Фейсбук">
-                <svg width="14" height="27" viewBox="0 0 14 27">
-                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            <li>
+              <a href="#" aria-label="Группа в фейсбуке">
+                <svg width="27" height="27">
+                  <use xlink:href="#icon-facebook-header"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="page-header__nav-contacts">
-          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+74957730831">
-            <svg width="18" height="18">
-              <use xlink:href="#icon-tel-header"></use>
-            </svg>
-            +7-495-773-08-31
-          </a>
-          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+79857276573">
-            <svg width="18" height="18">
-              <use xlink:href="#icon-tel-header"></use>
-            </svg>
-            +7-985-727-65-73
-          </a>
-        </div>
-        <ul class="page-header__nav-list">
-          <li>
-            <a class="page-header__nav-link" href="#">Технология</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Продукция</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Объекты</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
-        <div class="page-header__search">
-          <form class="page-header__search-form" action="" method="get">
-            <input id="header-search" type="search" name="search" placeholder="Поиск">
-            <button class="page-header__search-btn" type="submit">
-              <svg width="17" height="17">
-                <use xlink:href="#icon-search"></use>
-              </svg>
-            </button>
-          </form>
-          <button class="page-header__search-toggle" type="button">
-            <span class="visually-hidden">Открыть поле поиска</span>
-            <svg width="17" height="17">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </button>
-        </div>
-        <a class="page-header__nav-logo" href="#">
-          <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
-        </a>
-      </nav>
-    </div>
 
-    <div class="page-header__contacts">
-      <a class="page-header__contacts-link" href="tel:+74957730831">
-        <svg width="18" height="18">
-          <use xlink:href="#icon-tel-header"></use>
-        </svg>
-        +7-495-773-08-31
-      </a>
-      <a class="page-header__contacts-link" href="tel:+79857276573">
-        <svg width="18" height="18">
-          <use xlink:href="#icon-tel-header"></use>
-        </svg>
-        +7-985-727-65-73
-      </a>
-      <div class="page-header__contacts-slogan">
-        <p>Официальный дистрибьютор</p>
-        <p>
-          <picture>
-            <source type="image/webp" srcset="img/icon-distribution.webp">
-            <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
-          </picture>
-          <span>AERECO в России</span>
-        </p>
       </div>
     </div>
-  </div>
-</header>
-
-  <main>
-    <section class="main-intro">
-      <div class="main-intro__container container">
-        <div class="main-intro__wrape large-indent">
-          <h1 class="main-intro__title main-title">Новая роль вентиляции</h1>
-          <p class="main-intro__text">Оптимальный баланс между качеством воздуха в&nbsp;помещении и&nbsp;экономией электроэнергии</p>
-          <a class="main-intro__link link-blue-underlined" href="#">О Качестве воздуха</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Слайдер</h2>
-      <div class="container">
-        <div class="main-sliders">
-          <a href="#" class="main-sliders-more">
-            <svg width="72" height="60" viewBox="0 0 72 60">
-              <use xlink:href="img/sprite_auto.svg#icon-main-slider-next"></use>
-            </svg>
-            <span class="visually-hidden">показать все</span>
-          </a>
-          <div class="main-sliders__pagination1 swiper-pagination"></div>
-          <div class="main-sliders__button-prev1 swiper-button-prev"></div>
-          <div class="main-sliders__button-next1 swiper-button-next"></div>
-
-          <div class="main-slider1 swiper-container">
-            <ul class="swiper-wrapper">
-              <li class=" swiper-slide">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/main-slider-1@1x.webp 1x, img/main-slider-1@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-slider-1-tablet@1x.webp 1x, img/main-slider-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/main-slider-1-mobile@1x.webp 1x, img/main-slider-1-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1281px)" srcset="img/main-slider-1@1x.jpg 1x, img/main-slider-1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/main-slider-1-tablet@1x.jpg 1x, img/main-slider-1-tablet@2x.jpg 2x">
-                  <img src="img/main-slider-1-mobile@1x.jpg" srcset="img/main-slider-1-mobile@2x.jpg" width="1299" height="738" alt="слайд 1">
-                </picture>
-              </li>
-              <li class=" swiper-slide">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-slider-2-tablet@1x.webp 1x, img/main-slider-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
-
-                  <source media="(min-width: 1281px)" srcset="img/main-slider-2@1x.jpg 1x, img/main-slider-2@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/main-slider-2-tablet@1x.jpg 1x, img/main-slider-2-tablet@2x.jpg 2x">
-                  <img src="img/main-slider-2@1x.jpg" srcset="img/main-slider-2@2x.jpg" width="1299" height="738" alt="слайд 2">
-                </picture>
-              </li>
-              <li class=" swiper-slide">
-                  <img src="img/applying/img-1@1x.jpg" alt="слайд 3">
-              </li>
-            </ul>
-          </div>
-
-          <div class="main-slider2 swiper-container">
-            <ul class="swiper-wrapper">
-              <li class=" swiper-slide">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/main-slider-1@1x.webp 1x, img/main-slider-1@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-slider-1-tablet@1x.webp 1x, img/main-slider-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/main-slider-1-mobile@1x.webp 1x, img/main-slider-1-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1281px)" srcset="img/main-slider-1@1x.jpg 1x, img/main-slider-1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/main-slider-1-tablet@1x.jpg 1x, img/main-slider-1-tablet@2x.jpg 2x">
-                  <img src="img/main-slider-1-mobile@1x.jpg" srcset="img/main-slider-1-mobile@2x.jpg" width="1299" height="738" alt="слайд 1">
-                </picture>
-              </li>
-              <li class=" swiper-slide">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-slider-2-tablet@1x.webp 1x, img/main-slider-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/main-slider-2@1x.webp 1x, img/main-slider-2@2x.webp 2x">
-
-                  <source media="(min-width: 1281px)" srcset="img/main-slider-2@1x.jpg 1x, img/main-slider-2@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/main-slider-2-tablet@1x.jpg 1x, img/main-slider-2-tablet@2x.jpg 2x">
-                  <img src="img/main-slider-2@1x.jpg" srcset="img/main-slider-2@2x.jpg" width="1299" height="738" alt="слайд 2">
-                </picture>
-              </li>
-              <li class=" swiper-slide">
-                <img src="img/applying/img-1@1x.jpg" alt="слайд 3">
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="technology">
-      <div class="technology__wrap container">
-        <h2 class="technology__title main-title">Технологии Aereco</h2>
-        <div class="technology__container swiper-container">
-          <ol class="technology__list swiper-wrapper">
-            <li class="technology__item swiper-slide">
-              <span class="technology__num">0</span>
-              <h3>Система вентиляции с&nbsp;рекуперацией тепла</h3>
-              <div class="technology__image">
-                <img src="img/technology/1@1x.jpg" srcset="img/technology/1@2x.jpg" alt="">
-              </div>
-              <p>Механический приток и&nbsp;удалении воздуха с&nbsp;использованием специального теплообменника, который аккумулирует тепло удаляемого воздуха, передавая его холодному приточному воздуху.</p>
-              <span class="technology__name">Инновационная система DXR</span>
-            </li>
-            <li class="technology__item swiper-slide">
-              <span class="technology__num">0</span>
-              <h3>Гибридная система вентиляции</h3>
-              <div class="technology__image">
-                <img src="img/technology/2@1x.jpg" srcset="img/technology/2@2x.jpg" alt="">
-              </div>
-              <p>Сочетание энергоэффективности и&nbsp;постоянного поддержания высокого качества воздуха внутри помещений как новых, так и&nbsp;реконструируемых зданиях и&nbsp;пространств.</p>
-              <span class="technology__name">Вентиляторы низкого давления</span>
-            </li>
-            <li class="technology__item swiper-slide">
-              <span class="technology__num">0</span>
-              <h3>Естественная система вентиляции</h3>
-              <div class="technology__image">
-                <img src="img/technology/3@1x.jpg" srcset="img/technology/3@2x.jpg" alt="">
-              </div>
-              <p>Система естественной вентиляции компании Aereco&nbsp;&mdash; это идеальное решение для модернизации зданий, в&nbsp;которых раньше была предусмотрена стандартная система пассивной вентиляции.</p>
-              <span class="technology__name">Технология MEV</span>
-            </li>
-          </ol>
-          <div class="technology__pagination swiper-pagination"></div>
-        </div>
-        <a class="technology__link link-blue-underlined" href="#">Все СИСТЕМЫ</a>
-      </div>
-    </section>
-
-    <section class="applying">
-      <div class="applying__container container">
-        <h2 class="main-title">Применение на&nbsp;объектах</h2>
-        <div class="applying__wrap">
-          <a class="applying__link link-blue-underlined" href="#">Все объекты</a>
-          <div class="applying__lists">
-            <ul class="applying__list examples">
-              <li class="examples__item">
-                <div class="examples__image">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-1@1x.webp 1x, img/applying/img-1@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.webp 1x, img/applying/img-1-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
-
-                    <source media="(min-width: 1281px)" srcset="img/applying/img-1@1x.jpg 1x, img/applying/img-1@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.jpg 1x, img/applying/img-1-tablet@2x.jpg 2x">
-                    <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="ЖК «Match Point»">
-                  </picture>
-                </div>
-                <div class="examples__description">
-                  <span>27000 м2</span>
-                  <h3>ЖК «Match Point»</h3>
-                  <p>Москва, ул. Василисы Кожиной, 13</p>
-                  <b>Внедрены:</b>
-                  <p>Системы вентиляции с рекуперацией тепла, гибридные системы</p>
-                  <div>
-                    <a class="link-blue-underlined" href="#">СМОТРЕТЬ ПРОЕКТ</a>
-                  </div>
-                </div>
-              </li>
-              <li class="examples__item">
-                <div class="examples__image">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-2@1x.webp 1x, img/applying/img-2@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-2-tablet@1x.webp 1x, img/applying/img-2-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/applying/img-2-mobile@1x.webp 1x, img/applying/img-2-mobile@2x.webp 2x">
-
-                    <source media="(min-width: 1281px)" srcset="img/applying/img-2@1x.jpg 1x, img/applying/img-2@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/applying/img-2-tablet@1x.jpg 1x, img/applying/img-2-tablet@2x.jpg 2x">
-                    <img src="img/applying/img-2-mobile@1x.jpg" srcset="img/applying/img-2-mobile@2x.jpg" alt="ЖК «Headliner»">
-                  </picture>
-                </div>
-                <div class="examples__description">
-                  <span>27000 м2</span>
-                  <h3>ЖК «Headliner»</h3>
-                  <p>Москва, Шмитовский пр–д, 39</p>
-                  <b>Внедрены:</b>
-                  <p>Системы вентиляции с рекуперацией тепла, гибридные системы</p>
-                  <div>
-                    <a class="link-blue-underlined" href="#">СМОТРЕТЬ ПРОЕКТ</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul class="applying__list examples">
-              <li class="examples__item">
-                <div class="examples__image">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-3@1x.webp 1x, img/applying/img-3@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-3-tablet@1x.webp 1x, img/applying/img-3-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/applying/img-3-mobile@1x.webp 1x, img/applying/img-3-mobile@2x.webp 2x">
-
-                    <source media="(min-width: 1281px)" srcset="img/applying/img-3@1x.jpg 1x, img/applying/img-3@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/applying/img-3-tablet@1x.jpg 1x, img/applying/img-3-tablet@2x.jpg 2x">
-                    <img src="img/applying/img-3-mobile@1x.jpg" srcset="img/applying/img-3-mobile@2x.jpg" alt="ЖК «Зиларт»">
-                  </picture>
-                </div>
-                <div class="examples__description">
-                  <span>27000 м2</span>
-                  <h3>ЖК «Зиларт»</h3>
-                  <p>Москва, ул. Автозаводская, вл. 23</p>
-                  <b>Внедрены:</b>
-                  <p>Системы вентиляции с рекуперацией тепла, гибридные системы</p>
-                  <div>
-                    <a class="link-blue-underlined" href="#">СМОТРЕТЬ ПРОЕКТ</a>
-                  </div>
-                </div>
-              </li>
-              <li class="examples__item">
-                <div class="examples__image">
-                  <picture class="examples__image">
-                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-4@1x.webp 1x, img/applying/img-4@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-4-tablet@1x.webp 1x, img/applying/img-4-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/applying/img-4-mobile@1x.webp 1x, img/applying/img-4-mobile@2x.webp 2x">
-
-                    <source media="(min-width: 1281px)" srcset="img/applying/img-4@1x.jpg 1x, img/applying/img-4@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/applying/img-4-tablet@1x.jpg 1x, img/applying/img-4-tablet@2x.jpg 2x">
-                    <img src="img/applying/img-4-mobile@1x.jpg" srcset="img/applying/img-4-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
-                  </picture>
-                </div>
-                <div class="examples__description">
-                  <span>27000 м2</span>
-                  <h3>ЖК «SAVIN HOUSE»</h3>
-                  <p>Казань, ул. Фатыха Амирхана</p>
-                  <b>Внедрены:</b>
-                  <p>Системы вентиляции с рекуперацией тепла, гибридные системы</p>
-                  <div>
-                    <a class="link-blue-underlined" href="#">СМОТРЕТЬ ПРОЕКТ</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="tab">
-      <div class="container">
-        <div class="tab__wrap large-indent large-indent--additional">
-
-          <div class="tab__list">
-            <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'company')">Компания</button>
-            <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'solution')">Продукция</button>
-            <a class="tab__link tab__link--modal tab__link--popup1" onclick="window.Tab.openTab(event, 'calculation')">Технический расчет</a>
-            <a class="tab__link tab__link--modal tab__link--popup2" onclick="window.Tab.openTab(event, 'installation')">Монтаж</a>
-          </div>
-
-          <div class="tab__content content">
-
-            <div id="company" class="tabcontent content__item">
-              <h3>Системы вентиляции</h3>
-              <p>AeroHouse имеет многолетний опыт в&nbsp;сфере подбора и&nbsp;монтажа вентиляционного оборудования для обьектов любого размера и&nbsp;сложности.</p>
-              <a class="link-blue-underlined">О КОМПАНИИ</a>
-            </div>
-
-            <div id="solution" class="tabcontent content__item">
-              <h3>Комплексные решения</h3>
-              <p>Широкий ассортимент продукции для систем вентиляции позволит полностью укомплектовать любой проект, независимо от&nbsp;его сложности и&nbsp;размера.</p>
-              <a class="link-blue-underlined">О КОМПАНИИ</a>
-            </div>
-
-            <div id="calculation" class="tabcontent content__item">
-            </div>
-
-            <div id="installation" class="tabcontent  content__item">
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="overlay"></div>
-    
-  <div class="modal popup modal--calc">
-    <button class="modal__close-btn" type="button">
-      <svg width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
-      </svg>
-    </button>
-    <h2 class="modal__title">Мы&nbsp;готовы подобрать оборудование AERECO под ваш проект</h2>
-
-    <form method="post" name="calculation" autocomplete="on">
-      <label>
-        <input type="text" placeholder="ФИО*" required="">
-      </label>
-
-      <div class="modal__form-row">
-
-        <label>
-          <input type="email" placeholder="E-mail*" required="">
-        </label>
-
-        <label>
-          <input type="tel" placeholder="Телефон">
-        </label>
-
-      </div>
-
-      <textarea placeholder="Cообщение"></textarea>
-
-      <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
-        <input class="visually-hidden" type="file">
-      </label>
-      <div class="modal__upload-success">Файл успешно добавлен</div>
-
-      <button class="btn" type="submit">Отправить сообщение</button>
-
-      <label class="modal__agreement checkbox">
-        <input class="visually-hidden" type="checkbox" checked="" required="">
-        <span class="checkbox__indicator"></span>
-        <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
-      </label>
-
-    </form>
-  </div>
-
-    
-  <div class="modal popup modal--inst">
-    <button class="modal__close-btn" type="button">
-      <svg width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
-      </svg>
-    </button>
-    <h2 class="modal__title">Оставить заявку на монтаж оборудования</h2>
-
-    <form method="post" name="calculation" autocomplete="on">
-      <label>
-        <input type="text" placeholder="ФИО*" required="">
-      </label>
-
-      <div class="modal__form-row">
-
-        <label>
-          <input type="email" placeholder="E-mail*" required="">
-        </label>
-
-        <label>
-          <input type="tel" placeholder="Телефон">
-        </label>
-
-      </div>
-
-      <label>
-        <input type="text" placeholder="Адрес объекта">
-      </label>
-
-      <div class="modal__objects">
-        <p>Выберите тип обьекта:</p>
-        <div class="modal__types">
-          <label>Квартира
-            <input type="radio" name="object" value="flat">
-          </label>
-          <label>Коттедж
-            <input type="radio" name="object" value="cottage">
-          </label>
-          <label>Офис
-            <input type="radio" name="object" value="office">
-          </label>
-          <label>Ещё...
-            <input type="radio" name="object" value="another">
-          </label>
-        </div>
-      </div>
-
-      <textarea placeholder="Cообщение"></textarea>
-
-      <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
-        <input class="visually-hidden" type="file">
-      </label>
-      <div class="modal__upload-success">Файл успешно добавлен</div>
-
-      <button class="btn" type="submit">Отправить сообщение</button>
-
-      <label class="modal__agreement checkbox">
-        <input class="visually-hidden" type="checkbox" checked="" required="">
-        <span class="checkbox__indicator"></span>
-        <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
-      </label>
-
-    </form>
-  </div>
-
-
-    <!-- </div> -->
-
-  </main>
+  </header>
 
   <footer class="page-footer">
-  <div class="page-footer__map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.4155713468513!2d37.580422600569285!3d55.85545593943973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a9efd5eeaf%3A0xad906f52e0396da9!2z0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjcsINCc0L7RgdC60LLQsCwgMTI3MTA2!5e0!3m2!1sru!2sru!4v1600712107766!5m2!1sru!2sru" title="адрес на карте" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  </div>
-  
-<div class="page-footer__wrapper container">
-  <div class="page-footer__modal-wrap">
-    <div class="page-footer__modal modal">
-      <h2 class="modal__title">Напишите нам</h2>
-      <p class="modal__text">Напишите о&nbsp;своем проекте и&nbsp;мы&nbsp;ответим на&nbsp;Ваши вопросы</p>
-      <form method="post" name="feedback" autocomplete="on">
-        <div class="modal__form-row">
+    <div class="page-footer__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.4155713468513!2d37.580422600569285!3d55.85545593943973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a9efd5eeaf%3A0xad906f52e0396da9!2z0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjcsINCc0L7RgdC60LLQsCwgMTI3MTA2!5e0!3m2!1sru!2sru!4v1600712107766!5m2!1sru!2sru" title="адрес на карте" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    
+<div class="page-footer__wrapper container-40">
+    <div class="page-footer__modal-wrap">
+      <div class="page-footer__modal modal">
+        <h2 class="modal__title">Напишите нам</h2>
+        <p class="modal__text">Напишите о&nbsp;своем проекте и&nbsp;мы&nbsp;ответим на&nbsp;Ваши вопросы</p>
+        <form method="post" name="feedback" autocomplete="on">
+          <div class="modal__form-row">
 
-          <label for="name-id">
-            <input type="text" id="name-id" placeholder="Имя*" required="">
+            <label for="name-id">
+              <input type="text" id="name-id" placeholder="Имя*" required="">
+            </label>
+
+            <label for="phone-id">
+              <input type="tel" id="phone-id" placeholder="Телефон">
+            </label>
+          </div>
+
+          <label for="mail-id">
+            <input type="email" id="mail-id" placeholder="E-mail*" required="">
           </label>
 
-          <label for="phone-id">
-            <input type="tel" id="phone-id" placeholder="Телефон">
+          <textarea placeholder="Cообщение"></textarea>
+
+          <label class="modal__textarea-mobile" for="textarea-mobile">
+            <input type="text" id="textarea-mobile" placeholder="Cообщение">
           </label>
-        </div>
 
-        <label for="mail-id">
-          <input type="email" id="mail-id" placeholder="E-mail*" required="">
-        </label>
-
-        <textarea placeholder="Cообщение"></textarea>
-
-        <label class="modal__textarea-mobile" for="textarea-mobile">
-          <input type="text" id="textarea-mobile" placeholder="Cообщение">
-        </label>
-
-        <label class="modal__attachment">Прикрепить вложение
-          <input class="visually-hidden" type="file">
-        </label>
-        <div class="modal__upload-success">Файл успешно добавлен</div>
+          <label for="file-upload" class="modal__attachment">Прикрепить вложение
+            <input class="visually-hidden" type="file" id="file-upload">
+          </label>
+          <div class="modal__upload-success">Файл успешно добавлен</div>
 
 
-        <button class="btn" type="submit">Отправить сообщение</button>
+          <button class="btn" type="submit">Отправить сообщение</button>
 
-        <label class="modal__agreement checkbox" for="agree-id">
-          <input class="visually-hidden" type="checkbox" id="agree-id" checked="" required="">
-          <span class="checkbox__indicator"></span>
-          <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
-        </label>
+          <label class="modal__agreement checkbox" for="agree-id">
+            <input class="visually-hidden" type="checkbox" id="agree-id" checked="" required="">
+            <span class="checkbox__indicator"></span>
+            <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
+          </label>
 
-      </form>
+        </form>
+      </div>
     </div>
+
+    <div class="page-footer__icons">
+      <a class="page-footer__logo" href="main.html">
+        <img src="img/icon-logo.svg" width="107" height="83" alt="логотип компании">
+      </a>
+      <div class="page-footer__links social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Вотсап">
+              <svg width="26" height="26" viewBox="0 0 26 26">
+                <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Инстаграм">
+              <svg width="28" height="28" viewBox="0 0 28 28">
+                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Фейсбук">
+              <svg width="14" height="27" viewBox="0 0 14 27">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p>© 2020 ООО "АэроХауз"</p>
+      </div>
+    </div>
+    <div class="page-footer__contacts contacts">
+      <div>
+        <svg width="16" height="16" viewBox="0 0 16 16">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        <p class="contacts__title">Телефон</p>
+        <a href="tel:+74954142050">+7-495-414-20-50</a>
+      </div>
+      <div>
+        <svg width="14" height="20" viewBox="0 0 14 20">
+          <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
+        </svg>
+        <p class="contacts__title">Адрес</p>
+        <p class="contacts__address">127106, г. Москва, Алтуфьевское шоссе, д.&nbsp;27, офис 452.</p>
+      </div>
+      <div>
+        <svg width="19" height="15" viewBox="0 0 19 15">
+          <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+        </svg>
+        <p class="contacts__title">E-mail</p>
+        <a href="mailto:info@aero-house.com">info@aero-house.com</a>
+      </div>
+    </div>
+
   </div>
 
-  <div class="page-footer__icons">
-    <a class="page-footer__logo" href="main.html">
-      <img src="img/icon-logo.svg" width="107" height="83" alt="логотип компании">
-    </a>
-    <div class="page-footer__links social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href="#" aria-label="Вотсап">
-            <svg width="26" height="26" viewBox="0 0 26 26">
-              <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#" aria-label="Инстаграм">
-            <svg width="28" height="28" viewBox="0 0 28 28">
-              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#" aria-label="Фейсбук">
-            <svg width="14" height="27" viewBox="0 0 14 27">
-              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <p>© 2020 ООО "АэроХауз"</p>
-    </div>
-  </div>
-  <div class="page-footer__contacts contacts">
-    <div>
-      <svg width="16" height="16" viewBox="0 0 16 16">
-        <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-      </svg>
-      <p class="contacts__title">Телефон</p>
-      <a href="tel:+74954142050">+7-495-414-20-50</a>
-    </div>
-    <div>
-      <svg width="14" height="20" viewBox="0 0 14 20">
-        <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
-      </svg>
-      <p class="contacts__title">Адрес</p>
-      <p class="contacts__address">127106, г. Москва, Алтуфьевское шоссе, д.&nbsp;27, офис 452.</p>
-    </div>
-    <div>
-      <svg width="19" height="15" viewBox="0 0 19 15">
-        <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-      </svg>
-      <p class="contacts__title">E-mail</p>
-      <a href="mailto:info@aero-house.com">info@aero-house.com</a>
-    </div>
-  </div>
-
-</div>
 
 
 
-
-</footer>
-
-
+  </footer>
   <script src="js/vendor.js"></script>
 <script src="js/main.min.js"></script>
 

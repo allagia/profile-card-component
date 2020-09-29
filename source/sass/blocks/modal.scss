@@ -192,6 +192,16 @@
     display: flex;
     margin-left: 25px;
 
+    label {
+      color: inherit;
+      transition: color $transition-props;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+
     @include mobile {
       flex-wrap: wrap;
     }
@@ -333,13 +343,7 @@
       outline: none;
       -webkit-appearance: none;
       border-radius: 0;
-      // cursor: pointer;
-      // transition: opacity $transition-props;
       resize: none;
-
-      // &:hover {
-      //   opacity: 0.7;
-      // }
 
       @include mobile {
         display: none;
