@@ -90,131 +90,123 @@
 </symbol></svg>
 </div>
 <header class="page-header">
-  <div class="page-header__container container">
-    <div class="page-header__logo">
-      <a href="#">
-        <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
-      </a>
-    </div>
+  <div class="page-header__overlay"></div>
+  <div class="page-header__wrap container">
+    <a class="page-header__logo" href="#">
+      <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
+    </a>
 
-    <div class="page-header__controls">
-      <a class="page-header__mobile-tel" href="tel:+79857276573">
+    <div class="page-header__nav-wrap page-header__nav-wrap--closed page-header__nav-wrap--nojs">
+      <a class="page-header__nav-contact-link" href="tel:+79857276573">
         <svg width="15" height="15">
           <use xlink:href="#icon-phone"></use>
         </svg>
       </a>
-      <button class="page-header__btn-open" aria-controls="mobile-menu" aria-label="Открыть меню">
-        <svg width="19" height="19">
-          <use xlink:href="#icon-btn-burger"></use>
-        </svg>
+      <button class="page-header__nav-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
       </button>
-    </div>
-
-    <div class="page-header__menu-wrapper" id="mobile-menu">
-
-      <div class="page-header__mobile">
-        <div>
-          <img src="img/icon-logo-mobile.svg" width="60" height="47" alt="Логотип">
-        </div>
-
-        <button class="page-header__btn-close" aria-controls="mobile-menu" aria-label="Закрыть меню">
-          <svg width="19" height="19">
-            <use xlink:href="#icon-btn-cross"></use>
-          </svg>
-        </button>
-      </div>
-
-
-      <div class="page-header__center-wrapper">
-        <nav class="page-header__menu">
-          <ul>
-            <li>
-              <a href="#">Технология</a>
+      <nav class="page-header__nav page-header__nav--active">
+        <div class="page-header__links social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Вотсап">
+                <svg width="26" height="26" viewBox="0 0 26 26">
+                  <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a href="#">О компании</a>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Инстаграм">
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a href="#">Продукция</a>
-            </li>
-            <li>
-              <a href="#">Объекты</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Фейсбук">
+                <svg width="14" height="27" viewBox="0 0 14 27">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </nav>
-
+        </div>
+        <div class="page-header__nav-contacts">
+          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+74957730831">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-tel-header"></use>
+            </svg>
+            +7-495-773-08-31
+          </a>
+          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+79857276573">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-tel-header"></use>
+            </svg>
+            +7-985-727-65-73
+          </a>
+        </div>
+        <ul class="page-header__nav-list">
+          <li>
+            <a class="page-header__nav-link" href="#">Технология</a>
+          </li>
+          <li>
+            <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
+          </li>
+          <li>
+            <a class="page-header__nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="page-header__nav-link" href="#">Объекты</a>
+          </li>
+          <li>
+            <a class="page-header__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
         <div class="page-header__search">
-          <form method="get">
-            <input id="header-search" type="search" name="search" required="">
-            <svg width="17.5" height="17.5">
+          <form class="page-header__search-form" action="" method="get">
+            <input id="header-search" type="search" name="search" placeholder="Поиск">
+            <button class="page-header__search-btn" type="submit">
+              <svg width="17" height="17">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <button class="page-header__search-toggle" type="button">
+            <span class="visually-hidden">Открыть поле поиска</span>
+            <svg width="17" height="17">
               <use xlink:href="#icon-search"></use>
             </svg>
-            <label class="visually-hidden" for="header-search">Поиск по сайту</label>
-            <button class="visually-hidden" type="submit" aria-label="отправить запрос"></button>
-          </form>
+          </button>
         </div>
-      </div>
+        <a class="page-header__nav-logo" href="#">
+          <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
+        </a>
+      </nav>
+    </div>
 
-      <div class="page-header__right-wrapper">
-        <ul class="page-header__contact">
-          <li>
-            <a href="tel:+74957730831">
-              <svg width="18" height="18">
-                <use xlink:href="#icon-tel-header"></use>
-              </svg>
-              +7-495-773-08-31
-            </a>
-          </li>
-          <li>
-            <a href="tel:+79857276573">
-              <svg width="18" height="18">
-                <use xlink:href="#icon-tel-header"></use>
-              </svg>
-              +7-985-727-65-73
-            </a>
-          </li>
-        </ul>
-        <div class="page-header__slogan">
-          <p>Официальный дистрибьютор</p>
-          <p>
-            <picture>
-              <source type="image/webp" srcset="img/icon-distribution.webp">
-              <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
-            </picture>
-            <span>AERECO в России</span>
-          </p>
-        </div>
+    <div class="page-header__contacts">
+      <a class="page-header__contacts-link" href="tel:+74957730831">
+        <svg width="18" height="18">
+          <use xlink:href="#icon-tel-header"></use>
+        </svg>
+        +7-495-773-08-31
+      </a>
+      <a class="page-header__contacts-link" href="tel:+79857276573">
+        <svg width="18" height="18">
+          <use xlink:href="#icon-tel-header"></use>
+        </svg>
+        +7-985-727-65-73
+      </a>
+      <div class="page-header__contacts-slogan">
+        <p>Официальный дистрибьютор</p>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="img/icon-distribution.webp">
+            <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
+          </picture>
+          <span>AERECO в России</span>
+        </p>
       </div>
-
-      <div class="page-header__social">
-        <ul>
-          <li>
-            <a href="#" aria-label="Связать в вотсап">
-              <svg width="26" height="26">
-                <use xlink:href="#icon-whatsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Профиль в инстаграм">
-              <svg width="28" height="28">
-                <use xlink:href="#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Группа в фейсбуке">
-              <svg width="27" height="27">
-                <use xlink:href="#icon-facebook-header"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </header>
