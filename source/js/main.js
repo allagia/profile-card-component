@@ -10,3 +10,4 @@
 // =require components/main-intro-slider.js
 // =require components/main-tabs.js
 // =require components/popup.js
+// =require components/card-pictures-slider.js

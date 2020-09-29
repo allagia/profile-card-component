@@ -2,15 +2,198 @@
 <html lang="ru">
 <head>
   <include src="source/components/head.html"></include>
-  <title>Aero-House</title>
+  <title>Карточка</title>
 </head>
 <body class="body">
   <include src="source/components/header.html"></include>
   <main>
 
+    <section class="card-info">
+      <div class="card-info__container container">
 
+        <div class="card-info__column model">
+          <div class="model__variants">
+            <a class="model__other" href="#"><span>Главная / каталог / приточные устройства / EHA2</span></a>
+            <h1>EHA<sup>2</sup></h1>
+          </div>
+          <span class="model__type">Оконное</span>
+          <p class="model__name">Гигрорегулируемое приточное устройство с шумопоглащением</p>
+        </div>
+
+        <div class="card-info__column pictures">
+          <div class="pictures__slider swiper-container">
+            <ul class="pictures__list swiper-wrapper">
+              <li class="pictures__item swiper-slide">
+                <picture class="examples__image">
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
+                  <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+                </picture>
+              </li>
+              <li class="pictures__item swiper-slide">
+                <picture class="examples__image">
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
+                  <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+                </picture>
+              </li>
+              <li class="pictures__item swiper-slide">
+                <picture class="examples__image">
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
+                  <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+                </picture>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <p class="pictures__text">Контролирует расход воздуха в&nbsp;зависимости от&nbsp;уровня относительной влажности внутри помещения. Современный дизайн EHA&sup2;, воплощенный в&nbsp;тонком корпусе, идеально подходит для большинства окон и&nbsp;рольставен.</p>
+        </div>
+
+
+        <div class="card-info__column details">
+          <ul class="details__list">
+            <li class="details__item"><a class="details__link" href="#">Характеристики</a></li>
+            <li class="details__item"><a class="details__link" href="#">Аксессуары</a></li>
+          </ul>
+          <button class="details__button btn" type="button">Уточнить стоимость</button>
+          <ul class="details__basic-info basic-info">
+            <li class="basic-info__item">
+              <p class="basic-info__title">Цвета:&nbsp;</p>
+              <p class="basic-info__text">белый, тик, дуб, серый</p>
+            </li>
+            <li class="basic-info__item">
+              <p class="basic-info__title">Максимальная площадь открытия:&nbsp;</p>
+              <p class="basic-info__text">3600 мм<sup>2</sup></p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="advantages__container container">
+        <h2>Преимущества</h2>
+        <ol class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__description">
+              <span class="advantages__num"></span>
+              <h3>Наклонный воздушный поток </h3>
+              <p>Наклонный воздушный поток, направленый в&nbsp;потолочную зону, гарантирует поступательный нагрев свежего воздуха для комфорта жильцов.</p>
+            </div>
+            <div class="advantages__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)"
+                  srcset="img/advantages/img-1@1x.webp 1x, img/advantages/img-1@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/advantages/img-1-tablet@1x.webp 1x, img/advantages/img-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)"
+                  srcset="img/advantages/img-1@1x.jpg 1x, img/advantages/img-1@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/advantages/img-1-tablet@1x.jpg 1x, img/advantages/img-1-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+              </picture>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__description">
+              <span class="advantages__num"></span>
+              <h3>Переключатель режимов работы</h3>
+              <p>Специальный переключатель позволяет при необходимости вручную закрывать или открывать заслонку приточного устройства, что функционально дополняет систему гигрорегулирования.</p>
+            </div>
+            <div class="advantages__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)"
+                  srcset="img/advantages/img-2@1x.webp 1x, img/advantages/img-2@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/advantages/img-2-tablet@1x.webp 1x, img/advantages/img-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-2-mobile@1x.webp 1x, img/advantages/img-2-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)"
+                  srcset="img/advantages/img-2@1x.jpg 1x, img/advantages/img-2@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/advantages/img-2-tablet@1x.jpg 1x, img/advantages/img-2-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-2-mobile@1x.jpg" srcset="img/advantages/img-2-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+              </picture>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__description">
+              <span class="advantages__num"></span>
+              <h3>Защита от внешнего шума </h3>
+              <p>Использование высокоэффективных звукопоглощающих материалов, вместе со&nbsp;специальной проставкой и&nbsp;наружным козырьком, обеспечивает звукоизоляцию до&nbsp;42&nbsp;дБ.</p>
+            </div>
+            <div class="advantages__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)"
+                  srcset="img/advantages/img-3@1x.webp 1x, img/advantages/img-3@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/advantages/img-3-tablet@1x.webp 1x, img/advantages/img-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-3-mobile@1x.webp 1x, img/advantages/img-3-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)"
+                  srcset="img/advantages/img-3@1x.jpg 1x, img/advantages/img-3@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/advantages/img-3-tablet@1x.jpg 1x, img/advantages/img-3-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-3-mobile@1x.jpg" srcset="img/advantages/img-3-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+              </picture>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__description">
+              <span class="advantages__num"></span>
+              <h3>Легкое техническое обслуживание</h3>
+              <p>Нет необходимости в&nbsp;регулировке, достаточно очищать от&nbsp;пыли один раз в&nbsp;год.</p>
+            </div>
+            <div class="advantages__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)"
+                  srcset="img/advantages/img-4@1x.webp 1x, img/advantages/img-4@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/advantages/img-4-tablet@1x.webp 1x, img/advantages/img-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-4-mobile@1x.webp 1x, img/advantages/img-4-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)"
+                  srcset="img/advantages/img-4@1x.jpg 1x, img/advantages/img-4@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/advantages/img-4-tablet@1x.jpg 1x, img/advantages/img-4-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-4-mobile@1x.jpg" srcset="img/advantages/img-4-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+              </picture>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
   </main>
 
   <include src="source/components/footer_with_map.html"></include>
   <include src="source/components/script.html"></include>
 </body>
+</html>

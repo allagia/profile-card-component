@@ -161,45 +161,49 @@
 
   var parentSlider = document.querySelector('.main-slider1');
   var nextSlide = document.querySelector('.main-slider2');
-  var nextSlideItems = nextSlide.querySelectorAll('.swiper-slide');
 
-  var swiper1 = new Swiper(parentSlider, {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-      el: '.main-sliders__pagination1',
-      type: 'fraction',
-      formatFractionCurrent: function (number) {
-        if (number < 10) {
-          number = '0' + number;
-        }
-        return number;
+  if (nextSlide && parentSlider) {
+    var nextSlideItems = nextSlide.querySelectorAll('.swiper-slide');
+
+    var swiper1 = new Swiper(parentSlider, {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: '.main-sliders__pagination1',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+          if (number < 10) {
+            number = '0' + number;
+          }
+          return number;
+        },
+        formatFractionTotal: function (number) {
+          if (number < 10) {
+            number = '0' + number;
+          }
+          return number;
+        },
       },
-      formatFractionTotal: function (number) {
-        if (number < 10) {
-          number = '0' + number;
-        }
-        return number;
+      navigation: {
+        prevEl: '.main-sliders__button-prev1',
+        nextEl: '.main-sliders__button-next1',
       },
-    },
-    navigation: {
-      prevEl: '.main-sliders__button-prev1',
-      nextEl: '.main-sliders__button-next1',
-    },
-    on: {
-      slideChange: function () {
-        nextSlideItems.forEach(function (el) {
-          el.classList.remove('active');
-        });
-        var index = this.realIndex + 1;
-        if (nextSlideItems[index]) {
-          nextSlideItems[index].classList.add('active');
-        } else {
-          nextSlideItems[0].classList.add('active');
-        }
+      on: {
+        slideChange: function () {
+          nextSlideItems.forEach(function (el) {
+            el.classList.remove('active');
+          });
+          var index = this.realIndex + 1;
+          if (nextSlideItems[index]) {
+            nextSlideItems[index].classList.add('active');
+          } else {
+            nextSlideItems[0].classList.add('active');
+          }
+        },
       },
-    },
-  });
+    });
+  }
+
 
   /*
   var swiper2 = new Swiper('.main-slider2', {
@@ -281,18 +285,23 @@
   var closePopups = document.querySelectorAll('.modal__close-btn');
   var overlay = document.querySelector('.overlay');
 
-  button1.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup1.classList.add('popup--opened');
-    body.classList.add('body--under-popup');
-  });
+  if (button1) {
 
+    button1.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popup1.classList.add('popup--opened');
+      body.classList.add('body--under-popup');
+    });
+  }
 
-  button2.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup2.classList.add('popup--opened');
-    body.classList.add('body--under-popup');
-  });
+  if (button2) {
+
+    button2.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popup2.classList.add('popup--opened');
+      body.classList.add('body--under-popup');
+    });
+  }
 
   // var closeModal = function () {
   //   popups.forEach(function (el) {
@@ -331,9 +340,29 @@
     }
   });
 
-  overlay.addEventListener('click', function (evt) {
-    evt.stopPropagation(); //отмена закрывать окно при клике по модалке
-    closePopup();
+  if (overlay) {
+
+    overlay.addEventListener('click', function (evt) {
+      evt.stopPropagation(); //отмена закрывать окно при клике по модалке
+      closePopup();
+    });
+  }
+
+})();
+
+'use strict';
+
+(function () {
+
+  var swiper = new Swiper('.pictures__slider', {
+    slidesPerView: 'auto',
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+
   });
 
 })();
