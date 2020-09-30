@@ -379,11 +379,12 @@
 'use strict';
 
 (function () {
+  var accordion = document.querySelector('.card-accordion');
   var acc = document.querySelectorAll('.card-accordion__item');
-  var paddingBottom = 36;
+  // var bottomPadding = 36;
 
-  if (acc) {
-    // acc.classList.add('accordion--js');
+  if (accordion) {
+    accordion.classList.remove('no-js');
 
     for (var i = 0; i < acc.length; i++) {
       acc[i].addEventListener('click', function () {
@@ -393,7 +394,7 @@
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
-          panel.style.height = panel.scrollHeight + paddingBottom + 'px';
+          panel.style.maxHeight = panel.scrollHeight + 'px';
         }
       });
     }
