@@ -4,6 +4,13 @@
   list-style: none;
 }
 
+@mixin button-reset {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+
 @mixin tablet {
   @media (max-width: $tablet-width) {
     @content;

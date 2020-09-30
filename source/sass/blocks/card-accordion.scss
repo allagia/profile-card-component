@@ -1,0 +1,146 @@
+.card-accordion {
+  &__container {
+    padding-top: 118px;
+
+    @include tablet {
+      padding-top: 110px;
+    }
+  }
+
+  &__item {
+    @include button-reset;
+    position: relative;
+
+    font-size: 36px;
+    line-height: 42px;
+
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 110px;
+    padding: 33px 0;
+
+    cursor: pointer;
+    color: $dark;
+    // border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+    transition: $transition-props;
+    text-align: left;
+
+    &:first-of-type {
+      border-top: 1px solid rgba($color: #323b47, $alpha: 0.2);
+    }
+
+    svg {
+      margin-left: 18px;
+      transform: rotate(180deg);
+      color: #000000;
+      transition: transform $transition-props;
+    }
+
+    &.active {
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: max-height $transition-props;
+    border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+
+    &--scheme {
+      display: flex;
+      margin-top: -10px;
+      align-items: flex-start;
+    }
+  }
+}
+
+
+.scheme {
+  &__image {
+    margin-right: 180px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__pdf {
+    width: 340px;
+    min-height: 324px;
+    margin-top: 4px;
+    padding: 51px 29px 20px;
+    border: 1px solid rgba($color:#323b47, $alpha: 0.2);
+
+    @include tablet {
+      display: none;
+    }
+
+    h3 {
+      position: relative;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+
+      margin: 0 0 40px;
+      padding-left: 54px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: -7px;
+
+        width: 52px;
+        height: 52px;
+
+        background-image: url("../img/icon-pdf.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    p,
+    a {
+      font-size: 18px;
+      line-height: 28px;
+
+      letter-spacing: 0.005em;
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: $blue;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 14px;
+      display: block;
+      margin-bottom: 49px;
+    }
+
+    a {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: -46px;
+        top: -9px;
+        width: 25px;
+        height: 25px;
+        background-image: url("../img/icon-download.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
