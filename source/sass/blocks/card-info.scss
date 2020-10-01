@@ -11,6 +11,7 @@
 
     @include tablet {
       padding-bottom: 90px;
+      margin-top: -11px;
     }
 
     @include tablet-inner {
@@ -41,6 +42,11 @@
       margin-bottom: 20px;
     }
 
+    @include mobile {
+      margin-top: -25px;
+      padding-left: 28px;
+    }
+
     sup {
       font-size: 36px;
       top: -0.8em;
@@ -68,9 +74,7 @@
   }
 
   &__variants {
-    @include tablet-inner {
-      display: flex;
-    }
+    display: flex;
   }
 
   &__other {
@@ -80,8 +84,7 @@
     line-height: 16px;
     letter-spacing: 0.005em;
 
-    padding-left: 26px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     color: #5d6a7b;
 
@@ -91,21 +94,17 @@
       }
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 2px;
+    &--mobile {
+      opacity: 1;
+      transition: opacity $transition-props;
+      margin-right: 18px;
 
-      width: 9px;
-      height: 14px;
+      @include mobile {
+        margin: 5px 0 0 2px;
+      }
 
-      background-image: url("../img/icon-arrow-left.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      @include tablet-inner {
-        top: 11px;
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
@@ -202,17 +201,19 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
+  &__link {
+    display: flex;
+    align-items: baseline;
+    transition: color $transition-props;
 
-      width: 20px;
-      height: 10px;
+    &:hover {
+      color: $blue-hover;
+    }
 
-      background-image: url("../img/arrow.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
+    svg {
+      margin-left: 18px;
     }
   }
 
@@ -327,5 +328,41 @@
 
   &__text {
     margin: 0;
+  }
+}
+
+.breadcrumb {
+  @include list-reset;
+  display: flex;
+
+  @include mobile {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 14px;
+
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "/";
+      position: absolute;
+
+      right: -10px;
+    }
+  }
+
+  &__link {
+    opacity: 1;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

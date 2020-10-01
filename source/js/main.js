@@ -12,3 +12,4 @@
 // =require components/popup.js
 // =require components/card-pictures-slider.js
 // =require components/advantages-slider.js
+// =require components/card-accordion.js

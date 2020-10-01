@@ -24,6 +24,11 @@
 .main-sliders-more {
   position: absolute;
   bottom: 86.2%;
+
+  width: 14%;
+  right: 0;
+
+  text-align: left;
   cursor: pointer;
   transition: opacity $transition-props;
 
@@ -32,12 +37,13 @@
   }
 
   @include tablet-inner-rev {
-    right: 9.3%;
+    // rig  ht: 9.3%;
   }
 
 
   @include tablet {
-    right: 9.5%;
+    // right: 9.5%;
+    width: 14.4%;
     bottom: 87.2%;
 
     svg {
@@ -47,7 +53,7 @@
   }
 
   @include tablet-inner {
-    right: 15px;
+    right: 5px;
     bottom: -21.4%;
 
     svg {
@@ -60,21 +66,25 @@
 .main-sliders__pagination1 {
   font-size: 24px;
   line-height: 35px;
-  width: 100px;
+  width: 14%;
+  right: 0;
+  text-align: left;
   bottom: 40.6%;
   left: initial;
 
   @include tablet-inner-rev {
-    right: 8.7%;
+    // right: 8.7%;
   }
 
   @include tablet {
-    right: 6.5%;
+    // right: 6.5%;
+    width: 14.4%;
     bottom: 54.6%;
   }
 
   @include tablet-inner {
-    right: 51px;
+    width: 24%;
+    right: 52px;
     font-size: 18px;
     line-height: 27px;
 
