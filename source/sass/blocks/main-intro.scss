@@ -8,15 +8,16 @@
   }
 
   &__container {
-    padding-bottom: 57px;
-    padding-top: 40px;
+    padding-bottom: 58px;
+    padding-top: 34px;
 
     @include tablet {
-      padding-top: 2px;
+      padding-top: 9px;
       padding-bottom: 52px;
     }
 
     @include mobile {
+      padding-top: 2px;
       padding-bottom: 43px;
     }
   }
@@ -44,6 +45,10 @@
 
     margin: 0 0 33px 0;
     max-width: 60%;
+
+    @include tablet {
+      max-width: 70%;
+    }
 
     @include mobile {
       font-size: 16px;

@@ -72,6 +72,12 @@
     transition: max-height $transition-props;
     border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
 
+    &--specifications {
+      margin-bottom: 23px;
+      border-top: 1px solid rgba(50, 59, 71, 0.2);
+      border-bottom: none;
+    }
+
     &--scheme {
       display: flex;
       margin-top: -10px;
