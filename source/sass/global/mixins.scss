@@ -10,6 +10,12 @@
   }
 }
 
+@mixin tablet-1440px {
+  @media (max-width: $tablet-1440px) {
+    @content;
+  }
+}
+
 @mixin tablet-1200px {
   @media (max-width: $tablet-1200px) {
     @content;
