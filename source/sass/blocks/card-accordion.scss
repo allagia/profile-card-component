@@ -1,0 +1,326 @@
+.card-accordion {
+  &__container {
+    padding-top: 118px;
+
+    @include tablet {
+      padding-top: 110px;
+    }
+
+    @include mobile {
+      padding-top: 60px;
+    }
+  }
+
+  &__item {
+    @include button-reset;
+    position: relative;
+
+    font-size: 36px;
+    line-height: 42px;
+
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 110px;
+    padding: 33px 0;
+
+    cursor: pointer;
+    color: $dark;
+    transition: $transition-props;
+    text-align: left;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 36px;
+
+      height: 64px;
+      padding: 15px 0;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid rgba($color: #323b47, $alpha: 0.2);
+    }
+
+    svg {
+      margin-left: 18px;
+      transform: rotate(180deg);
+      color: #000000;
+      transition: transform $transition-props;
+
+      @include mobile {
+        width: 12px;
+        height: 15px;
+
+        margin-left: 19px;
+      }
+    }
+
+    &.active {
+      svg {
+        transform: rotate(270deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-props;
+    border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+
+    &--specifications {
+      margin-bottom: 23px;
+      border-top: 1px solid rgba(50, 59, 71, 0.2);
+      border-bottom: none;
+    }
+
+    &--scheme {
+      display: flex;
+      margin-top: -10px;
+      align-items: flex-start;
+    }
+  }
+}
+
+
+.scheme {
+  &__image {
+    margin-right: 180px;
+    margin-bottom: 33px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 18px;
+      margin-bottom: 19px;
+    }
+
+    img {
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.pdf {
+  width: 340px;
+  min-height: 324px;
+  margin-top: 4px;
+  padding: 51px 29px 20px;
+  border: 1px solid rgba($color:#323b47, $alpha: 0.2);
+
+  @include tablet {
+    display: none;
+  }
+
+  h3 {
+    position: relative;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+
+    margin: 0 0 40px;
+    padding-left: 54px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -7px;
+
+      width: 52px;
+      height: 52px;
+
+      background-image: url("../img/icon-pdf.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  p,
+  a {
+    font-size: 18px;
+    line-height: 28px;
+
+    letter-spacing: 0.005em;
+  }
+
+  p {
+    margin: 0 0 20px;
+    color: $blue;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin-bottom: 49px;
+  }
+
+  a {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: -46px;
+      top: -9px;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/icon-download.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+
+.card-accordion.no-js {
+  .card-accordion__content {
+    max-height: 100%;
+  }
+
+  .card-accordion__item {
+    svg {
+      transform: rotate(270deg);
+    }
+  }
+}
+
+
+.files {
+  @include mobile {
+    border-bottom: none;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    margin: 17px 0 33px;
+
+    @include mobile {
+      display: block;
+      margin: 6px 0 33px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    min-height: 160px;
+    margin-right: 4.9%;
+    padding: 20px 29px 10px;
+
+    @include tablet {
+      margin-right: 3.6%;
+      padding: 18px 29px 10px;
+    }
+
+    @include mobile {
+      width: 100%;
+      min-height: 145px;
+      padding: 15px 24px 0;
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(3) {
+      @include tablet {
+        margin-right: 0;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-left: 33px;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+
+      padding-left: 26px;
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      left: -3px;
+      top: -6px;
+      width: 26px;
+      height: 26px;
+
+      @include mobile {
+        top: -7px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  p {
+    width: 100%;
+    margin-bottom: 37px;
+
+    @include tablet {
+      margin-bottom: 31px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+
+      margin-bottom: 11px;
+    }
+  }
+
+  a {
+    padding-right: 38px;
+
+    @include tablet {
+      padding-right: 36px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 26px;
+      padding-right: 28px;
+    }
+
+    &::after {
+      right: 0;
+      top: -1px;
+
+      width: 20px;
+      height: 20px;
+
+      @include tablet {
+        right: 1px;
+        top: 0;
+      }
+    }
+  }
+}

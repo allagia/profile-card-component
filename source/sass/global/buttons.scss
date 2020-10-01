@@ -13,12 +13,15 @@
   vertical-align: middle;
   background-color: $blue;
   border-radius: 3px;
+  text-transform: uppercase;
+  transition: background-color $transition-props;
+  outline: none;
 
   &:hover {
-    background-color: #66d0fd;
+    background-color: $blue-hover;
   }
 
   &:active {
-    background-color: #08b5fe;
+    background-color: $blue-active;
   }
 }

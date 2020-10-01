@@ -14,18 +14,23 @@
   var closePopups = document.querySelectorAll('.modal__close-btn');
   var overlay = document.querySelector('.overlay');
 
-  button1.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup1.classList.add('popup--opened');
-    body.classList.add('body--under-popup');
-  });
+  if (button1) {
 
+    button1.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popup1.classList.add('popup--opened');
+      body.classList.add('no-scroll');
+    });
+  }
 
-  button2.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup2.classList.add('popup--opened');
-    body.classList.add('body--under-popup');
-  });
+  if (button2) {
+
+    button2.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popup2.classList.add('popup--opened');
+      body.classList.add('no-scroll');
+    });
+  }
 
   // var closeModal = function () {
   //   popups.forEach(function (el) {
@@ -37,7 +42,7 @@
   var closePopup = function () {
     popup1.classList.remove('popup--opened');
     popup2.classList.remove('popup--opened');
-    body.classList.remove('body--under-popup');
+    body.classList.remove('no-scroll');
   };
 
 
@@ -64,9 +69,12 @@
     }
   });
 
-  overlay.addEventListener('click', function (evt) {
-    evt.stopPropagation(); //отмена закрывать окно при клике по модалке
-    closePopup();
-  });
+  if (overlay) {
+
+    overlay.addEventListener('click', function (evt) {
+      evt.stopPropagation(); //отмена закрывать окно при клике по модалке
+      closePopup();
+    });
+  }
 
 })();
