@@ -256,7 +256,7 @@
     button1.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup1.classList.add('popup--opened');
-      body.classList.add('body--under-popup');
+      body.classList.add('no-scroll');
     });
   }
 
@@ -265,7 +265,7 @@
     button2.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup2.classList.add('popup--opened');
-      body.classList.add('body--under-popup');
+      body.classList.add('no-scroll');
     });
   }
 
@@ -279,7 +279,7 @@
   var closePopup = function () {
     popup1.classList.remove('popup--opened');
     popup2.classList.remove('popup--opened');
-    body.classList.remove('body--under-popup');
+    body.classList.remove('no-scroll');
   };
 
 
