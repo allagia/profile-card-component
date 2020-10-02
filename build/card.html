@@ -236,27 +236,29 @@
 </header>
 
   <main>
+    <section class="breadcrumb">
+      <div class="breadcrumb__container container">
+        <a class="breadcrumb__back-arrow" href="#">
+          <svg width="9" height="14" viewBox="0 0 9 14">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="catalog.html">каталог</a></li>
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">приточные устройства</a></li>
+          <li class="breadcrumb__item"><a class="breadcrumb__link">EHA<sup>2</sup></a></li>
+        </ul>
+      </div>
+    </section>
 
     <section class="card-info">
       <div class="card-info__container container">
 
         <div class="card-info__column model">
-          <div class="model__variants">
-            <a class="model__other model__other--mobile" href="#">
-              <svg width="9" height="14" viewBox="0 0 9 14">
-                <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
-              </svg>
-            </a>
-            <ul class="model__other breadcrumb">
-              <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
-              <li class="breadcrumb__item"><a class="breadcrumb__link" href="catalog.html">каталог</a></li>
-              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">приточные устройства</a></li>
-              <li class="breadcrumb__item"><a class="breadcrumb__link">EHA<sup>2</sup></a></li>
-            </ul>
-          </div>
           <h1 class="h1--add">EHA<sup>2</sup></h1>
           <span class="model__type">Оконное</span>
-          <p class="model__name">Гигрорегулируемое приточное устройство с шумопоглащением</p>
+          <h2 class="h2 h2--small">Гигрорегулируемое приточное устройство с шумопоглащением</h2>
         </div>
 
         <div class="card-info__column pictures">
@@ -286,13 +288,13 @@
               </li>
               <li class="pictures__item swiper-slide">
                 <picture class="examples__image">
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-1@1x.webp 1x, img/applying/img-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.webp 1x, img/applying/img-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1281px)" srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
-                  <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
+                  <source media="(min-width: 1281px)" srcset="img/applying/img-1@1x.jpg 1x, img/applying/img-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.jpg 1x, img/applying/img-1-tablet@2x.jpg 2x">
+                  <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="ЖК «SAVIN HOUSE»">
                 </picture>
               </li>
             </ul>
@@ -318,11 +320,11 @@
           <button class="details__button btn" type="button">Уточнить стоимость</button>
           <ul class="details__basic-info basic-info">
             <li class="basic-info__item">
-              <p class="basic-info__title">Цвета:&nbsp;</p>
+              <p class="basic-info__title">Цвета:</p>
               <p class="basic-info__text">белый, тик, дуб, серый</p>
             </li>
             <li class="basic-info__item">
-              <p class="basic-info__title">Максимальная площадь открытия:&nbsp;</p>
+              <p class="basic-info__title">Максимальная площадь открытия:</p>
               <p class="basic-info__text">3600 мм<sup>2</sup></p>
             </li>
           </ul>
@@ -337,17 +339,16 @@
         <div class="advantages__wrap swiper-container">
           <ol class="advantages__list swiper-wrapper">
             <li class="advantages__item swiper-slide">
-              <div class="advantages__picture">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.webp 1x, img/advantages/img-1@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.webp 1x, img/advantages/img-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.webp 1x, img/advantages/img-1@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.webp 1x, img/advantages/img-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.jpg 1x, img/advantages/img-1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.jpg 1x, img/advantages/img-1-tablet@2x.jpg 2x">
-                  <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
-                </picture>
-              </div>
+                <source media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.jpg 1x, img/advantages/img-1@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.jpg 1x, img/advantages/img-1-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
+              </picture>
+
               <div class="advantages__description">
                 <span class="advantages__num"></span>
                 <h3>Наклонный воздушный поток </h3>
@@ -355,17 +356,17 @@
               </div>
             </li>
             <li class="advantages__item swiper-slide">
-              <div class="advantages__picture">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-2@1x.webp 1x, img/advantages/img-2@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-2-tablet@1x.webp 1x, img/advantages/img-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1281px)" srcset="img/advantages/img-2@1x.jpg 1x, img/advantages/img-2@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/advantages/img-2-tablet@1x.jpg 1x, img/advantages/img-2-tablet@2x.jpg 2x">
-                  <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
-                </picture>
-              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-2@1x.webp 1x, img/advantages/img-2@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-2-tablet@1x.webp 1x, img/advantages/img-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)" srcset="img/advantages/img-2@1x.jpg 1x, img/advantages/img-2@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/advantages/img-2-tablet@1x.jpg 1x, img/advantages/img-2-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
+              </picture>
+
               <div class="advantages__description">
                 <span class="advantages__num"></span>
                 <h3>Переключатель режимов работы</h3>
@@ -373,17 +374,17 @@
               </div>
             </li>
             <li class="advantages__item swiper-slide">
-              <div class="advantages__picture">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.webp 1x, img/advantages/img-3@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.webp 1x, img/advantages/img-3-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.jpg 1x, img/advantages/img-3@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.jpg 1x, img/advantages/img-3-tablet@2x.jpg 2x">
-                  <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
-                </picture>
-              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.webp 1x, img/advantages/img-3@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.webp 1x, img/advantages/img-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.jpg 1x, img/advantages/img-3@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.jpg 1x, img/advantages/img-3-tablet@2x.jpg 2x">
+                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
+              </picture>
+
               <div class="advantages__description">
                 <span class="advantages__num"></span>
                 <h3>Защита от&nbsp;внешнего шума</h3>
@@ -391,17 +392,17 @@
               </div>
             </li>
             <li class="advantages__item swiper-slide">
-              <div class="advantages__picture">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-4@1x.webp 1x, img/advantages/img-4@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-4-tablet@1x.webp 1x, img/advantages/img-4-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1281px)" srcset="img/advantages/img-4@1x.jpg 1x, img/advantages/img-4@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/advantages/img-4-tablet@1x.jpg 1x, img/advantages/img-4-tablet@2x.jpg 2x">
-                  <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="">
-                </picture>
-              </div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-4@1x.webp 1x, img/applying/img-4@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-4-tablet@1x.webp 1x, img/applying/img-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1281px)" srcset="img/applying/img-4@1x.jpg 1x, img/applying/img-4@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/applying/img-4-tablet@1x.jpg 1x, img/applying/img-4-tablet@2x.jpg 2x">
+                <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="">
+              </picture>
+
               <div class="advantages__description">
                 <span class="advantages__num"></span>
                 <h3>Легкое техническое обслуживание</h3>
@@ -738,7 +739,7 @@
 <div class="page-footer__wrapper container">
   <div class="page-footer__modal-wrap">
     <div class="page-footer__modal modal">
-      <h2 class="modal__title">Напишите нам</h2>
+      <h2 class="h2 h2--footer">Напишите нам</h2>
       <p class="modal__text">Напишите о&nbsp;своем проекте и&nbsp;мы&nbsp;ответим на&nbsp;Ваши вопросы</p>
       <form method="post" name="feedback" autocomplete="on">
         <div class="modal__form-row">

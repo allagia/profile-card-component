@@ -79,4 +79,23 @@ h2 {
       font-weight: 400;
     }
   }
+
+  &--small {
+    font-size: 36px;
+    line-height: 42px;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.005em;
+      font-weight: 400;
+    }
+  }
+
+  &--footer {
+    @include mobile {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
 }
