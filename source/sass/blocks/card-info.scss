@@ -171,11 +171,7 @@
     }
   }
 
-  &__button {
-    line-height: 16px;
-    letter-spacing: 0.02em;
-
-    padding: 18px 33px;
+  button {
     margin-bottom: 50px;
 
     @include tablet-inner {

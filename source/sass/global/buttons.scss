@@ -1,16 +1,21 @@
 .btn {
+  display: block;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 52px;
+  letter-spacing: 0.02em;
 
-  border: none;
+  width: 190px;
+  height: 52px;
   margin: 0;
-  padding: 0;
-  width: auto;
+  // padding: 18px 48px;
+
 
   color: $white;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
+  border: none;
   background-color: $blue;
   border-radius: 3px;
   text-transform: uppercase;
@@ -23,5 +28,17 @@
 
   &:active {
     background-color: $blue-active;
+  }
+
+  &--send {
+    font-size: 15px;
+    line-height: 57px;
+
+    width: 320px;
+    height: 57px;
+  }
+
+  &--clarify {
+    width: 240px;
   }
 }
