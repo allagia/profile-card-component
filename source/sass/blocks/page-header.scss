@@ -8,7 +8,7 @@
   color: $dark;
 
   @include tablet {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   &__wrap {
@@ -26,8 +26,8 @@
     }
 
     @include mobile {
-      padding-top: 40px;
-      padding-bottom: 25px;
+      padding-top: 26px;
+      padding-bottom: 10px;
     }
   }
 
@@ -115,9 +115,9 @@
     @include tablet-1200px {
       position: absolute;
       display: block;
-      top: -55px;
+      top: -50px;
       right: 10px;
-      z-index: 1;
+      z-index: 12;
       width: 40px;
       height: 40px;
       background-color: transparent;
@@ -132,7 +132,7 @@
     }
 
     @include mobile {
-      top: -57px;
+      top: -46px;
       right: -17px;
     }
   }
@@ -162,7 +162,7 @@
       .page-header__nav-contact-link {
         position: absolute;
         display: block;
-        top: -45px;
+        top: -34px;
         right: 36px;
       }
     }
@@ -170,11 +170,11 @@
 
   &__nav-wrap--opened {
     @include tablet-1200px {
-      .page-header__nav-toggle {
+      .page-header__nav-toggle::after {
         content: "";
         position: absolute;
-        top: -45px;
-        right: 20px;
+        top: 10px;
+        right: 11px;
         z-index: 12;
         width: 19px;
         height: 19px;
@@ -225,14 +225,14 @@
         width: 90px;
         height: 70px;
         margin-top: 0;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
       }
 
       .page-header__nav-list {
         width: 100%;
         max-height: 266px;
         padding-top: 6px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         overflow-y: scroll;
       }
 
@@ -263,7 +263,7 @@
       }
 
       .page-header__search {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       .page-header__search input {
@@ -312,11 +312,6 @@
     @include mobile {
       .page-header__nav-contact-link {
         display: none;
-      }
-
-      .page-header__nav-toggle {
-        top: -47px;
-        right: -6px;
       }
 
       .page-header__nav-logo {
@@ -620,6 +615,7 @@
       flex-direction: row;
       align-self: center;
       order: -1;
+      margin-top: 5px;
       margin-left: auto;
       margin-right: 8%;
     }
