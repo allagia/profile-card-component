@@ -112,7 +112,7 @@
 </symbol></svg>
 </div>
 <header class="page-header">
-  <div class="page-header__overlay"></div>
+  <button class="page-header__overlay" type="button"></button>
   <div class="page-header__wrap container">
     <a class="page-header__logo" href="#">
       <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
@@ -127,7 +127,7 @@
       <button class="page-header__nav-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <nav class="page-header__nav page-header__nav--active">
+      <div class="page-header__nav page-header__nav--active">
         <div class="page-header__links social">
           <ul class="social__list">
             <li class="social__item">
@@ -167,23 +167,25 @@
             +7-985-727-65-73
           </a>
         </div>
-        <ul class="page-header__nav-list">
-          <li>
-            <a class="page-header__nav-link" href="#">Технология</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Продукция</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Объекты</a>
-          </li>
-          <li>
-            <a class="page-header__nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
+        <nav class="page-header__nav-list">
+          <ul>
+            <li>
+              <a class="page-header__nav-link" href="#">Технология</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Продукция</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Объекты</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
         <div class="page-header__search">
           <form class="page-header__search-form" action="" method="get">
             <input id="header-search" type="search" name="search" placeholder="Поиск">
@@ -203,7 +205,7 @@
         <a class="page-header__nav-logo" href="#">
           <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
         </a>
-      </nav>
+      </div>
     </div>
 
     <div class="page-header__contacts">

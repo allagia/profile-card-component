@@ -14,9 +14,20 @@
     if (navWrap.classList.contains('page-header__nav-wrap--closed')) {
       navWrap.classList.remove('page-header__nav-wrap--closed');
       navWrap.classList.add('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'hidden';
     } else {
       navWrap.classList.add('page-header__nav-wrap--closed');
       navWrap.classList.remove('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'visible';
+    }
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      navWrap.classList.add('page-header__nav-wrap--closed');
+      navWrap.classList.remove('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'visible';
     }
   });
 
