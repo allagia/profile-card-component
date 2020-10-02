@@ -29,11 +29,12 @@
     flex-direction: column;
     align-items: flex-start;
     min-width: 400px;
-    margin-right: 60px;
+    // margin-right: 60px;
+    margin-right: 5%;
+
 
     @include tablet {
-      min-width: 300px;
-      margin-right: 120px;
+      min-width: 368px;
     }
 
     @include mobile {
@@ -131,14 +132,14 @@
     }
   }
 
-  a {
-    padding: 9px 49px 8px 0;
+  // a {
+  //   padding: 9px 49px 8px 0;
 
-    &::after {
-      top: 12px;
-      width: 23px;
-    }
-  }
+  //   &::after {
+  //     top: 12px;
+  //     width: 23px;
+  //   }
+  // }
 }
 
 @keyframes fadeEffect {
