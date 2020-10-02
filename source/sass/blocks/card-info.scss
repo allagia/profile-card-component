@@ -7,7 +7,7 @@
     // flex-direction: column;
     // max-height: 100vh;
     // padding-top: 6px;
-    padding-bottom: 286px;
+    padding-bottom: 285px;
 
     @include tablet {
       padding-bottom: 90px;
@@ -71,41 +71,6 @@
     margin-bottom: 18px;
   }
 
-  &__variants {
-    display: flex;
-  }
-
-  &__other {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.005em;
-
-    margin-bottom: 20px;
-
-    color: #5d6a7b;
-
-    @include tablet-inner {
-      span {
-        display: none;
-      }
-    }
-
-    &--mobile {
-      opacity: 1;
-      transition: opacity $transition-props;
-      margin-right: 18px;
-
-      @include mobile {
-        margin: 5px 0 0 2px;
-      }
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
 
   &__type {
     position: relative;
@@ -147,19 +112,10 @@
     }
   }
 
-  &__name {
-    font-size: 36px;
-    line-height: 42px;
-
+  h2 {
     width: 90%;
-    margin: 0;
 
     @include tablet-inner {
-      font-size: 18px;
-      line-height: 28px;
-
-      letter-spacing: 0.005em;
-
       width: 100%;
     }
   }
@@ -247,10 +203,27 @@
   }
 
   &__slider {
+    height: 535px;
     margin-bottom: 40px;
+
+    @include tablet {
+      height: 370px;
+    }
 
     @include tablet-inner {
       margin-bottom: 20px;
+    }
+
+    @include mobile {
+      height: 180px;
+    }
+  }
+
+  &__item {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -321,7 +294,7 @@
 
   &__title {
     font-weight: 600;
-    margin: 0;
+    margin: 0 3px 0 0;
   }
 
   &__text {
@@ -329,38 +302,3 @@
   }
 }
 
-.breadcrumb {
-  @include list-reset;
-  display: flex;
-
-  @include mobile {
-    display: none;
-  }
-
-  &__item {
-    position: relative;
-    margin-right: 14px;
-
-    &:last-of-type {
-      &::after {
-        display: none;
-      }
-    }
-
-    &::after {
-      content: "/";
-      position: absolute;
-
-      right: -10px;
-    }
-  }
-
-  &__link {
-    opacity: 1;
-    transition: opacity $transition-props;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
