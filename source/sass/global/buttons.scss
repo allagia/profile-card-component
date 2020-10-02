@@ -14,7 +14,6 @@
   color: $white;
   cursor: pointer;
   text-align: center;
-  vertical-align: middle;
   border: none;
   background-color: $blue;
   border-radius: 3px;
@@ -36,6 +35,10 @@
 
     width: 320px;
     height: 57px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &--middle {

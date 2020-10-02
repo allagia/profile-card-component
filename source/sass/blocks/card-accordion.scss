@@ -93,7 +93,13 @@
   }
 
   img {
+    @include tablet {
+      margin-bottom: 36px;
+    }
+
     @include mobile {
+      margin-top: 17px;
+      margin-bottom: 20px;
       width: 100%;
     }
   }
@@ -193,7 +199,7 @@
   &__list {
     @include list-reset;
     display: flex;
-    margin: 17px 0 33px;
+    margin: 17px 0 37px;
 
     @include mobile {
       display: block;

@@ -26,7 +26,7 @@
     margin: 0 16px 11px 0;
 
     @media (max-width: 1400px) {
-      margin: 0 30px -8px auto;
+      margin: 0 30px 12px auto;
     }
 
     @media (max-width: 940px) and (min-width: 768px) {
@@ -39,7 +39,7 @@
   }
 
   .page-footer__logo {
-    margin-bottom: 154px;
+    margin-bottom: 160px;
 
     @media (max-width: 1400px) {
       margin-bottom: 36px;
@@ -51,18 +51,22 @@
   }
 
   .social__list {
-    margin: 0 0 28px;
+    margin: 0 0 16px;
 
     @media (max-width: 1400px) {
-      margin: 0 0 21px;
+      margin: 0 0 12px;
     }
+  }
+
+  .page-footer__icons {
+    margin: 0 0 13px;
   }
 
   .page-footer__modal-wrap {
     margin: -287px 0 0 17px;
 
     @media (max-width: 1400px) {
-      margin: -302px 0 32px 0;
+      margin: -302px 0 20px;
     }
 
     @include mobile {
