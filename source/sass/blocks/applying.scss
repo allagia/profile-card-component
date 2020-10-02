@@ -1,5 +1,5 @@
 .applying {
-  margin-bottom: 150px;
+  margin-bottom: 133px;
 
   @include tablet {
     margin-bottom: 140px;
@@ -14,24 +14,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-  }
-
-  h2 {
-    font-size: 64px;
-    line-height: 74px;
-    font-weight: 400;
-
-    margin: 0;
-
-    @include tablet {
-      font-size: 56px;
-      line-height: 65px;
-    }
-
-    @include mobile {
-      font-size: 36px;
-      line-height: 42px;
     }
   }
 
@@ -94,137 +76,6 @@
   @include mobile {
     flex-wrap: wrap;
     margin: 0;
-  }
-
-
-
-  &__description {
-    // position: absolute;
-    // top: 0;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // height: 100%;
-    // padding-top: 25px;
-    // width: 94%;
-
-
-    // font-size: 16px;
-    // line-height: 26px;
-
-    // letter-spacing: 0.005em;
-
-    // text-align: center;
-    // z-index: 1;
-    // opacity: 0;
-
-    // @include tablet {
-    //   width: 95%;
-    //   padding-top: 0;
-    //   padding-bottom: 10px;
-    //   border: 1px solid rgba($color: #8ea0b9, $alpha: 0.5);
-    // }
-
-    // @include mobile {
-    //   width: 100%;
-    // }
-
-    // span {
-    //   display: block;
-    //   margin-bottom: 6px;
-
-    //   @media (max-width: 1070px) {
-    //     font-size: 12px;
-    //     line-height: 14px;
-    //     letter-spacing: 0.01em;
-    //   }
-    // }
-
-    // h3 {
-    //   font-size: 36px;
-    //   line-height: 42px;
-    //   font-weight: 400;
-
-    //   margin: 0 0 13px;
-
-    //   @media (max-width: 1070px) {
-    //     font-size: 24px;
-    //     line-height: 36px;
-
-    //     margin: 0 0 8px;
-    //   }
-    // }
-
-    // p {
-    //   position: relative;
-    //   max-width: 44%;
-    //   margin: 0 auto;
-
-    //   @include tablet {
-    //     max-width: 64%;
-    //   }
-
-    //   @media (max-width: 1070px) {
-    //     font-size: 14px;
-    //     line-height: 22px;
-    //   }
-
-    //   &:first-of-type {
-    //     margin-bottom: 22px;
-    //     padding-left: 30px;
-
-    //     &::before {
-    //       content: "";
-    //       position: absolute;
-
-    //       top: 2px;
-    //       left: 7px;
-
-    //       width: 12px;
-    //       height: 17px;
-
-    //       background-image: url("../img/icon-pin.svg");
-
-    //       background-repeat: no-repeat;
-    //       background-size: contain;
-
-    //       @include mobile {
-    //         top: 3px;
-    //         left: -7px;
-    //       }
-    //     }
-
-    //     @include mobile {
-    //       margin-bottom: 25px;
-    //       padding-left: 12px;
-    //       text-align: initial;
-    //     }
-    //   }
-
-    //   &:last-of-type {
-    //     margin: 0 auto 39px;
-
-    //     @media (max-width: 1024px) {
-    //       display: none;
-    //     }
-    //   }
-    // }
-
-    // b {
-    //   font-weight: 600;
-    //   letter-spacing: 0.01em;
-
-    //   margin-bottom: 3px;
-    //   display: block;
-
-    //   @media (max-width: 1024px) {
-    //     display: none;
-    //   }
-    // }
-
-    // a {
-    //   padding: 9px 62px 8px 0;
-    // }
   }
 
 

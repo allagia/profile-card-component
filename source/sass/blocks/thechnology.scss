@@ -59,11 +59,7 @@
     }
   }
 
-  &__title {
-    font-size: 64px;
-    line-height: 74px;
-    font-weight: 400;
-
+  h2 {
     margin: 0 0 52px;
 
     color: $white;
@@ -73,8 +69,6 @@
     }
 
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
       margin-bottom: 32px;
     }
   }

@@ -1,7 +1,5 @@
 .main-intro {
-  // временно
   position: relative;
-  z-index: 4;
 
   @include mobile {
     overflow: hidden;
@@ -23,18 +21,14 @@
   }
 
 
-  &__title {
+  h1 {
     margin-bottom: 23px;
-    text-transform: uppercase;
 
     @include tablet {
       margin-bottom: 21px;
     }
 
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
-
       margin-bottom: 24px;
     }
   }
@@ -47,7 +41,7 @@
     max-width: 60%;
 
     @include tablet {
-      max-width: 70%;
+      max-width: 65%;
     }
 
     @include mobile {
