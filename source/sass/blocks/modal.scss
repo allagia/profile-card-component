@@ -230,32 +230,15 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px solid $dark;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: -30px;
-    //   display: block;
-    //   width: 17px;
-    //   height: 17px;
-    //   background-color: red;
-    //   // border-bottom: 1px solid $dark;
-    // }
-
-    // span {
-    //   display: none;
-    //   position: absolute;
-    //   top: 0;
-    //   left: -30px;
-    //   width: 17px;
-    //   height: 17px;
-    //   background-color: red;
-    // }
   }
 
   &--inst,
   &--calc {
+    height: 100%;
+    max-height: 700px;
+    min-height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 50px 95px 20px;
 
     @include mobile {
@@ -270,6 +253,7 @@
 
   &--inst {
     padding: 50px 95px 34px;
+    max-height: 780px;
 
     @include mobile {
       padding: 50px 15px 20px;
@@ -297,17 +281,12 @@
       outline: none;
       -webkit-appearance: none;
       border-radius: 0;
-      // cursor: pointer;
-      // transition: opacity $transition-props;
 
       &::placeholder {
         display: block;
         margin-bottom: 5px;
       }
 
-      // &:hover {
-      //   opacity: 0.7;
-      // }
 
       @include mobile {
         height: 36px;

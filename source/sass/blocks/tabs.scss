@@ -1,13 +1,16 @@
 .tab {
   position: relative;
-  margin-bottom: 280px;
+  padding-top: 95px;
+  padding-bottom: 280px;
 
   @include tablet {
-    margin-bottom: 153px;
+    padding-top: 110px;
+    padding-bottom: 153px;
   }
 
   @include mobile {
-    margin-bottom: 107px;
+    padding-top: 61px;
+    padding-bottom: 107px;
   }
 
   &__wrap {
@@ -38,6 +41,7 @@
     }
 
     @include mobile {
+      min-width: 100%;
       margin: 0 0 26px 0;
     }
   }
