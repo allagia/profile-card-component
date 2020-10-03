@@ -14,12 +14,12 @@
 
   <title>Aero-House</title>
 </head>
-<body>
+<body class="margin-85">
   <!--<link href="pixelPerfect/pixel-glass/styles.css" rel="stylesheet">-->
 <!--<link href="pixelPerfect/index.css" rel="stylesheet">-->
 <!--<script src="pixelPerfect/pixel-glass/script.js"></script>-->
 <div style="display: none;">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
 <clipPath id="clip0">
 <rect width="28" height="28" fill="transparent"></rect>
 </clipPath>
@@ -110,243 +110,237 @@
 <path d="M22.2812 0H0.71875C0.322 0 0 0.322 0 0.71875V22.2812C0 22.678 0.322 23 0.71875 23H22.2812C22.678 23 23 22.678 23 22.2812V0.71875C23 0.322 22.678 0 22.2812 0ZM21.5625 21.5625H1.4375V1.4375H21.5625V21.5625Z" fill="#39BAF0"></path>
 <path d="M19.4062 2.875H3.59375C3.197 2.875 2.875 3.197 2.875 3.59375V19.4062C2.875 19.803 3.197 20.125 3.59375 20.125H19.4062C19.803 20.125 20.125 19.803 20.125 19.4062V3.59375C20.125 3.197 19.803 2.875 19.4062 2.875ZM10.7812 18.6875H4.3125V12.2188H10.7812V18.6875ZM10.7812 10.7812H4.3125V4.3125H10.7812V10.7812ZM18.6875 18.6875H12.2188V12.2188H18.6875V18.6875ZM18.6875 10.7812H12.2188V4.3125H18.6875V10.7812Z" fill="#39BAF0"></path>
 </symbol></svg>
-  </div>
-  <header class="page-header">
-    <div class="page-header__container container-85">
-      <div class="page-header__logo">
-        <a href="#">
-          <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
-        </a>
-      </div>
+</div>
+<header class="page-header">
+  <button class="page-header__overlay" type="button"></button>
+  <div class="page-header__wrap container">
+    <a class="page-header__logo" href="#">
+      <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
+    </a>
 
-      <div class="page-header__controls">
-        <a class="page-header__mobile-tel" href="tel:+79857276573">
-          <svg width="15" height="15">
-            <use xlink:href="#icon-phone"></use>
-          </svg>
-        </a>
-        <button class="page-header__btn-open" aria-controls="mobile-menu" aria-label="Открыть меню">
-          <svg width="19" height="19">
-            <use xlink:href="#icon-btn-burger"></use>
-          </svg>
-        </button>
-      </div>
-
-      <div class="page-header__menu-wrapper" id="mobile-menu">
-
-        <div class="page-header__mobile">
-          <div>
-            <img src="img/icon-logo-mobile.svg" width="60" height="47" alt="Логотип">
-          </div>
-
-          <button class="page-header__btn-close" aria-controls="mobile-menu" aria-label="Закрыть меню">
-            <svg width="19" height="19">
-              <use xlink:href="#icon-btn-cross"></use>
+    <div class="page-header__nav-wrap page-header__nav-wrap--opened page-header__nav-wrap--nojs">
+      <a class="page-header__nav-contact-link" href="tel:+79857276573">
+        <svg width="15" height="15">
+          <use xlink:href="#icon-phone"></use>
+        </svg>
+      </a>
+      <button class="page-header__nav-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="page-header__nav page-header__nav--active">
+        <div class="page-header__links social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Вотсап">
+                <svg width="26" height="26" viewBox="0 0 26 26">
+                  <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Инстаграм">
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Фейсбук">
+                <svg width="14" height="27" viewBox="0 0 14 27">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-header__nav-contacts">
+          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+74957730831">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-tel-header"></use>
+            </svg>
+            +7-495-773-08-31
+          </a>
+          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+79857276573">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-tel-header"></use>
+            </svg>
+            +7-985-727-65-73
+          </a>
+        </div>
+        <nav class="page-header__nav-list">
+          <ul>
+            <li>
+              <a class="page-header__nav-link" href="#">Технология</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Продукция</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Объекты</a>
+            </li>
+            <li>
+              <a class="page-header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__search">
+          <form class="page-header__search-form" action="" method="get">
+            <input id="header-search" type="search" name="search" placeholder="Поиск">
+            <button class="page-header__search-btn" type="submit">
+              <svg width="17" height="17">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <button class="page-header__search-toggle" type="button">
+            <span class="visually-hidden">Открыть поле поиска</span>
+            <svg width="17" height="17">
+              <use xlink:href="#icon-search"></use>
             </svg>
           </button>
         </div>
-
-
-        <div class="page-header__center-wrapper">
-          <nav class="page-header__menu">
-            <ul>
-              <li>
-                <a href="#">Технология</a>
-              </li>
-              <li>
-                <a href="#">О компании</a>
-              </li>
-              <li>
-                <a href="#">Продукция</a>
-              </li>
-              <li>
-                <a href="#">Объекты</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="page-header__search">
-            <form method="get">
-              <input id="header-search" type="search" name="search" required="">
-              <svg width="17.5" height="17.5">
-                <use xlink:href="#icon-search"></use>
-              </svg>
-              <label class="visually-hidden" for="header-search">Поиск по сайту</label>
-              <button class="visually-hidden" type="submit"></button>
-            </form>
-          </div>
-        </div>
-
-        <div class="page-header__right-wrapper">
-          <ul class="page-header__contact">
-            <li>
-              <a href="tel:+74957730831">
-                <svg width="18" height="18">
-                  <use xlink:href="#icon-tel-header"></use>
-                </svg>
-                +7-495-773-08-31
-              </a>
-            </li>
-            <li>
-              <a href="tel:+79857276573">
-                <svg width="18" height="18">
-                  <use xlink:href="#icon-tel-header"></use>
-                </svg>
-                +7-985-727-65-73
-              </a>
-            </li>
-          </ul>
-          <div class="page-header__slogan">
-            <p>Официальный дистрибьютор</p>
-            <p>
-              <picture>
-                <source type="image/webp" srcset="img/icon-distribution.webp">
-                <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
-              </picture>
-              <span>AERECO в России</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="page-header__social">
-          <ul>
-            <li>
-              <a href="#" aria-label="Связать в вотсап">
-                <svg width="26" height="26">
-                  <use xlink:href="#icon-whatsapp"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Профиль в инстаграм">
-                <svg width="28" height="28">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Группа в фейсбуке">
-                <svg width="27" height="27">
-                  <use xlink:href="#icon-facebook-header"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
+        <a class="page-header__nav-logo" href="#">
+          <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
+        </a>
       </div>
     </div>
-  </header>
+
+    <div class="page-header__contacts">
+      <a class="page-header__contacts-link" href="tel:+74957730831">
+        <svg width="18" height="18">
+          <use xlink:href="#icon-tel-header"></use>
+        </svg>
+        +7-495-773-08-31
+      </a>
+      <a class="page-header__contacts-link" href="tel:+79857276573">
+        <svg width="18" height="18">
+          <use xlink:href="#icon-tel-header"></use>
+        </svg>
+        +7-985-727-65-73
+      </a>
+      <div class="page-header__contacts-slogan">
+        <p>Официальный дистрибьютор</p>
+        <p>
+          <picture>
+            <source type="image/webp" srcset="img/icon-distribution.webp">
+            <img src="img/icon-distribution.png" width="15" height="15" alt="Иконка AERECO">
+          </picture>
+          <span>AERECO в России</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
 
   <footer class="page-footer">
     <div class="page-footer__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.4155713468513!2d37.580422600569285!3d55.85545593943973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b537a9efd5eeaf%3A0xad906f52e0396da9!2z0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjcsINCc0L7RgdC60LLQsCwgMTI3MTA2!5e0!3m2!1sru!2sru!4v1600712107766!5m2!1sru!2sru" title="адрес на карте" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     
-<div class="page-footer__wrapper container-85">
-    <div class="page-footer__modal-wrap">
-      <div class="page-footer__modal modal">
-        <h2 class="modal__title">Напишите нам</h2>
-        <p class="modal__text">Напишите о&nbsp;своем проекте и&nbsp;мы&nbsp;ответим на&nbsp;Ваши вопросы</p>
-        <form method="post" name="feedback" autocomplete="on">
-          <div class="modal__form-row">
+<div class="page-footer__wrapper container">
+  <div class="page-footer__modal-wrap">
+    <div class="page-footer__modal modal">
+      <h2 class="h2 h2--footer">Напишите нам</h2>
+      <p class="modal__text">Напишите о&nbsp;своем проекте и&nbsp;мы&nbsp;ответим на&nbsp;Ваши вопросы</p>
+      <form method="post" name="feedback" autocomplete="on">
+        <div class="modal__form-row">
 
-            <label for="name-id">
-              <input type="text" id="name-id" placeholder="Имя*" required="">
-            </label>
-
-            <label for="phone-id">
-              <input type="tel" id="phone-id" placeholder="Телефон">
-            </label>
-          </div>
-
-          <label for="mail-id">
-            <input type="email" id="mail-id" placeholder="E-mail*" required="">
+          <label for="name-id">
+            <input type="text" id="name-id" placeholder="Имя*" required="">
           </label>
 
-          <textarea placeholder="Cообщение"></textarea>
-
-          <label class="modal__textarea-mobile" for="textarea-mobile">
-            <input type="text" id="textarea-mobile" placeholder="Cообщение">
+          <label for="phone-id">
+            <input type="tel" id="phone-id" placeholder="Телефон">
           </label>
+        </div>
 
-          <label for="file-upload" class="modal__attachment">Прикрепить вложение
-            <input class="visually-hidden" type="file" id="file-upload">
-          </label>
-          <div class="modal__upload-success">Файл успешно добавлен</div>
+        <label for="mail-id">
+          <input type="email" id="mail-id" placeholder="E-mail*" required="">
+        </label>
+
+        <textarea placeholder="Cообщение"></textarea>
+
+        <label class="modal__textarea-mobile" for="textarea-mobile">
+          <input type="text" id="textarea-mobile" placeholder="Cообщение">
+        </label>
+
+        <label class="modal__attachment">Прикрепить вложение
+          <input class="visually-hidden" type="file">
+        </label>
+        <div class="modal__upload-success">Файл успешно добавлен</div>
 
 
-          <button class="btn" type="submit">Отправить сообщение</button>
+        <button class="btn btn--big" type="submit">Отправить сообщение</button>
 
-          <label class="modal__agreement checkbox" for="agree-id">
-            <input class="visually-hidden" type="checkbox" id="agree-id" checked="" required="">
-            <span class="checkbox__indicator"></span>
-            <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
-          </label>
+        <label class="modal__agreement checkbox" for="agree-id">
+          <input class="visually-hidden" type="checkbox" id="agree-id" checked="" required="">
+          <span class="checkbox__indicator"></span>
+          <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
+        </label>
 
-        </form>
-      </div>
+      </form>
     </div>
-
-    <div class="page-footer__icons">
-      <a class="page-footer__logo" href="main.html">
-        <img src="img/icon-logo.svg" width="107" height="83" alt="логотип компании">
-      </a>
-      <div class="page-footer__links social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="#" aria-label="Вотсап">
-              <svg width="26" height="26" viewBox="0 0 26 26">
-                <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#" aria-label="Инстаграм">
-              <svg width="28" height="28" viewBox="0 0 28 28">
-                <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#" aria-label="Фейсбук">
-              <svg width="14" height="27" viewBox="0 0 14 27">
-                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <p>© 2020 ООО "АэроХауз"</p>
-      </div>
-    </div>
-    <div class="page-footer__contacts contacts">
-      <div>
-        <svg width="16" height="16" viewBox="0 0 16 16">
-          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-        </svg>
-        <p class="contacts__title">Телефон</p>
-        <a href="tel:+74954142050">+7-495-414-20-50</a>
-      </div>
-      <div>
-        <svg width="14" height="20" viewBox="0 0 14 20">
-          <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
-        </svg>
-        <p class="contacts__title">Адрес</p>
-        <p class="contacts__address">127106, г. Москва, Алтуфьевское шоссе, д.&nbsp;27, офис 452.</p>
-      </div>
-      <div>
-        <svg width="19" height="15" viewBox="0 0 19 15">
-          <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-        </svg>
-        <p class="contacts__title">E-mail</p>
-        <a href="mailto:info@aero-house.com">info@aero-house.com</a>
-      </div>
-    </div>
-
   </div>
+
+  <div class="page-footer__icons">
+    <a class="page-footer__logo" href="main.html">
+      <img src="img/icon-logo.svg" width="107" height="83" alt="логотип компании">
+    </a>
+    <div class="page-footer__links social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Вотсап">
+            <svg width="26" height="26" viewBox="0 0 26 26">
+              <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Инстаграм">
+            <svg width="28" height="28" viewBox="0 0 28 28">
+              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Фейсбук">
+            <svg width="14" height="27" viewBox="0 0 14 27">
+              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p>© 2020 ООО "АэроХауз"</p>
+    </div>
+  </div>
+  <div class="page-footer__contacts contacts">
+    <div>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+      </svg>
+      <p class="contacts__title">Телефон</p>
+      <a href="tel:+74954142050">+7-495-414-20-50</a>
+    </div>
+    <div>
+      <svg width="14" height="20" viewBox="0 0 14 20">
+        <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
+      </svg>
+      <p class="contacts__title">Адрес</p>
+      <p class="contacts__address">127106, г. Москва, Алтуфьевское шоссе, д.&nbsp;27, офис 452.</p>
+    </div>
+    <div>
+      <svg width="19" height="15" viewBox="0 0 19 15">
+        <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+      </svg>
+      <p class="contacts__title">E-mail</p>
+      <a href="mailto:info@aero-house.com">info@aero-house.com</a>
+    </div>
+  </div>
+
+</div>
 
 
 
