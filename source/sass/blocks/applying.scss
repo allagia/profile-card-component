@@ -1,107 +1,211 @@
 .applying {
-  margin-bottom: 146px;
-
-  @include tablet {
-    margin-bottom: 140px;
-  }
-
-  @include mobile {
-    margin-bottom: 62px;
-  }
-
-  h2 {
-    @include tablet {
-      font-size: 56px;
-      line-height: 65px;
-    }
-
+  &__container {
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
-    }
-  }
-
-  &__lists {
-    width: 100%;
-  }
-
-  &__wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: -51px;
-
-    @media (min-width: 768px) and (max-width: 1060px) {
-      margin-top: 20px;
-    }
-
-    @media (min-width: 1281px) and (max-width: 1350px) {
-      margin-top: 20px;
-    }
-
-    @include mobile {
-      flex-direction: column-reverse;
+      display: flex;
+      flex-direction: column;
       align-items: flex-start;
-      margin-top: 40px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 88px;
+
+    @include tablet {
+      margin-bottom: 90px;
+    }
+
+    @include mobile {
+      margin-bottom: 41px;
     }
   }
 
   &__link {
-    margin: 0 70px 101px 0;
-    padding: 9px 48px 5px 0;
+    margin: 0 70px 10px 0;
 
     @include tablet {
-      margin: 0 0 101px 0;
+      margin: 0 0 7px;
     }
 
     @include mobile {
-      margin: 3px 0 0 0;
+      display: none;
+      margin: -2px 0 0 0;
     }
 
     &::after {
       top: 13px;
       width: 25px;
     }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
   }
 }
 
-.examples {
+.portfolio-list {
   @include list-reset;
   display: flex;
-  width: 100%;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  margin: 0 -25px 40px;
 
   @include tablet {
-    margin-bottom: 30px;
+    margin: 0 -15px 30px;
   }
 
   @include mobile {
     flex-wrap: wrap;
-    margin-bottom: 0;
+    margin: 0;
   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
 
-    transition: opacity $transition-props;
+  &__item {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 0 0 50px 0;
+    padding: 0 25px;
+
+    overflow: hidden;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      // max-height: 409px;
+      margin: 0 0 30px 0;
+      padding: 0 15px;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      margin: 0 0 20px;
+      padding: 0;
+
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.portfolio-item {
+  display: block;
+  width: 100%;
+  // height: 100%;
+
+  transition: opacity $transition-props;
+
+  &:hover {
+    .portfolio-item__text {
+      opacity: 1;
+    }
 
     img {
+      opacity: 0;
+    }
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    max-width: 788px;
+    transition: opacity $transition-props;
+
+    @include tablet {
+      max-width: 540px;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__size {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.005em;
+
+    margin: 0 0 6px;
+
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+
+    margin: 0 0 13px;
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 36px;
+
+      margin: 0 0 8px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 4px;
+
+    b {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
   &__description {
-    position: absolute;
-    top: 0;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.005em;
+
+    color: #7c8592;
+
+    max-width: 44%;
+    margin: 0 0 32px;
+
+    @include tablet {
+      max-width: 65%;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+
+  &__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 14px;
+    align-items: center;
+    min-height: 606px;
+    padding-top: 34px;
 
 
     font-size: 16px;
@@ -114,145 +218,64 @@
     opacity: 0;
 
     @include tablet {
+      min-height: 409px;
       padding-top: 0;
-      padding-bottom: 10px;
+
       border: 1px solid rgba($color: #8ea0b9, $alpha: 0.5);
     }
 
-    span {
-      display: block;
-      margin-bottom: 6px;
-
-      @media (max-width: 1070px) {
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.01em;
-      }
-    }
-
-    h3 {
-      font-size: 36px;
-      line-height: 42px;
-      font-weight: 400;
-
-      margin: 0 0 13px;
-
-      @media (max-width: 1070px) {
-        font-size: 24px;
-        line-height: 36px;
-
-        margin: 0 0 8px;
-      }
-    }
-
-    p {
-      position: relative;
-      max-width: 44%;
-      margin: 0 auto;
-
-      @include tablet {
-        max-width: 64%;
-      }
-
-      @media (max-width: 1070px) {
-        font-size: 14px;
-        line-height: 22px;
-      }
-
-      &:first-of-type {
-        margin-bottom: 22px;
-        padding-left: 30px;
-
-        &::before {
-          content: "";
-          position: absolute;
-
-          top: 2px;
-          left: 7px;
-
-          width: 12px;
-          height: 17px;
-
-          background-image: url("../img/icon-pin.svg");
-
-          background-repeat: no-repeat;
-          background-size: contain;
-
-          @include mobile {
-            top: 3px;
-            left: -7px;
-          }
-        }
-
-        @include mobile {
-          margin-bottom: 25px;
-          padding-left: 12px;
-          text-align: initial;
-        }
-      }
-
-      &:last-of-type {
-        margin: 0 auto 39px;
-
-        @media (max-width: 1024px) {
-          display: none;
-        }
-      }
-    }
-
-    b {
-      font-weight: 600;
-      letter-spacing: 0.01em;
-
-      margin-bottom: 3px;
-      display: block;
-
-      @media (max-width: 1024px) {
-        display: none;
-      }
-    }
-
-    a {
-      padding: 9px 62px 8px 0;
-    }
-  }
-
-
-  &__item {
-    position: relative;
-    max-width: 788px;
-    // max-height: 606px;
-    width: 49%;
-    margin: 0 3.2% 0 0;
-
-    overflow: hidden;
-
-    &:nth-of-type(2n) {
-      margin-right: 0;
-    }
-
-    &:hover {
-      .examples__description {
-        opacity: 1;
-      }
-
-      .examples__image {
-        opacity: 0;
-      }
-    }
-
-    @include tablet {
-      max-height: 409px;
-      margin: 0 2.5% 0 0;
+    @media (max-width: 992px) {
+      min-height: 606px;
     }
 
     @include mobile {
-      width: 100%;
-      margin: 0 0 20px;
+      min-height: 222px;
+      padding-bottom: 2px;
+    }
 
-      max-width: 100%;
-      max-height: 100%;
+
+    address {
+      position: relative;
+      font-size: 16px;
+      line-height: 26px;
+      font-style: normal;
+
+      margin-bottom: 26px;
+      padding-left: 28px;
+
+      letter-spacing: 0.005em;
+
+      color: #7c8592;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+
+        max-width: 64%;
+        padding-left: 16px;
+        margin-bottom: 18px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        top: 1px;
+        left: 5px;
+        width: 12px;
+        height: 17px;
+
+        background-image: url("../img/icon-pin.svg");
+
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include mobile {
+          top: 3px;
+          left: -7px;
+        }
+      }
     }
   }
-
 }

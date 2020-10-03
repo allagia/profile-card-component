@@ -26,60 +26,62 @@
     if (navWrap.classList.contains('page-header__nav-wrap--closed')) {
       navWrap.classList.remove('page-header__nav-wrap--closed');
       navWrap.classList.add('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'hidden';
     } else {
       navWrap.classList.add('page-header__nav-wrap--closed');
       navWrap.classList.remove('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'visible';
+    }
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      navWrap.classList.add('page-header__nav-wrap--closed');
+      navWrap.classList.remove('page-header__nav-wrap--opened');
+      document.body.style.overflow = 'visible';
     }
   });
 
   window.matchMedia(TABLET__1200).addListener(closeMenu);
 })();
 
-// =require components/page-header-navigation.js
 'use strict';
 
 (function () {
   var header = document.querySelector('.page-header');
   var searchToggle = header.querySelector('.page-header__search-toggle');
-  var searchForm = header.querySelector('.page-header__search-form');
+  var searchBlock = header.querySelector('.page-header__search');
   var overlay = header.querySelector('.page-header__overlay');
 
-  searchForm.classList.remove('page-header__search-form--open');
-  searchToggle.classList.remove('page-header__search-toggle--close');
+  searchBlock.classList.remove('page-header__search-form--opened');
 
   searchToggle.addEventListener('click', function () {
-    searchForm.classList.add('page-header__search-form--open');
-    searchToggle.classList.add('page-header__search-toggle--close');
+    searchBlock.classList.add('page-header__search--opened');
     overlay.classList.add('page-header__overlay--show');
+    document.body.style.overflow = 'hidden';
   });
 
-  searchForm.addEventListener('submit', function () {
-    searchForm.classList.remove('page-header__search-form--open');
-    searchToggle.classList.remove('page-header__search-toggle--close');
-  });
-
-  var closeSearchForm = function () {
-    searchForm.classList.remove('page-header__search-form--open');
-    searchToggle.classList.remove('page-header__search-toggle--close');
+  var closeSearch = function () {
     overlay.classList.remove('page-header__overlay--show');
+    searchBlock.classList.remove('page-header__search--opened');
+    document.body.style.overflow = 'visible';
   };
+
+  searchBlock.addEventListener('submit', function () {
+    closeSearch();
+  });
 
   window.addEventListener('keydown', function (evt) {
     if (evt.key === 'Escape') {
       evt.preventDefault();
-      closeSearchForm();
+      closeSearch();
     }
   });
 
-  window.addEventListener('click', function (evt) {
-    if (evt.target === overlay) {
-      evt.preventDefault();
-      if (overlay.classList.contains('page-header__overlay--show')) {
-        searchForm.classList.remove('page-header__search-form--open');
-        searchToggle.classList.remove('page-header__search-toggle--close');
-        overlay.classList.remove('page-header__overlay--show');
-        document.body.style.overflow = 'visible';
-      }
+  overlay.addEventListener('click', function () {
+    if (overlay.classList.contains('page-header__overlay--show')) {
+      closeSearch();
     }
   });
 })();
@@ -136,7 +138,7 @@
   };
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.technology__container ', {
+    mySwiper = new Swiper('.technology__container ', {
       slidesPerView: 'auto',
       spaceBetween: 15,
       initialSlide: 1,
@@ -242,7 +244,7 @@
 
   var ESC_KEYCODE = 27;
   var ENTER_KEYCODE = 13;
-  var popups = document.querySelectorAll('.tab__link--modal');
+  // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
   var popup1 = document.querySelector('.modal--calc');
@@ -256,7 +258,7 @@
     button1.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup1.classList.add('popup--opened');
-      body.classList.add('body--under-popup');
+      body.classList.add('no-scroll');
     });
   }
 
@@ -265,7 +267,7 @@
     button2.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup2.classList.add('popup--opened');
-      body.classList.add('body--under-popup');
+      body.classList.add('no-scroll');
     });
   }
 
@@ -279,7 +281,7 @@
   var closePopup = function () {
     popup1.classList.remove('popup--opened');
     popup2.classList.remove('popup--opened');
-    body.classList.remove('body--under-popup');
+    body.classList.remove('no-scroll');
   };
 
 
@@ -308,10 +310,14 @@
 
   if (overlay) {
 
-    overlay.addEventListener('click', function (evt) {
-      evt.stopPropagation(); //отмена закрывать окно при клике по модалке
+    overlay.addEventListener('click', function () {
       closePopup();
     });
+    for (var i = 0; i < overlay.childNodes.length; i++) {
+      overlay.childNodes[i].addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    }
   }
 
 })();
@@ -320,9 +326,9 @@
 
 (function () {
 
-  var swiper = new Swiper('.pictures__slider', {
+  var swiper = new Swiper('.pictures', {
     slidesPerView: 'auto',
-    autoHeight: true,
+    // autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -341,7 +347,7 @@
 
   var mySwiper;
 
-  var breakpointChecker = function () {
+  var breakpointChecker1 = function () {
 
     if (breakpoint.matches === true) {
 
@@ -358,7 +364,7 @@
 
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.advantages__wrap', {
+    mySwiper = new Swiper('.advantages__wrap', {
       slidesPerView: 'auto',
       autoHeight: true,
       pagination: {
@@ -370,9 +376,45 @@
     });
   };
 
-  breakpoint.addListener(breakpointChecker);
+  breakpoint.addListener(breakpointChecker1);
 
-  breakpointChecker();
+
+  breakpointChecker1();
+
+})();
+
+'use strict';
+
+(function () {
+  var accordion = document.querySelector('.card-accordion');
+  var acc = document.querySelectorAll('.card-accordion__item');
+
+
+  if (accordion) {
+    accordion.classList.remove('no-js');
+
+    var openAccordion = function () {
+
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          var panel = this.nextElementSibling;
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+
+      }
+
+    };
+
+
+    openAccordion();
+  }
+
 
 })();
 

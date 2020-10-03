@@ -1,0 +1,61 @@
+.breadcrumb {
+  &__container {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 19px;
+
+    @include tablet {
+      padding-top: 29px;
+      padding-bottom: 18px;
+    }
+
+    @include mobile {
+      padding-top: 10px;
+      padding-bottom: 1px;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.005em;
+
+    padding-left: 17px;
+
+    color: #5d6a7b;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 14px;
+
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "/";
+      position: absolute;
+
+      right: -10px;
+    }
+  }
+
+  &__link {
+    opacity: 1;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
