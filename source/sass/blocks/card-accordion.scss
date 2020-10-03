@@ -7,7 +7,7 @@
     }
 
     @include mobile {
-      padding-top: 60px;
+      padding-top: 40px;
     }
   }
 
@@ -75,6 +75,10 @@
     &--specifications {
       border-top: 1px solid rgba(50, 59, 71, 0.2);
       border-bottom: none;
+
+      @include tablet {
+        margin-top: 9px;
+      }
     }
 
     &--scheme {
@@ -151,6 +155,11 @@
   p {
     margin: 0 0 20px;
     color: $blue;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   span {
@@ -217,7 +226,7 @@
 
     @include tablet {
       margin-right: 3.6%;
-      padding: 18px 29px 10px;
+      padding: 18px 27px 10px;
     }
 
     @include mobile {
@@ -281,7 +290,7 @@
     margin-bottom: 37px;
 
     @include tablet {
-      margin-bottom: 31px;
+      margin-bottom: 24px;
     }
 
     @include mobile {

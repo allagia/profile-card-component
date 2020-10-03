@@ -23,7 +23,7 @@
   };
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.technology__container ', {
+    mySwiper = new Swiper('.technology__container ', {
       slidesPerView: 'auto',
       spaceBetween: 15,
       initialSlide: 1,

@@ -138,7 +138,7 @@
   };
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.technology__container ', {
+    mySwiper = new Swiper('.technology__container ', {
       slidesPerView: 'auto',
       spaceBetween: 15,
       initialSlide: 1,
@@ -326,8 +326,8 @@
 
 (function () {
 
-  var swiper = new Swiper('.pictures__slider', {
-    slidesPerView: 1,
+  var swiper = new Swiper('.pictures', {
+    slidesPerView: 'auto',
     // autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
@@ -347,7 +347,7 @@
 
   var mySwiper;
 
-  var breakpointChecker = function () {
+  var breakpointChecker1 = function () {
 
     if (breakpoint.matches === true) {
 
@@ -364,7 +364,7 @@
 
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.advantages__wrap', {
+    mySwiper = new Swiper('.advantages__wrap', {
       slidesPerView: 'auto',
       autoHeight: true,
       pagination: {
@@ -376,9 +376,10 @@
     });
   };
 
-  breakpoint.addListener(breakpointChecker);
+  breakpoint.addListener(breakpointChecker1);
 
-  breakpointChecker();
+
+  breakpointChecker1();
 
 })();
 
