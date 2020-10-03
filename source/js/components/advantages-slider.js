@@ -6,7 +6,7 @@
 
   var mySwiper;
 
-  var breakpointChecker = function () {
+  var breakpointChecker1 = function () {
 
     if (breakpoint.matches === true) {
 
@@ -23,7 +23,7 @@
 
 
   var enableSwiper = function () {
-    var swiper = new Swiper('.advantages__wrap', {
+    mySwiper = new Swiper('.advantages__wrap', {
       slidesPerView: 'auto',
       autoHeight: true,
       pagination: {
@@ -35,8 +35,9 @@
     });
   };
 
-  breakpoint.addListener(breakpointChecker);
+  breakpoint.addListener(breakpointChecker1);
 
-  breakpointChecker();
+
+  breakpointChecker1();
 
 })();

@@ -2,8 +2,8 @@
 
 (function () {
 
-  var swiper = new Swiper('.pictures__slider', {
-    slidesPerView: 1,
+  var swiper = new Swiper('.pictures', {
+    slidesPerView: 'auto',
     // autoHeight: true,
     pagination: {
       el: '.swiper-pagination',

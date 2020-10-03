@@ -20,6 +20,10 @@
 
   .page-footer__wrapper {
     padding-top: 0;
+
+    @include mobile {
+      padding-bottom: 19px;
+    }
   }
 
   .page-footer__contacts {
@@ -34,7 +38,7 @@
     }
 
     @include mobile {
-      margin: 0 15px 46px;
+      margin: 0 15px 43px;
     }
   }
 
@@ -80,6 +84,11 @@
     @include mobile {
       border: none;
     }
+  }
+
+
+  .modal form button {
+    margin: 44px auto 23px;
   }
 }
 
