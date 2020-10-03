@@ -1,0 +1,174 @@
+.opportunities {
+  padding: 66px 0 106px;
+  background-color: $blue;
+  color: $white;
+
+  @include tablet {
+    padding: 2px 0 120px;
+    background-color: $white;
+    color: $dark;
+  }
+
+  @include mobile {
+    padding: 0 0 119px;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: normal;
+
+    @include mobile {
+      padding-right: 40px;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: .017em;
+    }
+  }
+}
+
+.opportunities__list {
+  display: flex;
+  padding-top: 81px;
+  padding-right: 4.8%;
+
+  @include tablet {
+    padding-top: 70px;
+    padding-right: 2.2%;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-right: 0;
+  }
+}
+
+.opportunities__item {
+  width: 27%;
+  margin-right: auto;
+
+  @include tablet {
+    width: 30%;
+  }
+
+  @include mobile  {
+    width: 100%;
+  }
+
+  &:not(:nth-of-type(1)) {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &:not(:first-of-type) {
+    margin-left: 8.3%;
+
+    @include tablet {
+      margin-left: 5%;
+    }
+  }
+}
+
+.opportunities__item-title {
+  padding: 0 24% 0 102px;
+  margin: 0;
+  position: relative;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+
+  @include tablet {
+    padding: 0 5% 0 70px;
+    font-size: 1.56vw;
+    letter-spacing: 0.009em;
+  }
+
+  @include mobile {
+    padding: 0 50% 0 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 72px;
+    height: 72px;
+    left: 0;
+    top: -2px;
+
+    @include tablet {
+      top: 2px;
+    }
+  }
+
+  &--clean::before{
+    background: url("../img/quality/icon-clean.svg") no-repeat;
+    background-size: 100%;
+
+    @include tablet {
+      background: url("../img/quality/icon-clean-blue.svg") no-repeat;
+    }
+  }
+
+  &--water::before{
+    background: url("../img/quality/icon-water.svg") no-repeat;
+    background-size: 100%;
+
+    @include tablet {
+      background: url("../img/quality/icon-water-blue.svg") no-repeat;
+    }
+  }
+
+  &--hot::before{
+    background: url("../img/quality/icon-hot.svg") no-repeat;
+    background-size: 100%;
+
+    @include tablet {
+      background: url("../img/quality/icon-hot-blue.svg") no-repeat;
+    }
+  }
+
+  &::after {
+    opacity: 0.9;
+    position: absolute;
+    content: "";
+    background-color: $white;
+    width: 90%;
+    height: 2px;
+    left: 0;
+    bottom: -24px;
+
+    @include tablet {
+      background-color: $blue;
+      bottom: -9px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.opportunities__item-text {
+  padding: 48px 0 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.012em;
+
+  @include tablet {
+    padding-top: 33px;
+    letter-spacing: 0.005em;
+  }
+
+  @include mobile {
+    padding-top: 24px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
