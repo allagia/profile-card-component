@@ -1,0 +1,40 @@
+.breadcrumbs {
+  @include list-reset;
+  display: flex;
+  color: #5d6a7b;
+
+  li:nth-of-type(n+2) {
+    padding-left: 4px;
+
+    &::before {
+      content: "/\00a0";
+    }
+  }
+
+  li:first-of-type {
+    position: relative;
+    padding-left: 31px;
+
+    @include tablet {
+      padding-left: 29px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 14px;
+      left: 3px;
+      top: 5px;
+      background: url(../img/icon-arrow-left.svg) no-repeat;
+
+      @include tablet {
+        left: 2px;
+      }
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
