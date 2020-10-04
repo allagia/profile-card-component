@@ -13,3 +13,4 @@
 // =require components/advantages-slider.js
 // =require components/card-accordion.js
 // =require components/air-quality.js
+// =require components/catalog-filter.js

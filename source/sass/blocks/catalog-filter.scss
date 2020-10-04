@@ -1,0 +1,291 @@
+.catalog {
+  &__form-filter {
+    display: flex;
+    flex-direction: column;
+    width: 34%;
+    max-width: 400px;
+    margin-top: 85px;
+    margin-right: 20px;
+
+    @include tablet {
+      margin-top: 50px;
+      margin-right: 4%;
+    }
+
+    @include tablet-inner {
+      min-width: 220px;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 23px;
+    }
+  }
+
+  &__form-filter fieldset {
+    margin: 0;
+    margin-bottom: 28px;
+    padding: 0;
+    border: none;
+
+    @include tablet {
+      margin-bottom: 13px;
+    }
+
+    @include mobile {
+      margin-bottom: 11px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &__form-filter fieldset:last-of-type {
+    margin-bottom: 27px;
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__form-list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      padding-left: 19px;
+    }
+  }
+
+  &__form-filter legend {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $dark;
+
+    @include tablet-1440px {
+      font-size: 22px;
+      line-height: 34px;
+    }
+
+    @include tablet-1200px {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include tablet-inner {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__legend-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 18px;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
+
+    @include mobile {
+      margin-bottom: 18px;
+      justify-content: space-between;
+    }
+  }
+
+  &__filter-toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    transition: opacity $transition-props;
+    background-color: transparent;
+    outline: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 8px;
+      width: 14px;
+      height: 14px;
+      background: url("../img/icon-arrow-opened.svg") no-repeat;
+
+      @include mobile {
+        left: 15px;
+      }
+    }
+
+    @include mobile {
+      right: -12px;
+    }
+  }
+
+  &__fieldset-wrap--closed {
+    .catalog__filter-toggle::before {
+      display: none;
+    }
+
+    .catalog__filter-toggle::after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 14px;
+      width: 14px;
+      height: 14px;
+      background: url("../img/icon-arrow-closed.svg") no-repeat;
+    }
+
+    .catalog__form-list {
+      display: none;
+    }
+
+    .catalog__legend-wrap {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__fieldset-wrap--nojs {
+    .catalog__filter-toggle::before,
+    .catalog__filter-toggle::after {
+      display: none;
+    }
+
+    .catalog__form-list {
+      display: flex;
+    }
+  }
+
+  &__form-filter li {
+    margin-bottom: 15px;
+    letter-spacing: 0.01em;
+
+    @include tablet-1440px {
+      font-size: 16px;
+    }
+
+    @include tablet-1200px {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__form-filter input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__form-checkbox {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: -2em;
+    width: 13px;
+    height: 13px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include mobile {
+      width: 10px;
+      height: 10px;
+      margin-top: 2px;
+      margin-left: -1.6em;
+    }
+  }
+
+  &__form-filter input:checked + .catalog__form-checkbox {
+    background-color: $blue;
+  }
+
+  &__form-filter input[disabled] ~ label {
+    opacity: 0.7;
+  }
+
+  &__form-filter input[disabled] + .catalog__form-checkbox {
+    display: none;
+  }
+
+  &__form-filter input:checked:disabled + .catalog__form-checkbox {
+    display: block;
+    background-color: $blue;
+    opacity: 0.7;
+  }
+
+  &__form-filter label:hover {
+    opacity: 0.7;
+  }
+
+  &__form-btns {
+    display: none;
+  }
+
+  &__form-btns--show,
+  &__form-btns--nojs {
+    display: block;
+
+    @include mobile {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__form-submit-btn {
+    width: 190px;
+    height: 51px;
+    margin-bottom: 8px;
+    outline: none;
+
+    @include mobile {
+      width: 150px;
+      height: 40px;
+    }
+  }
+
+  &__form-reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 51px;
+    margin-bottom: 8px;
+    color: $dark;
+    background-color: transparent;
+    outline: none;
+
+    & svg {
+      fill: $dark;
+      margin-left: -2px;
+      margin-right: 10px;
+
+      @include mobile {
+        margin-left: 9px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      background-color: transparent;
+    }
+
+    @include mobile {
+      width: 140px;
+      height: 40px;
+    }
+  }
+}
