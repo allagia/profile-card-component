@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    margin-bottom: 85px;
+    margin-bottom: 82px;
   }
 
   &::before {
@@ -59,11 +59,7 @@
     }
   }
 
-  &__title {
-    font-size: 64px;
-    line-height: 74px;
-    font-weight: 400;
-
+  h2 {
     margin: 0 0 52px;
 
     color: $white;
@@ -73,8 +69,6 @@
     }
 
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
       margin-bottom: 32px;
     }
   }
@@ -142,27 +136,27 @@
 
   &__link {
     @include tablet {
-      padding: 9px 45px 9px 0;
+      // padding: 9px 45px 9px 0;
     }
 
     @include mobile {
       display: block;
-      width: 160px;
+      width: 162px;
       margin: -34px 0 0 0;
-      padding: 9px 40px 5px 0;
+      // padding: 9px 40px 5px 0;
       z-index: 1;
     }
 
-    &::after {
-      @include tablet {
-        right: 2px;
-      }
+    // &::after {
+    //   @include tablet {
+    //     right: 2px;
+    //   }
 
-      @include mobile {
-        right: 1px;
-        top: 14px;
-      }
-    }
+    //   @include mobile {
+    //     right: 1px;
+    //     top: 14px;
+    //   }
+    // }
   }
 
   &__name {

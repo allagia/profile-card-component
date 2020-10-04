@@ -69,21 +69,11 @@
     }
   }
 
-  &__title {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 400;
-
-    margin: 0;
+  h2 {
     margin-bottom: 19px;
-
-
     text-align: center;
 
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
-
       margin: 0 0 11px;
     }
   }
@@ -240,32 +230,15 @@
     position: relative;
     display: inline-block;
     border-bottom: 1px solid $dark;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: -30px;
-    //   display: block;
-    //   width: 17px;
-    //   height: 17px;
-    //   background-color: red;
-    //   // border-bottom: 1px solid $dark;
-    // }
-
-    // span {
-    //   display: none;
-    //   position: absolute;
-    //   top: 0;
-    //   left: -30px;
-    //   width: 17px;
-    //   height: 17px;
-    //   background-color: red;
-    // }
   }
 
   &--inst,
   &--calc {
+    height: 100%;
+    max-height: 700px;
+    min-height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 50px 95px 20px;
 
     @include mobile {
@@ -273,9 +246,6 @@
     }
 
     h2 {
-      font-size: 36px;
-      line-height: 42px;
-
       max-width: 93%;
       margin: 0 auto 37px;
     }
@@ -283,6 +253,7 @@
 
   &--inst {
     padding: 50px 95px 34px;
+    max-height: 780px;
 
     @include mobile {
       padding: 50px 15px 20px;
@@ -310,17 +281,12 @@
       outline: none;
       -webkit-appearance: none;
       border-radius: 0;
-      // cursor: pointer;
-      // transition: opacity $transition-props;
 
       &::placeholder {
         display: block;
         margin-bottom: 5px;
       }
 
-      // &:hover {
-      //   opacity: 0.7;
-      // }
 
       @include mobile {
         height: 36px;
@@ -351,26 +317,7 @@
     }
 
     button {
-      font-size: 15px;
-      line-height: 57px;
-      font-weight: 500;
-      display: block;
-      margin: 40px auto 23px;
-      width: 319px;
-      min-height: 57px;
-
-      text-transform: uppercase;
-      outline: none;
-      transition: opacity $transition-props;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      @include mobile {
-        width: 100%;
-        margin: 45px auto 21px;
-      }
+      margin: 43px auto 23px;
     }
   }
 

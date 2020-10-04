@@ -2,7 +2,6 @@
 
 // =require utils.js
 // =require components/page-header.js
-// =require components/page-header-navigation.js
 // =require components/search.js
 // =require components/phone-mask.js
 // =require components/file-upload.js

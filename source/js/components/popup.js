@@ -5,7 +5,7 @@
 
   var ESC_KEYCODE = 27;
   var ENTER_KEYCODE = 13;
-  var popups = document.querySelectorAll('.tab__link--modal');
+  // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
   var popup1 = document.querySelector('.modal--calc');
@@ -71,10 +71,14 @@
 
   if (overlay) {
 
-    overlay.addEventListener('click', function (evt) {
-      evt.stopPropagation(); //отмена закрывать окно при клике по модалке
+    overlay.addEventListener('click', function () {
       closePopup();
     });
+    for (var i = 0; i < overlay.childNodes.length; i++) {
+      overlay.childNodes[i].addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    }
   }
 
 })();

@@ -1,7 +1,5 @@
 .main-intro {
-  // временно
   position: relative;
-  z-index: 4;
 
   @include mobile {
     overflow: hidden;
@@ -9,32 +7,28 @@
 
   &__container {
     padding-bottom: 58px;
-    padding-top: 34px;
+    padding-top: 44px;
 
     @include tablet {
-      padding-top: 9px;
+      padding-top: 49px;
       padding-bottom: 52px;
     }
 
     @include mobile {
-      padding-top: 2px;
+      padding-top: 18px;
       padding-bottom: 43px;
     }
   }
 
 
-  &__title {
+  h1 {
     margin-bottom: 23px;
-    text-transform: uppercase;
 
     @include tablet {
       margin-bottom: 21px;
     }
 
     @include mobile {
-      font-size: 36px;
-      line-height: 42px;
-
       margin-bottom: 24px;
     }
   }
@@ -47,7 +41,7 @@
     max-width: 60%;
 
     @include tablet {
-      max-width: 70%;
+      max-width: 65%;
     }
 
     @include mobile {
