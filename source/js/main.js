@@ -13,3 +13,4 @@
 // =require components/card-pictures-slider.js
 // =require components/advantages-slider.js
 // =require components/card-accordion.js
+// =require components/catalog-filter.js

@@ -1,0 +1,124 @@
+.catalog {
+  margin-top: 15px;
+
+  @include mobile {
+    margin-bottom: 22px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include mobile {
+      position: relative;
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-top: -50px;
+
+    @include tablet {
+      margin-top: -57px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  &__item {
+    width: 42%;
+    margin-bottom: 83px;
+    margin-right: 52px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    @include tablet-1440px {
+      margin-bottom: 76px;
+    }
+
+    @include tablet {
+      width: 48%;
+      margin-right: 4%;
+    }
+
+    @include tablet-1200px {
+      margin-bottom: 50px;
+    }
+
+    @include tablet-inner {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 33px;
+    }
+  }
+
+  &__link-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+
+    & img {
+      object-fit: contain;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    @include tablet-1440px {
+      margin-bottom: 21px;
+    }
+
+    @include tablet-inner {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    @include tablet-1440px {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @include tablet-1200px {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include tablet-inner {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include mobile {
+      line-height: 28px;
+    }
+  }
+}
