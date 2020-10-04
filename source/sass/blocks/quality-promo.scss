@@ -9,7 +9,7 @@
   }
 
   @include mobile {
-    padding-top: 1px;
+    padding-top: 17px;
     background: url("../img/quality/promo-mobile.jpg") no-repeat content-box 0 89px;
     background-size: 100%;
   }
@@ -17,14 +17,22 @@
   h1 {
     padding-left: 2px;
 
+    @media (max-width: 1300px) {
+      font-size: 48px;
+    }
+
     @include tablet {
       padding-left: 0;
+    }
+
+    @media (max-width: 840px) {
+      font-size: 35px;
     }
 
     @include mobile {
       font-weight: 500;
       font-size: 24px;
-      line-height: 34px;
+      line-height: 142%;
       letter-spacing: 0.005em;
     }
   }
@@ -60,11 +68,16 @@
   margin: 0;
   padding-top: 28px;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 150%;
   color: $dark;
+
+  @media (max-width: 1919px) {
+    font-size: 1.23vw;
+  }
 
   @include tablet {
     padding-top: 36px;
+    font-size: 1.88vw;
   }
 
   @include mobile {

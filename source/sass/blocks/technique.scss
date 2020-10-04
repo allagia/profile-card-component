@@ -1,18 +1,11 @@
-.technique {
-  padding: 29px 10px 0 30px;
-
-  @include mobile {
-    padding: 15px 15px 0;
-  }
-}
-
 .technique__summary {
+  padding: 28px 10px 28px 30px;
   display: flex;
   align-items: flex-start;
   padding-bottom: 28px;
 
   @include mobile {
-    padding: 0;
+    padding: 15px;
     min-height: 559px;
     flex-direction: column;
     justify-content: space-between;
@@ -34,7 +27,7 @@
 
 .technique__description {
   width: 40%;
-  padding: 18px 7% 0 70px;
+  padding: 18px 3% 0 70px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -49,7 +42,7 @@
     padding: 0;
     flex-grow: 1;
     width: 100%;
-    min-height: 276px;
+    min-height: 273px;
   }
 }
 
@@ -60,7 +53,7 @@
   margin-bottom: 55px;
 
   @include tablet {
-    margin-bottom: 67px;
+    margin-bottom: 68px;
   }
 
   @include mobile {
@@ -69,38 +62,31 @@
 }
 
 .technique__title {
-  padding: 0 10px 0 0;
-  margin: 0 0 34px;
+  margin: 0;
   font-weight: 500;
   font-size: 36px;
   line-height: 42px;
-
-  @include tablet {
-    padding: 0;
-    margin-bottom: 35px;
-  }
 
   @include mobile {
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.008em;
-    margin-bottom: 12px;
   }
 }
 
 .technique__description-text {
-  padding: 0;
-  margin: 0 0 20px;
+  padding: 36px 0 20px;
+  margin: 0;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.005em;
   color: $dark-grey;
 
   @include mobile {
+    padding: 12px 0 30px;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.005em;
-    margin-bottom: 20px;
   }
 }
 
@@ -110,7 +96,7 @@
   outline: none;
   cursor: pointer;
   margin: auto 0 0;
-  padding: 0 0 6px;
+  padding: 0 0 7px;
   border: none;
   background: none;
   text-transform: uppercase;
@@ -121,20 +107,19 @@
   transition: all 0.2s ease;
 
   @include mobile {
-    margin-bottom: 71px;
+    margin-top: auto;
   }
 
   &::before {
     position: absolute;
     content: "";
-
-    top: 2px;
-    right: -4px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: url("../img/quality/arrow-top.svg") 50% 50% no-repeat;
-    background-size: 12px;
+    transition: all 0.5s ease;
+    top: 7px;
+    right: 0;
+    width: 13px;
+    height: 9px;
+    background: $white url("../img/quality/arrow-down.svg") 50% 50%/cover no-repeat;
+    user-select: none;
   }
 
   &::after {
@@ -142,7 +127,7 @@
     width: 100%;
     content: "";
     border-bottom: 2px solid rgba(57, 186, 240, 0.8);
-    bottom: -1px;
+    bottom: 0;
     left: 0;
   }
 
@@ -166,12 +151,8 @@
 .technique__details {
   display: flex;
   align-items: flex-start;
-  padding: 0 0 0 110px;
-  height: 0;
-
-  @include tablet {
-    padding: 72px 0 0 65px;
-  }
+  max-height: 0;
+  transition: all ease-in .5s;
 
   @include mobile {
     padding: 0;
@@ -184,12 +165,11 @@
 }
 
 .technique__img {
-  width: 20%;
-  padding-top: 5px;
+  width: 29.5%;
+  padding: 79px 0 0 140px;
 
   @include tablet {
-    width: 24.3%;
-    padding-top: 0;
+    padding: 73px 0 0 95px;
   }
 
   @include mobile {
@@ -214,7 +194,7 @@
 }
 
 .technique__img-text {
-  padding: 3px 69px 0 0;
+  padding: 3px 118px 0 0;
   margin: 0;
   font-size: 14px;
   line-height: 22px;
@@ -227,16 +207,17 @@
 }
 
 .technique__details-list {
-  width: 80%;
-  padding: 74px 21% 0 124px;
+  width: 70%;
+  padding: 74px 19% 57px 71px;
 
   @include tablet {
-    padding: 1px 6.2% 0 53px;
+    width: 70.5%;
+    padding: 74px 9.2% 58px 53px;
   }
 
   @include mobile {
     width: 100%;
-    padding: 0;
+    padding: 18px 15px 15px;
   }
 }
 

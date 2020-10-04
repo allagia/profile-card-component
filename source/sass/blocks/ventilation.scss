@@ -1,6 +1,6 @@
 .ventilation {
   background-color: $bg-color;
-  padding: 143px 0 0.1px;
+  padding: 143px 0 160px;
 
   @include tablet {
     padding-top: 96px;
@@ -8,11 +8,12 @@
 
   @include mobile {
     padding-top: 53px;
+    padding-bottom: 35px;
   }
 
   h2 {
     padding: 0;
-    margin: 0 auto 82px;
+    margin: 0 auto 83px;
     font-size: 64px;
     line-height: 74px;
     font-weight: normal;
