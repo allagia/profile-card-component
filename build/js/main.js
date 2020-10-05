@@ -431,10 +431,14 @@
     if (dropdownSection) {
       if (parseInt(dropdownSection.style.maxHeight, 10)) {
         dropdownSection.style.maxHeight = 0 + 'px';
-        evt.target.innerHTML = 'РАЗВЕРНУТЬ';
+        if (evt.target.innerHTML === 'Свернуть') {
+          evt.target.innerHTML = 'Развернуть';
+        }
       } else {
         dropdownSection.style.maxHeight = dropdownSection.scrollHeight + 'px';
-        evt.target.innerHTML = 'СВЕРНУТЬ';
+        if (evt.target.innerHTML === 'Развернуть') {
+          evt.target.innerHTML = 'Свернуть';
+        }
       }
       evt.target.classList.toggle('technique__btn--show');
     }
@@ -446,6 +450,37 @@
     });
   }
 
+  var clientWidth = document.body.clientWidth;
+  var opportunitiesSlider;
+
+  var sliderInit = function () {
+    opportunitiesSlider = new Swiper('.opportunities__slider', {
+      slidesPerView: '1',
+      // loop: true,
+      pagination: {
+        el: '.opportunities__item-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+
+    });
+  };
+
+  var resizeHandlerSlider = function () {
+    clientWidth = document.body.clientWidth;
+    if (clientWidth < 768) {
+      if (opportunitiesSlider) {
+        opportunitiesSlider.destroy();
+      }
+      sliderInit();
+    } else {
+      if (opportunitiesSlider) {
+        opportunitiesSlider.destroy();
+      }
+    }
+  };
+
+  window.addEventListener('resize', resizeHandlerSlider);
 })();
 
 

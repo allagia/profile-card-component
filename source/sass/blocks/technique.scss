@@ -78,6 +78,12 @@
     line-height: 30px;
     letter-spacing: 0.008em;
   }
+
+  span {
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 .technique__description-text {
@@ -219,7 +225,7 @@
 
 .technique__details-list {
   width: 70%;
-  padding: 74px 19% 57px 71px;
+  padding: 74px 19% 57px 79px;
 
   @include tablet {
     width: 70.5%;

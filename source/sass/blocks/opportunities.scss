@@ -10,7 +10,7 @@
   }
 
   @include mobile {
-    padding: 0 0 119px;
+    padding: 0 0 50px;
   }
 
   h2 {
@@ -26,6 +26,23 @@
       line-height: 33px;
       letter-spacing: .017em;
     }
+  }
+}
+
+.opportunities__slider {
+  @include mobile {
+    padding-bottom: 49px;
+  }
+
+  .opportunities__item-pagination {
+    @include mobile {
+      bottom: 24px;
+    }
+  }
+
+  span {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -65,9 +82,9 @@
       margin-left: 5%;
     }
 
-    @include mobile {
-      display: none;
-    }
+    // @include mobile {
+    //   display: none;
+    // }
   }
 }
 
@@ -169,5 +186,11 @@
     padding-top: 24px;
     font-size: 12px;
     line-height: 20px;
+  }
+}
+
+.opportunities__item-pagination {
+  @include mobile {
+    bottom: 24px;
   }
 }
