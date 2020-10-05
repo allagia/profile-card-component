@@ -1,6 +1,6 @@
 .ventilation {
   background-color: $bg-color;
-  padding: 143px 0 0.1px;
+  padding: 143px 0 160px;
 
   @include tablet {
     padding-top: 96px;
@@ -8,11 +8,20 @@
 
   @include mobile {
     padding-top: 53px;
+    padding-bottom: 35px;
+  }
+
+  &--narrow {
+    padding: 80px 0 88px;
+
+    @include tablet {
+      padding-top: 74px;
+    }
   }
 
   h2 {
     padding: 0;
-    margin: 0 auto 82px;
+    margin: 0 auto 83px;
     font-size: 64px;
     line-height: 74px;
     font-weight: normal;
@@ -39,6 +48,14 @@
   overflow: hidden;
   background-color: $white;
   margin-bottom: 60px;
+
+  &--wide {
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
+  }
 
   @include mobile {
     margin-bottom: 40px;
