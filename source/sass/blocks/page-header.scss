@@ -7,6 +7,10 @@
   text-align: left;
   color: $dark;
 
+  @include tablet-1440px {
+    margin-bottom: 24px;
+  }
+
   @include tablet {
     margin-bottom: 10px;
   }
