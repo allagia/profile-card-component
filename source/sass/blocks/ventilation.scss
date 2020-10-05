@@ -12,10 +12,14 @@
   }
 
   &--narrow {
-    padding: 80px 0 88px;
+    padding: 80px 0 85px;
 
     @include tablet {
       padding-top: 74px;
+    }
+
+    @include mobile {
+      padding-top: 40px;
     }
   }
 
@@ -49,15 +53,19 @@
   background-color: $white;
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
   &--wide {
     margin-bottom: 80px;
 
     @include tablet {
       margin-bottom: 60px;
     }
-  }
 
-  @include mobile {
-    margin-bottom: 40px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
 }
