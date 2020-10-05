@@ -533,6 +533,7 @@
     };
 
     var showBtns = function () {
+      formBtns.classList.remove('catalog__form-btns--show');
       checkboxes.forEach(function (btn) {
         if (btn.checked) {
           formBtns.classList.add('catalog__form-btns--show');
