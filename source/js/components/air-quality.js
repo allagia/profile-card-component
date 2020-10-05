@@ -35,7 +35,7 @@
 
   var sliderInit = function () {
     opportunitiesSlider = new Swiper('.opportunities__slider', {
-      slidesPerView: '1',
+      slidesPerView: 'auto',
       // loop: true,
       pagination: {
         el: '.opportunities__item-pagination',
@@ -61,4 +61,5 @@
   };
 
   window.addEventListener('resize', resizeHandlerSlider);
+  window.addEventListener('load', resizeHandlerSlider);
 })();
