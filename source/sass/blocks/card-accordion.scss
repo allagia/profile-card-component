@@ -79,6 +79,10 @@
       @include tablet {
         margin-top: 9px;
       }
+
+      @include mobile {
+        margin-top: 6px;
+      }
     }
 
     &--scheme {

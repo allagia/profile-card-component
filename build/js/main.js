@@ -7,6 +7,8 @@
     BREAKPOINT_MOBILE: '(max-width: 767px)',
     BREAKPOINT_TABLET__1200: '(max-width: 1200px)',
     BREAKPOINT_TABLET: '(max-width: 1280px)',
+    ESC_KEYCODE: 27,
+    ENTER_KEYCODE: 13
   };
 })();
 
@@ -242,8 +244,6 @@
 
 (function () {
 
-  var ESC_KEYCODE = 27;
-  var ENTER_KEYCODE = 13;
   // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
@@ -251,7 +251,7 @@
   var popup2 = document.querySelector('.modal--inst');
   var body = document.querySelector('body');
   var closePopups = document.querySelectorAll('.modal__close-btn');
-  var overlay = document.querySelector('.overlay');
+  var overlay = document.querySelector('.overlay--main');
 
   if (button1) {
 
@@ -294,7 +294,7 @@
 
   closePopups.forEach(function (element) {
     element.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === ENTER_KEYCODE) {
+      if (evt.keyCode === window.utils.ENTER_KEYCODE) {
         evt.preventDefault();
         closePopup();
       }
@@ -302,7 +302,7 @@
   });
 
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === ESC_KEYCODE) {
+    if (evt.keyCode === window.utils.ESC_KEYCODE) {
       evt.preventDefault();
       closePopup();
     }
@@ -319,6 +319,7 @@
       });
     }
   }
+
 
 })();
 
@@ -560,5 +561,73 @@
       closeAccordion();
     });
   }
+})();
+
+'use strict';
+
+(function () {
+  var table = document.querySelector('#table');
+  table.addEventListener('scroll', function(e) {
+    // $('thead').css("left", -e.target.scrollLeft); //fix the thead relative to the body scrolling
+    $('thead th:nth-child(1)').css("left", e.target.scrollLeft); //fix the first cell of the header
+    $('tbody td:nth-child(1)').css("left", e.target.scrollLeft); //fix the first column of tdbody
+  });
+})();
+
+'use strict';
+
+(function () {
+  var button = document.querySelector('.basic-info__btn');
+  var popup = document.querySelector('.modal--calc');
+  var body = document.querySelector('body');
+  var closeBtn = document.querySelector('.modal__close-btn');
+  var overlay = document.querySelector('.overlay--card');
+
+  if (button) {
+    button.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      popup.classList.add('popup--opened');
+      body.classList.add('no-scroll');
+    });
+  }
+
+  var closePopup = function () {
+    popup.classList.remove('popup--opened');
+    body.classList.remove('no-scroll');
+  };
+
+  closeBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+
+  closeBtn.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+      evt.preventDefault();
+      closePopup();
+    }
+  });
+
+
+  document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === window.utils.ESC_KEYCODE) {
+      evt.preventDefault();
+      closePopup();
+    }
+  });
+
+  if (overlay) {
+
+    overlay.addEventListener('click', function () {
+      closePopup();
+    });
+    for (var i = 0; i < overlay.childNodes.length; i++) {
+      overlay.childNodes[i].addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    }
+  }
+
 })();
 

@@ -3,8 +3,6 @@
 
 (function () {
 
-  var ESC_KEYCODE = 27;
-  var ENTER_KEYCODE = 13;
   // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
@@ -12,7 +10,7 @@
   var popup2 = document.querySelector('.modal--inst');
   var body = document.querySelector('body');
   var closePopups = document.querySelectorAll('.modal__close-btn');
-  var overlay = document.querySelector('.overlay');
+  var overlay = document.querySelector('.overlay--main');
 
   if (button1) {
 
@@ -55,7 +53,7 @@
 
   closePopups.forEach(function (element) {
     element.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === ENTER_KEYCODE) {
+      if (evt.keyCode === window.utils.ENTER_KEYCODE) {
         evt.preventDefault();
         closePopup();
       }
@@ -63,7 +61,7 @@
   });
 
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === ESC_KEYCODE) {
+    if (evt.keyCode === window.utils.ESC_KEYCODE) {
       evt.preventDefault();
       closePopup();
     }
@@ -80,5 +78,6 @@
       });
     }
   }
+
 
 })();
