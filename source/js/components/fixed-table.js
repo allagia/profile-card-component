@@ -1,10 +1,16 @@
 'use strict';
 
 (function () {
-  var table = document.querySelector('#table');
-  table.addEventListener('scroll', function(e) {
-    // $('thead').css("left", -e.target.scrollLeft); //fix the thead relative to the body scrolling
-    $('thead th:nth-child(1)').css("left", e.target.scrollLeft); //fix the first cell of the header
-    $('tbody td:nth-child(1)').css("left", e.target.scrollLeft); //fix the first column of tdbody
+  var table = document.querySelector('#div-table');
+  var firstColumnHead = table.querySelector('thead th:nth-child(1)');
+  var firstColumns = table.querySelectorAll('tbody td:nth-child(1)');
+
+  table.addEventListener('scroll', function (e) {
+
+    firstColumnHead.style.left = -e.target.scrollLeft + 'px';
+    firstColumnHead.style.left = e.target.scrollLeft + 'px';
+    firstColumns.forEach(function (el) {
+      el.style.left = e.target.scrollLeft + 'px';
+    });
   });
 })();

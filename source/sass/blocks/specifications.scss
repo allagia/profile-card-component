@@ -1,4 +1,8 @@
 .specifications {
+  @include mobile {
+    display: none;
+  }
+
   &__point {
     position: relative;
     display: block;
@@ -32,18 +36,10 @@
     color: $blue;
   }
 
-  &__table {
-
-    // @include mobile {
-    //   display: none;
-    // }
-
-  }
-
   table {
     font-size: 16px;
     line-height: 26px;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
 
     letter-spacing: 0.005em;
     border-spacing: 0;
@@ -94,6 +90,10 @@
     text-align: left;
 
     height: 98px;
+
+    @include tablet {
+      height: 100px;
+    }
 
 
     @include mobile {
@@ -244,92 +244,146 @@
 }
 
 .feature {
-  overflow: auto;
-  margin: 0 -15px;
+  position: relative;
+  display: none;
+  border: none;
 
-  table {
-    position: relative;
-    width: 800px;
-    margin-top: 6px;
-    overflow: hidden;
-    border-collapse: collapse;
-  }
+  @include mobile {
+    display: block;
+    overflow: auto;
+    margin: 0 -15px;
 
-
-  /*thead*/
-  thead {
-    position: relative;
-    display: block; /*seperates the header from the body allowing it to be positioned*/
-    width: 700px;
-    overflow: visible;
-    background-color: $blue;
-  }
-
-  thead th {
-    min-width: 20px;
-    height: 90px;
-    padding: 0 0 26px;
-
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 400;
-    letter-spacing: 0.005em;
-  }
-
-  thead th:nth-child(1) {/*first cell in the header*/
-    position: relative;
-    display: block; /*seperates the first cell in the header from the header*/
-    padding: 20px 0 0 15px;
-    background-color: $blue;
-  }
-
-  thead th:nth-child(3),
-  thead th:nth-child(4),
-  thead th:nth-child(5) {
-    width: 130px;
-    padding-right: 34px;
-  }
+    table {
+      position: relative;
+      width: 800px;
+      width: calc(100% + 100px);
+      margin-bottom: 8px;
+      margin-top: 8px;
+      overflow: hidden;
+      border-spacing: 0;
+    }
 
 
-  /*tbody*/
-  tbody {
-    position: relative;
-    display: block; /*seperates the tbody from the header*/
-    width: 800px;
-    height: 100vh;
-    overflow: scroll;
-  }
+    /*thead*/
+    thead {
+      position: relative;
+      display: block; /*seperates the header from the body allowing it to be positioned*/
+      width: 600px;
+      width: 100%;
+      overflow: visible;
+      background-color: $blue;
+      color: $white;
+    }
 
-  tbody td {
-    min-width: 20px;
-    max-width: 170px;
-    font-size: 11px;
-    line-height: 14px;
-  }
+    thead th {
+      min-width: 20px;
+      height: 90px;
+      padding: 0 0 26px;
 
-  tbody tr td:nth-child(1) {  /*the first cell in each tr*/
-    position: relative;
-    display: block; /*seperates the first column from the tbody*/
-    min-height: 60px;
-    padding: 16px 30px 0 15px;
-    background-color: $white;
-    z-index: 1;
-  }
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      letter-spacing: 0.005em;
+    }
 
-  tbody tr td:nth-child(3),
-  tbody tr td:nth-child(4),
-  tbody tr td:nth-child(5) {
-    width: 130px;
-    padding-right: 34px;
-  }
+    thead th:nth-child(1) {/*first cell in the header*/
+      position: relative;
+      display: block; /*seperates the first cell in the header from the header*/
+      padding: 20px 0 0 15px;
+      min-width: 172px;
+      background-color: $blue;
+    }
 
-  .specifications__point {
-    &::before {
-      top: -14px;
-      left: 9px;
-      width: 10px;
-      height: 10px;
-      z-index: 0;
+    thead th:nth-child(3),
+    thead th:nth-child(4),
+    thead th:nth-child(5) {
+      min-width: 130px;
+      padding-right: 34px;
+    }
+
+    tbody {
+      position: relative;
+      display: block; /*seperates the tbody from the header*/
+      width: 600px;
+      width: calc(100% + 100px);
+      height: 100vh;
+      overflow: scroll;
+    }
+
+    tbody td {
+      position: relative;
+      min-width: 20px;
+      max-width: 170px;
+      font-size: 11px;
+      line-height: 14px;
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+      }
+    }
+
+    tbody tr td:nth-child(1) {  /*the first cell in each tr*/
+      position: relative;
+      display: block; /*seperates the first column from the tbody*/
+      min-height: 60px;
+      padding: 16px 30px 16px 15px;
+      background-color: $white;
+      z-index: 1;
+
+      &::after {
+        left: 15px;
+        width: calc(100% - 15px);
+      }
+    }
+
+    tbody tr td:last-child {
+      &::after {
+        width: calc(100% - 15px);
+      }
+    }
+
+    tbody tr:last-child td {
+      &::after {
+        display: none;
+      }
+    }
+
+    tbody tr:last-child td:nth-child(1) {
+      display: flex;
+
+      span::before {
+        top: 2px;
+        left: 0;
+      }
+    }
+
+    tbody tr td:nth-child(3),
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5) {
+      width: 130px;
+      padding-right: 34px;
+    }
+
+
+    .specifications__point {
+      padding-left: 16px;
+      margin-right: 17px;
+
+      &::before {
+        top: -9px;
+        left: 9px;
+        width: 10px;
+        height: 10px;
+        z-index: 0;
+      }
     }
   }
 }
