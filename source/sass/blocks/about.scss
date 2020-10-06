@@ -1,0 +1,84 @@
+.about {
+  padding-top: 92px;
+
+  @include tablet {
+    padding-top: 60px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.about__description {
+  margin-top: 65px;
+  padding-left: 68.7%;
+
+  min-height: 686px;
+
+  background-image: url("/img/about-company/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 57% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-company/about-bg@2x.jpg");
+  }
+
+  @include tablet {
+    margin-top: 79px;
+    background-image: url("/img/about-company/about-tablet-bg.jpg");
+    background-size: 48.7% auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-company/about-tablet-bg@2x.jpg");
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 9px;
+    letter-spacing: -0.025em;
+  }
+}
+
+.about__description-intro {
+  margin: 0;
+  padding-top: 28px;
+  padding-right: 18%;
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.95;
+
+  @media (max-width: 1919px) {
+    font-size: 1.26vw;
+  }
+}
+
+.about__description-text {
+  margin: 0 0 8.2%;;
+  padding: 28px 12% 10px 0;
+  padding-top: 28px;
+  padding-right: 12%;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.005em;
+  opacity: 0.95;
+
+  @media (max-width: 1919px) {
+    font-size: 0.94vw;
+  }
+}
+
+.about__description-link {
+  padding: 9px 71px 9px 0;
+
+  &::after {
+    top: 10px;
+    right: -2px;
+    width: 27px;
+    height: 15px;
+  }
+}
