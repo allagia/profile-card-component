@@ -15,6 +15,10 @@
     margin-bottom: 10px;
   }
 
+  @include mobile {
+    margin-bottom: 0;
+  }
+
   &__wrap {
     position: relative;
     display: flex;
