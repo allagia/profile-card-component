@@ -1,8 +1,4 @@
 .catalog-devices {
-  @include mobile {
-    position: relative;
-  }
-
   @include tablet {
     margin-top: 6px;
   }
@@ -28,10 +24,10 @@
     }
 
     @include mobile {
-      position: absolute;
+      position: relative;
       width: 100%;
-      top: -27px;
-      left: 41px;
+      margin-top: -27px;
+      margin-left: 26px;
       font-size: 22px;
       line-height: 26px;
     }
@@ -92,6 +88,7 @@
     margin-bottom: 17px;
 
     & img {
+      width: 100%;
       object-fit: contain;
     }
 
