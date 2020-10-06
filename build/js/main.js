@@ -119,44 +119,48 @@
 
 (function () {
 
+  var technologySlider = document.querySelector('.technology__container');
   var breakpoint = window.matchMedia('(min-width:768px)');
 
-  var mySwiper;
+  if (technologySlider) {
 
-  var breakpointChecker = function () {
+    var mySwiper;
 
-    if (breakpoint.matches === true) {
+    var breakpointChecker = function () {
 
-      if (mySwiper) {
-        mySwiper.destroy(true, true);
+      if (breakpoint.matches === true) {
+
+        if (mySwiper) {
+          mySwiper.destroy(true, true);
+        }
+        return;
+      } else if (breakpoint.matches === false) {
+        // eslint-disable-next-line consistent-return
+        return enableSwiper();
+
       }
-      return;
-    } else if (breakpoint.matches === false) {
-      // eslint-disable-next-line consistent-return
-      return enableSwiper();
 
-    }
+    };
 
-  };
+    var enableSwiper = function () {
+      mySwiper = new Swiper(technologySlider, {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        initialSlide: 1,
+        autoHeight: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
 
-  var enableSwiper = function () {
-    mySwiper = new Swiper('.technology__container ', {
-      slidesPerView: 'auto',
-      spaceBetween: 15,
-      initialSlide: 1,
-      autoHeight: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
+      });
+    };
 
-    });
-  };
+    breakpoint.addListener(breakpointChecker);
 
-  breakpoint.addListener(breakpointChecker);
-
-  breakpointChecker();
+    breakpointChecker();
+  }
 })();
 
 'use strict';
@@ -327,47 +331,13 @@
 
 (function () {
 
-  var swiper = new Swiper('.pictures', {
-    slidesPerView: 'auto',
-    // autoHeight: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
+  var pictureSlider = document.querySelector('.pictures');
 
-  });
+  if (pictureSlider) {
 
-})();
-
-'use strict';
-
-(function () {
-
-  var breakpoint = window.matchMedia('(min-width:992px)');
-
-  var mySwiper;
-
-  var breakpointChecker1 = function () {
-
-    if (breakpoint.matches === true) {
-
-      if (mySwiper) {
-        mySwiper.destroy(true, true);
-      }
-      return;
-    } else if (breakpoint.matches === false) {
-      // eslint-disable-next-line consistent-return
-      return enableSwiper();
-    }
-
-  };
-
-
-  var enableSwiper = function () {
-    mySwiper = new Swiper('.advantages__wrap', {
+    var swiper = new Swiper(pictureSlider, {
       slidesPerView: 'auto',
-      autoHeight: true,
+      // autoHeight: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -375,12 +345,55 @@
       },
 
     });
-  };
+  }
 
-  breakpoint.addListener(breakpointChecker1);
+})();
+
+'use strict';
+
+(function () {
+
+  var advantagesSlider = document.querySelector('.advantages__wrap');
+  var breakpoint = window.matchMedia('(min-width:992px)');
+
+  if (advantagesSlider) {
+
+    var mySwiper;
+
+    var breakpointChecker1 = function () {
+
+      if (breakpoint.matches === true) {
+
+        if (mySwiper) {
+          mySwiper.destroy(true, true);
+        }
+        return;
+      } else if (breakpoint.matches === false) {
+        // eslint-disable-next-line consistent-return
+        return enableSwiper();
+      }
+
+    };
 
 
-  breakpointChecker1();
+    var enableSwiper = function () {
+      mySwiper = new Swiper(advantagesSlider, {
+        slidesPerView: 'auto',
+        autoHeight: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+
+      });
+    };
+
+    breakpoint.addListener(breakpointChecker1);
+
+
+    breakpointChecker1();
+  }
 
 })();
 
