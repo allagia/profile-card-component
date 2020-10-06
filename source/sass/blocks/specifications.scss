@@ -39,10 +39,14 @@
   table {
     font-size: 16px;
     line-height: 26px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
 
     letter-spacing: 0.005em;
     border-spacing: 0;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
 
     @include mobile {
       font-size: 11px;
@@ -257,7 +261,7 @@
       position: relative;
       width: 800px;
       width: calc(100% + 100px);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       margin-top: 8px;
       overflow: hidden;
       border-spacing: 0;
