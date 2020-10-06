@@ -32,18 +32,20 @@
 
   var clientWidth = document.body.clientWidth;
   var opportunitiesSlider;
+  var slider = document.querySelector('.opportunities__slider');
 
   var sliderInit = function () {
-    opportunitiesSlider = new Swiper('.opportunities__slider', {
-      slidesPerView: '1',
-      // loop: true,
-      pagination: {
-        el: '.opportunities__item-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-
-    });
+    if (slider) {
+      opportunitiesSlider = new Swiper(slider, {
+        slidesPerView: 'auto',
+        // loop: true,
+        pagination: {
+          el: '.opportunities__item-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+      });
+    }
   };
 
   var resizeHandlerSlider = function () {
@@ -61,4 +63,5 @@
   };
 
   window.addEventListener('resize', resizeHandlerSlider);
+  window.addEventListener('load', resizeHandlerSlider);
 })();

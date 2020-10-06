@@ -9,24 +9,23 @@
   <main>
 
     <section class="breadcrumb">
-      <div class="container">
-        <ul class="catalog__breadcrumb breadcrumb">
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#"></a>
-          </li>
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#">Главная</a>
-          </li>
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="#">каталог</a>
-          </li>
+      <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
+      <div class="breadcrumb__container container">
+        <a class="breadcrumb__back-arrow" href="#">
+          <svg width="9" height="14" viewBox="0 0 9 14">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="catalog.html">каталог</a></li>
         </ul>
       </div>
     </section>
 
     <section class="catalog container">
 
-      <h1>Каталог</h1>
+      <h1 class="h1 h1--add">Каталог</h1>
 
       <div class="catalog__wrap">
 

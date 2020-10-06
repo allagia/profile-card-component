@@ -1,22 +1,29 @@
 .ventilation-intro {
-  display: flex;
   padding-top: 51px;
   padding-bottom: 65px;
-  justify-content: space-between;
 
   @include tablet {
     padding-top: 53px;
     padding-bottom: 70px;
   }
+
+  @include mobile {
+    padding-top: 37px;
+    padding-bottom: 77px;
+  }
 }
 
-.ventilation-intro__left {
+.ventilation-intro__wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  flex-wrap: wrap;
+
+  @include mobile {
+    display: block;
+  }
 
   h1 {
+    width: 50%;
     margin: 0;
     font-size: 64px;
     line-height: 74px;
@@ -32,25 +39,52 @@
       line-height: 56px;
     }
 
+    @media (max-width: 1279px) {
+      font-size: 3.74vw;
+    }
+
+    @include mobile {
+      width: 100%;
+      font-size: 28px;
+      line-height: 121%;
+      letter-spacing: -0.01em;
+    }
+
     span {
       padding-left: 152px;
+      padding-right: 50px;
 
       @include tablet {
-        padding-left: 137px;
+        padding-left: 24.6%;
+      }
+
+      @include mobile {
+        padding-left: 0;
       }
     }
   }
 }
 
+.ventilation-intro__inner {
+  width: 50%;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
 .ventilation-intro__link {
   display: inline-block;
-  margin: 74px 0 0 141px;
-  padding: 12px 62px 6px 0;
+  padding: 0 62px 6px 0;
+
+  @include tablet {
+    margin: 3px 0 0 0px;
+  }
 
   &::after {
     width: 31px;
     height: 15px;
-    top: 15px;
+    top: 3px;
     right: -3px;
   }
 
@@ -62,9 +96,15 @@
     display: inline-block;
     padding: 0 41px 6px 0;
     margin: 0;
+    margin-left: 165px;
 
     @include tablet {
+      margin-left: 15px;
       padding: 0 40px 5px 0;
+    }
+
+    @include mobile {
+      display: none;
     }
 
     &::after {
@@ -86,48 +126,37 @@
     }
   }
 
-  @include tablet {
-    margin: 3px 0 0 0px;
-  }
-
   &--tablet {
     display: none;
 
     @include tablet {
       display: inline-block;
-      padding: 12px 39px 6px 0;
+      padding: 0px 38px 6px 0;
     }
 
     &::after {
       width: 27px;
       height: 12px;
       top: 17px;
+
+      @include tablet {
+        height: 13px;
+        top: 4px;
+      }
     }
   }
 
   &--desktop {
+    margin-left: 140px;
     @include tablet {
       display: none;
     }
   }
 }
 
-.ventilation-intro__right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 39.9%;
-  padding: 78px 9% 0 0;
-
-  @include tablet {
-    width: 48.6%;
-    padding: 57px 4% 0 0;
-  }
-}
-
 .ventilation-intro__description {
-  padding: 0 13% 10px 0;
-  align-self: flex-end;
+  width: 50%;
+  padding: 79px 12% 10px 165px;
   font-size: 24px;
   line-height: 150%;
   opacity: 0.8;
@@ -137,12 +166,20 @@
   }
 
   @include tablet {
+    padding: 57px 8% 10px 15px;
     font-size: 24px;
   }
-}
 
-.ventilation-intro__bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 30.7% 0 8.6%;
+  @media (max-width: 1279px) {
+    font-size: 1.88vw;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 22px 19px 10px 0px;
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.005em;
+  }
 }

@@ -17,18 +17,18 @@
     </div>
 
     <section class="ventilation-intro container">
-      <div class="ventilation-intro__left">
+      <div class="ventilation-intro__wrapper">
         <h1>Все типы <span>вентиляции</span></h1>
-        <div class="ventilation-intro__wrapper">
-          <a href="#" class="ventilation-intro__link ventilation-intro__link--desktop link-blue-underlined">В каталог</a>
-          <a href="#" class="ventilation-intro__link ventilation-intro__link--tablet link-blue-underlined">О качестве воздуха</a>
-        </div>
-      </div>
-      <div class="ventilation-intro__right">
         <div class="ventilation-intro__description">Одним из основных критериев выбора системы вентиляции служит
           функциональное назначение здания и его технические характеристики
         </div>
-        <div class="ventilation-intro__wrapper">
+        <div class="ventilation-intro__inner">
+          <a href="#" class="ventilation-intro__link ventilation-intro__link--desktop link-blue-underlined">В
+            каталог</a>
+          <a href="#" class="ventilation-intro__link ventilation-intro__link--tablet link-blue-underlined">О качестве
+            воздуха</a>
+        </div>
+        <div class="ventilation-intro__inner">
           <a href="#" class="ventilation-intro__link ventilation-intro__link--qmark link-blue-underlined">Как
             выбрать</a>
         </div>
@@ -40,7 +40,7 @@
         <h2 class="visually-hidden">Типы вентиляции</h2>
         <div class="ventilation__list">
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -59,7 +59,7 @@
                     alt="recovery-sistem">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">01.</div>
                 <h3 class="technique__title">Cистемы вентиляции
                   с рекуперацией тепла</h3>
@@ -118,7 +118,7 @@
 
           </article>
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -136,7 +136,7 @@
                     srcset="/img/ventilation-type/hybrid-mobile@2x.jpg" width="880" height="494" alt="hybrid">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">02.</div>
                 <h3 class="technique__title">Гибридная система вентиляции</h3>
                 <p class="technique__description-text">Данная система сочетает энергоэффективность
@@ -191,7 +191,7 @@
             </div>
           </article>
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -210,7 +210,7 @@
                     alt="mechanical-individual">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">03.</div>
                 <h3 class="technique__title">Mеханическая система <span>вентиляции </span>— индивидуальная</h3>
                 <p class="technique__description-text">Система механической вентиляции гарантирует нужный расход воздуха
@@ -264,7 +264,7 @@
             </div>
           </article>
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -283,7 +283,7 @@
                     alt="mechanical-common">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">04.</div>
                 <h3 class="technique__title">Mеханическая система
                   — общего обслуживания</h3>
@@ -338,7 +338,7 @@
             </div>
           </article>
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -356,7 +356,7 @@
                     width="880" height="494" alt="fan">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">05.</div>
                 <h3 class="technique__title">Bытяжные вентиляторы
                   с рекуперацией тепла</h3>
@@ -413,7 +413,7 @@
             </div>
           </article>
           <article class="ventilation__item ventilation__item--wide technique">
-            <div class="technique__summary">
+            <div class="technique__summary technique__summary--short">
               <div class="technique__summary-img">
                 <picture>
                   <source type="image/webp" media="(min-width: 1281px)"
@@ -431,7 +431,7 @@
                     srcset="/img/ventilation-type/natural-mobile@2x.jpg" width="880" height="494" alt="natural">
                 </picture>
               </div>
-              <div class="technique__description">
+              <div class="technique__description technique__description--short">
                 <div class="technique__count">06.</div>
                 <h3 class="technique__title">Естественная система вентиляции</h3>
                 <p class="technique__description-text">Система естественной или пассивной вентиляции (PSV) компании
@@ -489,7 +489,11 @@
     </section>
   </main>
 
-  <include src="source/components/footer_without_map.html"></include>
+  <footer class="page-footer page-footer--without-map page-footer--gray">
+    <div class="page-footer__container">
+      <include src="source/components/footer.html"></include>
+    </div>
+  </footer>
   <include src="source/components/script.html"></include>
 </body>
 

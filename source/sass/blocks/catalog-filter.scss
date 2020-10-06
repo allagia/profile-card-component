@@ -4,11 +4,11 @@
     flex-direction: column;
     width: 34%;
     max-width: 400px;
-    margin-top: 85px;
+    margin-top: 82px;
     margin-right: 20px;
 
     @include tablet {
-      margin-top: 50px;
+      margin-top: 48px;
       margin-right: 4%;
     }
 
@@ -19,7 +19,7 @@
     @include mobile {
       width: 100%;
       max-width: 100%;
-      margin-top: 23px;
+      margin-top: 0;
     }
   }
 
@@ -30,11 +30,11 @@
     border: none;
 
     @include tablet {
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
 
     @include mobile {
-      margin-bottom: 11px;
+      margin-bottom: 3px;
       padding-bottom: 7px;
       border-bottom: 1px solid $border-color;
     }
@@ -89,14 +89,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     @include tablet {
-      margin-bottom: 21px;
+      margin-bottom: 18px;
     }
 
     @include mobile {
-      margin-bottom: 18px;
+      margin-bottom: 5px;
       justify-content: space-between;
     }
   }
@@ -178,6 +178,7 @@
     }
 
     @include mobile {
+      margin-bottom: 10px;
       font-size: 12px;
       line-height: 18px;
     }
