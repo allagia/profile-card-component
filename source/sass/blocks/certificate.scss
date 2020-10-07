@@ -1,0 +1,116 @@
+.certificate {
+  padding: 0 0 111px;
+
+  @include mobile {
+    padding-bottom: 78px;
+  }
+}
+
+.certificate__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 75px 0 0 17.2%;
+
+  @media (max-width: 1000px) {
+    margin: 75px 0 0;
+  }
+
+  @include mobile {
+    margin: 60px 0 0;
+  }
+}
+
+.certificate__pdf {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+
+  p {
+    margin: 0 0 33px;
+    padding-left: 5px;
+  }
+
+  span {
+    margin-bottom: 7px;
+
+    &:last-of-type {
+      margin-bottom: auto;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.certificate__link {
+  margin-bottom: 13px;
+}
+
+.certificate__description {
+  width: 37.8%;
+  padding-top: 5px;
+  padding-right: 20px;
+
+  @include mobile {
+    width: 100%;
+    padding: 0;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 189%;
+    opacity: 0.95;
+    letter-spacing: -0.025em;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 243%;
+    }
+  }
+}
+
+.certificate__description-intro {
+  margin: 25px 0;
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.95;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.005em;
+  }
+
+  @include mobile {
+    margin: 17px 0 31px;
+  }
+}
+
+.certificate__description-link {
+  padding-right: 51px;
+
+  &::after {
+    top: 10px;
+    right: -2px;
+    width: 31px;
+    height: 15px;
+
+    @media (max-width: 1000px) {
+      right: -23px;
+    }
+
+    @include mobile {
+      right: -2px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-right: 12px;
+  }
+
+  @include mobile {
+    padding-right: 51px;
+  }
+}

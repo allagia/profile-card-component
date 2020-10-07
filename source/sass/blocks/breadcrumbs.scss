@@ -13,6 +13,10 @@
 
   &--about {
     padding-top: 6px;
+
+    @include tablet {
+      padding-top: 25px;
+    }
   }
 
   li:nth-of-type(n+2) {
