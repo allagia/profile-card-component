@@ -8,23 +8,23 @@
     <h2 class="h2 h2--small">Оставить заявку на монтаж оборудования</h2>
 
     <form method="post" name="calculation" autocomplete="on">
-      <label>
+      <label><span class="visually-hidden">ФИО</span>
         <input type="text" placeholder="ФИО*" required>
       </label>
 
       <div class="modal__form-row">
 
-        <label>
+        <label><span class="visually-hidden">Почта</span>
           <input type="email" placeholder="E-mail*" required>
         </label>
 
-        <label>
+        <label><span class="visually-hidden">Телефон</span>
           <input type="tel" placeholder="Телефон">
         </label>
 
       </div>
 
-      <label>
+      <label><span class="visually-hidden">Адрес объекта</span>
         <input type="text" placeholder="Адрес объекта">
       </label>
 
@@ -46,7 +46,9 @@
         </div>
       </div>
 
-      <textarea placeholder="Cообщение"></textarea>
+      <label><span class="visually-hidden">Cообщение</span>
+        <textarea placeholder="Cообщение"></textarea>
+      </label>
 
       <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
         <input class="visually-hidden" type="file">
