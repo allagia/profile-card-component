@@ -1,4 +1,10 @@
 .breadcrumb {
+  &--no-mobile {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__container {
     display: flex;
     padding-top: 10px;
