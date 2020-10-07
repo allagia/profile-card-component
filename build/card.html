@@ -241,7 +241,7 @@
     <section class="breadcrumb">
       <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
       <div class="breadcrumb__container container">
-        <a class="breadcrumb__back-arrow" href="#">
+        <a class="breadcrumb__back-arrow" href="#" aria-label="переход на предыдущую страницу">
           <svg width="9" height="14" viewBox="0 0 9 14">
             <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
           </svg>
@@ -430,12 +430,14 @@
           <table class="specifications__table">
 
             <thead>
-              <th></th>
-              <th>Приточное устройство</th>
-              <th></th>
-              <th>EHA² 5-35</th>
-              <th>EHA² 11-35</th>
-              <th colspan="2">EHA² 17-35</th>
+              <tr>
+                <th></th>
+                <th>Приточное устройство</th>
+                <th></th>
+                <th>EHA² 5-35</th>
+                <th>EHA² 11-35</th>
+                <th colspan="2">EHA² 17-35</th>
+              </tr>
             </thead>
 
             <tbody>
@@ -695,12 +697,13 @@
             <table>
 
                 <thead>
-
-                  <th>Приточное устройство</th>
-                  <th></th>
-                  <th>EHA² 5-35</th>
-                  <th>EHA² 11-35</th>
-                  <th>EHA² 17-35</th>
+                  <tr>
+                    <th>Приточное устройство</th>
+                    <th></th>
+                    <th>EHA² 5-35</th>
+                    <th>EHA² 11-35</th>
+                    <th>EHA² 17-35</th>
+                  </tr>
                 </thead>
 
                 <tbody>
@@ -1077,23 +1080,25 @@
     <h2 class="h2 h2--small">Мы&nbsp;готовы подобрать оборудование AERECO под ваш проект</h2>
 
     <form method="post" name="calculation" autocomplete="on">
-      <label>
+      <label><span class="visually-hidden">ФИО</span>
         <input type="text" placeholder="ФИО*" required="">
       </label>
 
       <div class="modal__form-row">
 
-        <label>
+        <label><span class="visually-hidden">Почта</span>
           <input type="email" placeholder="E-mail*" required="">
         </label>
 
-        <label>
+        <label><span class="visually-hidden">Телефон</span>
           <input type="tel" placeholder="Телефон">
         </label>
 
       </div>
 
-      <textarea placeholder="Cообщение"></textarea>
+      <label><span class="visually-hidden">Cообщение</span>
+        <textarea placeholder="Cообщение"></textarea>
+      </label>
 
       <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
         <input class="visually-hidden" type="file">
@@ -1125,22 +1130,24 @@
       <form method="post" name="feedback" autocomplete="on">
         <div class="modal__form-row">
 
-          <label for="name-id">
-            <input type="text" id="name-id" placeholder="Имя*" required="">
+          <label><span class="visually-hidden">Имя</span>
+            <input type="text" placeholder="Имя*" required="">
           </label>
 
-          <label for="phone-id">
-            <input type="tel" id="phone-id" placeholder="Телефон">
+          <label><span class="visually-hidden">Телефон</span>
+            <input type="tel" placeholder="Телефон">
           </label>
         </div>
 
-        <label for="mail-id">
-          <input type="email" id="mail-id" placeholder="E-mail*" required="">
+        <label><span class="visually-hidden">Почта</span>
+          <input type="email" placeholder="E-mail*" required="">
         </label>
 
-        <textarea placeholder="Cообщение"></textarea>
+        <label><span class="visually-hidden">Cообщение</span>
+          <textarea placeholder="Cообщение"></textarea>
+        </label>
 
-        <label class="modal__textarea-mobile" for="textarea-mobile">
+        <label class="modal__textarea-mobile" for="textarea-mobile"><span class="visually-hidden">Cообщение</span>
           <input type="text" id="textarea-mobile" placeholder="Cообщение">
         </label>
 
