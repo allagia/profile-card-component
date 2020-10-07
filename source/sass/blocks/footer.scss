@@ -147,8 +147,8 @@
     @media (max-width: 1490px) {
       display: flex;
       justify-content: space-between;
-      width: 71.5%;
-      margin: 0 0 20px auto;
+      width: 71.7%;
+      margin: 0 0 22px auto;
 
       order: 3;
     }
@@ -171,11 +171,11 @@
 
     svg {
       position: absolute;
-      top: 4px;
+      top: 2px;
       left: -30px;
 
       @include mobile {
-        top: 0;
+        top: -2px;
       }
     }
 
@@ -203,6 +203,10 @@
       @media (max-width: 1490px) {
         min-width: 226px;
         margin-bottom: 0;
+      }
+
+      @media (max-width: 940px) {
+        min-width: 220px;
       }
 
       @include mobile {
@@ -278,9 +282,10 @@
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.005em;
+    max-width: 190px;
     margin: 0;
 
-    color: rgba($color: #323B47, $alpha: 0.8);
+    color: rgba($color: #323b47, $alpha: 0.8);
 
     @media (max-width: 1490px) {
       font-size: 12px;

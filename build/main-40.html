@@ -250,22 +250,24 @@
       <form method="post" name="feedback" autocomplete="on">
         <div class="modal__form-row">
 
-          <label for="name-id">
-            <input type="text" id="name-id" placeholder="Имя*" required="">
+          <label><span class="visually-hidden">Имя</span>
+            <input type="text" placeholder="Имя*" required="">
           </label>
 
-          <label for="phone-id">
-            <input type="tel" id="phone-id" placeholder="Телефон">
+          <label><span class="visually-hidden">Телефон</span>
+            <input type="tel" placeholder="Телефон">
           </label>
         </div>
 
-        <label for="mail-id">
-          <input type="email" id="mail-id" placeholder="E-mail*" required="">
+        <label><span class="visually-hidden">Почта</span>
+          <input type="email" placeholder="E-mail*" required="">
         </label>
 
-        <textarea placeholder="Cообщение"></textarea>
+        <label><span class="visually-hidden">Cообщение</span>
+          <textarea placeholder="Cообщение"></textarea>
+        </label>
 
-        <label class="modal__textarea-mobile" for="textarea-mobile">
+        <label class="modal__textarea-mobile" for="textarea-mobile"><span class="visually-hidden">Cообщение</span>
           <input type="text" id="textarea-mobile" placeholder="Cообщение">
         </label>
 
