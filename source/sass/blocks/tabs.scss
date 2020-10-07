@@ -33,8 +33,12 @@
   &__wrap {
     display: flex;
 
-    @include tablet {
+    @include tablet-1440px {
       margin-left: 55px;
+    }
+
+    @include tablet-inner {
+      margin-left: 0;
     }
 
     @include mobile {
@@ -62,11 +66,17 @@
     align-items: flex-start;
     min-width: 400px;
     // margin-right: 60px;
-    margin-right: 5%;
+    // margin-right: 5%;
+    margin-right: 4.3%;
 
 
-    @include tablet {
+    @include tablet-1440px {
       min-width: 368px;
+      margin-right: 4.9%;
+    }
+
+    @include tablet-inner {
+      margin-right: 0;
     }
 
     @include mobile {
@@ -153,6 +163,11 @@
 .tabcontent {
   display: none;
   animation: fadeEffect 1s;
+  width: 81%;
+
+  @include tablet-1440px {
+    width: 98%;
+  }
 
   h3 {
     font-weight: 600;

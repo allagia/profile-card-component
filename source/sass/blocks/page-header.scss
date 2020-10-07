@@ -15,6 +15,10 @@
     margin-bottom: 10px;
   }
 
+  @include mobile {
+    margin-bottom: 0;
+  }
+
   &__wrap {
     position: relative;
     display: flex;
@@ -26,7 +30,6 @@
     @include tablet-1200px {
       flex-wrap: wrap;
       padding-top: 16px;
-      padding-bottom: 30px;
     }
 
     @include mobile {

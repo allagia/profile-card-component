@@ -1,4 +1,8 @@
 .specifications {
+  @include mobile {
+    display: none;
+  }
+
   &__point {
     position: relative;
     display: block;
@@ -28,28 +32,51 @@
     }
   }
 
+  &__subtitle {
+    color: $blue;
+  }
+
   table {
     font-size: 16px;
     line-height: 26px;
-    margin-bottom: 23px;
+    margin-bottom: 26px;
 
     letter-spacing: 0.005em;
     border-spacing: 0;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+
+    @include mobile {
+      font-size: 11px;
+      line-height: 14px;
+    }
   }
 
-  tr {
-    &:first-of-type {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 34px;
+  thead {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
 
-      letter-spacing: 0.005em;
+    letter-spacing: 0.005em;
 
-      color: $white;
+    color: $white;
+    background-color: #39baf0;
+
+    tr {
       background-color: #39baf0;
     }
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
 
+      letter-spacing: 0.005em;
+    }
+  }
+
+  tr {
     &:last-of-type {
       td {
         height: 79px;
@@ -62,9 +89,22 @@
   }
 
   th {
-    padding: 33px 0;
+    font-weight: 500;
     border-style: hidden;
     text-align: left;
+
+    height: 98px;
+
+    @include tablet {
+      height: 100px;
+    }
+
+
+    @include mobile {
+      font-weight: 400;
+      padding: 0 0 28px;
+      height: 90px;
+    }
 
     &:first-of-type {
       width: 5.6%;
@@ -90,6 +130,10 @@
 
       @include tablet {
         width: 8.3%;
+      }
+
+      @include mobile {
+        width: 9%;
       }
     }
 
@@ -170,17 +214,17 @@
     }
   }
 
-
   .specifications__note {
     display: flex;
     align-items: center;
+    width: 100%;
 
     span {
       position: relative;
       font-size: 14px;
       line-height: 20px;
 
-      margin-right: 42px;
+      margin-right: 46px;
 
       @include tablet {
         margin-right: 25px;
@@ -189,7 +233,7 @@
 
 
       &::before {
-        top: -2px;
+        top: 1px;
         left: -22px;
         width: 14px;
         height: 14px;
@@ -198,6 +242,151 @@
           top: 1px;
           left: 0;
         }
+      }
+    }
+  }
+}
+
+.feature {
+  position: relative;
+  display: none;
+  border: none;
+
+  @include mobile {
+    display: block;
+    overflow: auto;
+    margin: 0 -15px;
+
+    table {
+      position: relative;
+      width: 800px;
+      width: calc(100% + 100px);
+      margin-bottom: 4px;
+      margin-top: 8px;
+      overflow: hidden;
+      border-spacing: 0;
+    }
+
+
+    /*thead*/
+    thead {
+      position: relative;
+      display: block; /*seperates the header from the body allowing it to be positioned*/
+      width: 600px;
+      width: 100%;
+      overflow: visible;
+      background-color: $blue;
+      color: $white;
+    }
+
+    thead th {
+      min-width: 20px;
+      height: 90px;
+      padding: 0 0 26px;
+
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      letter-spacing: 0.005em;
+    }
+
+    thead th:nth-child(1) {/*first cell in the header*/
+      position: relative;
+      display: block; /*seperates the first cell in the header from the header*/
+      padding: 20px 0 0 15px;
+      min-width: 172px;
+      background-color: $blue;
+    }
+
+    thead th:nth-child(3),
+    thead th:nth-child(4),
+    thead th:nth-child(5) {
+      min-width: 130px;
+      padding-right: 34px;
+    }
+
+    tbody {
+      position: relative;
+      display: block; /*seperates the tbody from the header*/
+      width: 600px;
+      width: calc(100% + 100px);
+      height: 100vh;
+      overflow: scroll;
+    }
+
+    tbody td {
+      position: relative;
+      min-width: 20px;
+      max-width: 170px;
+      font-size: 11px;
+      line-height: 14px;
+
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+      }
+    }
+
+    tbody tr td:nth-child(1) {  /*the first cell in each tr*/
+      position: relative;
+      display: block; /*seperates the first column from the tbody*/
+      min-height: 60px;
+      padding: 16px 30px 16px 15px;
+      background-color: $white;
+      z-index: 1;
+
+      &::after {
+        left: 15px;
+        width: calc(100% - 15px);
+      }
+    }
+
+    tbody tr td:last-child {
+      &::after {
+        width: calc(100% - 15px);
+      }
+    }
+
+    tbody tr:last-child td {
+      &::after {
+        display: none;
+      }
+    }
+
+    tbody tr:last-child td:nth-child(1) {
+      display: flex;
+
+      span::before {
+        top: 2px;
+        left: 0;
+      }
+    }
+
+    tbody tr td:nth-child(3),
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5) {
+      width: 130px;
+      padding-right: 34px;
+    }
+
+
+    .specifications__point {
+      padding-left: 16px;
+      margin-right: 17px;
+
+      &::before {
+        top: -9px;
+        left: 9px;
+        width: 10px;
+        height: 10px;
+        z-index: 0;
       }
     }
   }
