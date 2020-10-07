@@ -1,5 +1,5 @@
 .opportunities {
-  padding: 66px 0 106px;
+  padding: 65px 0 106px;
   background-color: $blue;
   color: $white;
 
@@ -63,11 +63,10 @@
 }
 
 .opportunities__item {
-  width: 27%;
-  margin-right: auto;
+  width: 25.6%;
 
   @include tablet {
-    width: 30%;
+    width: 29.2%;
   }
 
   @include mobile  {
@@ -75,8 +74,8 @@
 
   }
 
-  &:not(:first-of-type) {
-    margin-left: 8.3%;
+  &:not(:nth-of-type(3n + 1)) {
+    margin-left: 8.8%;
 
 
     @include tablet {

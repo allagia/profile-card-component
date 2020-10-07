@@ -1,5 +1,4 @@
 .quality-promo {
-  padding-top: 14px;
   background: url("../img/quality/promo.jpg") no-repeat content-box 0 138px;
   background-size: 57.05%;
 
@@ -9,7 +8,7 @@
   }
 
   @include mobile {
-    padding-top: 17px;
+    padding-top: 27px;
     background: url("../img/quality/promo-mobile.jpg") no-repeat content-box 0 89px;
     background-size: 100%;
   }
