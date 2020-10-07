@@ -111,6 +111,7 @@
 
     img {
       max-width: 370px;
+      max-height: 248px;
       margin-bottom: 39px;
 
       @include mobile {
@@ -123,5 +124,9 @@
     @media (max-width: 1400px) {
       width: 91%;
     }
+  }
+
+  &__link {
+    display: block;
   }
 }

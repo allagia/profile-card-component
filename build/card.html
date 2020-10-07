@@ -260,7 +260,11 @@
 
         <div class="card-info__column model">
           <h1 class="h1 h1--add">EHA<sup>2</sup></h1>
-          <span class="model__type">Оконное</span>
+          <span class="model__type">
+            <svg width="23" height="23" viewBox="0 0 23 23">
+              <use xlink:href="img/sprite_auto.svg#icon-window"></use>
+            </svg>
+            Оконное</span>
           <h2 class="h2 h2--small">Гигрорегулируемое приточное устройство с шумопоглащением</h2>
         </div>
 
@@ -473,8 +477,8 @@
                 <td>Переключатель режимов работы</td>
                 <td></td>
                 <td><span class="specifications__point"></span></td>
-                <td><span class="specifications__point specifications__point--grey"></span></td>
-                <td><span class="specifications__point specifications__point--grey"></span></td>
+                <td><span class="specifications__point specifications__point--none"></span></td>
+                <td><span class="specifications__point specifications__point--none"></span></td>
                 <td></td>
               </tr>
 
@@ -675,8 +679,8 @@
               <tr>
                 <td></td>
                 <td class="specifications__note">
-                  <span class="specifications__point">Включено</span>
-                  <span class="specifications__point specifications__point--grey">Опция</span>
+                  <span class="specifications__point"></span><span>Включено</span>
+                  <span class="specifications__point specifications__point--none"></span><span>Опция</span>
                 </td>
                 <td></td>
                 <td></td>
@@ -742,8 +746,8 @@
                     <td>Переключатель режимов работы</td>
                     <td></td>
                     <td><span class="specifications__point"></span></td>
-                    <td><span class="specifications__point specifications__point--grey"></span></td>
-                    <td><span class="specifications__point specifications__point--grey"></span></td>
+                    <td><span class="specifications__point specifications__point--none"></span></td>
+                    <td><span class="specifications__point specifications__point--none"></span></td>
 
                   </tr>
 
@@ -955,14 +959,14 @@
 
                   <tr>
 
-                    <td class="specifications__note">
-                      <span class="specifications__point">Включено</span>
-                      <span class="specifications__point specifications__point--grey">Опция</span>
+                    <td class="specifications__note" colspan="5">
+                      <span class="specifications__point"></span><span>Включено</span>
+                      <span class="specifications__point specifications__point--none"></span><span>Опция</span>
                     </td>
+                    <!-- <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td></td> -->
 
                   </tr>
                 </tbody>
@@ -1027,43 +1031,49 @@
         <h2 class="h1 h1--add">Аксессуары для EHA<sup>2</sup></h2>
         <ul class="accessory__list">
           <li class="accessory__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.webp 1x, img/cards/accessory-1@2x.webp 2x">
-              <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
+            <a class="accessory__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.webp 1x, img/cards/accessory-1@2x.webp 2x">
+                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
 
-              <source media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.jpg 1x, img/cards/accessory-1@2x.jpg 2x">
-              <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
-            </picture>
-            <div class="accessory__description">
-              <h3>E-TFR Оконный телескопический канал</h3>
-              <p>АЕА1151</p>
-            </div>
+                <source media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.jpg 1x, img/cards/accessory-1@2x.jpg 2x">
+                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
+              </picture>
+              <div class="accessory__description">
+                <h3>E-TFR Оконный телескопический канал</h3>
+                <p>АЕА1151</p>
+              </div>
+            </a>
           </li>
           <li class="accessory__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.webp 1x, img/cards/accessory-2@2x.webp 2x">
-              <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
+            <a class="accessory__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.webp 1x, img/cards/accessory-2@2x.webp 2x">
+                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
 
-              <source media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.jpg 1x, img/cards/accessory-2@2x.jpg 2x">
-              <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
-            </picture>
-            <div class="accessory__description">
-              <h3>AC Наружный козырек с контролем потока воздуха</h3>
-              <p>AC</p>
-            </div>
+                <source media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.jpg 1x, img/cards/accessory-2@2x.jpg 2x">
+                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
+              </picture>
+              <div class="accessory__description">
+                <h3>AC Наружный козырек с контролем потока воздуха</h3>
+                <p>AC</p>
+              </div>
+            </a>
           </li>
           <li class="accessory__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.webp 1x, img/cards/accessory-3@2x.webp 2x">
-              <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
+            <a class="accessory__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.webp 1x, img/cards/accessory-3@2x.webp 2x">
+                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
 
-              <source media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.jpg 1x, img/cards/accessory-3@2x.jpg 2x">
-              <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
-            </picture>
-            <div class="accessory__description">
-              <h3>A-EHA Акустический козырек</h3>
-              <p>A-EHA</p>
-            </div>
+                <source media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.jpg 1x, img/cards/accessory-3@2x.jpg 2x">
+                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="схема устройства">
+              </picture>
+              <div class="accessory__description">
+                <h3>A-EHA Акустический козырек</h3>
+                <p>A-EHA</p>
+              </div>
+            </a>
           </li>
         </ul>
         <a class="link-blue-underlined" href="#">Смотреть Все</a>

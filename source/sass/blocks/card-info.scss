@@ -31,13 +31,6 @@
     }
   }
 
-  &__column {
-    // width: 48.5%;
-
-    // @include tablet-inner {
-    //   width: 100%;
-    // }
-  }
 
   h1 {
     margin-bottom: 40px;
@@ -52,7 +45,7 @@
     }
 
     @include mobile {
-      margin-top: -25px;
+      margin-top: -42px;
       padding-left: 28px;
       margin-bottom: 20px;
     }
@@ -104,13 +97,9 @@
 
   &__type {
     position: relative;
-    display: block;
-    padding-left: 37px;
+    display: flex;
+    align-items: center;
     margin-bottom: 19px;
-
-    @include tablet {
-      padding-left: 35px;
-    }
 
     @include tablet-inner {
       font-size: 14px;
@@ -118,26 +107,20 @@
 
       letter-spacing: 0.005em;
 
-      padding-left: 26px;
       margin-bottom: 5px;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
+    svg {
+      margin-right: 14px;
 
-      width: 23px;
-      height: 23px;
-
-      background-image: url("../img/icon-window.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
+      @include tablet {
+        margin-right: 12px;
+      }
 
       @include tablet-inner {
-        top: 2px;
         width: 16px;
         height: 16px;
+        margin-right: 10px;
       }
     }
   }
@@ -156,6 +139,9 @@
   grid-area: details;
 
   @include list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 24px;
   line-height: 36px;
 
