@@ -255,6 +255,8 @@
 }
 
 .technique__details-list {
+  display: flex;
+  flex-direction: column;
   width: 70%;
   padding: 74px 19% 57px 79px;
 
@@ -315,25 +317,14 @@
   }
 }
 
-.technique__details-link {
-  width: 238px;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 10px 0 6px;
+.technique__details-container {
+  margin: 8px 0;
 
   @include mobile {
-    padding-top: 1px;
+    margin: 0 0 7px;
   }
+}
 
-  &::after {
-    width: 28px;
-    height: 14px;
-
-    @include mobile {
-      width: 30px;
-      height: 15px;
-      right: -1px;
-      top: 4px;
-    }
-  }
+.technique__details-link {
+  padding-right: 57px;
 }
