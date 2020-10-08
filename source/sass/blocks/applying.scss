@@ -190,11 +190,11 @@
 
     color: #7c8592;
 
-    max-width: 44%;
+    max-width: 300px;
     margin: 0 0 32px;
 
     @include tablet {
-      max-width: 65%;
+      max-width: 350px;
     }
 
     @include mobile {
@@ -209,7 +209,7 @@
     justify-content: center;
     align-items: center;
     min-height: 606px;
-    padding-top: 34px;
+    padding: 85px 50px 50px;
 
 
     font-size: 16px;
@@ -223,7 +223,7 @@
 
     @include tablet {
       min-height: 409px;
-      padding-top: 0;
+      padding: 58px 50px;
 
       border: 1px solid rgba($color: #8ea0b9, $alpha: 0.5);
     }
@@ -234,7 +234,7 @@
 
     @include mobile {
       min-height: 222px;
-      padding-bottom: 2px;
+      padding: 26px 20px;
     }
 
 
@@ -256,7 +256,7 @@
         line-height: 22px;
         text-align: left;
 
-        max-width: 64%;
+        max-width: 192px;
         padding-left: 16px;
         margin-bottom: 18px;
       }
