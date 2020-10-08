@@ -53,11 +53,11 @@
     }
   }
 
-  // &:last-of-type {
-  //   td {
-  //     display: flex;
-  //   }
-  // }
+  &:last-of-type {
+    td {
+      display: flex;
+    }
+  }
 
 
   td:nth-of-type(2) {
