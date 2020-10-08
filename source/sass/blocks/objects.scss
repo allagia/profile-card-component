@@ -1,0 +1,515 @@
+.objects {
+  margin-top: 37px;
+  padding: 0;
+
+  &__title {
+    margin-bottom: 6px;
+    padding: 0 145px;
+
+    @include tablet {
+      margin-left: 14px;
+      padding: 0 85px;
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 74px;
+      letter-spacing: -0.003em;
+    }
+
+    @include tablet {
+      margin-top: 56px;
+    }
+
+    @include mobile {
+      width: 80%;
+      margin-top: -40px;
+      margin-bottom: 11px;
+      margin-left: 0;
+      padding: 0 15px;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 58px;
+    padding: 0 145px;
+
+    @include tablet {
+      margin-bottom: 49px;
+      padding: 0 85px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+  }
+
+  &__intro-text {
+    max-width: 46%;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark;
+
+    @include tablet-1440px {
+      font-size: 22px;
+    }
+
+    @include tablet {
+      max-width: 762px;
+      margin-left: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: normal;
+
+      & span {
+        display: none;
+      }
+    }
+  }
+
+  &__intro-date {
+    margin-right: 15%;
+    margin-bottom: 27px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: $dark;
+    border-bottom: 2px solid $blue;
+
+    @include tablet {
+      margin-right: 1.5%;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding: 30px 0 60px;
+    background-color: $bg-color;
+
+    @include tablet {
+      padding-bottom: 93px;
+    }
+
+    @include mobile {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__slider-gallery {
+    width: 68%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include tablet {
+      width: 93%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0;
+      padding: 0 15px;
+    }
+  }
+
+  &__slider-list {
+    @include list-reset;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding-top: 30px;
+    transition: margin-left 250ms;
+    overflow: hidden;
+
+    @include mobile {
+      flex-direction: column;
+      padding-top: 0;
+    }
+  }
+
+  &__slider-item {
+    margin-right: 145px;
+
+    @include tablet {
+      margin-right: 90px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+  }
+
+  &__span {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__span--visible {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__slider-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 216px;
+    height: 190px;
+    margin-bottom: 80px;
+    padding-top: 38px;
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    & svg {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+
+      @include mobile {
+        width: 50px;
+        height: 50px;
+        margin-right: 28px;
+        margin-top: 18px;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
+    @include mobile {
+      flex-direction: row;
+      width: 290px;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-left: 15px;
+      height: 96px;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: left;
+      background-color: $white;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+
+    & svg {
+      width: 19px;
+      height: 19px;
+      margin: 0 auto;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__controls--prev {
+    top: 145px;
+    left: 135px;
+  }
+
+  &__controls--next {
+    top: 145px;
+    right: 135px;
+  }
+
+  &__slider-desc {
+    display: none;
+    flex-direction: row;
+    margin: 0 7.5%;
+    padding: 30px;
+    background-color: $white;
+
+    & img {
+      width: 82.7%;
+      margin-right: 140px;
+
+      @include tablet-1440px {
+        width: 415px;
+        height: 490px;
+      }
+
+      @include tablet {
+        margin-left: auto;
+      }
+    }
+
+    @include tablet {
+      margin: 0 6.5%;
+      padding-right: 17px;
+    }
+  }
+
+  &__slider-desc-mobile {
+    display: none;
+
+    & img {
+      @include mobile {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      padding-bottom: 16px;
+      background-color: transparent;
+    }
+  }
+
+  &__slider-desc-mobile--active {
+    display: flex;
+  }
+
+  .objects__slider-text-block {
+    width: 38%;
+    margin-top: 70px;
+
+    @include tablet {
+      width: 72%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 15px;
+      padding-right: 10px;
+    }
+  }
+
+  .objects__slider-title {
+    margin-top: 0;
+    margin-bottom: 29px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 42px;
+    color: $dark;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .objects__slider-text {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 18px;
+    line-height: 28px;
+    color: $dark;
+    letter-spacing: 0.005em;
+
+    @include mobile {
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: normal;
+    }
+  }
+
+  &__slider-button--active {
+    padding-top: 36px;
+    border: 2px solid $blue;
+
+    @include mobile {
+      padding-top: 0;
+      border: none;
+    }
+  }
+
+  .objects__slider-desc--active {
+    display: flex;
+  }
+
+  &__apt {
+    padding-top: 150px;
+    padding-right: 4.5%;
+    padding-left: 7.5%;
+
+    @include tablet {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      padding-left: 6.5%;
+      padding-right: 3.5%;
+    }
+
+    @include mobile {
+      padding-top: 40px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__apt-link {
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  &__apt-title {
+    margin-bottom: 100px;
+    font-size: 64px;
+    line-height: 74px;
+    color: $dark;
+
+    @include tablet {
+      margin-bottom: 85px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__apt-wrap {
+    @include list-reset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__apt-item {
+    margin-bottom: 73px;
+    margin-right: 3%;
+
+    & img {
+      width: 100%;
+      margin-bottom: 25px;
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
+    }
+
+    @include tablet {
+      margin-right: 5.5%;
+    }
+
+    @include mobile {
+      margin-bottom: 1px;
+      margin-right: 0;
+    }
+  }
+
+  &__apt-item-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 42px;
+    color: $dark;
+
+    @include mobile {
+      margin-bottom: 11px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  &__apt-adress {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 21px;
+    padding-left: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $light-grey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -5px;
+      width: 18px;
+      height: 18px;
+      background: url("../img/icon-pin.svg") no-repeat;
+      background-size: 18px 18px;
+
+      @include mobile {
+        top: 2px;
+        left: 0;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__apt-desc {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__tab {
+    padding-top: 57px;
+    padding-bottom: 167px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__tab-wrap {
+    margin-right: 238px;
+  }
+}

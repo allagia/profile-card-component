@@ -6,29 +6,13 @@
   &__point {
     position: relative;
     display: block;
+    width: 18px;
+    height: 18px;
+    background-color: $blue;
+    border-radius: 50%;
 
-    &::before {
-      position: absolute;
-      content: "";
-
-      top: -10px;
-      left: -1px;
-
-      width: 18px;
-      height: 18px;
-      background-color: $blue;
-      border-radius: 50%;
-
-      @include tablet {
-        top: -9px;
-        left: 1px;
-      }
-    }
-
-    &--grey {
-      &::before {
-        background-color: #dedede;
-      }
+    &--none {
+      background-color: #dedede;
     }
   }
 
@@ -219,30 +203,23 @@
     align-items: center;
     width: 100%;
 
+    margin-left: -23px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+
     span {
       position: relative;
       font-size: 14px;
       line-height: 20px;
+      margin-right: 26px;
+    }
 
-      margin-right: 46px;
-
-      @include tablet {
-        margin-right: 25px;
-        padding-left: 21px;
-      }
-
-
-      &::before {
-        top: 1px;
-        left: -22px;
-        width: 14px;
-        height: 14px;
-
-        @include tablet {
-          top: 1px;
-          left: 0;
-        }
-      }
+    .specifications__point {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
     }
   }
 }
@@ -342,6 +319,11 @@
       background-color: $white;
       z-index: 1;
 
+      &.specifications__note {
+        max-width: 100%;
+        padding: 16px 17px 16px 15px;
+      }
+
       &::after {
         left: 15px;
         width: calc(100% - 15px);
@@ -362,11 +344,7 @@
 
     tbody tr:last-child td:nth-child(1) {
       display: flex;
-
-      span::before {
-        top: 2px;
-        left: 0;
-      }
+      align-items: baseline;
     }
 
     tbody tr td:nth-child(3),
@@ -376,18 +354,25 @@
       padding-right: 34px;
     }
 
+    .specifications__note {
+      span {
+        margin-right: 17px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .specifications__point {
+        margin-right: 6px;
+      }
+    }
 
     .specifications__point {
-      padding-left: 16px;
       margin-right: 17px;
 
-      &::before {
-        top: -9px;
-        left: 9px;
-        width: 10px;
-        height: 10px;
-        z-index: 0;
-      }
+      width: 10px;
+      height: 10px;
     }
   }
 }
