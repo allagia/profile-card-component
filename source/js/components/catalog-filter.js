@@ -72,8 +72,8 @@
       closeAccordion();
     });
 
-    window.addEventListener('load', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       closeAccordion();
-    });
+    }, {once: true});
   }
 })();
