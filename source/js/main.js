@@ -14,6 +14,7 @@
 // =require components/card-accordion.js
 // =require components/air-quality.js
 // =require components/catalog-filter.js
+// =require components/objects.js
 // =require components/fixed-table.js
 // =require components/card-popup.js
 // =require components/fixed-tbl.js

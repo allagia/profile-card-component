@@ -20,19 +20,20 @@
     body.classList.remove('no-scroll');
   };
 
-  closeBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    closePopup();
-  });
-
-
-  closeBtn.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       closePopup();
-    }
-  });
+    });
 
+
+    closeBtn.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+        evt.preventDefault();
+        closePopup();
+      }
+    });
+  }
 
   document.addEventListener('keydown', function (evt) {
     if (evt.keyCode === window.utils.ESC_KEYCODE) {
