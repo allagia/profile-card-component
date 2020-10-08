@@ -44,6 +44,7 @@
   &__list {
     @include list-reset;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -25px 42px;
 
     @include tablet-inner {
@@ -54,6 +55,7 @@
   &__item {
     width: 25%;
     min-width: 400px;
+    min-width: 386px;
     padding: 0 25px;
 
     @media (max-width: 1400px) {
@@ -109,6 +111,7 @@
 
     img {
       max-width: 370px;
+      max-height: 248px;
       margin-bottom: 39px;
 
       @include mobile {
@@ -121,5 +124,9 @@
     @media (max-width: 1400px) {
       width: 91%;
     }
+  }
+
+  &__link {
+    display: block;
   }
 }

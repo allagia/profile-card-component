@@ -36,13 +36,9 @@
     opacity: 0.4;
   }
 
-  @include tablet-inner-rev {
-    // rig  ht: 9.3%;
-  }
 
 
   @include tablet {
-    // right: 9.5%;
     width: 14.4%;
     bottom: 87.2%;
 
@@ -53,13 +49,18 @@
   }
 
   @include tablet-inner {
-    right: 5px;
-    bottom: -21.4%;
+    right: 11px;
+    width: 40px;
+    bottom: -13.4%;
 
     svg {
       width: 36px;
       height: 30px;
     }
+  }
+
+  @include mobile {
+    bottom: -21.4%;
   }
 }
 
@@ -72,22 +73,21 @@
   bottom: 40.6%;
   left: initial;
 
-  @include tablet-inner-rev {
-    // right: 8.7%;
-  }
-
   @include tablet {
-    // right: 6.5%;
     width: 14.4%;
     bottom: 54.6%;
   }
 
   @include tablet-inner {
-    width: 24%;
-    right: 52px;
+    width: 80px;
+    right: 49px;
     font-size: 18px;
     line-height: 27px;
 
+    bottom: -13.4%;
+  }
+
+  @include mobile {
     bottom: -21.4%;
   }
 }
@@ -111,7 +111,11 @@
       height: 360px;
     }
 
-    @include tablet-inner {
+    // @include tablet-inner {
+    //   height: 217px;
+    // }
+
+    @include mobile {
       height: 217px;
     }
   }
@@ -190,9 +194,14 @@
 
     @include tablet-inner {
       display: block;
-      color: $white;
-      font-size: 20px;
+      content: "";
       padding: 0 0 0 36px;
+      width: 12px;
+      height: 19px;
+      background-image: url("../img/icon-arrow-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(180deg);
     }
   }
 
@@ -233,9 +242,16 @@
     font-size: 20px;
     padding: 3px 0 0 36px;
 
+
     @include tablet-inner {
+      content: "";
       color: $white;
       padding: 0 36px 0 0;
+      width: 12px;
+      height: 19px;
+      background-image: url("../img/icon-arrow-white.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 

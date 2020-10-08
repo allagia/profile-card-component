@@ -9,12 +9,21 @@
 <body class="body">
   <include src="source/components/header.html"></include>
   <main>
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Качество воздуха</a></li>
-      </ul>
-    </div>
+    <section class="breadcrumb breadcrumb--no-mobile">
+      <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
+      <div class="breadcrumb__container container">
+        <a class="breadcrumb__back-arrow" href="#" aria-label="переход на предыдущую страницу">
+          <span class="visually-hidden">Назад</span>
+          <svg width="9" height="14" viewBox="0 0 9 14">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__link">Качество воздуха</span></li>
+        </ul>
+      </div>
+    </section>
     <section class="quality-promo container">
       <h1>Качество воздуха в помещении</h1>
       <div class="quality-promo__description">
@@ -71,13 +80,13 @@
             <div class="technique__summary">
               <div class="technique__summary-img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="/img/quality/adaptive.webp 1x, /img/quality/adaptive@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="/img/quality/adaptive-tablet.webp 1x, /img/quality/adaptive-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="/img/quality/adaptive-mobile.webp 1x, img/quality/adaptive-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/adaptive.webp 1x, img/quality/adaptive@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/adaptive-tablet.webp 1x, img/quality/adaptive-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/quality/adaptive-mobile.webp 1x, img/quality/adaptive-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="/img/quality/adaptive.jpg 1x, /img/quality/adaptive@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="/img/quality/adaptive-tablet.jpg 1x, /img/quality/adaptive-tablet@2x.jpg 2x">
-                    <img src="src=/img/quality/adaptive-mobile.jpg" srcset="/img/quality/adaptive-mobile@2x.jpg" width="880" height="494" alt="adaptive-sistem">
+                    <source media="(min-width: 1281px)" srcset="img/quality/adaptive.jpg 1x, img/quality/adaptive@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/quality/adaptive-tablet.jpg 1x, img/quality/adaptive-tablet@2x.jpg 2x">
+                    <img src="img/quality/adaptive-mobile.jpg" srcset="img/quality/adaptive-mobile@2x.jpg" width="880" height="494" alt="adaptive-sistem">
                 </picture>
               </div>
               <div class="technique__description">
@@ -93,13 +102,13 @@
             <div class="technique__details">
               <div class="technique__img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="/img/quality/exhaust.webp 1x, /img/quality/exhaust@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="/img/quality/exhaust-tablet.webp 1x, /img/quality/exhaust-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="/img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/exhaust.webp 1x, img/quality/exhaust@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="/img/quality/exhaust.jpg 1x, /img/quality/exhaust@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="/img/quality/exhaust-tablet.jpg 1x, /img/quality/exhaust-tablet@2x.jpg 2x">
-                    <img src="src=/img/quality/exhaust.jpg" srcset="/img/quality/exhaust@2x.jpg" width="280" height="238" alt="exhaust">
+                    <source media="(min-width: 1281px)" srcset="img/quality/exhaust.jpg 1x, img/quality/exhaust@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.jpg 1x, img/quality/exhaust-tablet@2x.jpg 2x">
+                    <img src="img/quality/exhaust.jpg" srcset="img/quality/exhaust@2x.jpg" width="280" height="238" alt="exhaust">
                 </picture>
                 <p class="technique__img-title">G2H.</p>
                 <p class="technique__img-text">Многофункци&shy;ональное вытяжное устройство</p>
@@ -133,7 +142,9 @@
                     в пустующих помещениях, автоматически сокращая расход воздуха.
                   </p>
                 </div>
-                <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-container">
+                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                </div>
               </div>
             </div>
 
@@ -142,13 +153,13 @@
             <div class="technique__summary">
               <div class="technique__summary-img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="/img/quality/hygro.webp 1x, /img/quality/hygro@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="/img/quality/hygro-tablet.webp 1x, /img/quality/hygro-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="/img/quality/hygro-mobile.webp 1x, img/quality/hygro-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/hygro.webp 1x, img/quality/hygro@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/hygro-tablet.webp 1x, img/quality/hygro-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/quality/hygro-mobile.webp 1x, img/quality/hygro-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="/img/quality/hygro.jpg 1x, /img/quality/hygro@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="/img/quality/hygro-tablet.jpg 1x, /img/quality/hygro-tablet@2x.jpg 2x">
-                    <img src="src=/img/quality/hygro-mobile.jpg" srcset="/img/quality/hygro-mobile@2x.jpg" width="880" height="494" alt="hygro">
+                    <source media="(min-width: 1281px)" srcset="img/quality/hygro.jpg 1x, img/quality/hygro@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/quality/hygro-tablet.jpg 1x, img/quality/hygro-tablet@2x.jpg 2x">
+                    <img src="img/quality/hygro-mobile.jpg" srcset="img/quality/hygro-mobile@2x.jpg" width="880" height="494" alt="hygro">
                 </picture>
               </div>
               <div class="technique__description">
@@ -165,13 +176,13 @@
             <div class="technique__details">
               <div class="technique__img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="/img/quality/emm.webp 1x, /img/quality/emm@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="/img/quality/emm.webp 1x, /img/quality/emm@2x.webp 2x">
-                      <source type="image/webp" srcset="/img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+                      <source type="image/webp" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="/img/quality/emm.jpg 1x, /img/quality/emm@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="/img/quality/emm.jpg 1x, /img/quality/emm@2x.jpg 2x">
-                    <img src="src=/img/quality/emm.jpg" srcset="/img/quality/emm@2x.jpg" width="280" height="238" alt="emm">
+                    <source media="(min-width: 1281px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
+                    <img src="img/quality/emm.jpg" srcset="img/quality/emm@2x.jpg" width="280" height="238" alt="emm">
                 </picture>
                 <p class="technique__img-title">EMM.</p>
                 <p class="technique__img-text">Гигрорегули&shy;руемое приточное устройство</p>
@@ -204,7 +215,9 @@
                     система вентиляции обеспечивает эффективное и последовательное решение проблемы конденсации.
                   </p>
                 </div>
-                <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-container">
+                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                </div>
               </div>
             </div>
           </article>
@@ -212,13 +225,13 @@
             <div class="technique__summary">
               <div class="technique__summary-img">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="/img/quality/sensor.webp 1x, /img/quality/sensor@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="/img/quality/sensor-tablet.webp 1x, /img/quality/sensor-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="/img/quality/sensor-mobile.webp 1x, img/quality/sensor-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/sensor.webp 1x, img/quality/sensor@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/sensor-tablet.webp 1x, img/quality/sensor-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/quality/sensor-mobile.webp 1x, img/quality/sensor-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="/img/quality/sensor.jpg 1x, /img/quality/sensor@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="/img/quality/sensor-tablet.jpg 1x, /img/quality/sensor-tablet@2x.jpg 2x">
-                    <img src="src=/img/quality/sensor-mobile.jpg" srcset="/img/quality/sensor-mobile@2x.jpg" width="880" height="494" alt="sensor">
+                    <source media="(min-width: 1281px)" srcset="img/quality/sensor.jpg 1x, img/quality/sensor@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/quality/sensor-tablet.jpg 1x, img/quality/sensor-tablet@2x.jpg 2x">
+                    <img src="img/quality/sensor-mobile.jpg" srcset="img/quality/sensor-mobile@2x.jpg" width="880" height="494" alt="sensor">
                 </picture>
               </div>
               <div class="technique__description">
@@ -233,7 +246,7 @@
             </div>
             <div class="technique__details">
               <div class="technique__img">
-                <img src="/img/quality/s-rh.jpg" alt="s-rh" width="280" height="238">
+                <img src="img/quality/s-rh.jpg" alt="s-rh" width="280" height="238">
                 <p class="technique__img-title">S-RH/T.</p>
                 <p class="technique__img-text">Цифровой датчик влажности
                   и температуры воздуха</p>
@@ -267,7 +280,9 @@
                     первоначальным настройкам.
                   </p>
                 </div>
-                <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-container">
+                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                </div>
               </div>
             </div>
           </article>

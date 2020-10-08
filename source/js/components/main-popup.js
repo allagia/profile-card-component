@@ -3,6 +3,8 @@
 
 (function () {
 
+  // var ESC_KEYCODE = 27;
+  // var ENTER_KEYCODE = 13;
   // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
@@ -10,7 +12,7 @@
   var popup2 = document.querySelector('.modal--inst');
   var body = document.querySelector('body');
   var closePopups = document.querySelectorAll('.modal__close-btn');
-  var overlay = document.querySelector('.overlay--main');
+  var overlay = document.querySelector('.overlay');
 
   if (button1) {
 
@@ -78,6 +80,5 @@
       });
     }
   }
-
 
 })();

@@ -1,16 +1,21 @@
 .breadcrumb {
+  &--no-mobile {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__container {
     display: flex;
-    padding-top: 10px;
-    padding-bottom: 19px;
+    padding-top: 3px;
+    padding-bottom: 11px;
 
     @include tablet {
-      padding-top: 29px;
-      padding-bottom: 18px;
+      padding-top: 22px;
     }
 
     @include mobile {
-      padding-top: 20px;
+      padding-top: 1px;
       padding-bottom: 1px;
     }
   }
@@ -23,7 +28,7 @@
     line-height: 16px;
     letter-spacing: 0.005em;
 
-    padding-left: 17px;
+    padding: 7px 0 0 0;
 
     color: #5d6a7b;
 
@@ -39,6 +44,10 @@
     &:last-of-type {
       &::after {
         display: none;
+      }
+
+      .breadcrumb__link:hover {
+        opacity: 1;
       }
     }
 
@@ -56,6 +65,20 @@
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  &__back-arrow {
+    width: 27px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      position: relative;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
     }
   }
 }

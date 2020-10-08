@@ -1,14 +1,14 @@
 .ventilation-intro {
-  padding-top: 51px;
+  padding-top: 36px;
   padding-bottom: 65px;
 
   @include tablet {
-    padding-top: 53px;
+    padding-top: 39px;
     padding-bottom: 70px;
   }
 
   @include mobile {
-    padding-top: 37px;
+    padding-top: 48px;
     padding-bottom: 77px;
   }
 }
@@ -75,26 +75,11 @@
 
 .ventilation-intro__link {
   display: inline-block;
-  padding: 0 62px 6px 0;
-
-  @include tablet {
-    margin: 3px 0 0 0px;
-  }
-
-  &::after {
-    width: 31px;
-    height: 15px;
-    top: 3px;
-    right: -3px;
-  }
-
-  &:hover {
-    opacity: 0.7;
-  }
+  padding-right: 62px;
 
   &--qmark {
     display: inline-block;
-    padding: 0 41px 6px 0;
+    padding-right: 41px;
     margin: 0;
     margin-left: 165px;
 
@@ -112,13 +97,16 @@
       content: "?";
       color: $blue;
       font-size: 17px;
-      top: 0;
-      right: -23px;
+      top: 8px;
+      right: -16px;
+      transition: all 0.2s ease;
+
+      @include tablet {
+        top: 0;
+      }
     }
 
     &:hover {
-      opacity: 0.7;
-
       &::after {
         background: none;
         color: $dark;
@@ -156,10 +144,9 @@
 
 .ventilation-intro__description {
   width: 50%;
-  padding: 79px 12% 10px 165px;
+  padding: 79px 12% 0 165px;
   font-size: 24px;
   line-height: 150%;
-  opacity: 0.8;
 
   @media(max-width: 1800px) {
     font-size: 1.27vw;

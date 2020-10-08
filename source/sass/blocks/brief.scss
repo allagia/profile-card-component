@@ -1,0 +1,88 @@
+.brief {
+  background-color: $bg-color;
+}
+
+.brief__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 105px;
+  padding-bottom: 31px;
+  padding-left: 17.2%;
+
+  @include tablet {
+    padding-top: 103px;
+    padding-left: 8.6%;
+  }
+
+  @include mobile {
+    display: block;
+    padding-top: 44px;
+    padding-left: 0;
+  }
+}
+
+.brief__item  {
+  width: 21.7%;
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 62px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 56px;
+  }
+
+  &:not(:nth-of-type(3n + 1)) {
+    margin-left: 127px;
+
+    @include tablet {
+      margin-left: 15.7%;
+    }
+
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+
+  &:last-of-type {
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.brief__index {
+  margin: 0 0 42px;
+  font-size: 96px;
+  line-height: 35%;
+  color: $blue;
+
+  @include tablet {
+    font-size: 72px;
+    line-height: 47%;
+    margin: 0 0 34px;
+  }
+
+  @include mobile {
+    margin: 0 0 21px;
+    font-size: 64px;
+    line-height: 34px;
+    text-align: center;
+  }
+}
+
+.brief__descr {
+  margin: 0;
+  padding-right: 50px;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.005em;
+  opacity: 0.95;
+
+  @include mobile {
+    text-align: center;
+    padding: 0;
+  }
+}

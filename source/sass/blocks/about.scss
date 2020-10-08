@@ -1,8 +1,14 @@
 .about {
   padding-top: 92px;
+  padding-bottom: 92px;
 
   @include tablet {
-    padding-top: 60px;
+    padding-top: 41px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-top: 26px;
   }
 
   h1 {
@@ -14,12 +20,12 @@
   margin-top: 65px;
   padding-left: 68.7%;
 
-  min-height: 686px;
+  padding-bottom: 9.8%;
 
   background-image: url("/img/about-company/about-bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: 57% auto;
+  background-size: 57.1% auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/about-company/about-bg@2x.jpg");
@@ -27,11 +33,26 @@
 
   @include tablet {
     margin-top: 79px;
+    padding-left: 51.3%;
+    padding-bottom: 0.7%;
+
     background-image: url("/img/about-company/about-tablet-bg.jpg");
     background-size: 48.7% auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/about-company/about-tablet-bg@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    margin-top: 36px;
+    padding: 93% 0 0;
+
+    background-image: url("/img/about-company/about-mobile-bg.jpg");
+    background-size: 100% auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-company/about-mobile-bg@2x.jpg");
     }
   }
 
@@ -41,6 +62,15 @@
     font-size: 18px;
     line-height: 9px;
     letter-spacing: -0.025em;
+
+    @include tablet {
+      line-height: 21px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -55,6 +85,19 @@
   @media (max-width: 1919px) {
     font-size: 1.26vw;
   }
+
+  @include tablet {
+    padding-top: 34px;
+    padding-right: 12%;
+    font-size: 1.88vw;
+  }
+
+  @include mobile {
+    padding: 17px 0 0;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.005em;
+  }
 }
 
 .about__description-text {
@@ -68,7 +111,21 @@
   opacity: 0.95;
 
   @media (max-width: 1919px) {
-    font-size: 0.94vw;
+    font-size: 0.92vw;
+  }
+
+  @include tablet {
+    padding-top: 34px;
+    font-size: 1.41vw;
+    margin-bottom: 3.7%;
+  }
+
+  @include mobile {
+    padding: 40px 0 0;
+    margin-bottom: 7.8%;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.005em;
   }
 }
 

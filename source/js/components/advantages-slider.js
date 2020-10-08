@@ -2,42 +2,46 @@
 
 (function () {
 
+  var advantagesSlider = document.querySelector('.advantages__wrap');
   var breakpoint = window.matchMedia('(min-width:992px)');
 
-  var mySwiper;
+  if (advantagesSlider) {
 
-  var breakpointChecker1 = function () {
+    var mySwiper;
 
-    if (breakpoint.matches === true) {
+    var breakpointChecker1 = function () {
 
-      if (mySwiper) {
-        mySwiper.destroy(true, true);
+      if (breakpoint.matches === true) {
+
+        if (mySwiper) {
+          mySwiper.destroy(true, true);
+        }
+        return;
+      } else if (breakpoint.matches === false) {
+        // eslint-disable-next-line consistent-return
+        return enableSwiper();
       }
-      return;
-    } else if (breakpoint.matches === false) {
-      // eslint-disable-next-line consistent-return
-      return enableSwiper();
-    }
 
-  };
+    };
 
 
-  var enableSwiper = function () {
-    mySwiper = new Swiper('.advantages__wrap', {
-      slidesPerView: 'auto',
-      autoHeight: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
+    var enableSwiper = function () {
+      mySwiper = new Swiper(advantagesSlider, {
+        slidesPerView: 'auto',
+        autoHeight: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
 
-    });
-  };
+      });
+    };
 
-  breakpoint.addListener(breakpointChecker1);
+    breakpoint.addListener(breakpointChecker1);
 
 
-  breakpointChecker1();
+    breakpointChecker1();
+  }
 
 })();

@@ -1,10 +1,10 @@
 .opportunities {
-  padding: 66px 0 106px;
+  padding: 65px 0 56px;
   background-color: $blue;
   color: $white;
 
   @include tablet {
-    padding: 2px 0 120px;
+    padding: 2px 0 70px;
     background-color: $white;
     color: $dark;
   }
@@ -40,16 +40,24 @@
     }
   }
 
-  span {
+  .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
+    background: $blue;
+    opacity: 0.3;
+
+    &-active {
+      opacity: 1;
+    }
   }
 }
 
 .opportunities__list {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 81px;
   padding-right: 4.8%;
+
 
   @include tablet {
     padding-top: 70px;
@@ -57,26 +65,27 @@
   }
 
   @include mobile {
+    flex-wrap: nowrap;
     padding-top: 40px;
     padding-right: 0;
   }
 }
 
 .opportunities__item {
-  width: 27%;
-  margin-right: auto;
+  margin-bottom: 50px;
+  width: 25.6%;
 
   @include tablet {
-    width: 30%;
+    width: 29.2%;
   }
 
   @include mobile  {
     width: 100%;
-
+    margin-bottom: 0;
   }
 
-  &:not(:first-of-type) {
-    margin-left: 8.3%;
+  &:not(:nth-of-type(3n + 1)) {
+    margin-left: 8.8%;
 
 
     @include tablet {
@@ -116,7 +125,7 @@
     width: 72px;
     height: 72px;
     left: 0;
-    top: -2px;
+    top: -12px;
 
     @include tablet {
       top: 2px;
