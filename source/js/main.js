@@ -16,3 +16,4 @@
 // =require components/catalog-filter.js
 // =require components/fixed-table.js
 // =require components/card-popup.js
+// =require components/fixed-tbl.js

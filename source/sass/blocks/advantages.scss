@@ -125,17 +125,32 @@
     }
   }
 
-
-  img {
-    max-width: 300px;
+  &__image {
+    max-width: 38%;
+    min-width: 38%;
 
     @include tablet {
-      max-width: 210px;
+      max-width: 39%;
+      min-width: 39%;
+    }
+
+    @include tablet-inner {
+      max-width: 80%;
+      min-width: 80%;
+    }
+  }
+
+  img {
+    width: 300px;
+    max-height: 220px;
+    object-fit: cover;
+
+    @include tablet {
+      max-height: 166px;
       padding-top: 6px;
     }
 
     @include tablet-inner {
-      max-width: 233px;
       margin-bottom: 20px;
     }
   }

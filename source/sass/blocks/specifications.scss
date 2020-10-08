@@ -203,7 +203,7 @@
     align-items: center;
     width: 100%;
 
-    margin-left: -23px;
+    // margin-left: -23px;
 
     @include tablet {
       margin-left: 0;
@@ -373,6 +373,40 @@
 
       width: 10px;
       height: 10px;
+    }
+  }
+}
+
+
+.mobile {
+  @include mobile {
+
+    position: relative;
+    margin: 0 -15px;
+
+    .specifications__note {
+      span {
+        margin-right: 17px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .specifications__point {
+        margin-right: 6px;
+      }
+    }
+
+    .specifications__point {
+      margin-right: 17px;
+
+      width: 10px;
+      height: 10px;
+    }
+
+    table {
+      margin-top: 7px;
     }
   }
 }
