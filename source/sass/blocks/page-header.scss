@@ -563,7 +563,7 @@
     border: none;
     cursor: auto;
     outline: none;
-    // -webkit-appearance: none;
+    -webkit-appearance: none;
     border-radius: 0;
 
     &::placeholder {
@@ -613,6 +613,7 @@
     padding: 10px 6px 27px;
     border: none;
     background-color: transparent;
+    transition: $transition-props;
 
     &:active,
     &:focus {
@@ -622,7 +623,6 @@
     &:hover,
     &:focus {
       fill: $blue-hover;
-      transition: $transition-props;
     }
   }
 
@@ -663,6 +663,9 @@
     &:hover,
     &:focus {
       opacity: 0.7;
+    }
+
+    &:active {
       transition: $transition-props;
     }
 
