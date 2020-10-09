@@ -239,9 +239,6 @@
   }
 
   &__form-submit-btn {
-    margin-bottom: 8px;
-    line-height: 38px;
-
     @include mobile {
       width: 150px;
       height: 40px;

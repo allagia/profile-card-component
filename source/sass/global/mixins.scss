@@ -17,6 +17,12 @@
   }
 }
 
+@mixin tablet-1600px {
+  @media (max-width: $tablet-1600px) {
+    @content;
+  }
+}
+
 @mixin tablet-1440px {
   @media (max-width: $tablet-1440px) {
     @content;
