@@ -72,7 +72,7 @@
       btn.addEventListener('click', handleBtnClick);
     });
 
-    window.matchMedia(TABLET__1200).addListener(openMenu);
+    //window.matchMedia(TABLET__1200).addListener(openMenu);
   }
 })();
 
@@ -853,9 +853,6 @@
     var enableSwiper = function () {
       mySwiper = new Swiper(specificationsSlider, {
         slidesPerView: 'auto',
-        // spaceBetween: 15,
-        // initialSlide: 1,
-        // autoHeight: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',

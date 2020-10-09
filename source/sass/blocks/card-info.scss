@@ -40,7 +40,6 @@
     }
 
     @include tablet-inner {
-      padding-left: 2px;
       margin-bottom: 20px;
     }
 
@@ -52,13 +51,14 @@
 
     sup {
       font-size: 36px;
-      top: -0.8em;
+      vertical-align: revert;
+      top: -.3em;
 
       @include tablet {
         font-size: 26px;
       }
 
-      @include tablet-inner {
+      @include mobile {
         font-size: 13px;
       }
     }
