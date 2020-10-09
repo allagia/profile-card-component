@@ -51,6 +51,22 @@
       }
     }
 
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: flex;
+      }
+    }
+
+    &--pattern {
+      display: none;
+
+      @include mobile {
+        display: flex;
+      }
+    }
+
     &:first-of-type,
     &:nth-of-type(2) {
       border-top: 1px solid rgba($color: #323b47, $alpha: 0.2);
@@ -93,8 +109,21 @@
     transition: max-height $transition-props;
     border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
 
+    // &::before {
+    //   @include mobile {
+
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 1px;
+    //     border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+    //   }
+    // }
+
     &--specifications {
-      border-top: 1px solid rgba(50, 59, 71, 0.2);
+      // border-top: 1px solid rgba(50, 59, 71, 0.2);
       border-bottom: none;
 
       @include tablet {
@@ -235,10 +264,6 @@
 
 
 .files {
-  // @include mobile {
-  //   border-bottom: none;
-  // }
-
   &__list {
     @include list-reset;
     display: flex;

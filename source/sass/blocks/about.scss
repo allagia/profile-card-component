@@ -1,66 +1,119 @@
 .about {
-  padding-top: 92px;
-  padding-bottom: 92px;
+  padding-bottom: 144px;
 
   @include tablet {
-    padding-top: 41px;
-    padding-bottom: 40px;
+    padding-bottom: 139px;
   }
 
   @include mobile {
     padding-top: 26px;
+    padding-bottom: 60px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 142%;
+      letter-spacing: 0.005em;
+    }
   }
 
-  h1 {
-    text-transform: uppercase;
+  &--indent-top {
+    padding-bottom: 92px;
+    padding-top: 77px;
+
+    @include tablet {
+      padding-top: 27px;
+      padding-bottom: 40px;
+    }
+
+    @include mobile {
+      padding-top: 26px;
+      padding-bottom: 42px;
+    }
+
+    h1 {
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.about__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 64px;
+
+  @include tablet {
+    margin-top: 69px
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 22px;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+
+    @include tablet {
+      margin-top: 79px
+    }
+
+    @include mobile {
+      margin-top: 36px;
+    }
+  }
+}
+
+.about__img {
+  width: 57.2%;
+
+  @include tablet {
+    width: 42.8%;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 31px;
+  }
+
+  &--wide {
+    @include tablet {
+      width: 48.7%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 }
 
 .about__description {
-  margin-top: 65px;
-  padding-left: 68.7%;
-
-  padding-bottom: 9.8%;
-
-  background-image: url("/img/about-company/about-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 57.1% auto;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/about-company/about-bg@2x.jpg");
-  }
+  width: 31.3%;
+  padding-right: 2.6%;
 
   @include tablet {
-    margin-top: 79px;
-    padding-left: 51.3%;
-    padding-bottom: 0.7%;
-
-    background-image: url("/img/about-company/about-tablet-bg.jpg");
-    background-size: 48.7% auto;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/about-company/about-tablet-bg@2x.jpg");
-    }
+    width: 48.7%;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 
   @include mobile {
-    margin-top: 36px;
-    padding: 93% 0 0;
-
-    background-image: url("/img/about-company/about-mobile-bg.jpg");
-    background-size: 100% auto;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/about-company/about-mobile-bg@2x.jpg");
-    }
+    width: 100%;
   }
 
   h2 {
     margin: 0;
     font-weight: 600;
     font-size: 18px;
-    line-height: 9px;
+    line-height: 100%;
     letter-spacing: -0.025em;
 
     @include tablet {
@@ -72,12 +125,29 @@
       line-height: 18px;
     }
   }
+
+  &--big-indent {
+    padding-right: 6%;
+
+    @include mobile {
+      padding-right: 0;
+    }
+
+    h2 {
+      line-height: 50%;
+
+      @include tablet {
+        line-height: 21px;
+      }
+    }
+  }
+
 }
 
 .about__description-intro {
   margin: 0;
+  margin-bottom: -6px;
   padding-top: 28px;
-  padding-right: 18%;
   font-size: 24px;
   line-height: 150%;
   opacity: 0.95;
@@ -88,23 +158,30 @@
 
   @include tablet {
     padding-top: 34px;
-    padding-right: 12%;
+    margin-bottom: -2px;
     font-size: 1.88vw;
   }
 
   @include mobile {
-    padding: 17px 0 0;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.005em;
+    padding: 15px 0 0;
+    font-size: 16px;
+    line-height: 168%;
+    letter-spacing: .005em;
+  }
+
+  &--big-text {
+    @include mobile {
+      padding: 14px 0 0;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.005em;
+    }
   }
 }
 
 .about__description-text {
-  margin: 0 0 8.2%;;
-  padding: 28px 12% 10px 0;
-  padding-top: 28px;
-  padding-right: 12%;
+  margin: 0 0 10.2%;
+  padding: 35px 0 10px 0;
   font-size: 18px;
   line-height: 156%;
   letter-spacing: 0.005em;
@@ -117,12 +194,12 @@
   @include tablet {
     padding-top: 34px;
     font-size: 1.41vw;
-    margin-bottom: 3.7%;
+    margin-bottom: 4.7%;
   }
 
   @include mobile {
-    padding: 40px 0 0;
-    margin-bottom: 7.8%;
+    padding: 42px 0 0;
+    margin-bottom: 7.5%;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.005em;
@@ -130,12 +207,5 @@
 }
 
 .about__description-link {
-  padding: 9px 71px 9px 0;
-
-  &::after {
-    top: 10px;
-    right: -2px;
-    width: 27px;
-    height: 15px;
-  }
+  padding-right: 73px;
 }

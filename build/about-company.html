@@ -345,24 +345,49 @@
 </header>
 
   <main>
-    <div class="container">
-      <ul class="breadcrumbs breadcrumbs--about">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Технология</a></li>
-      </ul>
-    </div>
-    <section class="about container">
-      <h1>ОБ Aerohouse</h1>
-      <div class="about__description">
-        <h2>Эксперты в системах вентиляции</h2>
-        <p class="about__description-intro">AeroHouse — официальный дистрибьютор французской компании Aereco,
-          производителя передовых систем вентиляции для домов, квартир, общественных пространств, жилых комплексов.
-        </p>
-        <p class="about__description-text">
-          Многолетний опыт работы и сотрудничества позволяет нам обеспечивать комплексный сервис для наших клиентов
-          и экспертное консультирование по вопросам подбора, установки и эксплуатации систем любой сложности.
-        </p>
-        <a href="#" class="about__description-link link-blue-underlined">о технологиях</a>
+    <section class="breadcrumb breadcrumb--no-mobile">
+      <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
+      <div class="breadcrumb__container container">
+        <a class="breadcrumb__back-arrow" href="#" aria-label="переход на предыдущую страницу">
+          <span class="visually-hidden">Назад</span>
+          <svg width="9" height="14" viewBox="0 0 9 14">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </a>
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
+          <li class="breadcrumb__item"><a class="breadcrumb__link">Технология</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="about about--indent-top">
+      <div class="container">
+        <h1>ОБ Aerohouse</h1>
+
+        <div class="about__container about__container--align-top">
+          <div class="about__img about__img--wide">
+            <picture>
+              <source type="image/webp" media="(min-width: 1281px)" srcset="img/about-company/about-bg.webp 1x, img/about-company/about-bg@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/about-company/about-tablet-bg.webp 1x, img/about-company/about-tablet-bg@2x.webp 2x">
+              <source type="image/webp" srcset="img/about-company/about-mobile-bg.webp 1x, img/about-company/about-mobile-bg@2x.webp 2x">
+
+                <source media="(min-width: 1281px)" srcset="img/about-company/about-bg.jpg 1x, img/about-company/about-bg@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="iimg/about-company/about-tablet-bg.jpg 1x, img/about-company/about-tablet-bg@2x.jpg 2x">
+                <img src="img/about-company/about-mobile-bg.jpg" srcset="img/about-company/about-mobile-bg@2x.jpg" width="930" height="685" alt="about">
+            </picture>
+          </div>
+          <div class="about__description about__description--big-indent">
+            <h2>Эксперты в системах вентиляции</h2>
+            <p class="about__description-intro about__description-intro--big-text">AeroHouse — официальный дистрибьютор французской компании Aereco,
+              производителя передовых систем вентиляции для домов, квартир, общественных пространств, жилых комплексов.
+            </p>
+            <p class="about__description-text">
+              Многолетний опыт работы и сотрудничества позволяет нам обеспечивать комплексный сервис для наших клиентов
+              и экспертное консультирование по вопросам подбора, установки и эксплуатации систем любой сложности.
+            </p>
+            <a href="#" class="about__description-link link-blue-underlined">о технологиях</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="tab tab--about">
@@ -553,11 +578,8 @@
             </p>
             <a href="#" class="certificate__description-link link-blue-underlined">Сертификаты AERECO</a>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
   </main>

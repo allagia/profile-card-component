@@ -18,6 +18,7 @@
       width: 100%;
       max-width: 100%;
       margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -214,6 +215,11 @@
     opacity: 0.7;
   }
 
+  label {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
   &__form-filter label:hover {
     opacity: 0.7;
   }
@@ -239,6 +245,7 @@
     @include mobile {
       width: 150px;
       height: 40px;
+      line-height: 147.3%;
     }
   }
 

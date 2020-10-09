@@ -17,3 +17,5 @@
 // =require components/objects.js
 // =require components/fixed-table.js
 // =require components/card-popup.js
+// =require components/fixed-tbl.js
+// =require components/specifications-slider.js

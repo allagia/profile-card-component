@@ -90,7 +90,8 @@ gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
-    'source/defaultTheme.css'
+    'source/gridviewscroll.js',
+    'source/fixed_table.js',
   ], {
     base: 'source'
   })
