@@ -4,7 +4,7 @@
   <include src="source/components/head.html"></include>
   <title>Каталог - приточные устройства</title>
 </head>
-<body class="body">
+<body>
   <include src="source/components/header.html"></include>
   <main>
 
@@ -19,18 +19,20 @@
         <ul class="breadcrumb__list">
           <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html">Главная</a></li>
           <li class="breadcrumb__item"><a class="breadcrumb__link" href="catalog.html">каталог</a></li>
-          <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">приточные устройства</a></li>
+          <li class="breadcrumb__item">приточные устройства</li>
         </ul>
       </div>
     </section>
 
     <section class="catalog-devices container">
-
-      <h1 class="catalog-devices__title h1 h1-add">Приточные устройства</h1>
-
+      <h1 class="catalog-devices__title h1 h1-add">
+        Приточные устройства
+      </h1>
       <div class="catalog-devices__wrap">
 
-        <include src="source/components/catalog-filter.html"></include>
+        <aside>
+          <include src="source/components/catalog-filter.html"></include>
+        </aside>
 
         <ul class="catalog-devices__list">
           <li class="catalog-devices__item">
@@ -51,9 +53,14 @@
             <a class="catalog-devices__link" href="#">
               <div class="catalog-devices__link-name">
                 <h2 class="catalog-devices__name">EHT</h2>
-                <span class="catalog-devices__model-type catalog-devices__model-type--2">Стеновое</span>
+                <svg width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="img/sprite_auto.svg#icon-wall"></use>
+                </svg>
+                <p class="catalog-devices__model-type">Стеновое</p>
               </div>
-              Гигрорегулируемое приточное устройство
+              <h3 class="catalog-devices__model">
+                Гигрорегулируемое приточное устройство
+              </h3>
             </a>
           </li>
           <li class="catalog-devices__item">
@@ -74,9 +81,14 @@
             <a class="catalog-devices__link" href="#">
               <div class="catalog-devices__link-name">
                 <h2 class="catalog-devices__name">EHA<sup>2</sup></h2>
-                <span class="catalog-devices__model-type">Оконное</span>
+                <svg width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="img/sprite_auto.svg#icon-window"></use>
+                </svg>
+                <p class="catalog-devices__model-type">Оконное</p>
               </div>
-              Гигрорегулируемое приточное устройство с шумопоглощением
+              <h3 class="catalog-devices__model">
+                Гигрорегулируемое приточное устройство с&nbsp;шумопоглощением
+              </h3>
             </a>
           </li>
           <li class="catalog-devices__item">
@@ -97,9 +109,14 @@
             <a class="catalog-devices__link" href="#">
               <div class="catalog-devices__link-name">
                 <h2 class="catalog-devices__name">EMM</h2>
-                <span class="catalog-devices__model-type">Оконное</span>
+                <svg width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="img/sprite_auto.svg#icon-window"></use>
+                </svg>
+                <p class="catalog-devices__model-type">Оконное</p>
               </div>
-              Гигрорегулируемое приточное устройство
+              <h3 class="catalog-devices__model">
+                Гигрорегулируемое приточное устройство
+              </h3>
             </a>
           </li>
           <li class="catalog-devices__item">
@@ -120,9 +137,14 @@
             <a class="catalog-devices__link" href="#">
               <div class="catalog-devices__link-name">
                 <h2 class="catalog-devices__name">EMM<sup>2</sup></h2>
-                <span class="catalog-devices__model-type">Оконное</span>
+                <svg width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="img/sprite_auto.svg#icon-window"></use>
+                </svg>
+                <p class="catalog-devices__model-type">Оконное</p>
               </div>
-              Гигрорегулируемое приточное устройство с повышенным расходом воздуха
+              <h3 class="catalog-devices__model">
+                Гигрорегулируемое приточное устройство с&nbsp;повышенным расходом воздуха
+              </h3>
             </a>
           </li>
         </ul>

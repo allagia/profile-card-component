@@ -27,6 +27,7 @@
 
     var showContent = function (el) {
       var target = el.closest('.catalog__fieldset-wrap');
+      el.focusable = 'False';
       openList(target);
     };
 
