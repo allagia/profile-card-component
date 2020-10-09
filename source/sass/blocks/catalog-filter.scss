@@ -2,11 +2,8 @@
   &__form-filter {
     display: flex;
     flex-direction: column;
-    width: 34%;
     max-width: 400px;
     margin-top: 82px;
-    margin-right: 20px;
-    margin-bottom: 83px;
 
     @include tablet {
       margin-top: 48px;
@@ -25,7 +22,7 @@
     }
   }
 
-  &__form-filter fieldset {
+  &__fieldset-wrap {
     margin: 0;
     margin-bottom: 28px;
     padding: 0;
@@ -36,17 +33,17 @@
     }
 
     @include mobile {
-      margin-bottom: 3px;
-      padding-bottom: 7px;
+      margin-bottom: 0;
+      padding-bottom: 9px;
       border-bottom: 1px solid $border-color;
     }
   }
 
-  &__form-filter fieldset:last-of-type {
-    margin-bottom: 28px;
+  &__fieldset-wrap:last-of-type {
+    margin-bottom: 27px;
 
     @include mobile {
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
   }
 
@@ -60,53 +57,17 @@
     }
   }
 
-  &__form-filter legend {
+  &__filter-toggle {
+    position: relative;
+    height: 40px;
+    margin-bottom: 17px;
+    padding-left: 0;
+    padding-right: 40px;
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
     color: $dark;
-
-    @include tablet-1440px {
-      font-size: 22px;
-      line-height: 34px;
-    }
-
-    @include tablet-1200px {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    @include tablet-inner {
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    @include mobile {
-      font-size: 14px;
-      line-height: 18px;
-    }
-  }
-
-  &__legend-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 16px;
-
-    @include tablet {
-      margin-bottom: 18px;
-    }
-
-    @include mobile {
-      margin-bottom: 5px;
-      justify-content: space-between;
-    }
-  }
-
-  &__filter-toggle {
-    position: relative;
-    width: 40px;
-    height: 40px;
+    white-space: nowrap;
     cursor: pointer;
     border: none;
     transition: opacity $transition-props;
@@ -117,22 +78,38 @@
       content: "";
       position: absolute;
       top: 13px;
-      left: 8px;
+      right: 18px;
       width: 14px;
       height: 14px;
       background: url("../img/icon-arrow-opened.svg") no-repeat;
 
       @include mobile {
-        left: 15px;
+        right: 0;
       }
     }
 
+    @include tablet {
+      letter-spacing: -0.05em;
+    }
+
+    @include tablet-inner {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
     @include mobile {
-      right: -12px;
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left;
+      letter-spacing: normal;
     }
   }
 
   &__fieldset-wrap--closed {
+    .catalog__filter-toggle {
+      margin-bottom: 0;
+    }
+
     .catalog__filter-toggle::before {
       display: none;
     }
@@ -141,18 +118,23 @@
       content: "";
       position: absolute;
       top: 13px;
-      left: 14px;
+      right: 18px;
       width: 14px;
       height: 14px;
       background: url("../img/icon-arrow-closed.svg") no-repeat;
+
+      @include mobile {
+        right: 0;
+      }
     }
 
     .catalog__form-list {
       display: none;
     }
 
-    .catalog__legend-wrap {
-      margin-bottom: 6px;
+    @include mobile {
+      padding-bottom: 1px;
+      padding-left: 0;
     }
   }
 
@@ -179,7 +161,7 @@
       font-size: 14px;
     }
 
-    @include mobile {
+    @include tablet-inner {
       margin-bottom: 10px;
       font-size: 12px;
       line-height: 18px;
@@ -203,10 +185,14 @@
     overflow: hidden;
     border-radius: 50%;
 
-    @include mobile {
+    @include tablet-inner {
       width: 10px;
       height: 10px;
-      margin-top: 3.5px;
+      margin-top: 4px;
+    }
+
+    @include mobile {
+      margin-top: 2px;
       margin-left: -1.6em;
     }
   }
@@ -253,10 +239,8 @@
   }
 
   &__form-submit-btn {
-    width: 190px;
-    height: 51px;
     margin-bottom: 8px;
-    outline: none;
+    line-height: 38px;
 
     @include mobile {
       width: 150px;
@@ -269,12 +253,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 190px;
-    height: 51px;
     margin-bottom: 8px;
     color: $dark;
-    background-color: transparent;
-    outline: none;
 
     & svg {
       fill: $dark;

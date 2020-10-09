@@ -3,7 +3,7 @@
     margin-bottom: 22px;
 
     h1 {
-      margin-top: -25px;
+      margin-top: -42px;
       padding-left: 28px;
       margin-bottom: 10px;
     }
@@ -21,6 +21,18 @@
     }
   }
 
+  & aside {
+    margin-right: 20px;
+
+    @include tablet {
+      margin-right: 4.5%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
   &__list {
     @include list-reset;
     display: flex;
@@ -28,10 +40,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 75%;
-    margin-top: -50px;
+    margin-top: 23px;
 
     @include tablet {
-      margin-top: -57px;
+      margin-top: 0;
     }
 
     @include mobile {
@@ -43,24 +55,21 @@
 
   &__item {
     width: 42%;
-    margin-bottom: 83px;
+    margin-bottom: 58px;
     margin-right: 52px;
 
     &:nth-of-type(2n) {
       margin-right: 0;
     }
 
-    @include tablet-1440px {
-      margin-bottom: 76px;
-    }
-
     @include tablet {
       width: 48%;
+      margin-bottom: 55px;
       margin-right: 4%;
     }
 
     @include tablet-1200px {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     @include tablet-inner {
@@ -69,7 +78,7 @@
 
     @include mobile {
       width: 100%;
-      margin-bottom: 33px;
+      margin-bottom: 9px;
     }
   }
 
@@ -82,31 +91,29 @@
     & img {
       width: 100%;
       object-fit: contain;
+      margin-bottom: 25px;
+
+      @include tablet {
+        margin-bottom: 21px;
+      }
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
     }
 
     &:hover,
     &:focus {
       opacity: 0.7;
-    }
-
-    @include tablet-1440px {
-      margin-bottom: 21px;
-    }
-
-    @include tablet-inner {
-      margin-bottom: 10px;
     }
   }
 
-  &__link {
+  &__link-text {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 24px;
     line-height: 36px;
     color: $dark;
-
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
 
     @include tablet-1440px {
       font-size: 22px;
@@ -119,7 +126,7 @@
     }
 
     @include tablet-inner {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 18px;
     }
 

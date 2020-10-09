@@ -218,99 +218,100 @@
 </symbol></svg>
 </div>
 <header class="page-header">
-  <button class="page-header__overlay" type="button"></button>
   <div class="page-header__wrap container">
-    <a class="page-header__logo" href="#">
+    <a class="page-header__logo page-header__logo--disabled-link" href="#">
       <img src="img/icon-logo.svg" width="107" height="83" alt="Логотип">
     </a>
 
-    <div class="page-header__nav-wrap page-header__nav-wrap--opened page-header__nav-wrap--nojs">
+    <div class="page-header__wrapper page-header__wrapper--closed page-header__wrapper--nojs">
+      <button class="page-header__nav-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <a class="page-header__nav-contact-link" href="tel:+79857276573">
         <svg width="15" height="15">
           <use xlink:href="#icon-phone"></use>
         </svg>
       </a>
-      <button class="page-header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="page-header__nav page-header__nav--active">
-        <div class="page-header__links social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Вотсап">
-                <svg width="26" height="26" viewBox="0 0 26 26">
-                  <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+      <div class="page-header__nav-wrap">
+        <div class="page-header__nav">
+          <div class="page-header__links social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Вотсап">
+                  <svg width="26" height="26" viewBox="0 0 26 26">
+                    <use xlink:href="img/sprite_auto.svg#icon-whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Инстаграм">
+                  <svg width="28" height="28" viewBox="0 0 28 28">
+                    <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" aria-label="Фейсбук">
+                  <svg width="14" height="27" viewBox="0 0 14 27">
+                    <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-header__nav-contacts">
+            <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+74957730831">
+              <svg width="18" height="18">
+                <use xlink:href="#icon-tel-header"></use>
+              </svg>
+              +7-495-773-08-31
+            </a>
+            <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+79857276573">
+              <svg width="18" height="18">
+                <use xlink:href="#icon-tel-header"></use>
+              </svg>
+              +7-985-727-65-73
+            </a>
+          </div>
+          <nav class="page-header__nav-list">
+            <ul>
+              <li>
+                <a class="page-header__nav-link" href="#">Технология</a>
+              </li>
+              <li>
+                <a class="page-header__nav-link" href="#">О компании</a>
+              </li>
+              <li>
+                <a class="page-header__nav-link" href="#">Продукция</a>
+              </li>
+              <li>
+                <a class="page-header__nav-link" href="#">Объекты</a>
+              </li>
+              <li>
+                <a class="page-header__nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__search">
+            <form class="page-header__search-form">
+              <input class="page-header__search-input" id="header-search" type="search" name="search" placeholder="Поиск">
+              <button class="page-header__search-btn" type="submit">
+                <svg width="17" height="17">
+                  <use xlink:href="#icon-search"></use>
                 </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Инстаграм">
-                <svg width="28" height="28" viewBox="0 0 28 28">
-                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#" aria-label="Фейсбук">
-                <svg width="14" height="27" viewBox="0 0 14 27">
-                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-header__nav-contacts">
-          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+74957730831">
-            <svg width="18" height="18">
-              <use xlink:href="#icon-tel-header"></use>
-            </svg>
-            +7-495-773-08-31
-          </a>
-          <a class="page-header__contacts-link page-header__contacts-link--nav" href="tel:+79857276573">
-            <svg width="18" height="18">
-              <use xlink:href="#icon-tel-header"></use>
-            </svg>
-            +7-985-727-65-73
-          </a>
-        </div>
-        <nav class="page-header__nav-list">
-          <ul>
-            <li>
-              <a class="page-header__nav-link" href="#">Технология</a>
-            </li>
-            <li>
-              <a class="page-header__nav-link page-header__nav-link--active" href="#">О компании</a>
-            </li>
-            <li>
-              <a class="page-header__nav-link" href="#">Продукция</a>
-            </li>
-            <li>
-              <a class="page-header__nav-link" href="#">Объекты</a>
-            </li>
-            <li>
-              <a class="page-header__nav-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="page-header__search">
-          <form class="page-header__search-form">
-            <input id="header-search" type="search" name="search" placeholder="Поиск">
-            <button class="page-header__search-btn" type="submit">
+              </button>
+            </form>
+            <button class="page-header__search-toggle" type="button">
+              <span class="visually-hidden">Открыть поле поиска</span>
               <svg width="17" height="17">
                 <use xlink:href="#icon-search"></use>
               </svg>
             </button>
-          </form>
-          <button class="page-header__search-toggle" type="button">
-            <span class="visually-hidden">Открыть поле поиска</span>
-            <svg width="17" height="17">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </button>
+          </div>
+          <a class="page-header__nav-logo" href="#">
+            <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
+          </a>
         </div>
-        <a class="page-header__nav-logo" href="#">
-          <img src="img/icon-logo-mobile.svg" width="107" height="83" alt="Логотип">
-        </a>
       </div>
     </div>
 

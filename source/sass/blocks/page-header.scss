@@ -28,7 +28,6 @@
     padding-top: 30px;
 
     @include tablet-1200px {
-      flex-wrap: wrap;
       padding-top: 16px;
     }
 
@@ -38,11 +37,15 @@
     }
   }
 
+  &__logo--disabled-link {
+    pointer-events: none;
+  }
+
   &__logo {
     display: block;
-    width: 107px;
-    height: 83px;
-    margin-right: 4%;
+    max-width: 6.6%;
+    height: auto;
+    margin-right: 3.5%;
     transition: opacity $transition-props;
 
     &:hover,
@@ -50,17 +53,29 @@
       opacity: 0.7;
     }
 
+    @include tablet-1440px {
+      width: 107px;
+      height: 83px;
+      margin-right: 20px;
+    }
+
     @include tablet {
-      width: 90px;
-      height: 70px;
-      margin-right: 4%;
+      min-width: 90px;
+      margin-right: 40px;
+      margin-left: 0;
     }
 
     @include tablet-1200px {
       order: -2;
       margin-top: 0;
       margin-bottom: 3px;
+      margin-right: 54%;
     }
+
+    @include tablet-inner {
+      margin-right: 40%;
+    }
+
 
     @include mobile {
       width: 60px;
@@ -74,24 +89,16 @@
     object-fit: contain;
   }
 
+  &__wrapper {
+    width: 62%;
+
+    @include tablet-1440px {
+      width: 77%;
+    }
+  }
+
   &__nav-wrap {
-    position: relative;
-    width: 66%;
     margin-top: -9px;
-
-    @include tablet {
-      width: 68%;
-      margin-right: 2%;
-      padding-top: 5px;
-    }
-
-    @include tablet-1200px {
-      width: 100%;
-    }
-
-    @include mobile {
-      margin-top: 0;
-    }
   }
 
   &__nav-contact-link {
@@ -120,10 +127,10 @@
     display: none;
 
     @include tablet-1200px {
-      position: absolute;
       display: block;
-      top: -50px;
-      right: 10px;
+      position: absolute;
+      top: 37px;
+      right: 3px;
       z-index: 12;
       width: 40px;
       height: 40px;
@@ -133,14 +140,20 @@
       transition: opacity $transition-props;
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         opacity: 0.7;
+        outline: none;
+      }
+
+      &::-moz-focus-inner {
+        border: 0;
       }
     }
 
     @include mobile {
-      top: -46px;
-      right: -17px;
+      top: 30px;
+      right: 4px;
     }
   }
 
@@ -148,8 +161,12 @@
     display: none;
   }
 
-  &__nav-wrap--closed {
+  &__wrapper--closed {
     @include tablet-1200px {
+      .page-header__nav-wrap {
+        display: none;
+      }
+
       .page-header__nav-toggle::before {
         content: "";
         position: absolute;
@@ -159,24 +176,29 @@
         height: 19px;
         background: url("../img/icon-btn-burger.svg") no-repeat $white;
       }
-
-      .page-header__nav {
-        display: none;
-      }
     }
 
     @include mobile {
       .page-header__nav-contact-link {
         position: absolute;
         display: block;
-        top: -34px;
-        right: 36px;
+        top: 42px;
+        right: 57px;
       }
     }
   }
 
-  &__nav-wrap--opened {
+  &__wrapper--opened {
     @include tablet-1200px {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      width: 100%;
+      height: 100%;
+      background-color: $blue;
+
       .page-header__nav-toggle::after {
         content: "";
         position: absolute;
@@ -188,26 +210,21 @@
         background: url("../img/icon-btn-cross.svg") no-repeat transparent;
       }
 
-      .page-header__nav {
-        position: absolute;
-        top: -90px;
-        left: 0;
-        z-index: 11;
-        width: 100vw;
-        margin-left: -85px;
-        padding: 30px 85px 1000px;
-        background-color: $blue;
+      .page-header__nav-wrap {
+        width: 100%;
+        padding: 30px 85px 99px;
+
+        @include mobile {
+          padding: 0 15px;
+        }
       }
     }
   }
 
-  &__nav-wrap--nojs {
+  &__wrapper--nojs {
     @include tablet-1200px {
-      .page-header__nav-toggle {
-        display: none;
-      }
-
       .page-header__nav {
+        display: flex;
         position: relative;
         top: -92px;
         left: 0;
@@ -224,15 +241,15 @@
     }
   }
 
-  &__nav-wrap--opened,
-  &__nav-wrap--nojs {
+  &__wrapper--opened,
+  &__wrapper--nojs {
     @include tablet-1200px {
       .page-header__nav-logo {
         display: block;
         width: 90px;
         height: 70px;
         margin-top: 0;
-        margin-bottom: 32px;
+        margin-bottom: 23px;
       }
 
       .page-header__nav-list {
@@ -240,7 +257,7 @@
         max-height: 266px;
         padding-top: 6px;
         margin-bottom: 20px;
-        overflow-y: scroll;
+        overflow-y: auto;
       }
 
       .page-header__nav-list li {
@@ -328,11 +345,14 @@
       }
 
       .page-header__nav {
-        margin-left: -15px;
         padding-top: 39px;
-        padding-bottom: 97px;
+        padding-bottom: 42px;
         padding-left: 15px;
         padding-right: 15px;
+
+        @include mobile {
+          padding: 50px 0 42px;
+        }
       }
 
       .page-header__nav-list {
@@ -354,9 +374,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 2%;
     padding-top: 7px;
     padding-bottom: 13px;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
 
     @include tablet-1200px {
       flex-direction: column-reverse;
@@ -369,74 +392,61 @@
   &__nav--active {
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -11px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $border-color;
+    & .page-header__nav-list li {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -29px;
+        left: 0;
+        width: calc(100% + 13px);
+        height: 1px;
+        background-color: $border-color;
 
-      @include tablet {
-        display: none;
-      }
-    }
-
-    .page-header__nav-link--active::after {
-      content: "";
-      position: absolute;
-      bottom: -33px;
-      left: 13px;
-      width: calc(100% - 26px);
-      height: 4px;
-      background-color: $blue;
-
-      @include tablet {
-        bottom: -28px;
-      }
-
-      @include tablet-1200px {
-        display: none;
-      }
-    }
-
-    & li:first-of-type .page-header__nav-link--active::after {
-      left: 0;
-      width: calc(100% - 13px);
-    }
-
-    @include tablet {
-      & .page-header__nav-list li {
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -29px;
-          left: 0;
+        @include tablet-1440px {
           width: 100%;
-          height: 1px;
-          background-color: $border-color;
         }
 
-        &:last-of-type {
-          &::after {
-            width: calc(100% - 13px);
-          }
+        @include tablet-1200px {
+          display: none;
         }
       }
-    }
 
-    @include tablet-1200px {
-      & .page-header__nav-list li::after {
-        display: none;
+      &:last-of-type {
+        &::after {
+          width: calc(100% - 20px);
+        }
       }
     }
   }
 
-  &__nav-list {
-    width: 93%;
-    margin-right: 5%;
+  .page-header__nav-link--active::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: 18px;
+    width: calc(100% - 36px);
+    height: 4px;
+    background-color: $blue;
 
+    @include tablet {
+      bottom: -28px;
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  & li:first-of-type .page-header__nav-link--active::after {
+    left: 0;
+    width: calc(100% - 20px);
+  }
+
+  @include tablet-1200px {
+    & .page-header__nav-list li::after {
+      display: none;
+    }
+  }
+
+  &__nav-list {
     @include tablet {
       margin-right: 0;
     }
@@ -457,8 +467,13 @@
 
   &__nav-list li {
     position: relative;
+    margin-right: 2.4%;
     border: none;
     padding: 0;
+
+    @include tablet-1440px {
+      margin-right: 0;
+    }
   }
 
   &__nav-list li:first-of-type .page-header__nav-link {
@@ -466,7 +481,8 @@
   }
 
   &__nav-link {
-    padding: 10px 13px;
+    width: auto;
+    padding: 10px 18px;
     line-height: 16px;
     color: $dark;
     letter-spacing: 0.02em;
@@ -480,6 +496,7 @@
     }
 
     @include tablet {
+      padding: 10px 20px;
       padding-bottom: 25px;
     }
 
@@ -488,29 +505,23 @@
     }
   }
 
-  &__overlay {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
-  }
-
-  &__overlay--show {
-    display: block;
-  }
-
   &__search {
     position: relative;
     width: 30px;
     height: 37px;
     margin-top: -7px;
-    margin-left: 20px;
-    margin-right: -10px;
+    margin-left: 69px;
+    margin-right: 2px;
+
+
+    @include tablet-1440px {
+      margin-left: 0;
+    }
+
+    @include tablet {
+      margin-left: 5.5%;
+      margin-right: 24px;
+    }
   }
 
   &__search-form {
@@ -542,7 +553,7 @@
     width: 215px;
     min-width: 185px;
     height: 37px;
-    padding: 7px 40px 7px 7px;
+    padding: 3px 40px 7px 7px;
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
@@ -552,6 +563,8 @@
     border: none;
     cursor: auto;
     outline: none;
+    // -webkit-appearance: none;
+    border-radius: 0;
 
     &::placeholder {
       color: $lighter-grey;
@@ -566,9 +579,9 @@
   }
 
   &__search-toggle {
-    position: absolute;
-    top: -1px;
-    right: 5px;
+    position: relative;
+    top: -7px;
+    right: 2px;
     width: 30px;
     height: 37px;
     padding: 10px 6px 29px;
@@ -578,6 +591,12 @@
     &:active,
     &:focus {
       outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      fill: $blue-hover;
+      transition: $transition-props;
     }
 
     @include tablet-1200px {
@@ -600,8 +619,10 @@
       outline: none;
     }
 
-    @include tablet {
-      top: -10px;
+    &:hover,
+    &:focus {
+      fill: $blue-hover;
+      transition: $transition-props;
     }
   }
 
@@ -612,19 +633,26 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    margin-right: 2%;
+    width: 14%;
+
+    @include tablet-1440px {
+      width: auto;
+      white-space: nowrap;
+    }
 
     @include tablet {
-      margin-right: 0;
+      margin-right: 17px;
+      margin-left: auto;
     }
 
     @include tablet-1200px {
       flex-direction: row;
       align-self: center;
+      justify-content: flex-end;
       order: -1;
       margin-top: 5px;
       margin-left: auto;
-      margin-right: 8%;
+      margin-right: 0;
     }
   }
 
@@ -635,6 +663,7 @@
     &:hover,
     &:focus {
       opacity: 0.7;
+      transition: $transition-props;
     }
 
     @include tablet {

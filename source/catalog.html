@@ -4,7 +4,7 @@
   <include src="source/components/head.html"></include>
   <title>Каталог</title>
 </head>
-<body class="body">
+<body>
   <include src="source/components/header.html"></include>
   <main>
 
@@ -24,12 +24,13 @@
     </section>
 
     <section class="catalog container">
-
-      <h1 class="h1 h1--add">Каталог</h1>
+      <h2 class="visually-hidden">Каталог продукции</h2>
 
       <div class="catalog__wrap">
-
-        <include src="source/components/catalog-filter.html"></include>
+        <aside>
+          <h1 class="h1 h1--add">Каталог</h1>
+          <include src="source/components/catalog-filter.html"></include>
+        </aside>
 
         <ul class="catalog__list">
           <li class="catalog__item">
@@ -46,8 +47,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-1-desktop@1x.jpg" srcset="img/catalog-img/catalog-1-desktop@2x.jpg 2x" alt="Приточные устройства">
               </picture>
+              <p class="catalog__link-text">Приточные устройства</p>
             </a>
-            <a class="catalog__link" href="#">Приточные устройства</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -63,8 +64,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-2-desktop@1x.jpg" srcset="img/catalog-img/catalog-2-desktop@2x.jpg 2x" alt="Вытяжные устройства">
               </picture>
+              <p class="catalog__link-text">Вытяжные устройства</p>
             </a>
-            <a class="catalog__link" href="#">Вытяжные устройства</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -80,8 +81,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-3-desktop@1x.jpg" srcset="img/catalog-img/catalog-3-desktop@2x.jpg 2x" alt="Системы с рекуперацией тепла">
               </picture>
+              <p class="catalog__link-text">Системы с&nbsp;рекуперацией тепла</p>
             </a>
-            <a class="catalog__link" href="#">Системы с рекуперацией тепла</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -97,8 +98,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-4-desktop@1x.jpg" srcset="img/catalog-img/catalog-4-desktop@2x.jpg 2x" alt="Наружные козырьки">
               </picture>
+              <p class="catalog__link-text">Наружные козырьки</p>
             </a>
-            <a class="catalog__link" href="#">Наружные козырьки</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -114,8 +115,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-5-desktop@1x.jpg" srcset="img/catalog-img/catalog-5-desktop@2x.jpg 2x" alt="Вентиляторы">
               </picture>
+              <p class="catalog__link-text">Вентиляторы</p>
             </a>
-            <a class="catalog__link" href="#">Вентиляторы</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -131,8 +132,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-6-desktop@1x.jpg" srcset="img/catalog-img/catalog-6-desktop@2x.jpg 2x" alt="Датчики">
               </picture>
+              <p class="catalog__link-text">Датчики</p>
             </a>
-            <a class="catalog__link" href="#">Датчики</a>
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#">
@@ -148,8 +149,8 @@
                   <!-- 1х: 510px x 358px; 2x: 1021px x 716px; -->
                 <img src="img/catalog-img/catalog-7-desktop@1x.jpg" srcset="img/catalog-img/catalog-7-desktop@2x.jpg 2x" alt="Системы для общественных зданий">
               </picture>
+              <p class="catalog__link-text">Системы для общественных зданий</p>
             </a>
-            <a class="catalog__link" href="#">Системы для общественных зданий</a>
           </li>
         </ul>
       </div>
