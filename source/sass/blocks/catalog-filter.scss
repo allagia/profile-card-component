@@ -227,6 +227,11 @@
     opacity: 0.7;
   }
 
+  label {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
   &__form-filter label:hover {
     opacity: 0.7;
   }
