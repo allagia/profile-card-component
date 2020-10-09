@@ -48,4 +48,12 @@
   &--transparent {
     background-color: transparent;
   }
+
+  &--line-height {
+    line-height: 38px;
+  }
+
+  & + .btn {
+    margin-top: 8px;
+  }
 }
