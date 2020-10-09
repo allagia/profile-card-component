@@ -110,15 +110,20 @@
     }
 
     img {
-      max-width: 370px;
-      max-height: 248px;
+      // max-width: 370px;
+
+      width: 370px;
+      height: 248px;
       margin-bottom: 39px;
+      object-fit: cover;
 
       @include mobile {
         margin-bottom: 21px;
+        height: 180px;
       }
     }
   }
+
 
   &__description {
     @media (max-width: 1400px) {
