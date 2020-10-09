@@ -27,10 +27,10 @@
   }
 
   .page-footer__contacts {
-    margin: 0 16px 11px 0;
+    margin: 0 0 17px 0;
 
     @media (max-width: 1400px) {
-      margin: 0 30px 12px auto;
+      margin: 0 25px 12px auto;
     }
 
     @media (max-width: 940px) and (min-width: 768px) {
@@ -67,7 +67,7 @@
   }
 
   .page-footer__modal-wrap {
-    margin: -287px 0 0 17px;
+    margin: -287px 0 0 0;
 
     @media (max-width: 1400px) {
       margin: -302px 0 20px;
@@ -88,7 +88,11 @@
 
 
   .modal form button {
-    margin: 44px auto 23px;
+    margin: 0 auto 19px;
+
+    @include mobile {
+      margin: 44px auto 22px;
+    }
   }
 }
 
