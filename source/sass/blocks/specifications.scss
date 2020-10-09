@@ -203,7 +203,7 @@
     align-items: center;
     width: 100%;
 
-    margin-left: -23px;
+    // margin-left: -23px;
 
     @include tablet {
       margin-left: 0;
@@ -373,6 +373,159 @@
 
       width: 10px;
       height: 10px;
+    }
+  }
+}
+
+
+.mobile {
+  @include mobile {
+
+    position: relative;
+    margin: 0 -15px;
+
+    .specifications__note {
+      span {
+        margin-right: 17px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .specifications__point {
+        margin-right: 6px;
+      }
+    }
+
+    .specifications__point {
+      margin-right: 17px;
+
+      width: 10px;
+      height: 10px;
+    }
+
+    table {
+      margin-top: 7px;
+    }
+  }
+}
+
+.pattern {
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: relative;
+    margin: 0 -15px;
+
+    table {
+      // position: relative;
+      width: 100%;
+      // margin-top: 6px;
+      border-collapse: collapse;
+    }
+
+    thead {
+      position: relative;
+      font-size: 14px;
+      line-height: 22px;
+
+      letter-spacing: 0.005em;
+
+      color: $white;
+      background-color: $blue;
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 20px 0 48px 15px;
+        border-spacing: 0;
+        background-color: $blue;
+        font-weight: normal;
+        text-align: left;
+
+        &:last-of-type {
+          // padding: 20px 0 48px 14px;
+          // text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      font-size: 11px;
+      line-height: 14px;
+
+      td {
+        position: relative;
+        min-height: 46px;
+        padding: 15px 0 16px 15px;
+        text-align: left;
+
+        &:last-of-type {
+          // padding: 9px 0 9px 14px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 0;
+          width: 100%;
+          height: 1px;
+          border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
+        }
+      }
+
+      tr:last-of-type {
+        td {
+          display: flex;
+        }
+      }
+    }
+
+    &__slide {
+      overflow: auto;
+      height: 400px;
+    }
+
+    .specifications__note {
+      span {
+        margin-right: 17px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      .specifications__point {
+        margin-right: 6px;
+      }
+    }
+
+    .specifications__point {
+      margin-right: 17px;
+
+      width: 10px;
+      height: 10px;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+      bottom: 325px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      opacity: 0.7;
+      outline: none;
+
+      &-active {
+        opacity: 1;
+      }
     }
   }
 }
