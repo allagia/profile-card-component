@@ -4,12 +4,13 @@
 
   @include tablet {
     padding-top: 39px;
-    padding-bottom: 70px;
+    padding-bottom: 78px;
   }
 
   @include mobile {
+    position: relative;
     padding-top: 48px;
-    padding-bottom: 77px;
+    padding-bottom: 109px;
   }
 }
 
@@ -17,14 +18,20 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 257px;
+  padding-right: 13%;
+
+  @include tablet {
+    padding-right: 9.9%;
+    min-height: 235px;
+  }
 
   @include mobile {
     display: block;
+    padding-right: 0;
   }
 
   h1 {
-    width: 50%;
-    margin: 0;
     font-size: 64px;
     line-height: 74px;
     text-transform: uppercase;
@@ -65,28 +72,50 @@
   }
 }
 
-.ventilation-intro__inner {
-  width: 50%;
+.ventilation-intro__column {
+  width: 31%;
+  align-self: flex-end;
 
+  @include tablet {
+    width: 43%;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &:first-of-type {
+    width: 50%;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet {
+      width: 56%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.ventilation-intro__inner {
   @include mobile {
     width: 100%;
   }
 }
 
 .ventilation-intro__link {
-  display: inline-block;
   padding-right: 62px;
 
-  &--qmark {
-    display: inline-block;
-    padding-right: 41px;
-    margin: 0;
-    margin-left: 165px;
+  @include tablet {
+    padding-right: 40px;
+  }
 
-    @include tablet {
-      margin-left: 15px;
-      padding: 0 40px 5px 0;
-    }
+  &--qmark {
+    padding-right: 40px;
 
     @include mobile {
       display: none;
@@ -102,7 +131,7 @@
       transition: all 0.2s ease;
 
       @include tablet {
-        top: 0;
+        top: 8;
       }
     }
 
@@ -118,24 +147,18 @@
     display: none;
 
     @include tablet {
-      display: inline-block;
-      padding: 0px 38px 6px 0;
+      display: inline;
     }
 
-    &::after {
-      width: 27px;
-      height: 12px;
-      top: 17px;
-
-      @include tablet {
-        height: 13px;
-        top: 4px;
-      }
+    @include mobile {
+      position: absolute;
+      bottom: 73px;
     }
   }
 
   &--desktop {
     margin-left: 140px;
+
     @include tablet {
       display: none;
     }
@@ -143,17 +166,15 @@
 }
 
 .ventilation-intro__description {
-  width: 50%;
-  padding: 79px 12% 0 165px;
   font-size: 24px;
   line-height: 150%;
+  margin-bottom: 10px;
 
-  @media(max-width: 1800px) {
-    font-size: 1.27vw;
-  }
+  // @media(max-width: 1800px) {
+  //   font-size: 1.27vw;
+  // }
 
   @include tablet {
-    padding: 57px 8% 10px 15px;
     font-size: 24px;
   }
 
