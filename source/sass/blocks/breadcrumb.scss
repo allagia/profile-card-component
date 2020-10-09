@@ -11,11 +11,11 @@
     padding-bottom: 11px;
 
     @include tablet {
-      padding-top: 22px;
+      padding-top: 9px;
     }
 
     @include mobile {
-      padding-top: 1px;
+      padding-top: 6px;
       padding-bottom: 1px;
     }
   }

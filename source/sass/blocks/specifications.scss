@@ -107,6 +107,10 @@
         width: 43%;
         padding-left: 93px;
       }
+
+      @media (max-width: 1100px) {
+        padding-left: 10px;
+      }
     }
 
     &:nth-of-type(3) {
@@ -124,6 +128,10 @@
     &:nth-of-type(4),
     &:nth-of-type(5) {
       width: 17.2%;
+
+      @media (max-width: 1100px) {
+        width: 16.3%;
+      }
     }
 
 
@@ -185,6 +193,10 @@
     &:nth-of-type(4),
     &:nth-of-type(5) {
       width: 17.2%;
+
+      @media (max-width: 1100px) {
+        width: 16.3%;
+      }
     }
 
     &:last-of-type {
@@ -512,7 +524,7 @@
       height: 10px;
     }
 
-    .swiper-container-horizontal>.swiper-pagination-bullets {
+    .swiper-container-horizontal > .swiper-pagination-bullets {
       bottom: 325px;
     }
 
