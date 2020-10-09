@@ -1,5 +1,5 @@
 .technique__summary {
-  padding: 28px 10px 28px 30px;
+  padding: 28px 30px;
   display: flex;
   align-items: flex-start;
   padding-bottom: 28px;
@@ -18,7 +18,7 @@
 }
 
 .technique__summary-img {
-  width: 55.4%;
+  width: 56.4%;
 
   @include tablet {
     width: 50.4%;
@@ -32,7 +32,7 @@
 
 .technique__description {
   width: 40%;
-  padding: 18px 0 0 70px;
+  padding: 18px 0 0 65px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
