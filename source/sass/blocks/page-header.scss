@@ -69,13 +69,8 @@
       order: -2;
       margin-top: 0;
       margin-bottom: 3px;
-      margin-right: 54%;
+      //margin-right: 54%;
     }
-
-    @include tablet-inner {
-      margin-right: 40%;
-    }
-
 
     @include mobile {
       min-width: 60px;
@@ -94,6 +89,10 @@
 
     @include tablet-1440px {
       width: 77%;
+    }
+
+    @include tablet-1200px {
+      width: 50px;
     }
   }
 
@@ -130,7 +129,7 @@
       display: block;
       position: absolute;
       top: 37px;
-      right: 3px;
+      right: 76px;
       z-index: 12;
       width: 40px;
       height: 40px;
@@ -138,6 +137,10 @@
       cursor: pointer;
       border: none;
       transition: opacity $transition-props;
+
+      @include mobile {
+        right: 15px;
+      }
 
       &:hover,
       &:active,
@@ -212,7 +215,7 @@
 
       .page-header__nav-wrap {
         width: 100%;
-        padding: 30px 85px 99px;
+        padding: 30px 85px 60px;
 
         @include mobile {
           padding: 0 15px;
@@ -254,17 +257,14 @@
 
       .page-header__nav-list {
         width: 100%;
-        max-height: 266px;
-        padding-top: 6px;
-        margin-bottom: 20px;
-        overflow-y: auto;
+        margin-bottom: 30px;
       }
 
       .page-header__nav-list li {
         padding-bottom: 20px;
 
         &:last-child {
-          padding-bottom: 10px;
+          padding-bottom: 0;
         }
       }
 
@@ -287,7 +287,7 @@
       }
 
       .page-header__search {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
 
       .page-header__search input {
