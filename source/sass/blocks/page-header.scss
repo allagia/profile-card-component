@@ -69,13 +69,8 @@
       order: -2;
       margin-top: 0;
       margin-bottom: 3px;
-      margin-right: 54%;
+      //margin-right: 54%;
     }
-
-    @include tablet-inner {
-      margin-right: 40%;
-    }
-
 
     @include mobile {
       min-width: 60px;
@@ -94,6 +89,10 @@
 
     @include tablet-1440px {
       width: 77%;
+    }
+
+    @include tablet-1200px {
+      width: 50px;
     }
   }
 
