@@ -11,6 +11,18 @@
   @include mobile {
     padding: 0 15px;
   }
+
+  &--padding-right {
+    padding: 0 120px 0 145px;
+
+    @include tablet {
+      padding: 0 85px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
 }
 
 .margin-85 {

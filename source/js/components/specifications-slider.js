@@ -28,9 +28,6 @@
     var enableSwiper = function () {
       mySwiper = new Swiper(specificationsSlider, {
         slidesPerView: 'auto',
-        // spaceBetween: 15,
-        // initialSlide: 1,
-        // autoHeight: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',

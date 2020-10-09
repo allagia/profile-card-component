@@ -58,6 +58,6 @@
       btn.addEventListener('click', handleBtnClick);
     });
 
-    window.matchMedia(TABLET__1200).addListener(openMenu);
+    //window.matchMedia(TABLET__1200).addListener(openMenu);
   }
 })();

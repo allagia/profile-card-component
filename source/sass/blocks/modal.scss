@@ -34,7 +34,7 @@
   @include mobile {
     position: relative;
     width: 100%;
-    min-height: auto;
+    min-height: 616px;
     padding: 29px 15px 29px;
   }
 
@@ -202,6 +202,7 @@
     display: block;
     position: relative;
     padding-left: 36px;
+    margin-top: -36px;
     transition: opacity $transition-props;
     cursor: pointer;
 
@@ -234,30 +235,27 @@
 
   &--inst,
   &--calc {
-    height: 100%;
-    max-height: 750px;
     padding: 50px 95px 50px;
-    margin: 30px 0;
-    min-height: auto;
+    max-height: calc(100vh - 60px);
     overflow-y: scroll;
     overflow-x: hidden;
 
     @include mobile {
-      padding: 50px 15px 20px;
+      padding: 30px 15px;
     }
 
     h2 {
-      max-width: 93%;
+      padding-right: 30px;
+      padding-left: 30px;
       margin: 0 auto 37px;
     }
   }
 
   &--inst {
-    padding: 50px 95px 34px;
-    max-height: 820px;
+    padding: 50px 95px;
 
     @include mobile {
-      padding: 50px 15px 20px;
+      padding: 30px 15px;
     }
   }
 
@@ -334,6 +332,10 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
+
+    @include mobile {
+      right: 15px;
+    }
 
     svg {
       fill: #7b7b7b;
@@ -415,9 +417,9 @@
   &--opened {
     display: block;
     position: fixed;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     z-index: 100;
   }
 }
