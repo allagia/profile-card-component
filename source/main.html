@@ -102,7 +102,19 @@
                 </picture>
               </li>
               <li class=" swiper-slide">
-                <img src="img/applying/img-1@1x.jpg" alt="слайд 3">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1281px)"
+                    srcset="img/applying/img-1@1x.webp 1x, img/applying/img-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/applying/img-1-tablet@1x.webp 1x, img/applying/img-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1281px)"
+                    srcset="img/applying/img-1@1x.jpg 1x, img/applying/img-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/applying/img-1-tablet@1x.jpg 1x, img/applying/img-1-tablet@2x.jpg 2x">
+                  <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="slide 3">
+                </picture>
               </li>
             </ul>
           </div>
@@ -119,7 +131,7 @@
               <span class="technology__num">0</span>
               <h3>Система вентиляции с&nbsp;рекуперацией тепла</h3>
               <div class="technology__image">
-                <img src="img/technology/1@1x.jpg" srcset="img/technology/1@2x.jpg" alt="">
+                <img src="img/technology/1@1x.jpg" srcset="img/technology/1@2x.jpg" width="740" height="496" alt="система вентиляции">
               </div>
               <p class="technology__text">Механический приток и&nbsp;удалении воздуха с&nbsp;использованием специального теплообменника, который аккумулирует тепло удаляемого воздуха, передавая его холодному приточному воздуху.</p>
               <p class="technology__name"><b>Инновационная система DXR</b></p>
@@ -128,7 +140,7 @@
               <span class="technology__num">0</span>
               <h3>Гибридная система вентиляции</h3>
               <div class="technology__image">
-                <img src="img/technology/2@1x.jpg" srcset="img/technology/2@2x.jpg" alt="">
+                <img src="img/technology/2@1x.jpg" srcset="img/technology/2@2x.jpg" width="740" height="496" alt="гибридная система">
               </div>
               <p class="technology__text">Сочетание энергоэффективности и&nbsp;постоянного поддержания высокого качества воздуха внутри помещений как новых, так и&nbsp;реконструируемых зданиях и&nbsp;пространств.</p>
                <p class="technology__name"><b>Вентиляторы низкого давления</b></p>
@@ -137,7 +149,7 @@
               <span class="technology__num">0</span>
               <h3>Естественная система вентиляции</h3>
               <div class="technology__image">
-                <img src="img/technology/3@1x.jpg" srcset="img/technology/3@2x.jpg" alt="">
+                <img src="img/technology/3@1x.jpg" srcset="img/technology/3@2x.jpg" width="740" height="496" alt="естественная вентиляция">
               </div>
               <p class="technology__text">Система естественной вентиляции компании Aereco&nbsp;&mdash; это идеальное решение для модернизации зданий, в&nbsp;которых раньше была предусмотрена стандартная система пассивной вентиляции.</p>
                <p class="technology__name"><b>Технология MEV</b></p>
@@ -269,8 +281,8 @@
           <div class="tab__list">
             <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'company')">Компания</button>
             <button class="tab__link" type="button" onclick="window.Tab.openTab(event, 'solution')">Продукция</button>
-            <a class="tab__link tab__link--modal tab__link--popup1" onclick="window.Tab.openTab(event, 'calculation')">Технический расчет</a>
-            <a class="tab__link tab__link--modal tab__link--popup2" onclick="window.Tab.openTab(event, 'installation')">Монтаж</a>
+            <a class="tab__link tab__link--modal tab__link--popup1" onclick="window.Tab.openTab(event, 'calculation')" href="#">Технический расчет</a>
+            <a class="tab__link tab__link--modal tab__link--popup2" onclick="window.Tab.openTab(event, 'installation')" href="#">Монтаж</a>
           </div>
 
           <div class="tab__content content">
@@ -307,7 +319,7 @@
 
   </main>
 
-  <include src="source/components/footer_with_map.html"></include>
+  <include src="source/components/footer-main.html"></include>
   <include src="source/components/script.html"></include>
 </body>
 </html>

@@ -77,8 +77,13 @@
     @include mobile {
       position: relative;
       z-index: 1;
-      width: 50px;
+      width: 46px;
       height: 50px;
+      margin-left: -16px;
+
+      svg {
+        margin-left: 18px;
+      }
     }
   }
 }

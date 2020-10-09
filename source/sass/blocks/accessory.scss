@@ -45,18 +45,18 @@
     @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -25px 42px;
+    margin: 0 -25px 22px;
 
     @include tablet-inner {
-      margin: 0 0 20px;
+      margin: 0;
     }
   }
 
   &__item {
     width: 25%;
-    min-width: 400px;
     min-width: 386px;
     padding: 0 25px;
+    margin-bottom: 20px;
 
     @media (max-width: 1400px) {
       width: 41%;
@@ -133,5 +133,10 @@
 
   &__link {
     display: block;
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
