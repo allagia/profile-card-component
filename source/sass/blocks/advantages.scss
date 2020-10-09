@@ -159,6 +159,10 @@
     position: relative;
     padding: 44px 0 0 70px;
 
+    @include tablet-1440px {
+      padding: 44px 0 0 50px;
+    }
+
     @include tablet {
       padding: 0 6px 0 45px;
     }
