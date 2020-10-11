@@ -18,7 +18,7 @@
   var header = document.querySelector('.page-header');
 
   if (header) {
-    var TABLET__1200 = window.utils.BREAKPOINT_TABLET__1200;
+    // var TABLET__1200 = window.utils.BREAKPOINT_TABLET__1200;
     var navToggle = header.querySelector('.page-header__nav-toggle');
     var navWrap = header.querySelector('.page-header__wrapper');
     var nav = header.querySelector('.page-header__nav');
@@ -271,9 +271,11 @@
 
 'use strict';
 
-
 (function () {
 
+  // var overlayMain = document.querySelector('.overlay--main');
+
+  // if (overlayMain) {
   // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
@@ -349,8 +351,7 @@
       });
     }
   }
-
-
+  // }
 })();
 
 'use strict';
@@ -539,6 +540,7 @@
     var checkboxes = Array.from(formFilter.querySelectorAll('input[type=checkbox]'));
     var formBtns = formFilter.querySelector('.catalog__form-btns');
     var resetBtn = formBtns.querySelector('.catalog__form-reset-btn');
+    var screenWidth = document.body.clientWidth;
 
     formBtns.classList.remove('catalog__form-btns--nojs');
     wraps.forEach(function (wrap) {
@@ -555,7 +557,6 @@
 
     var showContent = function (el) {
       var target = el.closest('.catalog__fieldset-wrap');
-      el.focusable = 'False';
       openList(target);
     };
 
@@ -564,7 +565,6 @@
     };
 
     var closeAccordion = function () {
-      var screenWidth = document.body.clientWidth;
       if (screenWidth <= size) {
         wraps.forEach(function (wrap) {
           wrap.classList.add('catalog__fieldset-wrap--closed');
@@ -604,6 +604,15 @@
     document.addEventListener('DOMContentLoaded', function () {
       closeAccordion();
     }, {once: true});
+
+    window.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape') {
+        formBtns.classList.remove('catalog__form-btns--show');
+        checkboxes.forEach(function (btn) {
+          btn.checked = false;
+        });
+      }
+    });
   }
 })();
 
@@ -625,7 +634,6 @@
 
     prevBtn.style.opacity = '0.25';
 
-    // var width;
     var count = 1;
     var position = 0;
     var shownCount = 4;
@@ -733,9 +741,13 @@
 'use strict';
 
 (function () {
-  var button = document.querySelector('.basic-info__btn');
+  // var overlayCard = document.querySelector('.overlay--card');
+
+  // if (overlayCard) {
   var popup = document.querySelector('.modal--calc');
   var body = document.querySelector('body');
+  var button = document.querySelector('.basic-info__btn');
+
   var closeBtn = document.querySelector('.modal__close-btn');
   var overlay = document.querySelector('.overlay--card');
 
@@ -757,7 +769,6 @@
       evt.preventDefault();
       closePopup();
     });
-
 
     closeBtn.addEventListener('keydown', function (evt) {
       if (evt.keyCode === window.utils.ENTER_KEYCODE) {
@@ -785,7 +796,7 @@
       });
     }
   }
-
+  // }
 })();
 
 'use strict';

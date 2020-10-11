@@ -4,7 +4,7 @@
   var header = document.querySelector('.page-header');
 
   if (header) {
-    var TABLET__1200 = window.utils.BREAKPOINT_TABLET__1200;
+    // var TABLET__1200 = window.utils.BREAKPOINT_TABLET__1200;
     var navToggle = header.querySelector('.page-header__nav-toggle');
     var navWrap = header.querySelector('.page-header__wrapper');
     var nav = header.querySelector('.page-header__nav');
