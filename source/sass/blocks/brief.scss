@@ -1,17 +1,26 @@
 .brief {
   background-color: $bg-color;
+  padding: 107px 0 82px;
+
+  @include tablet {
+    padding: 103px 0 92px;
+  }
+
+  @include mobile {
+    padding: 0 0 39px;
+  }
 }
 
 .brief__wrapper {
+  @include list-reset;
+  padding: 0 60px 0 19px;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 105px;
-  padding-bottom: 31px;
-  padding-left: 17.2%;
+  align-items: flex-start;
 
   @include tablet {
-    padding-top: 103px;
-    padding-left: 8.6%;
+    padding-right: 0;
+    padding-left: 3.9%;
   }
 
   @include mobile {
@@ -22,11 +31,14 @@
 }
 
 .brief__item  {
-  width: 21.7%;
-  margin-bottom: 50px;
+  width: 30%;
+  margin: 0 auto auto;
+  display: flex;
+  flex-direction: column;
 
   @include tablet {
-    margin-bottom: 62px;
+    width: 20%;
+    margin: 0;
   }
 
   @include mobile {
@@ -35,10 +47,8 @@
   }
 
   &:not(:nth-of-type(3n + 1)) {
-    margin-left: 127px;
-
     @include tablet {
-      margin-left: 15.7%;
+      margin-left: 18.4%;
     }
 
     @include mobile {
@@ -48,13 +58,13 @@
 
   &:last-of-type {
     @include mobile {
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
   }
 }
 
 .brief__index {
-  margin: 0 0 42px;
+  margin: 0;
   font-size: 96px;
   line-height: 35%;
   color: $blue;
@@ -74,12 +84,15 @@
 }
 
 .brief__descr {
-  margin: 0;
-  padding-right: 50px;
+  margin: 39px 0 0;
   font-size: 18px;
   line-height: 156%;
   letter-spacing: 0.005em;
   opacity: 0.95;
+
+  @include tablet {
+    margin-top: 0;
+  }
 
   @include mobile {
     text-align: center;

@@ -23,6 +23,18 @@
       padding: 0 15px;
     }
   }
+
+  &--inner {
+    padding: 0 10.2% 0 20.1%;
+
+    @include tablet {
+      padding: 0 8.6% 0 10.9%;
+    }
+
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
 }
 
 .margin-85 {
