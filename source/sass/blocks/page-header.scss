@@ -579,8 +579,8 @@
   }
 
   &__search-toggle {
-    position: relative;
-    top: -7px;
+    position: absolute;
+    top: -2px;
     right: 2px;
     width: 30px;
     height: 37px;
@@ -606,8 +606,8 @@
 
   &__search-btn {
     position: absolute;
-    top: -1px;
-    right: 5px;
+    top: -2px;
+    right: 2px;
     width: 30px;
     height: 37px;
     padding: 10px 6px 27px;
@@ -659,6 +659,7 @@
   &__contacts-link {
     display: flex;
     margin-bottom: 10px;
+    transform: translateZ(0);
 
     &:hover,
     &:focus {
