@@ -1,8 +1,10 @@
 'use strict';
 
-
 (function () {
 
+  // var overlayMain = document.querySelector('.overlay--main');
+
+  // if (overlayMain) {
   // var popups = document.querySelectorAll('.tab__link--modal');
   var button1 = document.querySelector('.tab__link--popup1');
   var button2 = document.querySelector('.tab__link--popup2');
@@ -78,6 +80,5 @@
       });
     }
   }
-
-
+  // }
 })();

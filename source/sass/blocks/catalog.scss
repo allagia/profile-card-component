@@ -6,6 +6,10 @@
       margin-top: -42px;
       padding-left: 28px;
       margin-bottom: 10px;
+
+      @include mobile {
+        margin-top: -52px;
+      }
     }
   }
 
@@ -39,33 +43,37 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 75%;
+    min-width: 75%;
+    max-width: 75%;
     margin-top: 23px;
 
     @include tablet {
+      min-width: 65%;
+      max-width: 100%;
       margin-top: 0;
     }
 
     @include mobile {
       flex-direction: column;
-      width: 100%;
-      margin-top: 30px;
+      min-width: 100%;
+      max-width: 100%;
     }
   }
 
   &__item {
-    width: 42%;
+    min-width: 42%;
+    max-width: 42%;
     margin-bottom: 58px;
-    margin-right: 52px;
+    margin-right: 4%;
 
     &:nth-of-type(2n) {
       margin-right: 0;
     }
 
     @include tablet {
-      width: 48%;
+      min-width: 48%;
+      max-width: 48%;
       margin-bottom: 55px;
-      margin-right: 4%;
     }
 
     @include tablet-1200px {
@@ -77,7 +85,8 @@
     }
 
     @include mobile {
-      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
       margin-bottom: 9px;
     }
   }
@@ -88,23 +97,23 @@
     margin-bottom: 24px;
     transition: all 0.2s ease;
 
-    & img {
-      width: 100%;
-      object-fit: contain;
-      margin-bottom: 25px;
-
-      @include tablet {
-        margin-bottom: 21px;
-      }
-
-      @include mobile {
-        margin-bottom: 10px;
-      }
-    }
-
     &:hover,
     &:focus {
       opacity: 0.7;
+    }
+  }
+
+  &__link-img img {
+    margin-bottom: 25px;
+    object-fit: contain;
+
+    @include tablet {
+      margin-bottom: 21px;
+    }
+
+    @include mobile {
+      min-width: 100%;
+      margin-bottom: 10px;
     }
   }
 

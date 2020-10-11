@@ -16,7 +16,6 @@
 
     prevBtn.style.opacity = '0.25';
 
-    // var width;
     var count = 1;
     var position = 0;
     var shownCount = 4;

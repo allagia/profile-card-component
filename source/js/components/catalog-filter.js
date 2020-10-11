@@ -11,6 +11,7 @@
     var checkboxes = Array.from(formFilter.querySelectorAll('input[type=checkbox]'));
     var formBtns = formFilter.querySelector('.catalog__form-btns');
     var resetBtn = formBtns.querySelector('.catalog__form-reset-btn');
+    var screenWidth = document.body.clientWidth;
 
     formBtns.classList.remove('catalog__form-btns--nojs');
     wraps.forEach(function (wrap) {
@@ -27,7 +28,6 @@
 
     var showContent = function (el) {
       var target = el.closest('.catalog__fieldset-wrap');
-      el.focusable = 'False';
       openList(target);
     };
 
@@ -36,7 +36,6 @@
     };
 
     var closeAccordion = function () {
-      var screenWidth = document.body.clientWidth;
       if (screenWidth <= size) {
         wraps.forEach(function (wrap) {
           wrap.classList.add('catalog__fieldset-wrap--closed');
@@ -76,5 +75,14 @@
     document.addEventListener('DOMContentLoaded', function () {
       closeAccordion();
     }, {once: true});
+
+    window.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape') {
+        formBtns.classList.remove('catalog__form-btns--show');
+        checkboxes.forEach(function (btn) {
+          btn.checked = false;
+        });
+      }
+    });
   }
 })();

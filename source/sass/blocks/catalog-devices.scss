@@ -52,32 +52,37 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 75%;
+    min-width: 75%;
+    max-width: 75%;
     margin-top: 88px;
 
     @include tablet {
+      min-width: 65%;
+      max-width: 100%;
       margin-top: -101px;
     }
 
     @include mobile {
       flex-direction: column;
-      width: 100%;
-      margin-top: 11px;
+      min-width: 100%;
+      max-width: 100%;
+      margin-top: 0;
     }
   }
 
   &__item {
-    width: 42%;
+    min-width: 42%;
+    max-width: 42%;
     margin-bottom: 66px;
-    margin-right: 52px;
+    margin-right: 4%;
 
     &:nth-of-type(2n) {
       margin-right: 0;
     }
 
     @include tablet {
-      width: 48%;
-      margin-right: 4%;
+      min-width: 48%;
+      max-width: 48%;
       margin-bottom: 70px;
     }
 
@@ -90,7 +95,9 @@
     }
 
     @include mobile {
-      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
       margin-bottom: 39px;
     }
   }
@@ -98,20 +105,11 @@
   &__link-img {
     display: block;
     width: 100%;
-    margin-bottom: 16px;
-
-    & img {
-      width: 100%;
-      object-fit: contain;
-    }
+    transition: all 0.2s ease;
 
     &:hover,
     &:focus {
       opacity: 0.7;
-    }
-
-    @include tablet {
-      margin-bottom: 10px;
     }
 
     @include tablet {
@@ -119,19 +117,21 @@
     }
 
     @include mobile {
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
   }
 
-  &__link {
-    &:hover,
-    &:focus {
-      opacity: 0.7;
+  &__link-img img {
+    margin-bottom: 15px;
+    object-fit: contain;
+
+    @include tablet {
+      margin-bottom: 7px;
     }
 
     @include mobile {
-      display: block;
-      margin-top: -3px;
+      min-width: 100%;
+      margin-bottom: 4px;
     }
   }
 
@@ -143,7 +143,7 @@
 
   &__name {
     margin-bottom: -4px;
-    margin-right: 9%;
+    margin-right: 6%;
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -151,6 +151,7 @@
 
     @include tablet {
       margin-bottom: -2px;
+      margin-right: 9%;
     }
 
     @include tablet-inner {
@@ -166,6 +167,7 @@
   &__link-name svg {
     width: 23px;
     height: 23px;
+    margin-right: 3%;
 
     @include tablet-inner {
       width: 16px;
@@ -175,7 +177,6 @@
 
   &__model-type {
     position: relative;
-    margin-left: 3%;
     font-size: 16px;
     font-weight: 400;
     color: $dark;

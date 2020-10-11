@@ -1,9 +1,13 @@
 'use strict';
 
 (function () {
-  var button = document.querySelector('.basic-info__btn');
+  // var overlayCard = document.querySelector('.overlay--card');
+
+  // if (overlayCard) {
   var popup = document.querySelector('.modal--calc');
   var body = document.querySelector('body');
+  var button = document.querySelector('.basic-info__btn');
+
   var closeBtn = document.querySelector('.modal__close-btn');
   var overlay = document.querySelector('.overlay--card');
 
@@ -25,7 +29,6 @@
       evt.preventDefault();
       closePopup();
     });
-
 
     closeBtn.addEventListener('keydown', function (evt) {
       if (evt.keyCode === window.utils.ENTER_KEYCODE) {
@@ -53,5 +56,5 @@
       });
     }
   }
-
+  // }
 })();
