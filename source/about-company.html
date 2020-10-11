@@ -11,7 +11,7 @@
   <main>
     <section class="breadcrumb breadcrumb--no-mobile">
       <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
-      <div class="breadcrumb__container container">
+      <div class="breadcrumb__container breadcrumb__container--narrow container">
         <a class="breadcrumb__back-arrow" href="#" aria-label="переход на предыдущую страницу">
           <span class="visually-hidden">Назад</span>
           <svg width="9" height="14" viewBox="0 0 9 14">
@@ -56,7 +56,7 @@
     </section>
     <section class="tab tab--about">
       <h2 class="visually-hidden">Подробная информация о компании и продукции</h2>
-      <div class="container">
+      <div class="container container--inner">
         <div class="tab__wrap tab__wrap--about">
 
           <div class="tab__list tab__list--about">
@@ -69,12 +69,12 @@
 
           <div class="tab__content tab__content--about content">
 
-            <div id="supply" class="tabcontent content__item tabcontent--about">
+            <div id="supply" class="tabcontent tabcontent--about content__item">
               <h3>Системы вентиляции</h3>
               <p>AeroHouse — официальный поставщик и партнер AERECO S.A. — одного
                 из крупнейших европейских производителей
                 вентиляционного оборудования.</p>
-              <a class="link-blue-underlined link-blue-underlined--about">О КОМПАНИИ</a>
+              <a class="link-blue-underlined">О КОМПАНИИ</a>
             </div>
 
             <div id="calculation" class="tabcontent content__item">
@@ -89,158 +89,49 @@
 
       </div>
     </section>
-    <div class="overlay">
-
-      <div class="modal popup modal--calc">
-        <button class="modal__close-btn" type="button">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
-          </svg>
-        </button>
-        <h2 class="h2 h2--small">Мы&nbsp;готовы подобрать оборудование AERECO под ваш проект</h2>
-
-        <form method="post" name="calculation" autocomplete="on">
-          <label>
-            <input type="text" placeholder="ФИО*" required="">
-          </label>
-
-          <div class="modal__form-row">
-
-            <label>
-              <input type="email" placeholder="E-mail*" required="">
-            </label>
-
-            <label>
-              <input type="tel" placeholder="Телефон">
-            </label>
-
-          </div>
-
-          <textarea placeholder="Cообщение"></textarea>
-
-          <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
-            <input class="visually-hidden" type="file">
-          </label>
-          <div class="modal__upload-success">Файл успешно добавлен</div>
-
-          <button class="btn btn--big" type="submit">Отправить сообщение</button>
-
-          <label class="modal__agreement checkbox">
-            <input class="visually-hidden" type="checkbox" checked="" required="">
-            <span class="checkbox__indicator"></span>
-            <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных
-              данных и соглашаюсь с политикой конфиденциальности</span>
-          </label>
-
-        </form>
-      </div>
-
-
-      <div class="modal popup modal--inst">
-        <button class="modal__close-btn" type="button">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
-          </svg>
-        </button>
-        <h2 class="h2 h2--small">Оставить заявку на монтаж оборудования</h2>
-
-        <form method="post" name="calculation" autocomplete="on">
-          <label>
-            <input type="text" placeholder="ФИО*" required="">
-          </label>
-
-          <div class="modal__form-row">
-
-            <label>
-              <input type="email" placeholder="E-mail*" required="">
-            </label>
-
-            <label>
-              <input type="tel" placeholder="Телефон">
-            </label>
-
-          </div>
-
-          <label>
-            <input type="text" placeholder="Адрес объекта">
-          </label>
-
-          <div class="modal__objects">
-            <p>Выберите тип обьекта:</p>
-            <div class="modal__types">
-              <label>Квартира
-                <input type="radio" name="object" value="flat">
-              </label>
-              <label>Коттедж
-                <input type="radio" name="object" value="cottage">
-              </label>
-              <label>Офис
-                <input type="radio" name="object" value="office">
-              </label>
-              <label>Ещё...
-                <input type="radio" name="object" value="another">
-              </label>
-            </div>
-          </div>
-
-          <textarea placeholder="Cообщение"></textarea>
-
-          <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
-            <input class="visually-hidden" type="file">
-          </label>
-          <div class="modal__upload-success">Файл успешно добавлен</div>
-
-          <button class="btn btn--big" type="submit">Отправить сообщение</button>
-
-          <label class="modal__agreement checkbox">
-            <input class="visually-hidden" type="checkbox" checked="" required="">
-            <span class="checkbox__indicator"></span>
-            <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных
-              данных и соглашаюсь с политикой конфиденциальности</span>
-          </label>
-
-        </form>
-      </div>
+    <div class="overlay overlay--main">
+      <include src="source/components/modal-calc.html"></include>
+      <include src="source/components/modal-inst.html"></include>
     </div>
 
     <section class="brief">
-      <div class="container">
+      <div class="container container--inner">
         <h2 class="visually-hidden">Компания в цифрах</h2>
-        <div class="brief__wrapper">
-          <div class="brief__item">
+        <ul class="brief__wrapper">
+          <li class="brief__item">
             <p class="brief__index">5</p>
             <p class="brief__descr">Лет работы</p>
-          </div>
-          <div class="brief__item">
+          </li>
+          <li class="brief__item">
             <p class="brief__index">86</p>
-            <p class="brief__descr">Реализованных<br />проектов</p>
-          </div>
-          <div class="brief__item">
+            <p class="brief__descr">Реализованных<br>проектов</p>
+          </li>
+          <li class="brief__item">
             <p class="brief__index">&gt;300</p>
             <p class="brief__descr">Наименований продукции</p>
-          </div>
-        </div>
-
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="certificate">
-      <div class="container">
+      <div class="container container--inner">
         <div class="certificate__wrapper">
-          <div class="pdf certificate__pdf">
-            <h3>PDF</h3>
+
+          <div class="certificate__document document document--certificate">
+            <h3>
+              <svg width="52" height="52" viewBox="0 0 52 52">
+                <use xlink:href="#icon-pdf"></use>
+              </svg>
+              PDF</h3>
             <p>ГОСТ 30494-2011</p>
-            <span>Здания жилые и общественные.</span>
-            <span>Параметры микроклимата в помещениях</span>
-            <div class="certificate__link">
+            <span>Здания жилые и общественные.<br>Параметры микроклимата в помещениях</span>
               <a href="file.pdf">Скачать</a>
-            </div>
           </div>
 
           <div class="certificate__description">
             <h2>Высочайшее качество</h2>
-            <p class="certificate__description-intro">Все предлагаемые решения соответствуют самым высоким европейским
-              стандартам качества и требованиям к энергоэффективности и экологичности.
+            <p class="certificate__description-intro">Все предлагаемые решения соответствуют самым высоким европейским стандартам качества и требованиям к энергоэффективности и экологичности.
             </p>
             <a href="#" class="certificate__description-link link-blue-underlined">Сертификаты AERECO</a>
           </div>

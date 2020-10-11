@@ -1,11 +1,12 @@
 .certificate {
-  padding: 0 0 111px;
+  padding: 80px 0 111px;
 
   @include tablet {
-    padding-bottom: 140px;
+    padding: 80px 0 140px;
   }
 
   @include mobile {
+    padding-top: 60px;
     padding-bottom: 78px;
   }
 }
@@ -13,67 +14,28 @@
 .certificate__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 79px 0 0 17.2%;
-
-  @include tablet {
-    margin: 79px 0 0 8.6%;
-  }
+  padding-left: 40px;
 
   @media (max-width: 1000px) {
     margin: 79px 0 0;
   }
 
-  @include mobile {
-    margin: 60px 0 0;
-  }
-}
-
-.certificate__pdf {
-  width: 25.1%;
-  display: flex;
-  flex-direction: column;
-  padding-right: 20px;
-
   @include tablet {
-    width: 33.5%;
-    padding-left: 29px;
+    padding-right: 60px;
   }
 
   @include mobile {
-    display: none;
+    margin: 0;
+    padding: 0;
   }
-
-  p {
-    margin: 0 0 33px;
-    padding-left: 5px;
-
-    @include tablet {
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
-
-  span {
-    margin-bottom: 7px;
-
-    &:last-of-type {
-      margin-bottom: auto;
-    }
-  }
-}
-
-.certificate__link {
-  margin-bottom: 13px;
 }
 
 .certificate__description {
-  width: 37.8%;
+  width: 459px;
   padding-top: 1px;
-  padding-right: 20px;
 
   @include tablet {
-    width: 53.2%;
-    padding-right: 60px;
+    width: 48.9%;
   }
 
   @media (max-width: 1000px) {

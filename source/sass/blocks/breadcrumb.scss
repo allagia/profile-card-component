@@ -18,7 +18,14 @@
       padding-top: 6px;
       padding-bottom: 1px;
     }
+
+    &--narrow {
+      @include tablet {
+        padding-top: 9px;
+      }
+    }
   }
+
 
   &__list {
     @include list-reset;

@@ -11,7 +11,7 @@
   <main>
     <section class="breadcrumb breadcrumb--no-mobile">
       <h2 class="visually-hidden">Ссылки на предыдущие разделы</h2>
-      <div class="breadcrumb__container container">
+      <div class="breadcrumb__container breadcrumb__container--narrow container">
         <a class="breadcrumb__back-arrow" href="#" aria-label="переход на предыдущую страницу">
           <span class="visually-hidden">Назад</span>
           <svg width="9" height="14" viewBox="0 0 9 14">
@@ -60,8 +60,13 @@
         <div class="opportunities__slider swiper-container">
           <div class="opportunities__list swiper-wrapper">
             <div class="opportunities__item swiper-slide">
-              <h3 class="opportunities__item-title opportunities__item-title--clean">Поддержание
-                свойств&nbsp;воздуха</h3>
+              <div class="opportunities__item-title">
+                <h3>Поддержание<br>
+                  свойств&nbsp;воздуха</h3>
+                  <svg class="opportunities__item-img" width="72" height="72">
+                    <use xlink:href="#icon-clean"></use>
+                  </svg>
+              </div>
               <p class="opportunities__item-text">Современные решения для систем вентиляции
                 от компании AERECO обеспечивают постоянный воздухообмен в помещении и быстро удаляют загрязненный воздух.
                 Также в помещении поддерживается естественный для человека уровень кислорода, что положительно влияет
@@ -69,8 +74,13 @@
             </div>
 
             <div class="opportunities__item swiper-slide">
-              <h3 class="opportunities__item-title opportunities__item-title--water">Регуляция
-                влажности&nbsp;воздуха</h3>
+              <div class="opportunities__item-title">
+                <h3>Регуляция<br>
+                  влажности&nbsp;воздуха</h3>
+                  <svg class="opportunities__item-img" width="72" height="72">
+                    <use xlink:href="#icon-water"></use>
+                  </svg>
+              </div>
               <p class="opportunities__item-text">В процессе жизнедеятельности человека повышается уровень влажности
                 в помещении, образуется конденсат, что приводит к появлению плесени на стенах. При значительном повышении
                 влажности, гигрорегулируемые вытяжные решетки открываются шире, удаляя излишки влаги, тем самым исключая
@@ -78,7 +88,12 @@
             </div>
 
             <div class="opportunities__item swiper-slide">
-              <h3 class="opportunities__item-title opportunities__item-title--hot">Снижение энергопотерь</h3>
+              <div class="opportunities__item-title">
+                <h3>Снижение<br>энергопотерь</h3>
+                <svg class="opportunities__item-img" width="72" height="72">
+                  <use xlink:href="#icon-hot"></use>
+                </svg>
+              </div>
               <p class="opportunities__item-text">При интенсивной циркуляции воздуха, вместе
                 с загрязненным воздухом удаляется и тепло,
                 а значит растут энергопотери. Иногда этот показатель доходит до 50%. Технология AERECO позволяет сохранять
@@ -116,51 +131,53 @@
                 <button class="technique__btn" type="button">Развернуть</button>
               </div>
             </div>
-            <div class="technique__details">
-              <div class="technique__img">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/exhaust.webp 1x, img/quality/exhaust@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
+            <div class="technique__dropdown">
+              <div class="technique__details">
+                <div class="technique__img">
+                  <picture class="technique__summary-picture">
+                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/exhaust.webp 1x, img/quality/exhaust@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/quality/exhaust-tablet.webp 1x, img/quality/exhaust-tablet@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="img/quality/exhaust.jpg 1x, img/quality/exhaust@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.jpg 1x, img/quality/exhaust-tablet@2x.jpg 2x">
-                    <img src="img/quality/exhaust.jpg" srcset="img/quality/exhaust@2x.jpg" width="280" height="238" alt="exhaust">
-                </picture>
-                <p class="technique__img-title">G2H.</p>
-                <p class="technique__img-text">Многофункци&shy;ональное вытяжное устройство</p>
-              </div>
-              <div class="technique__details-list">
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Эффективный воздухообмен</h3>
-                  <p class="technique__details-text">Регулируя расход воздуха в зависимости от потребностей
-                    в вентиляции, оборудование Aereco в значительной степени способствует улучшению качества воздуха
-                    внутри помещений. В жилом помещении, в случае нахождения в нем людей, уровень относительной
-                    влажности повышается. Чтобы эффективней удалить загрязненный воздух, приточные устройства
-                    открываются шире, пропуская больший объем воздуха. В процессе эксплуатации подсобных помещений
-                    (кухня, ванная, туалет) также выделяются пары воды. Более широкое открытие вытяжных устройств
-                    увеличивает воздухообмен, моментально удаляя загрязненный воздух.
-                  </p>
+                      <source media="(min-width: 1281px)" srcset="img/quality/exhaust.jpg 1x, img/quality/exhaust@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/quality/exhaust-tablet.jpg 1x, img/quality/exhaust-tablet@2x.jpg 2x">
+                      <img src="img/quality/exhaust.jpg" srcset="img/quality/exhaust@2x.jpg" width="280" height="238" alt="exhaust">
+                  </picture>
+                  <p class="technique__img-title">G2H.</p>
+                  <p class="technique__img-text">Многофункци&shy;ональное вытяжное устройство</p>
                 </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Нормализация влажности</h3>
-                  <p class="technique__details-text">В процессе жизнедеятельности человека повышается уровень влажности
-                    в помещении; на кухне и в ванной образуется конденсат, что приводит
-                    к появлению плесени на стенах. При значительном повышении влажности, гигрорегулируемые вытяжные
-                    решетки открываются шире, удаляя излишки
-                    влаги, тем самым исключая риск образования конденсата.
-                  </p>
-                </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Минимизация потерь тепла</h3>
-                  <p class="technique__details-text">Зачастую вентиляция становится причиной тепловых потерь
-                    в помещении. Иногда этот показатель доходит до 50%, что характерно для большинства классических
-                    систем вентиляции. Между тем технология Aereco позволяет сохранять тепло
-                    в пустующих помещениях, автоматически сокращая расход воздуха.
-                  </p>
-                </div>
-                <div class="technique__details-container">
-                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-list">
+                  <div class="technique__details-item">
+                    <h3>Эффективный воздухообмен</h3>
+                    <p>Регулируя расход воздуха в зависимости от потребностей
+                      в вентиляции, оборудование Aereco в значительной степени способствует улучшению качества воздуха
+                      внутри помещений. В жилом помещении, в случае нахождения в нем людей, уровень относительной
+                      влажности повышается. Чтобы эффективней удалить загрязненный воздух, приточные устройства
+                      открываются шире, пропуская больший объем воздуха. В процессе эксплуатации подсобных помещений
+                      (кухня, ванная, туалет) также выделяются пары воды. Более широкое открытие вытяжных устройств
+                      увеличивает воздухообмен, моментально удаляя загрязненный воздух.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Нормализация влажности</h3>
+                    <p>В процессе жизнедеятельности человека повышается уровень влажности
+                      в помещении; на кухне и в ванной образуется конденсат, что приводит
+                      к появлению плесени на стенах. При значительном повышении влажности, гигрорегулируемые вытяжные
+                      решетки открываются шире, удаляя излишки
+                      влаги, тем самым исключая риск образования конденсата.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Минимизация потерь тепла</h3>
+                    <p>Зачастую вентиляция становится причиной тепловых потерь
+                      в помещении. Иногда этот показатель доходит до 50%, что характерно для большинства классических
+                      систем вентиляции. Между тем технология Aereco позволяет сохранять тепло
+                      в пустующих помещениях, автоматически сокращая расход воздуха.
+                    </p>
+                  </div>
+                  <div class="technique__details-container">
+                    <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,50 +207,52 @@
                 <button class="technique__btn" type="button">Развернуть</button>
               </div>
             </div>
-            <div class="technique__details">
-              <div class="technique__img">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
-                      <source type="image/webp" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+            <div class="technique__dropdown">
+              <div class="technique__details">
+                <div class="technique__img">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1281px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
+                        <source type="image/webp" srcset="img/quality/emm.webp 1x, img/quality/emm@2x.webp 2x">
 
-                    <source media="(min-width: 1281px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
-                    <img src="img/quality/emm.jpg" srcset="img/quality/emm@2x.jpg" width="280" height="238" alt="emm">
-                </picture>
-                <p class="technique__img-title">EMM.</p>
-                <p class="technique__img-text">Гигрорегули&shy;руемое приточное устройство</p>
-              </div>
-              <div class="technique__details-list">
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Принцип работы</h3>
-                  <p class="technique__details-text">Гигрорегулируемая система вентиляции Aereco в целом основана
-                    на изменении поперечного сечения и потока воздуха в приточных и вытяжных устройствах за счет
-                    уникального механического датчика, который напрямую приводит в действие заслонку, регулирующую
-                    расход воздуха.
-                  </p>
+                      <source media="(min-width: 1281px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/quality/emm.jpg 1x, img/quality/emm@2x.jpg 2x">
+                      <img src="img/quality/emm.jpg" srcset="img/quality/emm@2x.jpg" width="280" height="238" alt="emm">
+                  </picture>
+                  <p class="technique__img-title">EMM.</p>
+                  <p class="technique__img-text">Гигрорегули&shy;руемое приточное устройство</p>
                 </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Надежный автоматический датчик</h3>
-                  <p class="technique__details-text">Выполняя функции индикатора и привода гигрорегулируемой системы,
-                    датчик V8 подчиняется принципу известного физического закона: при повышении влажности материя
-                    удлиняется,
-                    при снижении — сужается. В соответствии с этим принципом 8 или 16 полиамидных полосок датчика
-                    приводят в действие одну или несколько заслонок, регулируя поток воздуха
-                    в зависимости от уровня относительной влажности в помещении. Благодаря системе тепловой
-                    корректировки, процесс открытия заслонок происходит независимо от внешних климатических условий,
-                    даже зимой, когда абсолютная влажность ниже.
-                  </p>
-                </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Нормализация влажности</h3>
-                  <p class="technique__details-text">Влажность является верным сигналом о необходимости проветрить
-                    помещение. Адаптируя поток воздуха в зависимости от относительной влажности, гигрорегулируемая
-                    система вентиляции обеспечивает эффективное и последовательное решение проблемы конденсации.
-                  </p>
-                </div>
-                <div class="technique__details-container">
-                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-list">
+                  <div class="technique__details-item">
+                    <h3>Принцип работы</h3>
+                    <p>Гигрорегулируемая система вентиляции Aereco в целом основана
+                      на изменении поперечного сечения и потока воздуха в приточных и вытяжных устройствах за счет
+                      уникального механического датчика, который напрямую приводит в действие заслонку, регулирующую
+                      расход воздуха.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Надежный автоматический датчик</h3>
+                    <p>Выполняя функции индикатора и привода гигрорегулируемой системы,
+                      датчик V8 подчиняется принципу известного физического закона: при повышении влажности материя
+                      удлиняется,
+                      при снижении — сужается. В соответствии с этим принципом 8 или 16 полиамидных полосок датчика
+                      приводят в действие одну или несколько заслонок, регулируя поток воздуха
+                      в зависимости от уровня относительной влажности в помещении. Благодаря системе тепловой
+                      корректировки, процесс открытия заслонок происходит независимо от внешних климатических условий,
+                      даже зимой, когда абсолютная влажность ниже.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Нормализация влажности</h3>
+                    <p>Влажность является верным сигналом о необходимости проветрить
+                      помещение. Адаптируя поток воздуха в зависимости от относительной влажности, гигрорегулируемая
+                      система вентиляции обеспечивает эффективное и последовательное решение проблемы конденсации.
+                    </p>
+                  </div>
+                  <div class="technique__details-container">
+                    <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,44 +280,46 @@
                 <button class="technique__btn" type="button">Развернуть</button>
               </div>
             </div>
-            <div class="technique__details">
-              <div class="technique__img">
-                <img src="img/quality/s-rh.jpg" alt="s-rh" width="280" height="238">
-                <p class="technique__img-title">S-RH/T.</p>
-                <p class="technique__img-text">Цифровой датчик влажности
-                  и температуры воздуха</p>
-              </div>
-              <div class="technique__details-list">
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Пиковый расход воздуха от датчика присутствия</h3>
-                  <p class="technique__details-text">При нахождении в помещении человека, датчик присутствия
-                    автоматически активирует пиковый режим расхода воздуха. Данная технология позволяет экономить
-                    тепловую энергию, накопленную во время отсутствия людей в помещении. Датчик непрерывно измеряет
-                    инфракрасные лучи, и как только обнаруживает колебания, посылает сигнал для обработки на электронную
-                    карту, которая, в свою очередь, его анализирует и затем активирует привод, управляющий открытием
-                    створок вытяжного устройства.
-                  </p>
+            <div class="technique__dropdown">
+              <div class="technique__details">
+                <div class="technique__img">
+                  <img src="img/quality/s-rh.jpg" alt="s-rh" width="280" height="238">
+                  <p class="technique__img-title">S-RH/T.</p>
+                  <p class="technique__img-text">Цифровой датчик влажности
+                    и температуры воздуха</p>
                 </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Ручное управление</h3>
-                  <p class="technique__details-text">В помещениях, где относительная влажность не может быть
-                    использована в качестве оперативного индикатора интенсивного загрязнения (кухня, туалет и пр.),
-                    пользователь, посредством вытяжного устройства, может активировать пиковый расход воздуха для
-                    моментального удаления неприятных запахов. Включение пикового режима может производиться нажатием
-                    на кнопку, или с помощью пульта дистанционного управления.
-                  </p>
-                </div>
-                <div class="technique__details-item">
-                  <h3 class="technique__details-title">Использование датчиков CO2 и VOC</h3>
-                  <p class="technique__details-text">Оба датчика управляются одинаковым способом: в зависимости
-                    от настроек. Когда уровень CO2 (или VOC) ниже установленного порога, расход воздуха остается
-                    на минимальном уровне. Как только концентрация загрязняющих веществ увеличивается, срабатывает
-                    пиковый расход, который длится до тех пор, пока качество воздуха не будет соответствовать
-                    первоначальным настройкам.
-                  </p>
-                </div>
-                <div class="technique__details-container">
-                  <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                <div class="technique__details-list">
+                  <div class="technique__details-item">
+                    <h3>Пиковый расход воздуха от датчика присутствия</h3>
+                    <p>При нахождении в помещении человека, датчик присутствия
+                      автоматически активирует пиковый режим расхода воздуха. Данная технология позволяет экономить
+                      тепловую энергию, накопленную во время отсутствия людей в помещении. Датчик непрерывно измеряет
+                      инфракрасные лучи, и как только обнаруживает колебания, посылает сигнал для обработки на электронную
+                      карту, которая, в свою очередь, его анализирует и затем активирует привод, управляющий открытием
+                      створок вытяжного устройства.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Ручное управление</h3>
+                    <p>В помещениях, где относительная влажность не может быть
+                      использована в качестве оперативного индикатора интенсивного загрязнения (кухня, туалет и пр.),
+                      пользователь, посредством вытяжного устройства, может активировать пиковый расход воздуха для
+                      моментального удаления неприятных запахов. Включение пикового режима может производиться нажатием
+                      на кнопку, или с помощью пульта дистанционного управления.
+                    </p>
+                  </div>
+                  <div class="technique__details-item">
+                    <h3>Использование датчиков CO<sub>2</sub> и VOC</h3>
+                    <p>Оба датчика управляются одинаковым способом: в зависимости
+                      от настроек. Когда уровень CO<sub>2</sub> (или VOC) ниже установленного порога, расход воздуха остается
+                      на минимальном уровне. Как только концентрация загрязняющих веществ увеличивается, срабатывает
+                      пиковый расход, который длится до тех пор, пока качество воздуха не будет соответствовать
+                      первоначальным настройкам.
+                    </p>
+                  </div>
+                  <div class="technique__details-container">
+                    <a href="#" class="technique__details-link link-blue-underlined">Смотреть в каталоге</a>
+                  </div>
                 </div>
               </div>
             </div>

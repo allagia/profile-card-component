@@ -5,9 +5,8 @@
   padding-bottom: 28px;
 
   @include mobile {
-    padding: 15px 15px 20px;
+    padding: 15px;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   &--short {
@@ -21,7 +20,7 @@
   width: 56.4%;
 
   @include tablet {
-    width: 50.4%;
+    width: 52.4%;
   }
 
   @include mobile {
@@ -97,6 +96,7 @@
   }
 
   @include mobile {
+    margin-bottom: 12px;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.008em;
@@ -123,7 +123,8 @@
   }
 
   @include mobile {
-    padding: 12px 0 30px;
+    padding: 0;
+    margin-bottom: 10px;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.005em;
@@ -135,8 +136,8 @@
   position: relative;
   outline: none;
   cursor: pointer;
-  margin: auto 0 0;
-  padding: 0 0 7px;
+  margin: auto 0 6px;
+  padding: 0;
   border: none;
   background: none;
   text-transform: uppercase;
@@ -147,7 +148,7 @@
   transition: all 0.2s ease;
 
   @include mobile {
-    margin-top: auto;
+    margin-bottom: 13px;
   }
 
   &::before {
@@ -167,8 +168,12 @@
     width: 100%;
     content: "";
     border-bottom: 2px solid rgba(57, 186, 240, 0.8);
-    bottom: 0;
+    bottom: -7px;
     left: 0;
+
+    @include mobile {
+      bottom: -8px
+    }
   }
 
   &:hover,
@@ -196,15 +201,23 @@
   }
 }
 
+.technique__dropdown {
+  max-height: 0;
+  transition: all ease-in .5s;
+}
+
 .technique__details {
   display: flex;
   align-items: flex-start;
-  max-height: 0;
-  transition: all ease-in .5s;
+  padding: 79px 19% 57px 140px;
+
+  @include tablet {
+    padding: 73px 9% 57px 96px;
+  }
 
   @include mobile {
-    padding: 0;
     display: block;
+    padding: 24px 15px 15px;
   }
 
   &--open {
@@ -214,10 +227,11 @@
 
 .technique__img {
   width: 29.5%;
-  padding: 79px 0 0 140px;
+  margin-right: 100px;
 
   @include tablet {
-    padding: 73px 0 0 95px;
+    width: 25.7%;
+    margin-right: 54px;
   }
 
   @include mobile {
@@ -229,99 +243,96 @@
   }
 }
 
+.technique__summary-picture {
+  display: block;
+  margin-bottom: 14px;
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
+}
+
 .technique__img-title {
-  padding: 14px 0 0;
-  margin: 0;
+  margin: 0 0 3px;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.005em;
 
   @include tablet {
-    padding-top: 20px;
+    margin-bottom: 4px;
   }
 }
 
 .technique__img-text {
-  padding: 3px 118px 0 0;
+  max-width: 228px;
   margin: 0;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.005em;
   color: $light-grey;
-
-  @include tablet {
-    padding: 4px 5px 0 0;
-  }
 }
 
 .technique__details-list {
   display: flex;
   flex-direction: column;
   width: 70%;
-  padding: 74px 19% 57px 79px;
-
-  @include tablet {
-    width: 70.5%;
-    padding: 74px 9.2% 58px 53px;
-  }
+  margin-top: -0.3em;
 
   @include mobile {
     width: 100%;
-    padding: 18px 15px 15px;
+
   }
 }
 
 .technique__details-item {
-  margin-bottom: 49px;
+  margin-bottom: 29px;
 
   @include tablet {
-    margin-bottom: 48px;
+    margin-bottom: 23px;
   }
 
   @include mobile {
-    padding-top: 2px;
-    margin-bottom: 33px;
-  }
-}
-
-.technique__details-title {
-  padding: 0 0 27px;
-  margin: 0;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 34px;
-  letter-spacing: 0.005em;
-
-  @include tablet {
-    padding-bottom: 18px;
+    margin-bottom: 19px;
   }
 
-  @include mobile {
-    font-size: 22px;
-    line-height: 25px;
-    letter-spacing: -0.02em;
-    padding-bottom: 17px;
+  h3 {
+    margin: 0 0 27px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.005em;
+
+    @include tablet {
+      margin: 6px 0 17px 0;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+    }
   }
-}
 
-.technique__details-text {
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0.005em;
+  p {
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.005em;
 
-  @include mobile {
-    font-size: 12px;
-    line-height: 20px;
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 }
 
 .technique__details-container {
-  margin: 8px 0;
+  margin: auto 0 8px;
 
   @include mobile {
-    margin: 0 0 7px;
+    margin: 3px 0 8px;
   }
 }
 

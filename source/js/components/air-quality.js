@@ -6,7 +6,7 @@
 
   var onDropdownMenuClick = function (evt) {
     evt.preventDefault();
-    var dropdownSection = evt.target.closest('.technique').querySelector('.technique__details');
+    var dropdownSection = evt.target.closest('.technique').querySelector('.technique__dropdown');
 
     if (dropdownSection) {
       if (parseInt(dropdownSection.style.maxHeight, 10)) {
@@ -30,6 +30,7 @@
     });
   }
 
+  // slider
   var clientWidth = document.body.clientWidth;
   var opportunitiesSlider;
   var slider = document.querySelector('.opportunities__slider');
