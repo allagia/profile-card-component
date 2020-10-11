@@ -273,85 +273,85 @@
 
 (function () {
 
-  // var overlayMain = document.querySelector('.overlay--main');
+  var overlayMain = document.querySelector('.overlay--main');
 
-  // if (overlayMain) {
-  // var popups = document.querySelectorAll('.tab__link--modal');
-  var button1 = document.querySelector('.tab__link--popup1');
-  var button2 = document.querySelector('.tab__link--popup2');
-  var popup1 = document.querySelector('.modal--calc');
-  var popup2 = document.querySelector('.modal--inst');
-  var body = document.querySelector('body');
-  var closePopups = document.querySelectorAll('.modal__close-btn');
-  var overlay = document.querySelector('.overlay--main');
+  if (overlayMain) {
+    // var popups = document.querySelectorAll('.tab__link--modal');
+    var button1 = document.querySelector('.tab__link--popup1');
+    var button2 = document.querySelector('.tab__link--popup2');
+    var popup1 = document.querySelector('.modal--calc');
+    var popup2 = document.querySelector('.modal--inst');
+    var body = document.querySelector('body');
+    var closePopups = document.querySelectorAll('.modal__close-btn');
+    var overlay = document.querySelector('.overlay--main');
 
-  if (button1) {
+    if (button1) {
 
-    button1.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      popup1.classList.add('popup--opened');
-      body.classList.add('no-scroll');
+      button1.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        popup1.classList.add('popup--opened');
+        body.classList.add('no-scroll');
+      });
+    }
+
+    if (button2) {
+
+      button2.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        popup2.classList.add('popup--opened');
+        body.classList.add('no-scroll');
+      });
+    }
+
+    // var closeModal = function () {
+    //   popups.forEach(function (el) {
+    //     el.classList.remove('popup--opened');
+    //   });
+    //   return;
+    // };
+
+    var closePopup = function () {
+      popup1.classList.remove('popup--opened');
+      popup2.classList.remove('popup--opened');
+      body.classList.remove('no-scroll');
+    };
+
+
+    closePopups.forEach(function (element) {
+      element.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        closePopup();
+      });
     });
-  }
 
-  if (button2) {
-
-    button2.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      popup2.classList.add('popup--opened');
-      body.classList.add('no-scroll');
+    closePopups.forEach(function (element) {
+      element.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+          evt.preventDefault();
+          closePopup();
+        }
+      });
     });
-  }
 
-  // var closeModal = function () {
-  //   popups.forEach(function (el) {
-  //     el.classList.remove('popup--opened');
-  //   });
-  //   return;
-  // };
-
-  var closePopup = function () {
-    popup1.classList.remove('popup--opened');
-    popup2.classList.remove('popup--opened');
-    body.classList.remove('no-scroll');
-  };
-
-
-  closePopups.forEach(function (element) {
-    element.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      closePopup();
-    });
-  });
-
-  closePopups.forEach(function (element) {
-    element.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+    document.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === window.utils.ESC_KEYCODE) {
         evt.preventDefault();
         closePopup();
       }
     });
-  });
 
-  document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.utils.ESC_KEYCODE) {
-      evt.preventDefault();
-      closePopup();
-    }
-  });
+    if (overlay) {
 
-  if (overlay) {
-
-    overlay.addEventListener('click', function () {
-      closePopup();
-    });
-    for (var i = 0; i < overlay.childNodes.length; i++) {
-      overlay.childNodes[i].addEventListener('click', function (event) {
-        event.stopPropagation();
+      overlay.addEventListener('click', function () {
+        closePopup();
       });
+      for (var i = 0; i < overlay.childNodes.length; i++) {
+        overlay.childNodes[i].addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+      }
     }
   }
-  // }
 })();
 
 'use strict';
@@ -742,62 +742,62 @@
 'use strict';
 
 (function () {
-  // var overlayCard = document.querySelector('.overlay--card');
+  var overlayCard = document.querySelector('.overlay--card');
 
-  // if (overlayCard) {
-  var popup = document.querySelector('.modal--calc');
-  var body = document.querySelector('body');
-  var button = document.querySelector('.basic-info__btn');
+  if (overlayCard) {
+    var popup = document.querySelector('.modal--calc');
+    var body = document.querySelector('body');
+    var button = document.querySelector('.basic-info__btn');
 
-  var closeBtn = document.querySelector('.modal__close-btn');
-  var overlay = document.querySelector('.overlay--card');
+    var closeBtn = document.querySelector('.modal__close-btn');
+    var overlay = document.querySelector('.overlay--card');
 
-  if (button) {
-    button.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      popup.classList.add('popup--opened');
-      body.classList.add('no-scroll');
-    });
-  }
+    if (button) {
+      button.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        popup.classList.add('popup--opened');
+        body.classList.add('no-scroll');
+      });
+    }
 
-  var closePopup = function () {
-    popup.classList.remove('popup--opened');
-    body.classList.remove('no-scroll');
-  };
+    var closePopup = function () {
+      popup.classList.remove('popup--opened');
+      body.classList.remove('no-scroll');
+    };
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      closePopup();
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        closePopup();
+      });
 
-    closeBtn.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+      closeBtn.addEventListener('keydown', function (evt) {
+        if (evt.keyCode === window.utils.ENTER_KEYCODE) {
+          evt.preventDefault();
+          closePopup();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === window.utils.ESC_KEYCODE) {
         evt.preventDefault();
         closePopup();
       }
     });
-  }
 
-  document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.utils.ESC_KEYCODE) {
-      evt.preventDefault();
-      closePopup();
-    }
-  });
+    if (overlay) {
 
-  if (overlay) {
-
-    overlay.addEventListener('click', function () {
-      closePopup();
-    });
-    for (var i = 0; i < overlay.childNodes.length; i++) {
-      overlay.childNodes[i].addEventListener('click', function (event) {
-        event.stopPropagation();
+      overlay.addEventListener('click', function () {
+        closePopup();
       });
+      for (var i = 0; i < overlay.childNodes.length; i++) {
+        overlay.childNodes[i].addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+      }
     }
   }
-  // }
 })();
 
 'use strict';

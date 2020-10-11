@@ -563,8 +563,8 @@
     border: none;
     cursor: auto;
     outline: none;
-    -webkit-appearance: none;
     border-radius: 0;
+    -webkit-appearance: none;
 
     &::placeholder {
       color: $lighter-grey;
