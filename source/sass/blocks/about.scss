@@ -86,10 +86,12 @@
   &--wide {
     @include tablet {
       width: 48.7%;
+      padding-right: 15px;
     }
 
     @include mobile {
       width: 100%;
+      padding-right: 0;
       margin-bottom: 40px;
     }
   }
@@ -113,17 +115,17 @@
     margin: 0 0 0.375em;
     font-weight: 600;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 120%;
     letter-spacing: -0.025em;
 
     @include tablet {
       margin: 0;
-      line-height: 21px;
+      //line-height: 21px;
     }
 
     @include mobile {
       font-size: 14px;
-      line-height: 18px;
+      //line-height: 18px;
     }
   }
 

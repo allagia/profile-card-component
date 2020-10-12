@@ -3,6 +3,23 @@
     margin-top: 6px;
   }
 
+  .tablet-hide {
+    display: block;
+    margin-bottom: 50px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .tablet-visible {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__wrap {
     display: flex;
     flex-direction: row;
@@ -54,12 +71,12 @@
     flex-wrap: wrap;
     min-width: 75%;
     max-width: 75%;
-    margin-top: 88px;
+    margin-top: 23px;
 
     @include tablet {
       min-width: 65%;
-      max-width: 100%;
-      margin-top: -101px;
+      max-width: 65%;
+      margin-top: 0;
     }
 
     @include mobile {
@@ -97,8 +114,7 @@
     @include mobile {
       min-width: 100%;
       max-width: 100%;
-      margin: 0 auto;
-      margin-bottom: 39px;
+      margin: 0 auto 40px;
     }
   }
 

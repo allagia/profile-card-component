@@ -73,6 +73,11 @@
       margin-right: 4.9%;
     }
 
+    @include tablet {
+      min-width: 300px;
+      margin-right: 4.9%;
+    }
+
     @include tablet-inner {
       margin-right: 0;
     }

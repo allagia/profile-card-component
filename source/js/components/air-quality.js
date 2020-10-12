@@ -51,7 +51,7 @@
 
   var resizeHandlerSlider = function () {
     clientWidth = document.body.clientWidth;
-    if (clientWidth < 768) {
+    if (clientWidth < 1024) {
       if (opportunitiesSlider) {
         opportunitiesSlider.destroy();
       }
