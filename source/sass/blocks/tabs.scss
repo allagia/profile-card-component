@@ -47,8 +47,10 @@
     }
 
     &--about {
+      margin-left: 0;
+
       @include tablet {
-        margin-left: 0;
+        margin-left: 55px;
       }
 
       @include mobile {
@@ -92,7 +94,7 @@
       min-height: 204px;
 
       @include tablet {
-        margin-right: 4.9%;
+        margin-right: 11.4%;
       }
 
       @include mobile {

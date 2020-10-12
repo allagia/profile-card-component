@@ -1,9 +1,9 @@
 .brief {
   background-color: $bg-color;
-  padding: 107px 0 82px;
+  padding: 107px 0 42px;
 
   @include tablet {
-    padding: 103px 0 92px;
+    padding: 103px 0 93px;
   }
 
   @include mobile {
@@ -32,7 +32,7 @@
 
 .brief__item  {
   width: 30%;
-  margin: 0 auto auto;
+  margin: 0 auto 40px;
   display: flex;
   flex-direction: column;
 
