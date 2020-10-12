@@ -325,11 +325,8 @@
   &--certificate {
     display: flex;
     flex-direction: column;
-    width: 26.2%;
-
-    @include tablet {
-      width: 36.6%;
-    }
+    width: 340px;
+    padding: 40px 22px 30px;
 
     @include mobile {
       display: none;
@@ -345,7 +342,6 @@
       }
 
       svg {
-        margin-top: 2px;
         margin-right: 8px;
       }
     }

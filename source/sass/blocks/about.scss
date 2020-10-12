@@ -2,7 +2,7 @@
   padding-bottom: 144px;
 
   @include tablet {
-    padding-bottom: 139px;
+    padding-bottom: 75px;
   }
 
   @include mobile {
@@ -86,7 +86,7 @@
   &--wide {
     @include tablet {
       width: 48.7%;
-      padding-right: 15px;
+      padding-right: 1px;
     }
 
     @include mobile {
