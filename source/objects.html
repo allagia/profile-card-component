@@ -39,376 +39,261 @@
 
         <div class="objects__slider">
           <h2 class="visually-hidden">Объекты</h2>
-          <div class="objects__slider-gallery">
-            <ul class="objects__slider-list">
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-apt"></use>
-                  </svg>
-                  <span class='objects__span'>Квартиры</span>
-                  <span class="objects__span--visible">Вентиляция квартир</span>
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
+          <div class="objects__slider-wrap">
+            <div class="swiper-container">
+              <ul class="objects__slider-list swiper-wrapper">
+                <li class="object-type swiper-slide">
+                  <a href="kvartiry" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-apt"></use>
+                    </svg>
+                    Квартиры
+                  </a>
+                </li>
+                <li class="object-type swiper-slide">
+                  <a href="kottedji" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-cottage"></use>
+                    </svg>
+                    Коттеджи
+                  </a>
+                </li>
+                <li class="object-type swiper-slide">
+                  <a href="hramy" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-church"></use>
+                    </svg>
+                    Храмы
+                  </a>
+                </li>
+                <li class="object-type swiper-slide">
+                  <a href="adminstraciya" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-authority"></use>
+                    </svg>
+                    Администрации
+                  </a>
+                </li>
+                <li class="object-type swiper-slide">
+                  <a href="shkoly" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-school"></use>
+                    </svg>
+                    Школы
+                  </a>
+                </li>
+                <li class="object-type swiper-slide">
+                  <a href="gostinica" class="js-tab-btn object-type__btn" type="button">
+                    <svg width="60" height="60" viewBox="0 0 60 60">
+                      <use xlink:href="img/sprite_auto.svg#icon-hotel"></use>
+                    </svg>
+                    Гостиницы
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-1@1x.jpg" srcset="img/objects/slider-1@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Вентиляция квартиры
-                    </h3>
-                    <p class="objects__slider-text">
-                      Мы подбираем и внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-                    </p>
-                    <p class="objects__slider-text">
-                      Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-cottage"></use>
-                  </svg>
-                  <span class='objects__span'>Коттеджи</span>
-                  <span class="objects__span--visible">Вентиляция коттеджей</span>
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
-
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-2@1x.jpg" srcset="img/objects/slider-2@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Вентиляция коттеджа
-                    </h3>
-                    <p class="objects__slider-text">
-                      Вентиляция загородного дома, как правило, отличается от&nbsp;городских квартир. Нередко в коттеджах, кроме спальни и&nbsp;гостиной, есть сауна, гараж для автомобиля, подсобные помещения, требующие особого подхода при организации воздушных потоков и нормализации влажности.
-                    </p>
-                    <p class="objects__slider-text">
-                      В гостиной с камином, для поддержания горения и комфорта людей, важно обеспечить подачу свежего, богатого кислородом воздуха. А регулирование уровня влажности в сауне и бассейне позволит не допускать появления излишней сырости. Наши специалисты спроектируют и становят комплексную систему вентиляции, учитывая каждую деталь.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-church"></use>
-                  </svg>
-                  <span class='objects__span'>Храмы</span>
-                  <span class="objects__span--visible">Вентиляция для&nbsp;храмов</span>
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
-
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-3@1x.jpg" srcset="img/objects/slider-3@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Вентиляция для храмов
-                    </h3>
-                    <p class="objects__slider-text">
-                      AeroHouse имеет большой опыт в проектировании и установке энергоэффективных систем вентиляции в храмах на базе высокопроизводительного оборудования от AERECO. Например, внедрение систем с рекуперацией тепла позволяет восстановить воздухообмен в помещениях любого размера и конфигурации. При&nbsp;этом отсутствует необходимость внесения существенных изменений в интерьер как в новых, так и в действуюзих храмах.
-                    </p>
-                    <p class="objects__slider-text">
-                      В итоге, удается раз и навсегда решить проблемы с повышенной влажностью, плесенью и грибком, защитив настенную роспись, элементы внутренней отделки и убранства храма.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-authority"></use>
-                  </svg>
-                  <span class='objects__span'>Администрации</span>
-                  <span class="objects__span--visible">Административные здания</span>
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
-
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-4@1x.jpg" srcset="img/objects/slider-4@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Административные здания
-                    </h3>
-                    <p class="objects__slider-text">
-                      Во всех странах мира действуют определенные нормы для систем вентиляции административных и общественных зданий. Это&nbsp;обусловленно тем, что качество воздуха в помещении напрямую влияет на здововье и продуктивную работу людей, находящихся в нем.
-                    </p>
-                    <p class="objects__slider-text">
-                      При проектировании и установке систем вентиляции мы руководствуемся всеми нормативами и требованиями, прописанными в СНиП. Хорошая система вентиляции в зданиях гарантирует наличие свежего воздуха и комфортной среды во&nbsp;всех рабочих помещениях.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-school"></use>
-                  </svg>
-                  <span class='objects__span'>Школы</span>
-                  <span class="objects__span--visible">Школы и&nbsp;детские сады</span>
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
-
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-5@1x.jpg" srcset="img/objects/slider-5@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Школы и детские сады
-                    </h3>
-                    <p class="objects__slider-text">
-                      Мы подбираем и внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-                    </p>
-                    <p class="objects__slider-text">
-                      Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="objects__slider-item">
-                <button class="objects__slider-button" type="button">
-                  <svg width="60" height="60" viewBox="0 0 60 60">
-                    <use xlink:href="img/sprite_auto.svg#icon-hotel"></use>
-                  </svg>
-                  Гостиницы
-                </button>
-                <div class="objects__slider-desc-mobile">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
-                    <source type="image/webp" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
-
-                        <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-                    <source media="(max-width: 767px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
-                      <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-                    <source media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
-                      <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-                    <img src="img/objects/slider-6@1x.jpg" srcset="img/objects/slider-6@2x.jpg 2x" alt="Объекты">
-                  </picture>
-                  <div class="objects__slider-text-block">
-                    <h3 class="objects__slider-title">
-                      Гостиницы
-                    </h3>
-                    <p class="objects__slider-text">
-                      Мы подбираем и внедряем системы вентиляции для зданий сразличной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-                    </p>
-                    <p class="objects__slider-text">
-                      Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <button class="swiper-button-prev objects__controls objects__controls--prev" type="button">
+              <svg width="19" height="19" viewBox="0 0 19 19">
+                <use xlink:href="img/sprite_auto.svg#icon-prev"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next objects__controls objects__controls--next" type="button">
+              <svg width="19" height="19" viewBox="0 0 19 19">
+                <use xlink:href="img/sprite_auto.svg#icon-next"></use>
+              </svg>
+            </button>
           </div>
-        <div class="objects__slider-controls">
-          <button class="objects__controls objects__controls--prev" type="button">
-            <svg width="19" height="19" viewBox="0 0 19 19">
-              <use xlink:href="img/sprite_auto.svg#icon-prev"></use>
-            </svg>
-          </button>
-          <button class="objects__controls objects__controls--next" type="button">
-            <svg width="19" height="19" viewBox="0 0 19 19">
-              <use xlink:href="img/sprite_auto.svg#icon-next"></use>
-            </svg>
-          </button>
-        </div>
 
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
+
+          <div class="slider-objects">
+            <a href="kvartiry" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-apt"></use>
+              </svg>
+              Вентиляция квартир
+            </a>
+            <div id="kvartiry" class="object-block">
+              <div class="object-block__wrap">
+                <picture class="object-block__img-wrap">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
+                  <source type="image/webp" srcset="img/objects/slider-1@1x.webp 1x, img/objects/slider-1@2x.webp 2x">
+
+                  <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
+                  <source media="(max-width: 767px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
+                  <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                  <source media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
+                  <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                  <img src="img/objects/slider-1@1x.jpg" srcset="img/objects/slider-1@2x.jpg 2x" alt="Объекты">
+                </picture>
+                <div class="object-type__text">
+                  <h3 class="object-type__title">
+                    Вентиляция квартиры
+                  </h3>
+                  <div class="object-type__p">
+                    <p>Мы подбираем и внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.</p>
+                    <p>Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.</p>
+                  </div>
+                </div>
+                </div>
+            </div>
+
+            <a href="kottedji" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-cottage"></use>
+              </svg>
+              Вентиляция коттеджей
+            </a>
+            <div id="kottedji" class="object-block">
+              <div class="object-block__wrap">
+              <picture class="object-block__img-wrap">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
+                <source type="image/webp" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
 
                 <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-1@1x.jpg 1x, img/objects/slider-1@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-1@1x.jpg" srcset="img/objects/slider-1@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
-              Вентиляция квартиры
-            </h3>
-            <p class="objects__slider-text">
-              Мы подбираем и внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-            </p>
-            <p class="objects__slider-text">
-              Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-            </p>
-          </div>
-        </div>
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-2@1x.webp 1x, img/objects/slider-2@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
+                <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                <source media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
+                <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                <img src="img/objects/slider-2@1x.jpg" srcset="img/objects/slider-2@2x.jpg 2x" alt="Объекты">
+              </picture>
+              <div class="object-type__text">
+                <h3 class="object-type__title">
+                  Вентиляция коттеджа
+                </h3>
+
+                <p>Вентиляция загородного дома, как правило, отличается от&nbsp;городских квартир. Нередко в&nbsp;коттеджах, кроме спальни и&nbsp;гостиной, есть сауна, гараж для автомобиля, подсобные помещения, требующие особого подхода при организации воздушных потоков и&nbsp;нормализации влажности.</p>
+                <p>В&nbsp;гостиной с&nbsp;камином, для поддержания горения и&nbsp;комфорта людей, важно обеспечить подачу свежего, богатого кислородом воздуха. А&nbsp;регулирование уровня влажности в&nbsp;сауне и&nbsp;бассейне позволит не&nbsp;допускать появления излишней сырости. Наши специалисты спроектируют и&nbsp;становят комплексную систему вентиляции, учитывая каждую деталь.</p>
+              </div>
+              </div>
+            </div>
+
+            <a href="hramy" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-church"></use>
+              </svg>
+              Вентиляция для&nbsp;храмов
+            </a>
+            <div id="hramy" class="object-block">
+              <div class="object-block__wrap">
+              <picture class="object-block__img-wrap">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
+                <source type="image/webp" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
 
                 <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-2@1x.jpg 1x, img/objects/slider-2@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-2@1x.jpg" srcset="img/objects/slider-2@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
-              Вентиляция коттеджа
-            </h3>
-            <p class="objects__slider-text">
-              Вентиляция загородного дома, как правило, отличается от&nbsp;городских квартир. Нередко в коттеджах, кроме спальни и&nbsp;гостиной, есть сауна, гараж для автомобиля, подсобные помещения, требующие особого подхода при организации воздушных потоков и нормализации влажности.
-            </p>
-            <p class="objects__slider-text">
-              В гостиной с камином, для поддержания горения и комфорта людей, важно обеспечить подачу свежего, богатого кислородом воздуха. А регулирование уровня влажности в сауне и бассейне позволит не допускать появления излишней сырости. Наши специалисты спроектируют и становят комплексную систему вентиляции, учитывая каждую деталь.
-            </p>
-          </div>
-        </div>
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-3@1x.webp 1x, img/objects/slider-3@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
+                <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                <source media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
+                <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                <img src="img/objects/slider-3@1x.jpg" srcset="img/objects/slider-3@2x.jpg 2x" alt="Объекты">
+              </picture>
+              <div class="object-type__text">
+                <h3 class="object-type__title">
+                  Вентиляция для храмов
+                </h3>
 
-                <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-3@1x.jpg 1x, img/objects/slider-3@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-3@1x.jpg" srcset="img/objects/slider-3@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
-              Вентиляция для храмов
-            </h3>
-            <p class="objects__slider-text">
-              AeroHouse имеет большой опыт в проектировании и установке энергоэффективных систем вентиляции в храмах на базе высокопроизводительного оборудования от AERECO. Например, внедрение систем с рекуперацией тепла позволяет восстановить воздухообмен в помещениях любого размера и конфигурации. При&nbsp;этом отсутствует необходимость внесения существенных изменений в интерьер как в новых, так и в действуюзих храмах.
-            </p>
-            <p class="objects__slider-text">
-              В итоге, удается раз и навсегда решить проблемы с повышенной влажностью, плесенью и грибком, защитив настенную роспись, элементы внутренней отделки и убранства храма.
-            </p>
-          </div>
-        </div>
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
+                <p>AeroHouse имеет большой опыт в&nbsp;проектировании и&nbsp;установке энергоэффективных систем вентиляции в&nbsp;храмах на&nbsp;базе высокопроизводительного оборудования от&nbsp;AERECO. Например, внедрение систем с&nbsp;рекуперацией тепла позволяет восстановить воздухообмен в&nbsp;помещениях любого размера и&nbsp;конфигурации. При этом отсутствует необходимость внесения существенных изменений в&nbsp;интерьер как в&nbsp;новых, так и&nbsp;в&nbsp;действующих храмах.</p>
+                <p>В&nbsp;итоге, удается раз и&nbsp;навсегда решить проблемы с&nbsp;повышенной влажностью, плесенью и&nbsp;грибком, защитив настенную роспись, элементы внутренней отделки и&nbsp;убранства храма.</p>
+              </div>
+              </div>
+            </div>
 
-                <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-4@1x.jpg" srcset="img/objects/slider-4@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
+            <a href="adminstraciya" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-authority"></use>
+              </svg>
               Административные здания
-            </h3>
-            <p class="objects__slider-text">
-              Во всех странах мира действуют определенные нормы для систем вентиляции административных и общественных зданий. Это&nbsp;обусловленно тем, что качество воздуха в помещении напрямую влияет на здововье и продуктивную работу людей, находящихся в нем.
-            </p>
-            <p class="objects__slider-text">
-              При проектировании и установке систем вентиляции мы руководствуемся всеми нормативами и требованиями, прописанными в СНиП. Хорошая система вентиляции в зданиях гарантирует наличие свежего воздуха и комфортной среды во&nbsp;всех рабочих помещениях.
-            </p>
-          </div>
-        </div>
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
+            </a>
+            <div id="adminstraciya" class="object-block">
+              <div class="object-block__wrap">
+              <picture class="object-block__img-wrap">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
+                <source type="image/webp" srcset="img/objects/slider-4@1x.webp 1x, img/objects/slider-4@2x.webp 2x">
 
                 <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-5@1x.jpg" srcset="img/objects/slider-5@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
-              Школы и детские сады
-            </h3>
-            <p class="objects__slider-text">
-              Мы подбираем и внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-            </p>
-            <p class="objects__slider-text">
-              Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-            </p>
-          </div>
-        </div>
-        <div class="objects__slider-desc">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
-            <source type="image/webp" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
+                <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                <source media="(max-width: 1440px)" srcset="img/objects/slider-4@1x.jpg 1x, img/objects/slider-4@2x.jpg 2x">
+                <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                <img src="img/objects/slider-4@1x.jpg" srcset="img/objects/slider-4@2x.jpg 2x" alt="Объекты">
+              </picture>
+              <div class="object-type__text">
+                <h3 class="object-type__title">
+                  Административные здания
+                </h3>
+
+                <p>Во&nbsp;всех странах мира действуют определенные нормы для систем вентиляции административных и&nbsp;общественных зданий. Это обусловленно тем, что качество воздуха в&nbsp;помещении напрямую влияет на&nbsp;здововье и&nbsp;продуктивную работу людей, находящихся в&nbsp;нем.</p>
+                <p>При проектировании и&nbsp;установке систем вентиляции мы&nbsp;руководствуемся всеми нормативами и&nbsp;требованиями, прописанными в&nbsp;СНиП. Хорошая система вентиляции в&nbsp;зданиях гарантирует наличие свежего воздуха и&nbsp;комфортной среды во&nbsp;всех рабочих помещениях.</p>
+              </div>
+              </div>
+            </div>
+
+            <a href="shkoly" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-school"></use>
+              </svg>
+              Школы и&nbsp;детские сады
+            </a>
+            <div id="shkoly" class="object-block">
+              <div class="object-block__wrap">
+              <picture class="object-block__img-wrap">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
+                <source type="image/webp" srcset="img/objects/slider-5@1x.webp 1x, img/objects/slider-5@2x.webp 2x">
 
                 <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
-            <source media="(max-width: 767px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
-              <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
-            <source media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
-              <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
-            <img src="img/objects/slider-6@1x.jpg" srcset="img/objects/slider-6@2x.jpg 2x" alt="Объекты">
-          </picture>
-          <div class="objects__slider-text-block">
-            <h3 class="objects__slider-title">
+                <source media="(max-width: 767px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
+                <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                <source media="(max-width: 1440px)" srcset="img/objects/slider-5@1x.jpg 1x, img/objects/slider-5@2x.jpg 2x">
+                <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                <img src="img/objects/slider-5@1x.jpg" srcset="img/objects/slider-5@2x.jpg 2x" alt="Объекты">
+              </picture>
+              <div class="object-type__text">
+                <h3 class="object-type__title">
+                  Школы и&nbsp;детские сады
+                </h3>
+
+                <p>Мы&nbsp;подбираем и&nbsp;внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и&nbsp;планировкой, от&nbsp;эконом до&nbsp;премиум класса. Каждый объект уникален по&nbsp;своим параметрам, и&nbsp;системы вентиляции всегда проектируются с&nbsp;учетом всех его технических особенностей.</p>
+                <p>Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в&nbsp;сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а&nbsp;влажность оптимальна для помещений. Деревянная мебель и&nbsp;паркет защищены от&nbsp;конденсата, а&nbsp;в&nbsp;ванной легко и&nbsp;комфортно дышать.</p>
+              </div>
+              </div>
+            </div>
+
+            <a href="gostinica" class="js-accord-btn object-type__btn" type="button">
+              <svg width="60" height="60" viewBox="0 0 60 60">
+                <use xlink:href="img/sprite_auto.svg#icon-hotel"></use>
+              </svg>
               Гостиницы
-            </h3>
-            <p class="objects__slider-text">
-              Мы подбираем и внедряем системы вентиляции для зданий сразличной архитектурой и планировкой, от эконом до премиум класса. Каждый объект уникален по своим параметрам, и системы вентиляции всегда проектируются с учетом всех его технических особенностей.
-            </p>
-            <p class="objects__slider-text">
-              Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а влажность оптимальна для помещений. Деревянная мебель и паркет защищены от конденсата, а в ванной легко и&nbsp;комфортно дышать.
-            </p>
+            </a>
+            <div id="gostinica" class="object-block">
+              <div class="object-block__wrap">
+              <picture class="object-block__img-wrap">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
+                <source type="image/webp" srcset="img/objects/slider-6@1x.webp 1x, img/objects/slider-6@2x.webp 2x">
+
+                <!-- 1х: 290px x 220px; 2x: 580px x 440px; -->
+                <source media="(max-width: 767px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
+                <!-- 1х: 415px x 490px; 2x: 830px x 980px; -->
+                <source media="(max-width: 1440px)" srcset="img/objects/slider-6@1x.jpg 1x, img/objects/slider-6@2x.jpg 2x">
+                <!-- 1х: 670px x 490px; 2x: 1340px x 980px; -->
+                <img src="img/objects/slider-6@1x.jpg" srcset="img/objects/slider-6@2x.jpg 2x" alt="Объекты">
+              </picture>
+              <div class="object-type__text">
+                <h3 class="object-type__title">
+                  Гостиницы
+                </h3>
+
+                <p>Мы&nbsp;подбираем и&nbsp;внедряем системы вентиляции для зданий с&nbsp;различной архитектурой и&nbsp;планировкой, от&nbsp;эконом до&nbsp;премиум класса. Каждый объект уникален по&nbsp;своим параметрам, и&nbsp;системы вентиляции всегда проектируются с&nbsp;учетом всех его технических особенностей.</p>
+                <p>Именно это позволяет жильцам дышать воздухом, без пыли и&nbsp;посторонних запахов двадцать четыре часа в&nbsp;сутки. Больше не&nbsp;нужно открывать окна перед сном, так воздух всегда чистый и&nbsp;свежий, а&nbsp;влажность оптимальна для помещений. Деревянная мебель и&nbsp;паркет защищены от&nbsp;конденсата, а&nbsp;в&nbsp;ванной легко и&nbsp;комфортно дышать.</p>
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
       </div>
 
         <div class="objects__apt">

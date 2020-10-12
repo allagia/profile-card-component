@@ -16,12 +16,9 @@
   justify-content: space-between;
   padding-left: 40px;
 
-  @media (max-width: 1000px) {
-    margin: 79px 0 0;
-  }
-
   @include tablet {
-    padding-right: 60px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @include mobile {

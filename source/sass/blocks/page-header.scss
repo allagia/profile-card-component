@@ -216,6 +216,8 @@
       .page-header__nav-wrap {
         width: 100%;
         padding: 30px 85px 60px;
+        height: 100%;
+        overflow: auto;
 
         @include mobile {
           padding: 0 15px;
@@ -502,6 +504,15 @@
 
     @include tablet-1200px {
       padding-left: 0;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+
+      &:active {
+        opacity: .7;
+      }
     }
   }
 
