@@ -3,7 +3,7 @@
   padding: 107px 0 42px;
 
   @include tablet {
-    padding: 103px 0 93px;
+    padding: 103px 0 53px;
   }
 
   @include mobile {
@@ -38,7 +38,7 @@
 
   @include tablet {
     width: 20%;
-    margin: 0;
+    margin: 0 0 40px;
   }
 
   @include mobile {
