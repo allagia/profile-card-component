@@ -76,7 +76,7 @@
     font-weight: 500;
     border-style: hidden;
     text-align: left;
-
+    padding: 10px 0;
     height: 98px;
 
     @include tablet {
@@ -86,7 +86,7 @@
 
     @include mobile {
       font-weight: 400;
-      padding: 0 0 28px;
+      padding: 10px 0 28px;
       height: 90px;
     }
 
@@ -146,7 +146,7 @@
   }
 
   td {
-    padding: 0;
+    padding: 10px 0;
     height: 90px;
     border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
 
