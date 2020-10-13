@@ -18,10 +18,33 @@
     right: 0;
     width: 24px;
     height: 12px;
+    z-index: 1;
     background-image: url("../img/icon-arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    transition: background-image 0.2s ease;
+    transition: opacity 0.3s ease;
+
+    @include tablet {
+      width: 23px;
+      height: 11px;
+
+      top: 14px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 0;
+    width: 24px;
+    height: 12px;
+    z-index: 2;
+    opacity: 0;
+    background-image: url("../img/icon-arrow-blue.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity 0.3s ease;
 
     @include tablet {
       width: 23px;
@@ -32,9 +55,12 @@
   }
 
   &:hover {
+    &::before {
+      opacity: 1;
+    }
+
     &::after {
-      background-image: url("../img/icon-arrow-blue.svg");
-      background-size: contain;
+      opacity: 0;
     }
   }
 
