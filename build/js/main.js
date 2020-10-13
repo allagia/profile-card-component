@@ -537,11 +537,10 @@
   if (formFilter) {
     var btns = Array.from(formFilter.querySelectorAll('.catalog__filter-toggle'));
     var wraps = Array.from(formFilter.querySelectorAll('.catalog__fieldset-wrap'));
-    var size = 993;
+    var size = 768;
     var checkboxes = Array.from(formFilter.querySelectorAll('input[type=checkbox]'));
     var formBtns = formFilter.querySelector('.catalog__form-btns');
     var resetBtn = formBtns.querySelector('.catalog__form-reset-btn');
-    var screenWidth = document.body.clientWidth;
 
     formBtns.classList.remove('catalog__form-btns--nojs');
     wraps.forEach(function (wrap) {
@@ -566,6 +565,7 @@
     };
 
     var closeAccordion = function () {
+      var screenWidth = document.body.clientWidth;
       if (screenWidth < size) {
         wraps.forEach(function (wrap) {
           wrap.classList.add('catalog__fieldset-wrap--closed');
@@ -578,7 +578,7 @@
     };
 
     var showBtns = function () {
-      alert('Вкладки фильтра закрываются из-за onChange');
+      // alert('Вкладки фильтра закрываются из-за onChange');
       formBtns.classList.remove('catalog__form-btns--show');
       checkboxes.forEach(function (btn) {
         if (btn.checked) {
@@ -603,9 +603,21 @@
       closeAccordion();
     });
 
+    window.addEventListener('scroll', function () {
+      var screenWidth = document.body.clientWidth;
+      if (screenWidth < size) {
+        checkboxes.forEach(function (btn) {
+          if (btn.checked) {
+            var closestList = btn.closest('.catalog__fieldset-wrap');
+            closestList.classList.remove('catalog__fieldset-wrap--closed');
+          }
+        });
+      }
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
       closeAccordion();
-      alert('Вкладки фильтра закрываются из-за DOMContentLoaded');
+      // alert('Вкладки фильтра закрываются из-за DOMContentLoaded');
     }, {once: true});
 
     window.addEventListener('keydown', function (evt) {

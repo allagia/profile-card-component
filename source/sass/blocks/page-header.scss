@@ -598,6 +598,7 @@
     padding: 10px 6px 29px;
     border: none;
     background-color: transparent;
+    transition: $transition-props;
 
     &:active,
     &:focus {
@@ -607,7 +608,6 @@
     &:hover,
     &:focus {
       fill: $blue-hover;
-      transition: $transition-props;
     }
 
     @include tablet-1200px {
@@ -671,14 +671,11 @@
     display: flex;
     margin-bottom: 10px;
     transform: translateZ(0);
+    transition: $transition-props;
 
     &:hover,
     &:focus {
       opacity: 0.7;
-    }
-
-    &:active {
-      transition: $transition-props;
     }
 
     @include tablet {
