@@ -578,6 +578,7 @@
     };
 
     var showBtns = function () {
+      alert('Вкладки фильтра закрываются из-за onChange');
       formBtns.classList.remove('catalog__form-btns--show');
       checkboxes.forEach(function (btn) {
         if (btn.checked) {
@@ -600,16 +601,11 @@
 
     window.addEventListener('resize', function () {
       closeAccordion();
-      checkboxes.forEach(function (btn) {
-        if (btn.checked) {
-          var closestList = btn.closest('.catalog__fieldset-wrap');
-          closestList.classList.remove('catalog__fieldset-wrap--closed');
-        }
-      });
     });
 
     document.addEventListener('DOMContentLoaded', function () {
       closeAccordion();
+      alert('Вкладки фильтра закрываются из-за DOMContentLoaded');
     }, {once: true});
 
     window.addEventListener('keydown', function (evt) {
