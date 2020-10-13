@@ -41,7 +41,7 @@
   thead {
     font-weight: 500;
     font-size: 24px;
-    line-height: 34px;
+    line-height: 1.4;
 
     letter-spacing: 0.005em;
 
@@ -52,10 +52,11 @@
       background-color: #39baf0;
     }
 
+    @include tablet-inner {
+      font-size: 20px;
+    }
     @include mobile {
       font-size: 14px;
-      line-height: 22px;
-
       letter-spacing: 0.005em;
     }
   }
@@ -76,18 +77,23 @@
     font-weight: 500;
     border-style: hidden;
     text-align: left;
-    padding: 10px 0;
-    height: 98px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
 
-    @include tablet {
-      height: 100px;
+    &:not(:last-of-type) {
+      padding-right: 10px;
+    }
+
+    @include tablet-inner {
+      height: 80px;
     }
 
 
     @include mobile {
       font-weight: 400;
       padding: 10px 0 28px;
-      height: 90px;
+      height: 100px;
     }
 
     &:first-of-type {
@@ -146,10 +152,14 @@
   }
 
   td {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 90px;
     border-bottom: 1px solid rgba($color: #323b47, $alpha: 0.2);
 
+    &:not(:last-of-type) {
+      padding-right: 10px;
+    }
 
     &:first-of-type {
       width: 5.6%;
