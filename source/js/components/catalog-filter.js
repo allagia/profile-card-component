@@ -5,50 +5,30 @@
   var formFilter = document.querySelector('.catalog__form-filter');
 
   if (formFilter) {
-    var btns = Array.from(formFilter.querySelectorAll('.catalog__filter-toggle'));
-    var wraps = Array.from(formFilter.querySelectorAll('.catalog__fieldset-wrap'));
-    var size = 768;
-    var checkboxes = Array.from(formFilter.querySelectorAll('input[type=checkbox]'));
+    var btns = formFilter.querySelectorAll('.catalog__filter-toggle');
+    var wraps = formFilter.querySelectorAll('.catalog__fieldset-wrap');
+    var checkboxes = formFilter.querySelectorAll('input[type=checkbox]');
     var formBtns = formFilter.querySelector('.catalog__form-btns');
     var resetBtn = formBtns.querySelector('.catalog__form-reset-btn');
+
 
     formBtns.classList.remove('catalog__form-btns--nojs');
     wraps.forEach(function (wrap) {
       wrap.classList.remove('catalog__fieldset-wrap--nojs');
     });
 
-    var openList = function (el) {
-      if (el.classList.contains('catalog__fieldset-wrap--closed')) {
-        el.classList.remove('catalog__fieldset-wrap--closed');
-      } else {
-        el.classList.add('catalog__fieldset-wrap--closed');
-      }
-    };
 
     var showContent = function (el) {
       var target = el.closest('.catalog__fieldset-wrap');
-      openList(target);
-    };
 
-    var handleBtnClick = function (evt) {
-      showContent(evt.currentTarget);
-    };
-
-    var closeAccordion = function () {
-      var screenWidth = document.body.clientWidth;
-      if (screenWidth < size) {
-        wraps.forEach(function (wrap) {
-          wrap.classList.add('catalog__fieldset-wrap--closed');
-        });
+      if (target.classList.contains('catalog__fieldset-wrap--closed')) {
+        target.classList.remove('catalog__fieldset-wrap--closed');
       } else {
-        wraps.forEach(function (wrap) {
-          wrap.classList.remove('catalog__fieldset-wrap--closed');
-        });
+        target.classList.add('catalog__fieldset-wrap--closed');
       }
     };
 
     var showBtns = function () {
-      // alert('Вкладки фильтра закрываются из-за onChange');
       formBtns.classList.remove('catalog__form-btns--show');
       checkboxes.forEach(function (btn) {
         if (btn.checked) {
@@ -62,42 +42,39 @@
     });
 
     btns.forEach(function (btn) {
-      btn.addEventListener('click', handleBtnClick);
+      btn.addEventListener('click', function(e){
+        showContent(e.currentTarget);
+      });
     });
 
     resetBtn.addEventListener('click', function () {
       formBtns.classList.remove('catalog__form-btns--show');
     });
 
+
+    var closeTabsOnMobile = function () {
+      if (document.body.clientWidth < 768) {
+        wraps.forEach(function (wrap) {
+          wrap.classList.add('catalog__fieldset-wrap--closed');
+        });
+      } else {
+        wraps.forEach(function (wrap) {
+          wrap.classList.remove('catalog__fieldset-wrap--closed');
+        });
+      }
+    };
+
+    var vw;
     window.addEventListener('resize', function () {
-      closeAccordion();
+      if (vw !== document.body.clientWidth) {
+        vw = document.body.clientWidth;
+        closeTabsOnMobile();
+      };
     });
 
-    window.addEventListener('scroll', function () {
-      var screenWidth = document.body.clientWidth;
-      if (screenWidth < size) {
-        checkboxes.forEach(function (btn) {
-          if (btn.checked) {
-            var closestList = btn.closest('.catalog__fieldset-wrap');
-            closestList.classList.remove('catalog__fieldset-wrap--closed');
-          }
-        });
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      closeAccordion();
-      // alert('Вкладки фильтра закрываются из-за DOMContentLoaded');
-    }, {once: true});
-
-    window.addEventListener('keydown', function (evt) {
-      if (evt.key === 'Escape') {
-        formBtns.classList.remove('catalog__form-btns--show');
-        checkboxes.forEach(function (btn) {
-          btn.checked = false;
-          closeAccordion();
-        });
-      }
+    window.addEventListener('DOMContentLoaded', function () {
+      closeTabsOnMobile();
     });
   }
+
 })();
