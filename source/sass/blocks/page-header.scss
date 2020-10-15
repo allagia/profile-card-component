@@ -12,7 +12,7 @@
   }
 
   @include tablet {
-    margin-bottom: 10px;
+    margin-bottom: 23px;
   }
 
   @include mobile {
@@ -33,7 +33,7 @@
 
     @include mobile {
       padding-top: 26px;
-      padding-bottom: 10px;
+      padding-bottom: 11px;
     }
   }
 
@@ -78,6 +78,11 @@
     }
   }
 
+  &__logo--small-size {
+    width: 90px;
+    height: auto;
+  }
+
   &__logo img,
   &__nav-logo img {
     width: 100%;
@@ -98,6 +103,10 @@
 
   &__nav-wrap {
     margin-top: -9px;
+
+    @include tablet {
+      margin-top: -4px;
+    }
   }
 
   &__nav-contact-link {

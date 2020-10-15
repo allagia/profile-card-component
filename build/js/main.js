@@ -572,7 +572,7 @@
     });
 
     btns.forEach(function (btn) {
-      btn.addEventListener('click', function(e){
+      btn.addEventListener('click', function (e) {
         showContent(e.currentTarget);
       });
     });
@@ -599,7 +599,7 @@
       if (vw !== document.body.clientWidth) {
         vw = document.body.clientWidth;
         closeTabsOnMobile();
-      };
+      }
     });
 
     window.addEventListener('DOMContentLoaded', function () {
@@ -626,7 +626,7 @@
     });
   }
 
-  //accordion
+  // accordion
   var btnTab = document.querySelectorAll('.js-tab-btn');
   var btnAccord = document.querySelectorAll('.js-accord-btn');
   var allBlocks = document.querySelectorAll('.object-block');
@@ -638,7 +638,7 @@
   for (var i = 0; i < btnTab.length; i++) {
     btnTab[i].addEventListener('click', function (e) {
       e.preventDefault();
-      openAccordion(this, btnTab)
+      openAccordion(this, btnTab);
     });
   }
 

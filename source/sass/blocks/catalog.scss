@@ -8,7 +8,7 @@
       margin-bottom: 10px;
 
       @include mobile {
-        margin-top: -52px;
+        margin-top: -44px;
       }
     }
   }
@@ -26,7 +26,7 @@
   }
 
   & aside {
-    margin-right: 20px;
+    margin-right: 47px;
 
     @include tablet {
       margin-right: 4.5%;
@@ -43,13 +43,13 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    min-width: 75%;
-    max-width: 75%;
-    margin-top: 23px;
+    min-width: 70%;
+    max-width: 70%;
+    margin-top: 24px;
 
     @include tablet {
-      min-width: 65%;
-      max-width: 65%;
+      min-width: 66%;
+      max-width: 66%;
       margin-top: 0;
     }
 
@@ -61,10 +61,10 @@
   }
 
   &__item {
-    min-width: 42%;
-    max-width: 42%;
+    min-width: 44.7%;
+    max-width: 44.7%;
     margin-bottom: 58px;
-    margin-right: 4%;
+    margin-right: 4.4%;
 
     &:nth-of-type(2n) {
       margin-right: 0;
@@ -73,7 +73,8 @@
     @include tablet {
       min-width: 48%;
       max-width: 48%;
-      margin-bottom: 55px;
+      margin-bottom: 53px;
+      margin-right: 4%;
     }
 
     @include tablet-1200px {
@@ -127,6 +128,10 @@
         margin-bottom: 10px;
       }
     }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
 
@@ -140,6 +145,10 @@
     @include tablet-1440px {
       font-size: 22px;
       line-height: 22px;
+    }
+
+    @include tablet {
+      line-height: 26px;
     }
 
     @include tablet-1200px {
