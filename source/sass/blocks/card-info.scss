@@ -192,7 +192,8 @@
 .pictures {
   grid-area: pictures;
   width: 97%;
-  height: 535px;
+  // height: 535px;
+  height: 576px;
   margin: 13px 0 0 25px;
 
   @include tablet {
@@ -233,7 +234,8 @@
   line-height: 36px;
 
   width: 77%;
-  margin: -3px 0 0 25px;
+  // margin: -3px 0 0 25px;
+  margin: 35px 0 0 25px;
 
   @include tablet {
     font-size: 18px;

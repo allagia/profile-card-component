@@ -1,5 +1,6 @@
 .page-footer__modal-wrap {
-  padding: 2px 0 0 13px;
+  // padding: 2px 0 0 13px;
+  padding: 2px 0 0;
   order: 2;
   z-index: 1;
 
@@ -419,7 +420,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.2);
     z-index: 100;
   }
 }
