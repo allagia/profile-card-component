@@ -42,7 +42,7 @@
     });
 
     btns.forEach(function (btn) {
-      btn.addEventListener('click', function(e){
+      btn.addEventListener('click', function (e) {
         showContent(e.currentTarget);
       });
     });
@@ -69,7 +69,7 @@
       if (vw !== document.body.clientWidth) {
         vw = document.body.clientWidth;
         closeTabsOnMobile();
-      };
+      }
     });
 
     window.addEventListener('DOMContentLoaded', function () {

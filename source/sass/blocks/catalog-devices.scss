@@ -33,7 +33,7 @@
   }
 
   & aside {
-    margin-right: 20px;
+    margin-right: 47px;
 
     @include tablet {
       margin-right: 4.5%;
@@ -69,14 +69,14 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    min-width: 75%;
-    max-width: 75%;
-    margin-top: 23px;
+    min-width: 70%;
+    max-width: 70%;
+    margin-top: 39px;
 
     @include tablet {
-      min-width: 65%;
-      max-width: 65%;
-      margin-top: 0;
+      min-width: 66%;
+      max-width: 66%;
+      margin-top: -17px;
     }
 
     @include mobile {
@@ -88,10 +88,10 @@
   }
 
   &__item {
-    min-width: 42%;
-    max-width: 42%;
+    min-width: 44.7%;
+    max-width: 44.7%;
     margin-bottom: 66px;
-    margin-right: 4%;
+    margin-right: 4.4%;
 
     &:nth-of-type(2n) {
       margin-right: 0;
@@ -100,7 +100,8 @@
     @include tablet {
       min-width: 48%;
       max-width: 48%;
-      margin-bottom: 70px;
+      margin-bottom: 66px;
+      margin-right: 4%;
     }
 
     @include tablet-1200px {
@@ -115,6 +116,27 @@
       min-width: 100%;
       max-width: 100%;
       margin: 0 auto 40px;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    margin-bottom: 0;
+    display: block;
+    overflow: hidden;
+
+    img {
+      margin-bottom: 15px;
+      object-fit: contain;
+
+      @include tablet {
+        margin-bottom: 7px;
+      }
+
+      @include mobile {
+        min-width: 100%;
+        margin-bottom: 4px;
+      }
     }
   }
 
@@ -134,20 +156,6 @@
 
     @include mobile {
       margin-bottom: 0;
-    }
-  }
-
-  &__link-img img {
-    margin-bottom: 15px;
-    object-fit: contain;
-
-    @include tablet {
-      margin-bottom: 7px;
-    }
-
-    @include mobile {
-      min-width: 100%;
-      margin-bottom: 4px;
     }
   }
 
