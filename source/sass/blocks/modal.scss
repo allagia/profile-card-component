@@ -237,7 +237,8 @@
   &--inst,
   &--calc {
     padding: 50px 95px 50px;
-    max-height: calc(100vh - 60px);
+    max-height: calc(100vh - 120px);
+    min-height: auto;
     overflow-y: scroll;
     overflow-x: hidden;
 
