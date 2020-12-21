@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="css/style.min.css">
 
-  <title>Карточка</title>
+  <title>Таблица</title>
   <script type="text/javascript" src="gridviewscroll.js"></script>
   <script type="text/javascript">
     var gridViewScroll = null;
@@ -421,921 +421,545 @@
       </div>
     </section>
 
-    <section class="card-info">
-      <div class="card-info__container container">
+    <section class="container card-accordion__container">
 
-        <div class="card-info__column model">
-          <h1 class="h1 h1--add">EHA<sup>2</sup></h1>
-          <span class="model__type">
-            <svg width="23" height="23" viewBox="0 0 23 23">
-              <use xlink:href="img/sprite_auto.svg#icon-window"></use>
-            </svg>
-            Оконное</span>
-          <h2 class="h2 h2--small">Гигрорегулируемое приточное устройство с шумопоглащением</h2>
-        </div>
+      <table class="table">
 
-        <div class="card-info__column pictures swiper-container">
-          <ul class="pictures__list swiper-wrapper">
-            <li class="pictures__item swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 790px x 535px; 2x: 1580px x 1070px -->
-                <source media="(min-width: 1281px)" srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
-                <!-- 1х: 540px x 370px; 2x: 1080px x 740px -->
-                <source media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="приточное устройство">
-              </picture>
-            </li>
-            <li class="pictures__item swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/cards/img-1@1x.webp 1x, img/cards/img-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.webp 1x, img/cards/img-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/cards/img-1-mobile@1x.webp 1x, img/cards/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 790px x 535px; 2x: 1580px x 1070px -->
-                <source media="(min-width: 1281px)" srcset="img/cards/img-1@1x.jpg 1x, img/cards/img-1@2x.jpg 2x">
-                <!-- 1х: 540px x 370px; 2x: 1080px x 740px -->
-                <source media="(min-width: 768px)" srcset="img/cards/img-1-tablet@1x.jpg 1x, img/cards/img-1-tablet@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/cards/img-1-mobile@1x.jpg" srcset="img/cards/img-1-mobile@2x.jpg" alt="приточное устройство">
-              </picture>
-            </li>
-            <li class="pictures__item swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-1@1x.webp 1x, img/applying/img-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.webp 1x, img/applying/img-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 790px x 535px; 2x: 1580px x 1070px -->
-                <source media="(min-width: 1281px)" srcset="img/applying/img-1@1x.jpg 1x, img/applying/img-1@2x.jpg 2x">
-                <!-- 1х: 540px x 370px; 2x: 1080px x 740px -->
-                <source media="(min-width: 768px)" srcset="img/applying/img-1-tablet@1x.jpg 1x, img/applying/img-1-tablet@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="приточное устройство">
-              </picture>
-            </li>
-          </ul>
-          <div class="swiper-pagination"></div>
-        </div>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Приточное устройство</th>
+            <th></th>
+            <th>EHA² 5-35</th>
+            <th>EHA² 11-35</th>
+            <th colspan="2">EHA² 17-35</th>
+          </tr>
+        </thead>
 
-        <p class="card-info__column pictures-text">Контролирует расход воздуха в&nbsp;зависимости от&nbsp;уровня относительной влажности внутри помещения. Современный дизайн EHA&sup2;, воплощенный в&nbsp;тонком корпусе, идеально подходит для большинства окон и&nbsp;рольставен.</p>
+        <tbody>
+
+          <tr>
+            <td></td>
+            <td>Стандартный код</td>
+            <td></td>
+            <td>EAR201, EAR283,<br>EAR286, EAR308</td>
+            <td>EAR202, EAR290,<br>EAR292, EAR327</td>
+            <td>EAR203, EAR295,<br>EAR297, EAR328</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__subtitle" colspan="5">Аэродинамика</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Гигрорегулирование</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Переключатель режимов работы</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point table__point--none"></span></td>
+            <td><span class="table__point table__point--none"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Расход воздуха (мин – макс) при 10 Па</td>
+            <td>м<sup>3</sup>/ч</td>
+            <td>5-35</td>
+            <td>11-35</td>
+            <td>17-35</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Максимальная площадь открытия</td>
+            <td>мм<sup>2</sup></td>
+            <td>3600</td>
+            <td>3600</td>
+            <td>3600</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__subtitle" colspan="5">Акустика</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Dn,e,w (C ; Ctr)*Звукоизоляция при максимальном открытии приточного устройства**</td>
+            <td>дБ</td>
+            <td>37 (0 ; 0)</td>
+            <td>37 (0 ; 0)</td>
+            <td>37 (0 ; 0)</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Dn,e,w (C ; Ctr)*Звукоизоляция при максимальном открытии в комплекте с козырьком A-EdA и проставкой E-EdA²</td>
+            <td>дБ</td>
+            <td>42 (0 ; 0)</td>
+            <td>42 (0 ; 0)</td>
+            <td>42 (0 ; 0)</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__subtitle" colspan="5">Аксессуары</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Плоский козырек</td>
+            <td></td>
+            <td>AP</td>
+            <td>AP</td>
+            <td>AP</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Акустический козырек</td>
+            <td></td>
+            <td>A-EHA</td>
+            <td>A-EHA</td>
+            <td>A-EHA</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Стандартный козырек</td>
+            <td></td>
+            <td>AS</td>
+            <td>AS</td>
+            <td>AS</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Козырек с контролем потока воздуха</td>
+            <td></td>
+            <td>AC</td>
+            <td>AC</td>
+            <td>AC</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Акустическая проставка</td>
+            <td></td>
+            <td>E-EHA²</td>
+            <td>E-EHA²</td>
+            <td>E-EHA²</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__subtitle" colspan="5">Прочие характеристики</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Вес</td>
+            <td>г.</td>
+            <td>271</td>
+            <td>271</td>
+            <td>271</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Цвет</td>
+            <td></td>
+            <td>белый, тик, дуб, серый</td>
+            <td>белый, тик, дуб, серый</td>
+            <td>белый, тик, дуб, серый</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Материал корпуса</td>
+            <td></td>
+            <td>ПС, АБС</td>
+            <td>ПС, АБС</td>
+            <td>ПС, АБС</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__subtitle" colspan="5">Монтаж</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Технологическое отверстие</td>
+            <td>мм</td>
+            <td>2x(172×12)</td>
+            <td>2x(172×12)</td>
+            <td>2x(172×12)</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Установка на окне</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Установка на рольставни</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Размещение в спальне</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Размещение в гостиной</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td class="table__note">
+              <span class="table__point"></span><span>Включено</span>
+              <span class="table__point table__point--none"></span><span>Опция</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="myTable" style="width: 100%; border-collapse: collapse;">
+
+          <tr class="GridViewScrollHeader">
+
+            <th>Приточное устройство</th>
+            <th></th>
+            <th>EHA² 5-35</th>
+            <th>EHA² 11-35</th>
+            <th>EHA² 17-35</th>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Стандартный код</td>
+            <td></td>
+            <td>EAR201, EAR283,<br>EAR286, EAR308</td>
+            <td>EAR202, EAR290,<br>EAR292, EAR327</td>
+            <td>EAR203, EAR295,<br>EAR297, EAR328</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__subtitle">Аэродинамика</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Гигрорегулирование</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Переключатель<br> режимов работы</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point table__point--none"></span></td>
+            <td><span class="table__point table__point--none"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Расход воздуха (мин<br> – макс) при 10 Па</td>
+            <td>м<sup>3</sup>/ч</td>
+            <td>5-35</td>
+            <td>11-35</td>
+            <td>17-35</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Максимальная<br> площадь открытия</td>
+            <td>мм<sup>2</sup></td>
+            <td>3600</td>
+            <td>3600</td>
+            <td>3600</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__subtitle">Акустика</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
 
 
-        <ul class="card-info__column details">
-          <li class="details__item"><a class="details__link" href="#">Характеристики
-            <svg width="20" height="10" viewBox="0 0 20 10">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
-          </a></li>
-          <li class="details__item"><a class="details__link" href="#">Аксессуары
-            <svg width="20" height="10" viewBox="0 0 20 10">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
-          </a></li>
-        </ul>
+          </tr>
 
-        <div class="card-info__column basic-info">
-          <button class="basic-info__btn btn btn--middle" type="button">Уточнить стоимость</button>
-          <ul class="basic-info__list">
-            <li class="basic-info__item">
-              <p class="basic-info__title">Цвета:</p>
-              <p class="basic-info__text">белый, тик, дуб, серый</p>
-            </li>
-            <li class="basic-info__item">
-              <p class="basic-info__title">Максимальная площадь открытия:</p>
-              <p class="basic-info__text">3600 мм<sup>2</sup></p>
-            </li>
-          </ul>
-        </div>
+          <tr class="GridViewScrollItem">
 
-      </div>
+            <td>Dn,e,w (C<br> ; Ctr)*Звукоизоляция при<br> максимальном открытии<br> приточного устройства**</td>
+            <td>дБ</td>
+            <td>37 (0 ; 0)</td>
+            <td>37 (0 ; 0)</td>
+            <td>37 (0 ; 0)</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Dn,e,w (C <br>; Ctr)*Звукоизоляция при<br> максимальном открытии<br> в комплекте с козырьком<br> A-EdA и проставкой E-EdA²</td>
+            <td>дБ</td>
+            <td>42 (0 ; 0)</td>
+            <td>42 (0 ; 0)</td>
+            <td>42 (0 ; 0)</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__subtitle">Аксессуары</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Плоский козырек</td>
+            <td></td>
+            <td>AP</td>
+            <td>AP</td>
+            <td>AP</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Акустический козырек</td>
+            <td></td>
+            <td>A-EHA</td>
+            <td>A-EHA</td>
+            <td>A-EHA</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Стандартный козырек</td>
+            <td></td>
+            <td>AS</td>
+            <td>AS</td>
+            <td>AS</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Козырек с контролем<br> потока воздуха</td>
+            <td></td>
+            <td>AC</td>
+            <td>AC</td>
+            <td>AC</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Акустическая проставка</td>
+            <td></td>
+            <td>E-EHA²</td>
+            <td>E-EHA²</td>
+            <td>E-EHA²</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__subtitle">Прочие характеристики</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Вес</td>
+            <td>г.</td>
+            <td>271</td>
+            <td>271</td>
+            <td>271</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Цвет</td>
+            <td></td>
+            <td>белый, тик, дуб, серый</td>
+            <td>белый, тик, дуб, серый</td>
+            <td>белый, тик, дуб, серый</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Материал корпуса</td>
+            <td></td>
+            <td>ПС, АБС</td>
+            <td>ПС, АБС</td>
+            <td>ПС, АБС</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__subtitle">Монтаж</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Технологическое<br> отверстие</td>
+            <td>мм</td>
+            <td>2x(172×12)</td>
+            <td>2x(172×12)</td>
+            <td>2x(172×12)</td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Установка на окне</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Установка на рольставни</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Размещение в спальне</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td>Размещение<br> в гостиной</td>
+            <td></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+            <td><span class="table__point"></span></td>
+
+          </tr>
+
+          <tr class="GridViewScrollItem">
+
+            <td class="table__note" colspan="5">
+              <span class="table__point"></span><span>Включено</span>
+              <span class="table__point table__point--none"></span><span>Опция</span>
+            </td>
+
+
+          </tr>
+      </table>
+
+
     </section>
 
-    <section class="advantages">
-      <div class="advantages__container container">
-        <h2>Преимущества</h2>
-        <div class="advantages__wrap swiper-container">
-          <ol class="advantages__list swiper-wrapper">
-            <li class="advantages__item swiper-slide">
-              <picture class="advantages__image">
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.webp 1x, img/advantages/img-1@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.webp 1x, img/advantages/img-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 300px x 220px; 2x: 600px x 440px -->
-                <source media="(min-width: 1281px)" srcset="img/advantages/img-1@1x.jpg 1x, img/advantages/img-1@2x.jpg 2x">
-                <!-- 1х: 210px x 160px; 2x: 420px x 320px -->
-                <source media="(min-width: 768px)" srcset="img/advantages/img-1-tablet@1x.jpg 1x, img/advantages/img-1-tablet@2x.jpg 2x">
-                <!-- 1х: 233px x 160px; 2x: 466px x 320px -->
-                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="поток поздуха">
-              </picture>
-
-              <div class="advantages__description">
-                <span class="advantages__num"></span>
-                <h3>Наклонный воздушный поток </h3>
-                <p>Наклонный воздушный поток, направленый в&nbsp;потолочную зону, гарантирует поступательный нагрев свежего воздуха для комфорта жильцов.</p>
-              </div>
-            </li>
-            <li class="advantages__item swiper-slide">
-
-              <picture class="advantages__image">
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/applying/img-2@1x.webp 1x, img/applying/img-2@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/applying/img-2-tablet@1x.webp 1x, img/applying/img-2-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/applying/img-1-mobile@1x.webp 1x, img/applying/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 300px x 220px; 2x: 600px x 440px -->
-                <source media="(min-width: 1281px)" srcset="img/applying/img-2@1x.jpg 1x, img/applying/img-2@2x.jpg 2x">
-                <!-- 1х: 210px x 160px; 2x: 420px x 320px -->
-                <source media="(min-width: 768px)" srcset="img/applying/img-2-tablet@1x.jpg 1x, img/applying/img-2-tablet@2x.jpg 2x">
-                <!-- 1х: 233px x 160px; 2x: 466px x 320px -->
-                <img src="img/applying/img-1-mobile@1x.jpg" srcset="img/applying/img-1-mobile@2x.jpg" alt="Переключатель">
-              </picture>
-
-              <div class="advantages__description">
-                <span class="advantages__num"></span>
-                <h3>Переключатель режимов работы</h3>
-                <p>Специальный переключатель позволяет при необходимости вручную закрывать или открывать заслонку приточного устройства, что функционально дополняет систему гигрорегулирования.</p>
-              </div>
-            </li>
-            <li class="advantages__item swiper-slide">
-
-              <picture class="advantages__image">
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.webp 1x, img/advantages/img-3@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.webp 1x, img/advantages/img-3-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 300px x 220px; 2x: 600px x 440px -->
-                <source media="(min-width: 1281px)" srcset="img/advantages/img-3@1x.jpg 1x, img/advantages/img-3@2x.jpg 2x">
-                <!-- 1х: 210px x 160px; 2x: 420px x 320px -->
-                <source media="(min-width: 768px)" srcset="img/advantages/img-3-tablet@1x.jpg 1x, img/advantages/img-3-tablet@2x.jpg 2x">
-                <!-- 1х: 233px x 160px; 2x: 466px x 320px -->
-                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="Защита от шума">
-              </picture>
-
-              <div class="advantages__description">
-                <span class="advantages__num"></span>
-                <h3>Защита от&nbsp;внешнего шума</h3>
-                <p>Использование высокоэффективных звукопоглощающих материалов, вместе со&nbsp;специальной проставкой и&nbsp;наружным козырьком, обеспечивает звукоизоляцию до&nbsp;42&nbsp;дБ.</p>
-              </div>
-            </li>
-            <li class="advantages__item swiper-slide">
-
-              <picture class="advantages__image">
-                <source type="image/webp" media="(min-width: 1281px)" srcset="img/advantages/img-4@1x.webp 1x, img/advantages/img-4@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/img-4-tablet@1x.webp 1x, img/advantages/img-4-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/advantages/img-1-mobile@1x.webp 1x, img/advantages/img-1-mobile@2x.webp 2x">
-                <!-- 1х: 300px x 220px; 2x: 600px x 440px -->
-                <source media="(min-width: 1281px)" srcset="img/advantages/img-4@1x.jpg 1x, img/advantages/img-4@2x.jpg 2x">
-                <!-- 1х: 210px x 160px; 2x: 420px x 320px -->
-                <source media="(min-width: 768px)" srcset="img/advantages/img-4-tablet@1x.jpg 1x, img/advantages/img-4-tablet@2x.jpg 2x">
-                <!-- 1х: 233px x 160px; 2x: 466px x 320px -->
-                <img src="img/advantages/img-1-mobile@1x.jpg" srcset="img/advantages/img-1-mobile@2x.jpg" alt="девайс на ножках">
-              </picture>
-
-              <div class="advantages__description">
-                <span class="advantages__num"></span>
-                <h3>Легкое техническое обслуживание</h3>
-                <p>Нет необходимости в&nbsp;регулировке, достаточно очищать от&nbsp;пыли один раз в&nbsp;год.</p>
-              </div>
-            </li>
-          </ol>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card-accordion no-js">
-      <h2 class="visually-hidden">Подробная информация о продукте</h2>
-      <div class="card-accordion__container container">
-        <button class="card-accordion__item card-accordion__item--table">Характеристики
-          <svg width="13" height="19" viewBox="0 0 13 19">
-            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <div class="card-accordion__content card-accordion__content--specifications specifications">
-          <table class="specifications__table table">
-
-            <thead>
-              <tr>
-                <th></th>
-                <th>Приточное устройство</th>
-                <th></th>
-                <th>EHA² 5-35</th>
-                <th>EHA² 11-35</th>
-                <th colspan="2">EHA² 17-35</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td></td>
-                <td>Стандартный код</td>
-                <td></td>
-                <td>EAR201, EAR283,<br>EAR286, EAR308</td>
-                <td>EAR202, EAR290,<br>EAR292, EAR327</td>
-                <td>EAR203, EAR295,<br>EAR297, EAR328</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__subtitle" colspan="5">Аэродинамика</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Гигрорегулирование</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Переключатель режимов работы</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point table__point--none"></span></td>
-                <td><span class="table__point table__point--none"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Расход воздуха (мин – макс) при 10 Па</td>
-                <td>м<sup>3</sup>/ч</td>
-                <td>5-35</td>
-                <td>11-35</td>
-                <td>17-35</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Максимальная площадь открытия</td>
-                <td>мм<sup>2</sup></td>
-                <td>3600</td>
-                <td>3600</td>
-                <td>3600</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__subtitle" colspan="5">Акустика</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Dn,e,w (C ; Ctr)*Звукоизоляция при максимальном открытии приточного устройства**</td>
-                <td>дБ</td>
-                <td>37 (0 ; 0)</td>
-                <td>37 (0 ; 0)</td>
-                <td>37 (0 ; 0)</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Dn,e,w (C ; Ctr)*Звукоизоляция при максимальном открытии в комплекте с козырьком A-EdA и проставкой E-EdA²</td>
-                <td>дБ</td>
-                <td>42 (0 ; 0)</td>
-                <td>42 (0 ; 0)</td>
-                <td>42 (0 ; 0)</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__subtitle" colspan="5">Аксессуары</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Плоский козырек</td>
-                <td></td>
-                <td>AP</td>
-                <td>AP</td>
-                <td>AP</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Акустический козырек</td>
-                <td></td>
-                <td>A-EHA</td>
-                <td>A-EHA</td>
-                <td>A-EHA</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Стандартный козырек</td>
-                <td></td>
-                <td>AS</td>
-                <td>AS</td>
-                <td>AS</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Козырек с контролем потока воздуха</td>
-                <td></td>
-                <td>AC</td>
-                <td>AC</td>
-                <td>AC</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Акустическая проставка</td>
-                <td></td>
-                <td>E-EHA²</td>
-                <td>E-EHA²</td>
-                <td>E-EHA²</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__subtitle" colspan="5">Прочие характеристики</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Вес</td>
-                <td>г.</td>
-                <td>271</td>
-                <td>271</td>
-                <td>271</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Цвет</td>
-                <td></td>
-                <td>белый, тик, дуб, серый</td>
-                <td>белый, тик, дуб, серый</td>
-                <td>белый, тик, дуб, серый</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Материал корпуса</td>
-                <td></td>
-                <td>ПС, АБС</td>
-                <td>ПС, АБС</td>
-                <td>ПС, АБС</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__subtitle" colspan="5">Монтаж</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Технологическое отверстие</td>
-                <td>мм</td>
-                <td>2x(172×12)</td>
-                <td>2x(172×12)</td>
-                <td>2x(172×12)</td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Установка на окне</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Установка на рольставни</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Размещение в спальне</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td>Размещение в гостиной</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-                <td class="table__note">
-                  <span class="table__point"></span><span>Включено</span>
-                  <span class="table__point table__point--none"></span><span>Опция</span>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <button class="card-accordion__item card-accordion__item--mobile">Характеристики
-          <svg width="13" height="19" viewBox="0 0 13 19">
-            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <div class="card-accordion__content card-accordion__content--mobile mobile" style="overflow: auto;">
-          <table id="myTable" style="width: 100%; border-collapse: collapse;">
-
-              <tr class="GridViewScrollHeader">
-
-                <th>Приточное устройство</th>
-                <th></th>
-                <th>EHA² 5-35</th>
-                <th>EHA² 11-35</th>
-                <th>EHA² 17-35</th>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Стандартный код</td>
-                <td></td>
-                <td>EAR201, EAR283,<br>EAR286, EAR308</td>
-                <td>EAR202, EAR290,<br>EAR292, EAR327</td>
-                <td>EAR203, EAR295,<br>EAR297, EAR328</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__subtitle">Аэродинамика</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Гигрорегулирование</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Переключатель<br> режимов работы</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point table__point--none"></span></td>
-                <td><span class="table__point table__point--none"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Расход воздуха (мин<br> – макс) при 10 Па</td>
-                <td>м<sup>3</sup>/ч</td>
-                <td>5-35</td>
-                <td>11-35</td>
-                <td>17-35</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Максимальная<br> площадь открытия</td>
-                <td>мм<sup>2</sup></td>
-                <td>3600</td>
-                <td>3600</td>
-                <td>3600</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__subtitle">Акустика</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Dn,e,w (C<br> ; Ctr)*Звукоизоляция при<br> максимальном открытии<br> приточного устройства**</td>
-                <td>дБ</td>
-                <td>37 (0 ; 0)</td>
-                <td>37 (0 ; 0)</td>
-                <td>37 (0 ; 0)</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Dn,e,w (C <br>; Ctr)*Звукоизоляция при<br> максимальном открытии<br> в комплекте с козырьком<br> A-EdA и проставкой E-EdA²</td>
-                <td>дБ</td>
-                <td>42 (0 ; 0)</td>
-                <td>42 (0 ; 0)</td>
-                <td>42 (0 ; 0)</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__subtitle">Аксессуары</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Плоский козырек</td>
-                <td></td>
-                <td>AP</td>
-                <td>AP</td>
-                <td>AP</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Акустический козырек</td>
-                <td></td>
-                <td>A-EHA</td>
-                <td>A-EHA</td>
-                <td>A-EHA</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Стандартный козырек</td>
-                <td></td>
-                <td>AS</td>
-                <td>AS</td>
-                <td>AS</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Козырек с контролем<br> потока воздуха</td>
-                <td></td>
-                <td>AC</td>
-                <td>AC</td>
-                <td>AC</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Акустическая проставка</td>
-                <td></td>
-                <td>E-EHA²</td>
-                <td>E-EHA²</td>
-                <td>E-EHA²</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__subtitle">Прочие характеристики</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Вес</td>
-                <td>г.</td>
-                <td>271</td>
-                <td>271</td>
-                <td>271</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Цвет</td>
-                <td></td>
-                <td>белый, тик, дуб, серый</td>
-                <td>белый, тик, дуб, серый</td>
-                <td>белый, тик, дуб, серый</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Материал корпуса</td>
-                <td></td>
-                <td>ПС, АБС</td>
-                <td>ПС, АБС</td>
-                <td>ПС, АБС</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__subtitle">Монтаж</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Технологическое<br> отверстие</td>
-                <td>мм</td>
-                <td>2x(172×12)</td>
-                <td>2x(172×12)</td>
-                <td>2x(172×12)</td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Установка на окне</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Установка на рольставни</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Размещение в спальне</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td>Размещение<br> в гостиной</td>
-                <td></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-                <td><span class="table__point"></span></td>
-
-              </tr>
-
-              <tr class="GridViewScrollItem">
-
-                <td class="table__note" colspan="5">
-                  <span class="table__point"></span><span>Включено</span>
-                  <span class="table__point table__point--none"></span><span>Опция</span>
-                </td>
-
-
-              </tr>
-          </table>
-        </div>
-
-
-        <button class="card-accordion__item">Схемы устройства
-          <svg width="13" height="19" viewBox="0 0 13 19">
-            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <div class="card-accordion__content card-accordion__content--scheme scheme">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/card-scheme@1x.webp 1x, img/cards/card-scheme@2x.webp 2x">
-            <source type="image/webp" srcset="img/cards/card-scheme-mobile@1x.webp 1x, img/cards/card-scheme-mobile@2x.webp 2x">
-            <!-- 1х: 800px x 400px; 2x: 1600px x 800px -->
-            <source media="(min-width: 768px)" srcset="img/cards/card-scheme@1x.jpg 1x, img/cards/card-scheme@2x.jpg 2x">
-            <!-- 1х: 290px x 145px; 2x: 580px x 290px -->
-            <img src="img/cards/card-scheme-mobile@1x.jpg" srcset="img/cards/card-scheme-mobile@2x.jpg" alt="схема устройства">
-          </picture>
-          <div class="scheme__document document">
-            <h3>
-              <svg width="52" height="52" viewBox="0 0 52 52">
-                <use xlink:href="img/sprite_auto.svg#icon-pdf"></use>
-              </svg>
-              PDF</h3>
-            <p>Схемы установки приточных устройств Aereco</p>
-            <span>Оконные и стеновых устройств Aereco</span>
-            <a href="file.pdf">Скачать</a>
-          </div>
-        </div>
-
-        <button class="card-accordion__item">Документация
-          <svg width="13" height="19" viewBox="0 0 13 19">
-            <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
-        <div class="card-accordion__content files">
-          <ul class="files-list ">
-            <li class="files-list__item">
-              <div class="document">
-                <p>Схемы установки приточных устройств Aereco</p>
-                <h3>
-                  <svg width="26" height="30" viewBox="0 0 26 30">
-                    <use xlink:href="img/sprite_auto.svg#icon-pdf"></use>
-                  </svg>PDF</h3>
-                <a href="file.pdf">Скачать</a>
-              </div>
-            </li>
-            <li class="files-list__item">
-              <div class="document">
-                <p>Схемы установки приточных устройств Aereco</p>
-                <h3>
-                  <svg width="26" height="30" viewBox="0 0 26 30">
-                    <use xlink:href="img/sprite_auto.svg#icon-pdf"></use>
-                  </svg>PDF</h3>
-                <a href="file.pdf">Скачать</a>
-              </div>
-            </li>
-            <li class="files-list__item">
-              <div class="document">
-                <p>Схемы установки приточных устройств Aereco</p>
-                <h3>
-                  <svg width="26" height="30" viewBox="0 0 26 30">
-                    <use xlink:href="img/sprite_auto.svg#icon-pdf"></use>
-                  </svg>PDF</h3>
-                <a href="file.pdf">Скачать</a>
-              </div>
-            </li>
-            <li class="files-list__item">
-              <div class="document">
-                <p>Схемы установки приточных устройств Aereco</p>
-                <h3>
-                  <svg width="26" height="30" viewBox="0 0 26 30">
-                    <use xlink:href="img/sprite_auto.svg#icon-pdf"></use>
-                  </svg>PDF</h3>
-                <a href="file.pdf">Скачать</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="accessory">
-      <div class="accessory__container container">
-        <h2 class="h1 h1--add">Аксессуары для EHA<sup>2</sup></h2>
-        <ul class="accessory__list">
-          <li class="accessory__item">
-            <a class="accessory__link" href="#">
-              <picture class="accessory__image">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.webp 1x, img/cards/accessory-1@2x.webp 2x">
-                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
-                <!-- 1х: 370px x 248px; 2x: 740px x 496px -->
-                <source media="(min-width: 768px)" srcset="img/cards/accessory-1@1x.jpg 1x, img/cards/accessory-1@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="Оконный телескопический канал">
-              </picture>
-              <div class="accessory__description">
-                <h3>E-TFR Оконный телескопический канал</h3>
-                <p>АЕА1151</p>
-              </div>
-            </a>
-          </li>
-          <li class="accessory__item">
-            <a class="accessory__link" href="#">
-              <picture class="accessory__image">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.webp 1x, img/cards/accessory-2@2x.webp 2x">
-                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
-                <!-- 1х: 370px x 248px; 2x: 740px x 496px -->
-                <source media="(min-width: 768px)" srcset="img/cards/accessory-2@1x.jpg 1x, img/cards/accessory-2@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="Наружный козырек">
-              </picture>
-              <div class="accessory__description">
-                <h3>AC Наружный козырек с контролем потока воздуха</h3>
-                <p>AC</p>
-              </div>
-            </a>
-          </li>
-          <li class="accessory__item">
-            <a class="accessory__link" href="#">
-              <picture class="accessory__image">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.webp 1x, img/cards/accessory-3@2x.webp 2x">
-                <source type="image/webp" srcset="img/cards/accessory-1-mobile@1x.webp 1x, img/cards/accessory-1-mobile@2x.webp 2x">
-                <!-- 1х: 370px x 248px; 2x: 740px x 496px -->
-                <source media="(min-width: 768px)" srcset="img/cards/accessory-3@1x.jpg 1x, img/cards/accessory-3@2x.jpg 2x">
-                <!-- 1х: 290px x 180px; 2x: 580px x 360px -->
-                <img src="img/cards/accessory-1-mobile@1x.jpg" srcset="img/cards/accessory-1-mobile@2x.jpg" alt="Акустический козырек">
-              </picture>
-              <div class="accessory__description">
-                <h3>A-EHA Акустический козырек</h3>
-                <p>A-EHA</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <a class="link-blue-underlined" href="#">Смотреть Все</a>
-      </div>
-    </section>
-    <div class="overlay overlay--card">
-      
-  <div class="modal popup modal--calc">
-    <button class="modal__close-btn" type="button">
-      <svg width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="img/sprite_auto.svg#icon-btn-cross"></use>
-      </svg>
-    </button>
-    <h2 class="h2 h2--small">Мы&nbsp;готовы подобрать оборудование AERECO под ваш проект</h2>
-
-    <form method="post" name="calculation" autocomplete="on">
-      <label><span class="visually-hidden">ФИО</span>
-        <input type="text" placeholder="ФИО*" required="">
-      </label>
-
-      <div class="modal__form-row">
-
-        <label><span class="visually-hidden">Почта</span>
-          <input type="email" placeholder="E-mail*" required="">
-        </label>
-
-        <label><span class="visually-hidden">Телефон</span>
-          <input type="tel" placeholder="Телефон">
-        </label>
-
-      </div>
-
-      <label><span class="visually-hidden">Cообщение</span>
-        <textarea placeholder="Cообщение"></textarea>
-      </label>
-
-      <label class="modal__attachment">Прикрепить чертеж квартиры, коттеджа, объекта
-        <input class="visually-hidden" type="file">
-      </label>
-      <div class="modal__upload-success">Файл успешно добавлен</div>
-
-      <button class="btn btn--big" type="submit">Отправить сообщение</button>
-
-      <label class="modal__agreement checkbox">
-        <input class="visually-hidden" type="checkbox" checked="" required="">
-        <span class="checkbox__indicator"></span>
-        <span class="checkbox__text">Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности</span>
-      </label>
-
-    </form>
-  </div>
-
-    </div>
   </main>
 
   <footer class="page-footer page-footer--without-map">

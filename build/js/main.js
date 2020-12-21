@@ -830,4 +830,3 @@
   }
 })();
 
-// =require components/modal-types.js
