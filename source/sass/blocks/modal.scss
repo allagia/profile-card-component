@@ -196,6 +196,10 @@
     @include mobile {
       flex-wrap: wrap;
     }
+
+    input[type="radio"]:checked + label {
+      color: $blue;
+    }
   }
 
 
@@ -316,9 +320,9 @@
       border-radius: 0;
       resize: none;
 
-      @include mobile {
-        display: none;
-      }
+      // @include mobile {
+      //   display: none;
+      // }
     }
 
     button {
@@ -326,6 +330,11 @@
     }
   }
 
+  form[name="feedback"] textarea {
+    @include mobile {
+      display: none;
+    }
+  }
 
   &__close-btn {
     position: absolute;
