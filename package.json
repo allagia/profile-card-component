@@ -1,7 +1,7 @@
 {
-  "name": "aero-house",
+  "name": "profile-card-component",
   "version": "1.0.0",
-  "description": "сборка для проекта aero-house",
+  "description": "сборка для проекта profile-card-component",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",

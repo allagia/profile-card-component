@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-  <html lang="ru">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="Description" content="системы вентиляции Aereco">
-      <title>Aero House</title>
-      <link rel="stylesheet" href="css/style.min.css">
-    </head>
-    <body>
-
-      <div style="padding: 50px; font-size: 22px">
-        <h1>Aero-House</h1>
-
-        <a href="main.html" style="color: blue; line-height: 50px">Главная страница</a><br>
-        <a href="card.html" style="color: blue; line-height: 50px">Карточка</a><br>
-        <a href="catalog.html" style="color: blue; line-height: 50px">Каталог</a><br>
-        <a href="catalog-devices.html" style="color: blue; line-height: 50px">Каталог - устройства</a><br>
-        <a href="air-quality.html" style="color: blue; line-height: 50px">Качество воздуха</a><br>
-        <a href="ventilation-type.html" style="color: blue; line-height: 50px">Типы вентиляции</a><br>
-        <a href="about-company.html" style="color: blue; line-height: 50px">О компании</a><br>
-        <a href="objects.html" style="color: blue; line-height: 50px">Объекты</a><br>
-
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Карточка пользователя</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header></header>
+  <main class="main">
+    <h1 class="visually-hidden">Карточка пользователя</h1>
+    <div class="main__circle main__circle--left"></div>
+    <div class="main__circle main__circle--right"></div>
+    <section class="card">
+      <div class="card__top"></div>
+      <div class="card__bottom">
+        <img class="card__image" src="img/user-pic@1x.png" srcset="img/user-pic@2x.png" alt="фотография пользователя">
+        <div class="card__general-info">
+          <h2 class="card__name">Victor Crest</h2>
+          <span class="card__years">26</span>
+        </div>
+        <p class="card__city">London</p>
+        <ul class="card__list">
+          <li class="card__item">
+            <span class="card__number">80K</span>
+            <h3 class="card__item-title">Followers</h3>
+          </li>
+          <li class="card__item">
+            <span class="card__number">803K</span>
+            <h3 class="card__item-title">Likes</h3>
+          </li>
+          <li class="card__item">
+            <span class="card__number">1.4K</span>
+            <h3 class="card__item-title">Photos</h3>
+          </li>
+        </ul>
       </div>
-    </body>
-  </html>
+
+    </section>
+  </main>
+  <footer></footer>
+
+</body>
+</html>
