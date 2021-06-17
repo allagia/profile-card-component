@@ -1,0 +1,60 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet-1600px {
+  @media (max-width: $tablet-1600px) {
+    @content;
+  }
+}
+
+@mixin tablet-1440px {
+  @media (max-width: $tablet-1440px) {
+    @content;
+  }
+}
+
+@mixin tablet-1200px {
+  @media (max-width: $tablet-1200px) {
+    @content;
+  }
+}
+
+@mixin tablet-inner {
+  @media (max-width: $tablet-inner) {
+    @content;
+  }
+}
+
+@mixin tablet-inner-rev {
+  @media (min-width: $tablet-inner+1) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
