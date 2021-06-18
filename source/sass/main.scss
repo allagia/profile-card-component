@@ -5,87 +5,134 @@
   justify-content: center;
   min-height: 100vh;
   background-color: $bg-color;
+  z-index: 0;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: -238%;
-  //   top: -182%;
-  //   width: 978px;
-  //   height: 976px;
-  //   border-radius: 50%;
-  //   opacity: 0.25;
-  //   background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53FFEE 99.94%);
-  //   mix-blend-mode: normal;
-  //   // z-index: -1;
-  //   transform: rotate(-135deg);
-  // }
+  @include mobile {
+    padding: 0 24px;
+  }
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   right: -220%;
-  //   bottom: -218%;
-  //   width: 978px;
-  //   height: 976px;
-  //   border-radius: 50%;
-  //   opacity: 0.25;
-  //   background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53FFEE 99.94%);
-  //   mix-blend-mode: normal;
-  //   // z-index: -2;
-  //   transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
-  // }
-
-  &__circle {
+  &::before {
+    content: "";
     position: absolute;
+    left: -20%;
+    top: -70%;
     width: 978px;
     height: 976px;
     border-radius: 50%;
     opacity: 0.25;
     background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53FFEE 99.94%);
     mix-blend-mode: normal;
+    z-index: -1;
+    transform: rotate(-135deg);
 
-    @media (max-width: $desktop-l) {
+    @include desktop {
+      left: -10%;
+      top: -56%;
       width: 800px;
       height: 800px;
     }
 
-    @media (max-width: $desktop-m) {
+    @include tablet {
+      left: -23%;
+      top: -41%;
       width: 700px;
       height: 700px;
     }
 
-    &--left {
-      left: -20%;
-      top: -70%;
-      transform: rotate(-135deg);
-
-      @media (max-width: $desktop-l) {
-        left: -10%;
-        top: -56%;
-      }
-
-      @media (max-width: $desktop-m) {
-        left: -23%;
-        top: -41%;
-      }
-    }
-
-    &--right {
-      right: -16%;
-      bottom: -88%;
-      // opacity: 0.25;
-      transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
-
-      @media (max-width: $desktop-l) {
-        right: -8%;
-        bottom: -58%;
-      }
-
-      @media (max-width: $desktop-m) {
-        right: -16%;
-        bottom: -68%;
-      }
+    @include mobile {
+      left: -109%;
+      top: -54%;
+      width: 622px;
+      height: 621px;
     }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -16%;
+    bottom: -88%;
+    width: 978px;
+    height: 976px;
+    border-radius: 50%;
+    opacity: 0.25;
+    background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53FFEE 99.94%);
+    mix-blend-mode: normal;
+    z-index: -1;
+    transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+
+    @include desktop {
+      right: -8%;
+      bottom: -58%;
+      width: 800px;
+      height: 800px;
+    }
+
+    @include tablet {
+      right: -16%;
+      bottom: -68%;
+      width: 700px;
+      height: 700px;
+    }
+
+    @include mobile {
+      right: -110%;
+      bottom: -47%;
+      width: 622px;
+      height: 621px;
+    }
+  }
+
+  // &__circle {
+  //   position: absolute;
+  //   width: 978px;
+  //   height: 976px;
+  //   border-radius: 50%;
+  //   opacity: 0.25;
+  //   background: linear-gradient(180deg, rgba(9, 137, 180, 0.0001) 0.78%, #53FFEE 99.94%);
+  //   mix-blend-mode: normal;
+
+  //   @media (max-width: $desktop-l) {
+  //     width: 800px;
+  //     height: 800px;
+  //   }
+
+  //   @media (max-width: $desktop-m) {
+  //     width: 700px;
+  //     height: 700px;
+  //   }
+
+  //   &--left {
+  //     left: -20%;
+  //     top: -70%;
+  //     transform: rotate(-135deg);
+
+  //     @media (max-width: $desktop-l) {
+  //       left: -10%;
+  //       top: -56%;
+  //     }
+
+  //     @media (max-width: $desktop-m) {
+  //       left: -23%;
+  //       top: -41%;
+  //     }
+  //   }
+
+  //   &--right {
+  //     right: -16%;
+  //     bottom: -88%;
+  //     // opacity: 0.25;
+  //     transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+
+  //     @media (max-width: $desktop-l) {
+  //       right: -8%;
+  //       bottom: -58%;
+  //     }
+
+  //     @media (max-width: $desktop-m) {
+  //       right: -16%;
+  //       bottom: -68%;
+  //     }
+  //   }
+  // }
 }
