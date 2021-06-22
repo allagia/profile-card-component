@@ -140,7 +140,9 @@
     height: 106px;
     margin: -53px 0 19px;
     border-radius: 50%;
+    border: 5px solid white;
     object-fit: cover;
+    background-color: white;
   }
 
   &__name {
